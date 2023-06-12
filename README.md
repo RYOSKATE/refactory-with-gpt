@@ -128,3 +128,17 @@ export OPENAI_API_KEY='sk-...'
 export OPENAI_ORGANIZATION="org-..."
 python run-gpt.py
 ```
+
+## 結果メモ
+
+```bash
+Summary for question_1 (sampling_rate = 100%, exp_idx = 0)
++-----------------+-------+
+|      Metric     | Value |
++-----------------+-------+
+|     rep_rate    | 0.991 |
+| rep_rate_wo_mut | 0.863 |
+|    time_cost    | 3.449 |
+|       rps       | 0.409 |
++-----------------+-------+
+```
