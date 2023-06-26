@@ -16,10 +16,11 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
     while retry_count < max_retry_count:
         try:
             generated_text = repair_code_by_gpt(
-                bug_code, description, sample_correct_code_blocks)
+                bug_code, description, sample_correct_code_blocks, extra_messages)
         except Exception as e:
             import sys
-            print(str(e)+"\n", file=sys.stderr)
+            print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
+                  "/"+str(max_retry_count)+"]"+str(e)+"\n", file=sys.stderr)
             retry_count += 1
             continue
 
@@ -63,7 +64,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
     return code
 
 
-def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str]) -> tuple[str, bool]:
+def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], extra_messages: list[str] = []) -> tuple[str, bool]:
 
     order = f"""
     description: "${description}"
@@ -92,6 +93,7 @@ def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_bloc
         messages=[
             {"role": "system", "content": "You are an excellent Python programmer."},
             {"role": "user", "content": order},
+            *extra_messages,
         ],
         max_tokens=1024,    # 生成する文章の最大単語数
         n=1,                # いくつの返答を生成するか
