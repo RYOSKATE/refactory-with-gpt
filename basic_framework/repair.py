@@ -1509,7 +1509,7 @@ class BlockRepair:
                                     t[1] for t in ref_fn_code_list]
                                 gtp_start_time = time.process_time()
                                 rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
-                                    code_perf_map["ori_bug_code"], description, sample_correct_code_blocks)
+                                    bug_code, description, sample_correct_code_blocks)
                                 code_perf_map["gpt_time"] = time.process_time(
                                 ) - gtp_start_time
                                 rep_code_with_gpt = regularize(
