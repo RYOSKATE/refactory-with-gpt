@@ -93,10 +93,10 @@ def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_bloc
             {"role": "system", "content": "You are an excellent Python programmer."},
             {"role": "user", "content": order},
         ],
-        max_tokens=1024,             # 生成する文章の最大単語数
+        max_tokens=1024,    # 生成する文章の最大単語数
         n=1,                # いくつの返答を生成するか
-        stop=None,             # 指定した単語が出現した場合、文章生成を打ち切る
-        temperature=0.5,              # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
+        stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
+        temperature=0.0,    # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
     )
     return completion.choices[0].message.content
 

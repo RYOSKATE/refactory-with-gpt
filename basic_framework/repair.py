@@ -1472,7 +1472,7 @@ class BlockRepair:
                         if "success" in code_perf_map["status"]:
                             code_perf_map["patch_size"] = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                        code_perf_map["rep_code"])
-                            if self.__is_gpt:
+                            if self.__is_gpt and 1 < code_perf_map["patch_size"]:
                                 # ここでcode_perf_map["rep_code"]をサンプルにChatGPTにこれより修正量の小さい修正コードを作らせる。
                                 sample_correct_code_blocks = [
                                     code_perf_map["rep_code"]]
@@ -1489,7 +1489,7 @@ class BlockRepair:
                                     gpt_patch_size = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                   rep_code_with_gpt)
                                     if gpt_patch_size < code_perf_map["patch_size"]:
-                                        rep_perf_map["status"] = "success_w_gpt_better"
+                                        code_perf_map["status"] = "success_w_gpt_better"
                                         code_perf_map["rep_code"] = rep_code_with_gpt
 
                             # special case in patch size calculation
@@ -1502,7 +1502,7 @@ class BlockRepair:
                                 code_perf_map["bug_ast_size"]
                             rps_list.append(code_perf_map["rps"])
                         else:
-                            if self.__is_gpt and ("timeout" not in rep_perf_map["status"]):
+                            if self.__is_gpt and ("timeout" not in code_perf_map["status"]):
                                 # この場合も模範解答をサンプルにChatGPTに修正コードを作らせる。
                                 sample_correct_code_blocks = [
                                     t[1] for t in ref_fn_code_list]
@@ -1514,7 +1514,7 @@ class BlockRepair:
                                 rep_code_with_gpt = regularize(
                                     rep_code_with_gpt_raw)
                                 if self.__tester.is_pass(self.__tester.tv_code(rep_code_with_gpt)):
-                                    rep_perf_map["status"] = "success_w_gpt_only"
+                                    code_perf_map["status"] = "success_w_gpt_only"
                                     code_perf_map["rep_code"] = rep_code_with_gpt
 
                         code_perf_map["total_time"] = time.process_time(

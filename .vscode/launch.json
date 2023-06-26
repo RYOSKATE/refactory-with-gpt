@@ -9,11 +9,12 @@
             "type": "python",
             "request": "launch",
             "program": "run.py",
-            "args": ["-d", "./data", "-q", "question_1", "-s", "100", "-o", "-m", "-b"],
+            "args": ["-d", "./data", "-q", "question_X", "-s", "100", "-o", "-m", "-b", "-g"],
             "console": "internalConsole",
             "justMyCode": true,
             "env": {
-                "PYTHONPATH": "${workspaceFolder}"
+                "PYTHONPATH": "${workspaceFolder}",
+                "OPENAI_API_KEY": "APIキーを入力(コミットしないように本当に注意)"
             },
         }
     ]
