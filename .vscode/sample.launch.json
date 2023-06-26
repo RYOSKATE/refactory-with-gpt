@@ -14,8 +14,8 @@
             "justMyCode": true,
             "env": {
                 "PYTHONPATH": "${workspaceFolder}",
-                "OPENAI_API_KEY": "APIキーを入力(コミットしないように本当に注意)"
-            },
+                "OPENAI_API_KEY": "APIキー(コミットしないように注意)"
+            }
         }
     ]
 }
