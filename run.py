@@ -28,6 +28,9 @@ if __name__ == "__main__":
     parser.add_argument("-y", "--oro_json", help="only do only refactoring and store the results.",
                         action="store_true", default=False)
 
+    parser.add_argument("-g", "--gpt", help="allow chat gpt to repair code.",
+                        action="store_true", default=False)
+
     args = parser.parse_args()
 
     sr_list = args.sampling_rates
@@ -55,13 +58,17 @@ if __name__ == "__main__":
     if args.offline_refactoring:
         for sr in sr_list:
             if sr == 0 or sr == 100:  # No repetitions since no real sampling
-                ofl_refactor(args.data_dir, args.questions, sampling_rate=sr, exp_idx=0)
+                ofl_refactor(args.data_dir, args.questions,
+                             sampling_rate=sr, exp_idx=0)
             else:
-                for exp_idx in range(exp_time):  # Number of repetitions, for random sample
-                    ofl_refactor(args.data_dir, args.questions, sampling_rate=sr, exp_idx=exp_idx)
+                # Number of repetitions, for random sample
+                for exp_idx in range(exp_time):
+                    ofl_refactor(args.data_dir, args.questions,
+                                 sampling_rate=sr, exp_idx=exp_idx)
 
     if args.block_repair:
-        repair_dataset(args.data_dir, args.questions, args.offline_refactoring, args.online_refactoring, sr_list, exp_time, True, args.mutation)
+        repair_dataset(args.data_dir, args.questions, args.offline_refactoring,
+                       args.online_refactoring, sr_list, exp_time, True, args.mutation,  args.gpt)
 
     if args.cmb_log:
         if args.online_refactoring:
@@ -70,4 +77,3 @@ if __name__ == "__main__":
             cmb_csv_logs(args.data_dir, "offline")
         else:
             cmb_csv_logs(args.data_dir, "norefactor")
-

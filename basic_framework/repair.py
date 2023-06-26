@@ -8,12 +8,14 @@ from shutil import copyfile
 import time
 import random
 import pickle
-import gc, time
+import gc
+import time
 from fastcache import clru_cache
 
 from basic_framework.holes import Holes
 from basic_framework.f1x import *
 from basic_framework.feedback import *
+from basic_framework.repair_with_gpt import read_file_contents, repair_code_by_gpt_with_retry
 from basic_framework.utils import *
 from basic_framework.distance import *
 from basic_framework.block import *
@@ -42,8 +44,8 @@ class HeapUnit:
 class RefactoredCode:
     def __init__(self, corr_code, fname, rname):
         self.corr_code = corr_code
-        self.fname = fname # Original correct code file name
-        self.rname = rname # Set of rules applied
+        self.fname = fname  # Original correct code file name
+        self.rname = rname  # Set of rules applied
 
     def __lt__(self, other):
         return len(self.rname.split(",")) < len(other.rname.split(","))
@@ -54,6 +56,7 @@ class RefactoredCode:
 
 class ORO:
     """Online Refactoring Only"""
+
     def __init__(self, ques_dir_path, sr_list, exp_time):
         self.__ques_dir_path = ques_dir_path
         self.__ans_dir_path = ques_dir_path + "/ans"
@@ -63,16 +66,19 @@ class ORO:
         self.__exp_time = exp_time
 
     def run(self, timeout=60):
-        print("\n\nOnline refactor submissions in " + self.__ques_dir_path.split("/")[-1] + "\n\n")
+        print("\n\nOnline refactor submissions in " +
+              self.__ques_dir_path.split("/")[-1] + "\n\n")
 
         buggy_dir_path = self.__code_dir_path + "/wrong"
         buggy_code_map = self.__get_dir_codes(buggy_dir_path)
 
         rc_map = {}
-        corr_code_map = self.__get_dir_codes(self.__ques_dir_path + "/code/correct")
+        corr_code_map = self.__get_dir_codes(
+            self.__ques_dir_path + "/code/correct")
         corr_fn_code_list = list(corr_code_map.items())
 
-        ref_fn_code_list = list(self.__get_dir_codes(self.__ques_dir_path + "/code/reference").items())
+        ref_fn_code_list = list(self.__get_dir_codes(
+            self.__ques_dir_path + "/code/reference").items())
 
         for sr in self.__sr_list:
             sel_corr_fn_code_list = []
@@ -84,7 +90,7 @@ class ORO:
                 sel_corr_fn_code_list.extend(corr_fn_code_list)
             else:
                 sel_corr_fn_code_list.extend(random.sample(corr_fn_code_list,
-                                                        int(sr / 100 * len(corr_fn_code_list))))
+                                                           int(sr / 100 * len(corr_fn_code_list))))
 
             rc_map[sr] = {}
             for exp_idx in range(self.__exp_time):
@@ -93,7 +99,7 @@ class ORO:
                     print(bug_file_name)
 
                     try:
-                        perf_map = {"gcr_time":0, "or_time":0, "code":""}
+                        perf_map = {"gcr_time": 0, "or_time": 0, "code": ""}
                         if not syntax_check(bug_code):
                             rc_map[sr][exp_idx][bug_file_name] = perf_map
                             continue
@@ -102,12 +108,15 @@ class ORO:
                         sel_fn_code_map = dict(sel_corr_fn_code_list)
 
                         ol_refactoring_start_time = time.process_time()
-                        corr_rc_map = self.astar_ol_rfty(bug_code, sel_fn_code_map)
-                        perf_map["or_time"] = time.process_time() - ol_refactoring_start_time
+                        corr_rc_map = self.astar_ol_rfty(
+                            bug_code, sel_fn_code_map)
+                        perf_map["or_time"] = time.process_time() - \
+                            ol_refactoring_start_time
 
                         gcr_start_time = time.process_time()
                         best_rc = self.astar_get_cls_rc(bug_code,  corr_rc_map)
-                        perf_map["gcr_time"] = time.process_time() - gcr_start_time
+                        perf_map["gcr_time"] = time.process_time() - \
+                            gcr_start_time
 
                         perf_map["code"] = best_rc.corr_code
 
@@ -121,7 +130,6 @@ class ORO:
         json_path = self.__ques_dir_path + "/oro.json"
         with open(json_path, 'w', encoding="utf-8") as f:
             json.dump(rc_map, f)
-
 
     def __get_dir_codes(self, code_dir_path):
         code_map = {}
@@ -168,12 +176,13 @@ class ORO:
             hu = h[0]
             rc = hu.rc
             d = hu.bd
-            
+
             if d == 0:
                 break
             else:
                 refactor = astRefactor.Refactor(rc.fname, rc.corr_code)
-                refactors = astRefactor.applyRules(refactor, untilDepth=1, results=[])
+                refactors = astRefactor.applyRules(
+                    refactor, untilDepth=1, results=[])
 
                 heapq.heappop(h)
                 for refactor in refactors:
@@ -184,7 +193,8 @@ class ORO:
                             elif "\nif " in refactoredCode:
                                 continue
                             corr_cfs_map = get_cfs_map(refactoredCode)
-                            n_d = multi_func_stru_dist(bug_cfs_map, corr_cfs_map)
+                            n_d = multi_func_stru_dist(
+                                bug_cfs_map, corr_cfs_map)
                             if "," in rc.rname:
                                 n_d += len(rc.rname.split(","))
 
@@ -194,7 +204,8 @@ class ORO:
                             else:
                                 n_rname += "," + rname
 
-                            n_rc = RefactoredCode(refactoredCode, refactor.fname, n_rname)
+                            n_rc = RefactoredCode(
+                                refactoredCode, refactor.fname, n_rname)
                             n_hu = HeapUnit(n_rc, n_d)
                             heapq.heappush(h, n_hu)
                 step += 1
@@ -224,7 +235,8 @@ class ORO:
                     corr_func_list_map[func_name] = []
                 corr_func_list_map[func_name].append((file_name, func_code))
 
-        max_len = max([len(corr_func_list_map[func_name]) for func_name in corr_func_list_map.keys()])
+        max_len = max([len(corr_func_list_map[func_name])
+                       for func_name in corr_func_list_map.keys()])
         del_func_name_list = []
         for func_name in corr_func_list_map.keys():
             if max_len - len(corr_func_list_map[func_name]) > 5:
@@ -243,7 +255,8 @@ class ORO:
         rc_list_map = {}
         for func_name, bug_func_code in bug_func_map.items():
             corr_func_code_map = dict(corr_func_list_map[func_name])
-            rc_list = self.astar_ol_rfty_func(bug_func_code, corr_func_code_map, max_step)
+            rc_list = self.astar_ol_rfty_func(
+                bug_func_code, corr_func_code_map, max_step)
             rc_list_map[func_name] = rc_list
 
         return rc_list_map
@@ -256,7 +269,8 @@ class ORO:
         rule_map = {}
         for func_name, bug_func_code in bug_func_map.items():
             func_rc_list = rc_list_map[func_name]
-            best_func_rc = self.astar_get_cls_func_rc(bug_func_code, func_rc_list)
+            best_func_rc = self.astar_get_cls_func_rc(
+                bug_func_code, func_rc_list)
 
             code_map[func_name] = best_func_rc.corr_code
             file_map[func_name] = best_func_rc.fname
@@ -274,10 +288,12 @@ class ORO:
         min_ted, best_rc = None, None
         for rc in rc_list:
             if min_ted is None:
-                min_ted = lev_multi_func_code_distance(bug_func_code, rc.corr_code)
+                min_ted = lev_multi_func_code_distance(
+                    bug_func_code, rc.corr_code)
                 best_rc = rc
             else:
-                ted = smt_lev_multi_func_code_distance(bug_func_code, rc.corr_code, min_ted)
+                ted = smt_lev_multi_func_code_distance(
+                    bug_func_code, rc.corr_code, min_ted)
                 if ted < min_ted:
                     min_ted = ted
                     best_rc = rc
@@ -285,7 +301,7 @@ class ORO:
 
 
 class BlockRepair:
-    def __init__(self, ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time):
+    def __init__(self, ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, is_gpt):
         self.__ques_dir_path = ques_dir_path
         self.__ans_dir_path = ques_dir_path + "/ans"
         self.__code_dir_path = ques_dir_path + "/code"
@@ -299,6 +315,7 @@ class BlockRepair:
         self.__is_offline_ref = is_offline_ref
         self.__is_online_ref = is_online_ref
         self.__is_mutation = is_mutation
+        self.__is_gpt = is_gpt
 
     def __get_corr_func_list_map(self, corr_code_map):
         corr_func_list_map = {}
@@ -311,7 +328,8 @@ class BlockRepair:
                     corr_func_list_map[func_name] = []
                 corr_func_list_map[func_name].append((file_name, func_code))
 
-        max_len = max([len(corr_func_list_map[func_name]) for func_name in corr_func_list_map.keys()])
+        max_len = max([len(corr_func_list_map[func_name])
+                       for func_name in corr_func_list_map.keys()])
         del_func_name_list = []
         for func_name in corr_func_list_map.keys():
             if max_len - len(corr_func_list_map[func_name]) > 5:
@@ -331,7 +349,7 @@ class BlockRepair:
 
             is_rm = False
             for func_name in func_code_map.keys():
-                #func_code = func_code_map[func_name]
+                # func_code = func_code_map[func_name]
                 if func_name not in corr_func_list_map.keys():
                     is_rm = True
                     break
@@ -422,9 +440,9 @@ class BlockRepair:
         corr_vn_list = self.__get_func_vns(corr_code, func_name)
 
         base_map = self.__get_vn_map_core(bug_trace_map, corr_trace_map,
-                                     bug_bb_list, corr_bb_list,
-                                     bug_stru_list, corr_stru_list,
-                                     bug_vn_list, corr_vn_list)
+                                          bug_bb_list, corr_bb_list,
+                                          bug_stru_list, corr_stru_list,
+                                          bug_vn_list, corr_vn_list)
 
         vn_map = {}
         for vn_a, cand_list in base_map.items():
@@ -436,15 +454,15 @@ class BlockRepair:
         return vn_map
 
     def __get_vn_map_core(self, trace_map_a, trace_map_b,
-                        bb_list_a, bb_list_b,
-                        stru_list_a, stru_list_b,
-                        vari_names_a, vari_names_b):
+                          bb_list_a, bb_list_b,
+                          stru_list_a, stru_list_b,
+                          vari_names_a, vari_names_b):
         tc_id_list = self.__tester.get_tc_id_list()
 
         base_map = {}
 
         # Map variables in method signature
-        assert(stru_list_a[0]=="sig" and stru_list_b[0]=="sig")
+        assert(stru_list_a[0] == "sig" and stru_list_b[0] == "sig")
         vari_sig_list_a = get_vari_in_sig(bb_list_a[0])
         vari_sig_list_b = get_vari_in_sig(bb_list_b[0])
 
@@ -495,7 +513,7 @@ class BlockRepair:
         for vn_a in vari_names_a:
             for vn_b in vari_names_b:
                 if vn_a not in base_map.keys() and \
-                    vn_b not in self.get_mapped_vari(base_map):
+                        vn_b not in self.get_mapped_vari(base_map):
                     if vn_a in def_map_a.keys() and vn_b in def_map_b.keys():
                         if def_map_a[vn_a] == def_map_b[vn_b]:
                             if vn_a not in base_map.keys():
@@ -511,8 +529,8 @@ class BlockRepair:
         for vn_a in vari_names_a:
             for vn_b in vari_names_b:
                 if vn_a not in base_map.keys() and \
-                    vn_b not in self.get_mapped_vari(base_map) and \
-                    vn_a == vn_b:
+                        vn_b not in self.get_mapped_vari(base_map) and \
+                        vn_a == vn_b:
                     if vn_a not in base_map.keys():
                         base_map[vn_a] = []
                     base_map[vn_a].append(vn_b)
@@ -575,8 +593,8 @@ class BlockRepair:
                     if left_timeout < 0:
                         break
 
-                    real_output, exp_output = self.__tester.run_tc(code, tc_id, left_timeout)
-
+                    real_output, exp_output = self.__tester.run_tc(
+                        code, tc_id, left_timeout)
 
                     if real_output == exp_output:
                         ss = SearchSpace()
@@ -585,7 +603,8 @@ class BlockRepair:
                             times_list = list(expr_rec_dict[ln].keys())
                             min_times = numpy.min(times_list)
                             expr_rec = expr_rec_dict[ln][min_times]
-                            ss.add_expr_list_ws(ln, expr_rec.repr_expr_list, expr_rec.repr_score_list)
+                            ss.add_expr_list_ws(
+                                ln, expr_rec.repr_expr_list, expr_rec.repr_score_list)
                         if not ssl_new.is_contain(ss):
                             ssl_new.add_ss(ss)
 
@@ -622,7 +641,8 @@ class BlockRepair:
 
         rep_perf_map["corr_code"] = corr_code
         rep_perf_map["ori_bug_code"] = bug_code
-        rep_perf_map["bug_ast_size"] = zss_ast_size(rep_perf_map["ori_bug_code"])
+        rep_perf_map["bug_ast_size"] = zss_ast_size(
+            rep_perf_map["ori_bug_code"])
 
         is_mutate = False
         lose_func_list = []
@@ -691,7 +711,8 @@ class BlockRepair:
             for k, v in base_map.items():
                 reverse_map[v] = k
 
-            rep_perf_map["vn_map_time"] += (time.process_time() - vn_map_start_time)
+            rep_perf_map["vn_map_time"] += (time.process_time() -
+                                            vn_map_start_time)
             rep_perf_map["vn_map"][func_name] = base_map
 
             # 3.2 spec. & rep.
@@ -717,59 +738,72 @@ class BlockRepair:
 
                     swt_bb_list = copy.deepcopy(corr_bb_list)
                     if corr_stru_list[k] == "sig":
-                        wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                        wait_rep_bb_list[k] = self.__swt_bb_vn(
+                            corr_bb_list, k, rev_vn_map)
                     elif corr_stru_list[k] in ["bb", "if", "elif", "while", "for"]:
 
                         if is_empty_block(bug_bb_list[k]) and is_empty_block(corr_bb_list[k]):
                             pass
                         elif is_empty_block(bug_bb_list[k]) and not is_empty_block(corr_bb_list[k]):
-                            wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                            wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                corr_bb_list, k, rev_vn_map)
                         elif (not is_empty_block(bug_bb_list[k])) and is_empty_block(corr_bb_list[k]):
                             wait_rep_bb_list[k] = corr_bb_list[k]
                         else:
                             if "if True:" in corr_bb_list[k] or "elif True:" in corr_bb_list[k]:
                                 wait_rep_bb_list[k] = corr_bb_list[k]
-                            elif bug_stru_list[k] in ["for"]:#, "while"
-                                wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                            elif bug_stru_list[k] in ["for"]:  # , "while"
+                                wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                    corr_bb_list, k, rev_vn_map)
                             else:
-                                swt_bb_list[k] = self.__swt_bb_vn(bug_bb_list, k, vn_map)
+                                swt_bb_list[k] = self.__swt_bb_vn(
+                                    bug_bb_list, k, vn_map)
 
                                 if swt_bb_list[k] != corr_bb_list[k]:
                                     swt_code = "".join(swt_bb_list)
                                     holed_swt_code = add_iil_holes(swt_code)
 
-                                    tr_dict = self.__tester.tv_code(icpl_corr_code + "\n\n" + holed_swt_code, timeout=2)
+                                    tr_dict = self.__tester.tv_code(
+                                        icpl_corr_code + "\n\n" + holed_swt_code, timeout=2)
 
                                     if self.__tester.is_pass(tr_dict):
                                         corr_bb_list[k] = swt_bb_list[k]
-                                        wait_rep_bb_list[k] = self.__swt_bb_vn(swt_bb_list, k,rev_vn_map)
+                                        wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                            swt_bb_list, k, rev_vn_map)
 
                                     else:
                                         # synthesis
                                         assert (k != 0)
                                         ln_start = 0
                                         for b_index in range(k):
-                                            ln_start += swt_bb_list[b_index].count("\n")
-                                        ln_end = ln_start + swt_bb_list[k].count("\n")
+                                            ln_start += swt_bb_list[b_index].count(
+                                                "\n")
+                                        ln_end = ln_start + \
+                                            swt_bb_list[k].count("\n")
 
-                                        bb_ln_list = list(range(ln_start, ln_end))
+                                        bb_ln_list = list(
+                                            range(ln_start, ln_end))
 
+                                        hole_dsp_dict = get_hole_dsp_dict(
+                                            swt_code, ln_list=bb_ln_list)
+                                        task_list = gen_hole_task_list(
+                                            hole_dsp_dict)
 
-                                        hole_dsp_dict = get_hole_dsp_dict(swt_code, ln_list=bb_ln_list)
-                                        task_list = gen_hole_task_list(hole_dsp_dict)
-
-                                        #huyang
+                                        # huyang
                                         block_success = False
 
                                         for task in task_list:
                                             Holes.init_global_vars()
                                             gc.collect()
 
-                                            holed_swt_code = add_holes(swt_code, task, bb_ln_list)
+                                            holed_swt_code = add_holes(
+                                                swt_code, task, bb_ln_list)
 
-                                            left_timeout = timeout - (time.process_time() - start_time)
+                                            left_timeout = timeout - \
+                                                (time.process_time() - start_time)
                                             if left_timeout < 0:
-                                                wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                                                wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                                    corr_bb_list, k, rev_vn_map)
                                                 is_timeout = True
                                                 break
 
@@ -781,37 +815,48 @@ class BlockRepair:
 
                                             syn_start_time = time.process_time()
 
-                                            repair_dict_list, inhole_time = self.synthesize(the_code, left_timeout/len(corr_stru_list))
-                                           
-                                            rep_perf_map["syn_time"] += time.process_time() - syn_start_time#inhole_time
+                                            repair_dict_list, inhole_time = self.synthesize(
+                                                the_code, left_timeout/len(corr_stru_list))
+
+                                            # inhole_time
+                                            rep_perf_map["syn_time"] += time.process_time() - \
+                                                syn_start_time
 
                                             if len(repair_dict_list) > 0:
-                                                func_rep_code = gen_rep_code(repair_dict_list, holed_swt_code)
+                                                func_rep_code = gen_rep_code(
+                                                    repair_dict_list, holed_swt_code)
 
-                                                holed_func_rep_code = add_iil_holes(func_rep_code)
+                                                holed_func_rep_code = add_iil_holes(
+                                                    func_rep_code)
 
-                                                tr_dict = self.__tester.tv_code(icpl_corr_code + "\n\n" + holed_func_rep_code)
+                                                tr_dict = self.__tester.tv_code(
+                                                    icpl_corr_code + "\n\n" + holed_func_rep_code)
                                                 if self.__tester.is_pass(tr_dict):
                                                     block_success = True
-                                                    rep_bb_list, rep_stru_list, rep_indent_list = get_func_cfs(func_rep_code)
+                                                    rep_bb_list, rep_stru_list, rep_indent_list = get_func_cfs(
+                                                        func_rep_code)
 
                                                     if len(rep_bb_list) == 0:
-                                                        wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                                                        wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                                            corr_bb_list, k, rev_vn_map)
                                                     else:
-                                                        wait_rep_bb_list[k] = self.__swt_bb_vn(rep_bb_list, k, rev_vn_map)
+                                                        wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                                            rep_bb_list, k, rev_vn_map)
                                                     break
 
-
                                         if not block_success:
-                                            wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                                            wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                                corr_bb_list, k, rev_vn_map)
 
                                 else:
-                                    wait_rep_bb_list[k] = self.__swt_bb_vn(corr_bb_list, k, rev_vn_map)
+                                    wait_rep_bb_list[k] = self.__swt_bb_vn(
+                                        corr_bb_list, k, rev_vn_map)
 
                 if vn_map_success:
                     rep_code_cand = "".join(wait_rep_bb_list)
 
-                    tr_dict = self.__tester.tv_code(icpl_corr_code+"\n\n"+rep_code_cand, timeout=2)
+                    tr_dict = self.__tester.tv_code(
+                        icpl_corr_code+"\n\n"+rep_code_cand, timeout=2)
 
                     if self.__tester.is_pass(tr_dict):
                         rep_func_map[func_name] = (rep_code_cand, tr_dict)
@@ -821,12 +866,15 @@ class BlockRepair:
                             rep_func_map[func_name] = (rep_code_cand, tr_dict)
                         else:
                             _, old_tr_dict = rep_func_map[func_name]
-                            if list(old_tr_dict.values()).count(True) <  list(tr_dict.values()).count(True):
-                                rep_func_map[func_name] = (rep_code_cand, tr_dict)
+                            if list(old_tr_dict.values()).count(True) < list(tr_dict.values()).count(True):
+                                rep_func_map[func_name] = (
+                                    rep_code_cand, tr_dict)
 
-            rep_perf_map["spec_syn_time"] += (time.process_time() - spec_syn_start_time)
+            rep_perf_map["spec_syn_time"] += (
+                time.process_time() - spec_syn_start_time)
 
-        rep_perf_map["spec_time"] = rep_perf_map["spec_syn_time"] - rep_perf_map["syn_time"]
+        rep_perf_map["spec_time"] = rep_perf_map["spec_syn_time"] - \
+            rep_perf_map["syn_time"]
 
         func_code_list = []
         for func_name in rep_func_map.keys():
@@ -899,7 +947,8 @@ class BlockRepair:
                 break
             else:
                 refactor = astRefactor.Refactor(rc.fname, rc.corr_code)
-                refactors = astRefactor.applyRules(refactor, untilDepth=1, results=[])
+                refactors = astRefactor.applyRules(
+                    refactor, untilDepth=1, results=[])
 
                 heapq.heappop(h)
                 for refactor in refactors:
@@ -910,9 +959,11 @@ class BlockRepair:
                             elif "\nif " in refactoredCode:
                                 continue
                             corr_cfs_map = get_cfs_map(refactoredCode)
-                            n_d = multi_func_stru_dist(bug_cfs_map, corr_cfs_map)
+                            n_d = multi_func_stru_dist(
+                                bug_cfs_map, corr_cfs_map)
                             if "," in rc.rname:
-                                n_d += len(rc.rname.split(",")) # add previous refactoring times
+                                # add previous refactoring times
+                                n_d += len(rc.rname.split(","))
 
                             n_rname = rc.rname
                             if n_rname == "":
@@ -920,7 +971,8 @@ class BlockRepair:
                             else:
                                 n_rname += "," + rname
 
-                            n_rc = RefactoredCode(refactoredCode, refactor.fname, n_rname)
+                            n_rc = RefactoredCode(
+                                refactoredCode, refactor.fname, n_rname)
                             n_hu = HeapUnit(n_rc, n_d)
                             heapq.heappush(h, n_hu)
                 step += 1
@@ -947,7 +999,8 @@ class BlockRepair:
         rc_list_map = {}
         for func_name, bug_func_code in bug_func_map.items():
             corr_func_code_map = dict(corr_func_list_map[func_name])
-            rc_list = self.astar_ol_rfty_func(bug_func_code, corr_func_code_map, max_step)
+            rc_list = self.astar_ol_rfty_func(
+                bug_func_code, corr_func_code_map, max_step)
             rc_list_map[func_name] = rc_list
 
         return rc_list_map
@@ -960,7 +1013,8 @@ class BlockRepair:
         rule_map = {}
         for func_name, bug_func_code in bug_func_map.items():
             func_rc_list = rc_list_map[func_name]
-            best_func_rc = self.astar_get_cls_func_rc(bug_func_code, func_rc_list)
+            best_func_rc = self.astar_get_cls_func_rc(
+                bug_func_code, func_rc_list)
 
             code_map[func_name] = best_func_rc.corr_code
             file_map[func_name] = best_func_rc.fname
@@ -978,10 +1032,12 @@ class BlockRepair:
         min_ted, best_rc = None, None
         for rc in rc_list:
             if min_ted is None:
-                min_ted = lev_multi_func_code_distance(bug_func_code, rc.corr_code)
+                min_ted = lev_multi_func_code_distance(
+                    bug_func_code, rc.corr_code)
                 best_rc = rc
             else:
-                ted = smt_lev_multi_func_code_distance(bug_func_code, rc.corr_code, min_ted)
+                ted = smt_lev_multi_func_code_distance(
+                    bug_func_code, rc.corr_code, min_ted)
                 if ted < min_ted:
                     min_ted = ted
                     best_rc = rc
@@ -991,7 +1047,8 @@ class BlockRepair:
         refactors = []
         for fname, corrCode in fname_corrCode.items():
             refactor = astRefactor.Refactor(fname, corrCode)
-            refactors += astRefactor.applyRules(refactor, untilDepth=1, results=[])
+            refactors += astRefactor.applyRules(refactor,
+                                                untilDepth=1, results=[])
 
         debug_test = False
 
@@ -1022,7 +1079,6 @@ class BlockRepair:
 
         return refactoredCodes
 
-
     def get_closest_rc(self, bug_code, refactoredCodes):
         code_map = {}
         fn_map = {}
@@ -1048,12 +1104,14 @@ class BlockRepair:
         debug_flag = False
         if debug_flag:
             from basic_framework.refactoring import Reporter
-            buggy_code_list = list(self.__get_dir_codes(self.__code_dir_path + "/wrong").values())
+            buggy_code_list = list(self.__get_dir_codes(
+                self.__code_dir_path + "/wrong").values())
             reporter = Reporter(buggy_code_list)
             mr = reporter.get_matching_rate(cluster_list_map)
             print("%.4f" % mr)
 
-        sel_code, rules_map, root_file_map = self.sel_corr_code(bug_code, cluster_list_map)
+        sel_code, rules_map, root_file_map = self.sel_corr_code(
+            bug_code, cluster_list_map)
 
         fn = str(root_file_map)
         if sel_code in fn_map.keys():
@@ -1066,7 +1124,7 @@ class BlockRepair:
         return RefactoredCode(sel_code, fn, rn)
 
     def get_closestRefactor(self, bug_code, refactoredCodes):
-        # Calculate the closest refactored code        
+        # Calculate the closest refactored code
         bug_map = get_cfs_map(bug_code)
         matchingDist, matchingRefactor = None, None
         nonMatchingDist, nonMatchingRefactor = None, None
@@ -1082,7 +1140,8 @@ class BlockRepair:
                 if matchingDist is None:
                     dist = lev_multi_func_code_distance(bug_code, corr_code)
                 else:
-                    dist = smt_lev_multi_func_code_distance(bug_code, corr_code, matchingDist)
+                    dist = smt_lev_multi_func_code_distance(
+                        bug_code, corr_code, matchingDist)
 
                 if matchingDist is None or dist < matchingDist:
                     matchingDist = dist
@@ -1093,7 +1152,8 @@ class BlockRepair:
                 if nonMatchingDist is None:
                     dist = lev_multi_func_code_distance(bug_code, corr_code)
                 else:
-                    dist = smt_lev_multi_func_code_distance(bug_code, corr_code, nonMatchingDist)
+                    dist = smt_lev_multi_func_code_distance(
+                        bug_code, corr_code, nonMatchingDist)
 
                 if nonMatchingDist is None or dist < nonMatchingDist:
                     nonMatchingDist = dist
@@ -1104,28 +1164,38 @@ class BlockRepair:
             closestRefactor = matchingRefactor
         return closestRefactor
 
-
     def print_ques_perf(self, sr, exp_idx, status_list, time_list, rps_list):
         try:
 
-            print("\nSummary for " + \
-                  self.__ques_dir_path.split("/")[-1] + \
+            print("\nSummary for " +
+                  self.__ques_dir_path.split("/")[-1] +
                   " (sampling_rate = " + str(sr) + "%, exp_idx = " + str(exp_idx) + ")")
 
             pt = PrettyTable()
             pt.field_names = ["Metric", "Value"]
-            c_success = status_list.count("success_wo_mut") + status_list.count("success_w_mut")
             c_success_wo_mut = status_list.count("success_wo_mut")
+            c_success_w_gpt_better = status_list.count("success_w_gpt_better")
+            c_success_w_gpt_only = status_list.count("success_w_gpt_only")
+            c_success = c_success_wo_mut + \
+                status_list.count("success_w_mut") + \
+                c_success_w_gpt_better + c_success_w_gpt_only
 
             pt.add_row(["rep_rate", "%.3f" % (c_success / len(status_list))])
-            pt.add_row(["rep_rate_wo_mut", "%.3f" % (c_success_wo_mut / len(status_list))])
+            pt.add_row(["rep_rate_wo_mut", "%.3f" %
+                        (c_success_wo_mut / len(status_list))])
+            if self.__is_gpt:
+                pt.add_row(["rep_rate_w_gpt_better", "%.3f" %
+                            (c_success_w_gpt_better / c_success)])
+                pt.add_row(["rep_count_w_gpt_only", "%d" %
+                            c_success_w_gpt_only])
 
             if c_success > 0:
                 pt.add_row(["time_cost", "%.3f" % numpy.mean(time_list)])
                 pt.add_row(["rps", "%.3f" % numpy.mean(rps_list)])
             print(pt.get_string())
         except Exception as e:
-            print("print_ques_perf failed!", self.__ques_dir_path.split("/")[-1])
+            print("print_ques_perf failed!",
+                  self.__ques_dir_path.split("/")[-1])
             print(str(e))
             print("\n")
 
@@ -1139,16 +1209,23 @@ class BlockRepair:
                 pt.add_row(["time", "%.3f" % code_perf_map["total_time"]])
 
                 if self.__is_offline_ref:
-                    pt.add_row(["stru_match_time", "%.3f" % code_perf_map["stru_match_time"]])
+                    pt.add_row(["stru_match_time", "%.3f" %
+                                code_perf_map["stru_match_time"]])
                 else:
-                    pt.add_row(["ol_refactoring_time", "%.3f" % code_perf_map["ol_refactoring_time"]])
-                    pt.add_row(["gcr_time", "%.3f" % code_perf_map["gcr_time"]])
-                    
+                    pt.add_row(["ol_refactoring_time", "%.3f" %
+                                code_perf_map["ol_refactoring_time"]])
+                    pt.add_row(["gcr_time", "%.3f" %
+                                code_perf_map["gcr_time"]])
 
                 pt.add_row(["mut_time", "%.3f" % code_perf_map["mut_time"]])
-                pt.add_row(["vn_map_time", "%.3f" % code_perf_map["vn_map_time"]])
-                pt.add_row(["spec_syn_time", "%.3f" % code_perf_map["spec_syn_time"]])
+                pt.add_row(["vn_map_time", "%.3f" %
+                            code_perf_map["vn_map_time"]])
+                pt.add_row(["spec_syn_time", "%.3f" %
+                            code_perf_map["spec_syn_time"]])
                 pt.add_row(["syn_time", "%.3f" % code_perf_map["syn_time"]])
+                if self.__is_gpt:
+                    pt.add_row(["gpt_time", "%.3f" %
+                                code_perf_map["gpt_time"]])
                 pt.add_row(["rps", "%.3f" % code_perf_map["rps"]])
 
                 print(pt.get_string())
@@ -1179,7 +1256,8 @@ class BlockRepair:
                 copyfile(src_fail_file_path, tgt_fail_file_path)
 
     def run(self, timeout=60):
-        print("\n\nRepair submissions in " + self.__ques_dir_path.split("/")[-1] + "\n\n")
+        print("\n\nRepair submissions in " +
+              self.__ques_dir_path.split("/")[-1] + "\n\n")
 
         buggy_dir_path = self.__code_dir_path + "/wrong"
         buggy_code_map = self.__get_dir_codes(buggy_dir_path)
@@ -1204,14 +1282,14 @@ class BlockRepair:
 
                 cluster_list_map = {}
                 with open(pickle_path, 'rb') as f:
-                    cluster_list_map, corr_temp_list, corr_const_list, ori_corr_code_list = pickle.load(f)
+                    cluster_list_map, corr_temp_list, corr_const_list, ori_corr_code_list = pickle.load(
+                        f)
 
                 fail_list = []
 
                 code_perf_map = {}
                 for bug_file_name, bug_code in buggy_code_map.items():
                     print(bug_file_name)
-
 
                     if any(cfs_map_equal(get_cfs_map(bug_code),
                                          get_cfs_map(ori_corr_code))
@@ -1232,26 +1310,30 @@ class BlockRepair:
                             perf_map[sr][exp_idx][bug_file_name] = code_perf_map
                             continue
 
-                        bug_temp_list, bug_const_list = get_temp_cons_lists([bug_code])
+                        bug_temp_list, bug_const_list = get_temp_cons_lists([
+                                                                            bug_code])
 
                         stru_match_start_time = time.process_time()
-                        corr_code, rules_map, root_file_map = self.sel_corr_code(bug_code, cluster_list_map)
-                        code_perf_map["stru_match_time"] = time.process_time() - stru_match_start_time
+                        corr_code, rules_map, root_file_map = self.sel_corr_code(
+                            bug_code, cluster_list_map)
+                        code_perf_map["stru_match_time"] = time.process_time(
+                        ) - stru_match_start_time
 
                         code_perf_map["rule_name"] = str(rules_map)
                         code_perf_map["corr_file_name"] = str(root_file_map)
 
                         self.rep_bug_code(bug_code,
-                                        corr_code,
-                                        corr_temp_list + bug_temp_list,
-                                        corr_const_list + bug_const_list,
-                                        rep_perf_map,
-                                        timeout)
+                                          corr_code,
+                                          corr_temp_list + bug_temp_list,
+                                          corr_const_list + bug_const_list,
+                                          rep_perf_map,
+                                          timeout)
                     except Exception as e:
                         rep_perf_map["status"] = "fail_exception"
 
                     code_perf_map.update(rep_perf_map)
-                    code_perf_map["total_time"] = time.process_time() - start_time
+                    code_perf_map["total_time"] = time.process_time() - \
+                        start_time
 
                     status_list.append(code_perf_map["status"])
                     if "success" in code_perf_map["status"]:
@@ -1264,23 +1346,30 @@ class BlockRepair:
                             code_perf_map["patch_size"] = 1
                         if code_perf_map["bug_ast_size"] == 0:
                             code_perf_map["bug_ast_size"] = 1
-                        code_perf_map["rps"] = code_perf_map["patch_size"] / code_perf_map["bug_ast_size"]
+                        code_perf_map["rps"] = code_perf_map["patch_size"] / \
+                            code_perf_map["bug_ast_size"]
                         rps_list.append(code_perf_map["rps"])
-                    else:# fail
+                    else:  # fail
                         fail_list.append(bug_file_name)
 
                     self.print_perf(bug_file_name, code_perf_map)
                     perf_map[sr][exp_idx][bug_file_name] = code_perf_map
 
-                self.print_ques_perf(sr, exp_idx, status_list, time_list, rps_list)
+                self.print_ques_perf(
+                    sr, exp_idx, status_list, time_list, rps_list)
                 self.copy_fail_codes(fail_list)
-        else:# online or block repair only
-            corr_code_map = self.__get_dir_codes(self.__ques_dir_path + "/code/correct")
+        else:  # online or block repair only
+            corr_code_map = self.__get_dir_codes(
+                self.__ques_dir_path + "/code/correct")
 
             corr_fn_code_list = list(corr_code_map.items())
 
-            ref_fn_code_list = list(self.__get_dir_codes(self.__ques_dir_path + "/code/reference").items())
-            
+            ref_fn_code_list = list(self.__get_dir_codes(
+                self.__ques_dir_path + "/code/reference").items())
+
+            description = read_file_contents(
+                self.__ques_dir_path + "/description.txt")
+
             for sr in self.__sr_list:
                 sel_corr_fn_code_list = []
                 sel_corr_fn_code_list.extend(ref_fn_code_list)
@@ -1291,10 +1380,10 @@ class BlockRepair:
                     sel_corr_fn_code_list.extend(corr_fn_code_list)
                 else:
                     sel_corr_fn_code_list.extend(random.sample(corr_fn_code_list,
-                                                            int(sr / 100 * len(corr_fn_code_list))))
+                                                               int(sr / 100 * len(corr_fn_code_list))))
 
-
-                corr_temp_list, corr_const_list = get_temp_cons_lists([code for _, code in sel_corr_fn_code_list])
+                corr_temp_list, corr_const_list = get_temp_cons_lists(
+                    [code for _, code in sel_corr_fn_code_list])
                 perf_map[sr] = {}
                 for exp_idx in range(self.__exp_time):
                     perf_map[sr][exp_idx] = {}
@@ -1309,7 +1398,8 @@ class BlockRepair:
 
                         code_perf_map = {}
 
-                        sel_corr_code_list = [code for _,code in sel_corr_fn_code_list]
+                        sel_corr_code_list = [code for _,
+                                              code in sel_corr_fn_code_list]
                         if any(cfs_map_equal(get_cfs_map(bug_code),
                                              get_cfs_map(ori_corr_code))
                                for ori_corr_code in sel_corr_code_list):
@@ -1325,9 +1415,15 @@ class BlockRepair:
                                 print("fail_syntax_error")
                                 code_perf_map["status"] = "fail_syntax_error"
                                 perf_map[sr][exp_idx][bug_file_name] = code_perf_map
-                                continue
+                                if self.__is_gpt:
+                                    # この場合は例外に飛ばしてChatGPTの修正コードを採用する。
+                                    raise Exception(
+                                        'bug code has syntax error')
+                                else:
+                                    continue
 
-                            bug_temp_list, bug_const_list = get_temp_cons_lists([bug_code])
+                            bug_temp_list, bug_const_list = get_temp_cons_lists([
+                                                                                bug_code])
 
                             # online refactoring
                             sel_fn_code_map = dict(sel_corr_fn_code_list)
@@ -1335,15 +1431,20 @@ class BlockRepair:
 
                             corr_rc_map = None
                             if self.__is_online_ref:
-                                corr_rc_map = self.astar_ol_rfty(bug_code, sel_fn_code_map)
-                                code_perf_map["ol_refactoring_time"] = time.process_time() - ol_refactoring_start_time
+                                corr_rc_map = self.astar_ol_rfty(
+                                    bug_code, sel_fn_code_map)
+                                code_perf_map["ol_refactoring_time"] = time.process_time(
+                                ) - ol_refactoring_start_time
                             else:
-                                corr_rc_map = self.astar_ol_rfty(bug_code, sel_fn_code_map, max_step=0)
+                                corr_rc_map = self.astar_ol_rfty(
+                                    bug_code, sel_fn_code_map, max_step=0)
                                 code_perf_map["ol_refactoring_time"] = 0
 
                             gcr_start_time = time.process_time()
-                            best_rc = self.astar_get_cls_rc(bug_code, corr_rc_map)
-                            code_perf_map["gcr_time"] = time.process_time() - gcr_start_time
+                            best_rc = self.astar_get_cls_rc(
+                                bug_code, corr_rc_map)
+                            code_perf_map["gcr_time"] = time.process_time(
+                            ) - gcr_start_time
 
                             corr_code = best_rc.corr_code
 
@@ -1351,43 +1452,87 @@ class BlockRepair:
                             code_perf_map["rule_name"] = best_rc.rname
 
                             self.rep_bug_code(bug_code,
-                                                corr_code,
-                                                corr_temp_list + bug_temp_list,
-                                                corr_const_list + bug_const_list,
-                                                rep_perf_map,
-                                                timeout)
+                                              corr_code,
+                                              corr_temp_list + bug_temp_list,
+                                              corr_const_list + bug_const_list,
+                                              rep_perf_map,
+                                              timeout)
                         except Exception as e:
                             rep_perf_map["status"] = "fail_exception"
 
                         code_perf_map.update(rep_perf_map)
-                        code_perf_map["total_time"] = time.process_time() - start_time
+                        # code_perf_map["total_time"] = time.process_time(
+                        # ) - start_time
 
-                        if code_perf_map["total_time"] > timeout:
-                            code_perf_map["status"] = "fail_timeout"
+                        # if code_perf_map["total_time"] > timeout:
+                        #     code_perf_map["status"] = "fail_timeout"
 
-                        status_list.append(code_perf_map["status"])
+                        # status_list.append(code_perf_map["status"])
 
                         if "success" in code_perf_map["status"]:
-                            time_list.append(code_perf_map["total_time"])
                             code_perf_map["patch_size"] = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                        code_perf_map["rep_code"])
+                            if self.__is_gpt:
+                                # ここでcode_perf_map["rep_code"]をサンプルにChatGPTにこれより修正量の小さい修正コードを作らせる。
+                                sample_correct_code_blocks = [
+                                    code_perf_map["rep_code"]]
+                                gtp_start_time = time.process_time()
+                                rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
+                                    code_perf_map["ori_bug_code"], description, sample_correct_code_blocks)
+                                code_perf_map["gpt_time"] = time.process_time(
+                                ) - gtp_start_time
+                                rep_code_with_gpt = regularize(
+                                    rep_code_with_gpt_raw)
+                                tr_dict = self.__tester.tv_code(
+                                    rep_code_with_gpt)
+                                if self.__tester.is_pass(tr_dict):
+                                    gpt_patch_size = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
+                                                                                  rep_code_with_gpt)
+                                    if gpt_patch_size < code_perf_map["patch_size"]:
+                                        rep_perf_map["status"] = "success_w_gpt_better"
+                                        code_perf_map["rep_code"] = rep_code_with_gpt
+
                             # special case in patch size calculation
                             if code_perf_map["patch_size"] == 0 and code_perf_map["ori_bug_code"] != code_perf_map["rep_code"]:
                                 code_perf_map["patch_size"] = 1
                             if code_perf_map["bug_ast_size"] == 0:
                                 code_perf_map["bug_ast_size"] = 1
 
-                            code_perf_map["rps"] = code_perf_map["patch_size"] / code_perf_map["bug_ast_size"]
+                            code_perf_map["rps"] = code_perf_map["patch_size"] / \
+                                code_perf_map["bug_ast_size"]
                             rps_list.append(code_perf_map["rps"])
+                        else:
+                            if self.__is_gpt and ("timeout" not in rep_perf_map["status"]):
+                                # この場合も模範解答をサンプルにChatGPTに修正コードを作らせる。
+                                sample_correct_code_blocks = [
+                                    t[1] for t in ref_fn_code_list]
+                                gtp_start_time = time.process_time()
+                                rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
+                                    code_perf_map["ori_bug_code"], description, sample_correct_code_blocks)
+                                code_perf_map["gpt_time"] = time.process_time(
+                                ) - gtp_start_time
+                                rep_code_with_gpt = regularize(
+                                    rep_code_with_gpt_raw)
+                                if self.__tester.is_pass(self.__tester.tv_code(rep_code_with_gpt)):
+                                    rep_perf_map["status"] = "success_w_gpt_only"
+                                    code_perf_map["rep_code"] = rep_code_with_gpt
+
+                        code_perf_map["total_time"] = time.process_time(
+                        ) - start_time
+                        if code_perf_map["total_time"] > timeout:
+                            code_perf_map["status"] = "fail_timeout"
+                        status_list.append(code_perf_map["status"])
+                        if "success" in code_perf_map["status"]:
+                            time_list.append(code_perf_map["total_time"])
                         else:
                             fail_list.append(bug_file_name)
 
                         self.print_perf(bug_file_name, code_perf_map)
                         perf_map[sr][exp_idx][bug_file_name] = code_perf_map
 
-                    self.print_ques_perf(sr, exp_idx, status_list, time_list, rps_list)
+                    self.print_ques_perf(
+                        sr, exp_idx, status_list, time_list, rps_list)
                     self.copy_fail_codes(fail_list)
-
 
         return perf_map
 
@@ -1414,7 +1559,7 @@ class BlockRepair:
                     continue
 
                 if cluster["stru"] == stru_list and \
-                    cluster["indent"] == indent_list:
+                        cluster["indent"] == indent_list:
 
                     func_code_list = cluster["code"]
                     rules_list = cluster["rule_id"]
@@ -1429,7 +1574,8 @@ class BlockRepair:
                     cluster_stru_str = cpr_stru_list(cluster["stru"])
                     if abs(len(cluster_stru_str) - len(bug_stru_str)) > min_stru_d:
                         continue
-                    stru_d = Levenshtein.distance(bug_stru_str, cluster_stru_str)
+                    stru_d = Levenshtein.distance(
+                        bug_stru_str, cluster_stru_str)
                     if stru_d < min_stru_d:
                         min_stru_d = stru_d
 
