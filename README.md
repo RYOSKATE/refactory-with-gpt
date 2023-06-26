@@ -247,6 +247,17 @@ python3 run.py -d ./data -q question_5 -s 100 -o -m -b    > results/question_5_s
 python3 run.py -d ./data -q question_5 -s 100 -o -m -b -g > results/question_5_s100_o_m_b_g.txt
 ```
 
+### 測定実行環境
+
+Oracle Cloud
+
+```
+  shape = "VM.Standard.A1.Flex"
+  shape_source_id = "ocid1.image.oc1.ap-tokyo-1.aaaaaaaatbmq2hdaoqg4iui4rqfjr5knskcuktmgm2e7awey63nxar7pkzfa"
+  memory_in_gbs = "6"
+	ocpus = "1"
+```
+
 ```bash
 # 放置実行用
 export OPENAI_API_KEY='sk-...'
