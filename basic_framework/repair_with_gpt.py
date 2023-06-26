@@ -18,9 +18,8 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             generated_text = repair_code_by_gpt(
                 bug_code, description, sample_correct_code_blocks)
         except Exception as e:
-            import traceback
             import sys
-            print(str(e), file=sys.stderr)
+            print(str(e)+"\n", file=sys.stderr)
             retry_count += 1
             continue
 

@@ -129,42 +129,27 @@ export OPENAI_ORGANIZATION="org-..."
 python run-gpt.py
 ```
 
-## 結果メモ
+# メモ
 
-```bash
-Summary for question_1 (sampling_rate = 100%, exp_idx = 0)
-+-----------------+-------+
-|      Metric     | Value |
-+-----------------+-------+
-|     rep_rate    | 0.991 |
-| rep_rate_wo_mut | 0.863 |
-|    time_cost    | 3.449 |
-|       rps       | 0.409 |
-+-----------------+-------+
-```
+## 論文メモ
+
+### 用語
 
 |ID|Description|Avg. #Lines #Correct #Incorrect %CFG Match Repair Rate Avg. Time Relative Patch
 of Code Attempt Attempt W/O R W/ R Taken (sec) Size (RPS)
 
 ![Alt text](image.png)
-“% CFG Match”：制御フロー構造が一致する正しい回答が見つかった割合。
-(W/O R はリファクタリングなし、W/ R はリファクタリングあり)
-Repair rate, average time-taken and relative patch size per assignment are shown for Refactory (and for Clara in brackets).
 
-CFG: control flow graphs
-mut: # 1.2 structure mutation
-TED：Tree-Edit-Distance。木の距離。
-Patch Size：バグコードと、修正コードの TED(AST の距離)
-REP: Relative Patch Size: Patch Size を元のバグコードのサイズで正規化した値(Clara で定義)
+- “% CFG Match”：制御フロー構造が一致する正しい回答が見つかった割合。
+  (W/O R はリファクタリングなし、W/ R はリファクタリングあり)
+  Repair rate, average time-taken and relative patch size per assignment are shown for Refactory (and for Clara in brackets).
+- CFG: control flow graphs
+- mut: # 1.2 structure mutation
+- TED：Tree-Edit-Distance。木の距離。
+- Patch Size：バグコードと、修正コードの TED(AST の距離)
+- REP: Relative Patch Size: Patch Size を元のバグコードのサイズで正規化した値(Clara で定義)
 
-# メモ
-
-- refactory が見つけた最も良い修正コード(パッチサイズが小さいもの上位 3 つくらい)をインプットにして GPT にこれより良い(小さい)の見つけて、と投げて良いのが見つかったらそれを採用する方針
-  - これで完全上位互換になるはず(time 以外は)。
-- 模範解答セットが少ないときはたぶん勝つ
-  - それこそ模範解答 0 個でも GPT ならコード直してくれる
-
-# 実装内容メモ
+## Refactory 実装内容メモ
 
 パラメータで指定した Question X を対象に実行
 Question X の"生徒の誤回答提出コード","生徒の正解提出コード", "模範解答コード"のコードを読み込む。
@@ -202,3 +187,50 @@ Question X の"生徒の誤回答提出コード","生徒の正解提出コー�
 　　 success なら、
 　　　パッチサイズ(元の誤回答コードと、修正コード)
 　　　 RPS(元の誤回答コードと、修正コード)を記録
+
+## 方針
+
+- refactory が見つけた最も良い修正コード(パッチサイズが小さいもの上位 3 つくらい)をインプットにして GPT にこれより良い(小さい)の見つけて、と投げて良いのが見つかったらそれを採用する方針
+  - これで完全上位互換になるはず(time 以外は)。
+- 模範解答セットが少ないときはたぶん勝つ
+  - それこそ模範解答 0 個でも GPT ならコード直してくれる
+
+## やったこと
+
+- Refactory の中身把握
+  - `## Refactory 実装内容メモ`
+  - ここが処理の中心`basic_framework/repair.py`
+- gpt 処理追加
+  - `basic_framework/repair_with_gpt.py`
+    - 処理本体はここ。
+  - `run-gpt.py`
+    - 試しに動かすようのやつはここ.`python run run-gpt.py`
+  - `basic_framework/repair.py`
+    - `basic_framework/repair.py`に`repair_with_gpt`する処理や計測項目追加
+- 比較実行
+  - `## 実行結果メモ`に。
+
+## 実行結果メモ
+
+`python3 run.py -d ./data -q question_1 -s 100 -o -m -b`
+
+### 変更前
+
+```bash
+Summary for question_1 (sampling_rate = 100%, exp_idx = 0)
++-----------------+-------+
+|      Metric     | Value |
++-----------------+-------+
+|     rep_rate    | 0.991 |
+| rep_rate_wo_mut | 0.863 |
+|    time_cost    | 3.449 |
+|       rps       | 0.409 |
++-----------------+-------+
+```
+
+### 変更後
+
+`results/`へ保存。
+
+- `python3 run.py -d ./data -q question_1 -s 100 -o -m -b    > results/results_wo_gpt.txt`
+- `python3 run.py -d ./data -q question_1 -s 100 -o -m -b -g > results/results_w_gpt.txt`
