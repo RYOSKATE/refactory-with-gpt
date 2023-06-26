@@ -1185,9 +1185,9 @@ class BlockRepair:
                         (c_success_wo_mut / len(status_list))])
             if self.__is_gpt:
                 pt.add_row(["rep_rate_w_gpt_better", "%.3f" %
-                            (c_success_w_gpt_better / c_success)])
-                pt.add_row(["rep_count_w_gpt_only", "%d" %
-                            c_success_w_gpt_only])
+                            (c_success_w_gpt_better / len(status_list))])
+                pt.add_row(["rep_rate_w_gpt_only", "%d" %
+                            c_success_w_gpt_only / len(status_list)])
 
             if c_success > 0:
                 pt.add_row(["time_cost", "%.3f" % numpy.mean(time_list)])
@@ -1469,6 +1469,7 @@ class BlockRepair:
 
                         # status_list.append(code_perf_map["status"])
 
+                        code_perf_map["gpt_time"] = 0
                         if "success" in code_perf_map["status"]:
                             code_perf_map["patch_size"] = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                        code_perf_map["rep_code"])
