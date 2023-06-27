@@ -9,6 +9,8 @@ from basic_framework.utils import syntax_check
 openai.organization = ''
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+# 実装参考:https://zenn.dev/ryo_kawamata/articles/b39ba0452fec81
+
 
 def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], max_retry_count=3) -> str:
     retry_count = 0
