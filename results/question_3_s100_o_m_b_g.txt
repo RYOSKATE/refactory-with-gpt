@@ -1,0 +1,5193 @@
+
+
+Repair submissions in question_3
+
+
+wrong_3_184.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.224 |
+| ol_refactoring_time | 0.485 |
+|       gcr_time      | 1.121 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.472 |
+|       syn_time      | 0.070 |
+|       gpt_time      | 0.072 |
+|         rps         | 0.261 |
++---------------------+-------+
+
+
+wrong_3_263.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 20.964 |
+| ol_refactoring_time | 0.287  |
+|       gcr_time      | 0.020  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.042  |
+|    spec_syn_time    | 20.393 |
+|       syn_time      | 19.790 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.761  |
++---------------------+--------+
+
+
+wrong_3_303.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.441 |
+| ol_refactoring_time | 0.317 |
+|       gcr_time      | 1.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.077 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.043 |
++---------------------+-------+
+
+
+wrong_3_152.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.798 |
+| ol_refactoring_time | 0.289 |
+|       gcr_time      | 1.082 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.358 |
+|       syn_time      | 0.064 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.286 |
++---------------------+-------+
+
+
+wrong_3_191.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.609 |
+| ol_refactoring_time | 0.288 |
+|       gcr_time      | 0.050 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.110 |
+|    spec_syn_time    | 0.015 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.091 |
++---------------------+-------+
+
+
+wrong_3_096.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.404 |
+| ol_refactoring_time | 0.285 |
+|       gcr_time      | 0.930 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.137 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.042 |
++---------------------+-------+
+
+
+wrong_3_140.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.485 |
+| ol_refactoring_time | 0.289 |
+|       gcr_time      | 1.120 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.091 |
++---------------------+-------+
+
+
+wrong_3_192.py
+success_w_gpt_only
+print_perf failed! wrong_3_192.py
+'rps'
+
+
+wrong_3_061.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.598 |
+| ol_refactoring_time | 0.288 |
+|       gcr_time      | 1.102 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.128 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.120 |
++---------------------+-------+
+
+
+wrong_3_072.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.482 |
+| ol_refactoring_time | 0.287 |
+|       gcr_time      | 0.992 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.129 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.087 |
++---------------------+-------+
+
+
+wrong_3_158.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.271 |
+| ol_refactoring_time | 3.477 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.667 |
+|       syn_time      | 0.075 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.943 |
++---------------------+-------+
+
+
+wrong_3_170.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.808 |
+| ol_refactoring_time | 0.462 |
+|       gcr_time      | 1.239 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.007 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.241 |
++---------------------+-------+
+
+
+wrong_3_100.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.150 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.012 |
+|    spec_syn_time    | 7.725 |
+|       syn_time      | 7.484 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_204.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.716 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.048  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.023  |
+|    spec_syn_time    | 11.734 |
+|       syn_time      | 11.364 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.633  |
++---------------------+--------+
+
+
+wrong_3_133.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 19.040 |
+| ol_refactoring_time | 0.295  |
+|       gcr_time      | 0.019  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.072  |
+|    spec_syn_time    | 13.547 |
+|       syn_time      | 12.923 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.738  |
++---------------------+--------+
+
+
+wrong_3_241.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.162 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.015 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.012 |
+|    spec_syn_time    | 0.263 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.761 |
++---------------------+-------+
+
+
+wrong_3_059.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.524 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.005 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.152 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.217 |
++---------------------+-------+
+
+
+wrong_3_121.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.003 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 1.378 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.227 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.214 |
++---------------------+-------+
+
+
+wrong_3_030.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.391 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.005 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.073 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_3_025.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.392 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.005 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.075 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_143.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.433 |
+| ol_refactoring_time | 3.617 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.557 |
+|       syn_time      | 0.255 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.953 |
++---------------------+-------+
+
+
+wrong_3_020.py
+success_w_gpt_only
+print_perf failed! wrong_3_020.py
+'rps'
+
+
+wrong_3_280.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.983 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.569 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.082 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_008.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 30.485 |
+| ol_refactoring_time | 0.294  |
+|       gcr_time      | 0.022  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.019  |
+|    spec_syn_time    | 29.951 |
+|       syn_time      | 28.931 |
+|       gpt_time      | 0.071  |
+|         rps         | 0.308  |
++---------------------+--------+
+
+
+wrong_3_159.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.549 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.178 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.100 |
++---------------------+-------+
+
+
+wrong_3_237.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.161 |
+| ol_refactoring_time | 3.546 |
+|       gcr_time      | 0.037 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.392 |
+|       syn_time      | 0.047 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.800 |
++---------------------+-------+
+
+
+wrong_3_073.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.526 |
+| ol_refactoring_time | 0.437 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.072 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_270.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.351 |
+| ol_refactoring_time | 0.289 |
+|       gcr_time      | 0.808 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.183 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.091 |
++---------------------+-------+
+
+
+wrong_3_229.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.825 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.179 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.010 |
+|    spec_syn_time    | 0.267 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.440 |
++---------------------+-------+
+
+
+wrong_3_208.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.129 |
+| ol_refactoring_time | 0.298  |
+|       gcr_time      | 0.053  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.032  |
+|    spec_syn_time    | 12.087 |
+|       syn_time      | 11.318 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.764  |
++---------------------+--------+
+
+
+wrong_3_189.py
+success_w_gpt_only
+print_perf failed! wrong_3_189.py
+'rps'
+
+
+wrong_3_289.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.110 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.058 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.133 |
+|    spec_syn_time    | 0.413 |
+|       syn_time      | 0.193 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.019 |
++---------------------+-------+
+
+
+wrong_3_135.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 19.099 |
+| ol_refactoring_time | 0.332  |
+|       gcr_time      | 0.020  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.075  |
+|    spec_syn_time    | 13.558 |
+|       syn_time      | 12.917 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.727  |
++---------------------+--------+
+
+
+wrong_3_024.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.388 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.075 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_3_101.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.532 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.030 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.122 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_199.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.812 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.048 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.170 |
+|    spec_syn_time    | 0.379 |
+|       syn_time      | 0.179 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.254 |
++---------------------+-------+
+
+
+wrong_3_112.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.275 |
+| ol_refactoring_time | 3.610 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.537 |
+|       syn_time      | 0.044 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.760 |
++---------------------+-------+
+
+
+wrong_3_157.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.372 |
+| ol_refactoring_time | 0.467 |
+|       gcr_time      | 0.432 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.379 |
+|       syn_time      | 0.064 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.556 |
++---------------------+-------+
+
+
+wrong_3_104.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.385 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.014 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.136 |
++---------------------+-------+
+
+
+wrong_3_297.py
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 30.403 |
+| ol_refactoring_time | 0.296  |
+|       gcr_time      | 0.041  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.056  |
+|    spec_syn_time    | 24.680 |
+|       syn_time      | 13.799 |
+|       gpt_time      | 0.003  |
+|         rps         | 1.256  |
++---------------------+--------+
+
+
+wrong_3_207.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.052 |
+| ol_refactoring_time | 0.294  |
+|       gcr_time      | 0.051  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.028  |
+|    spec_syn_time    | 12.074 |
+|       syn_time      | 11.281 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.865  |
++---------------------+--------+
+
+
+wrong_3_051.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 19.025 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.019  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.075  |
+|    spec_syn_time    | 13.527 |
+|       syn_time      | 12.920 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.791  |
++---------------------+--------+
+
+
+wrong_3_255.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.382 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.073 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.091 |
++---------------------+-------+
+
+
+wrong_3_212.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 16.951 |
+| ol_refactoring_time | 14.782 |
+|       gcr_time      | 0.206  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.183  |
+|    spec_syn_time    | 0.805  |
+|       syn_time      | 0.357  |
+|       gpt_time      | 0.072  |
+|         rps         | 1.030  |
++---------------------+--------+
+
+
+wrong_3_132.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 19.081 |
+| ol_refactoring_time | 0.474  |
+|       gcr_time      | 0.010  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.059  |
+|    spec_syn_time    | 13.525 |
+|       syn_time      | 12.921 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.738  |
++---------------------+--------+
+
+
+wrong_3_247.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.670 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.819 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.406 |
+|       syn_time      | 0.074 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.062 |
++---------------------+-------+
+
+
+wrong_3_169.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.962 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 1.363 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.217 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.286 |
++---------------------+-------+
+
+
+wrong_3_022.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.139 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.651 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.144 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_049.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.316 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.381 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.025 |
+|    spec_syn_time    | 0.518 |
+|       syn_time      | 0.100 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.233 |
++---------------------+-------+
+
+
+wrong_3_243.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.808 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.339 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.119 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.148 |
++---------------------+-------+
+
+
+wrong_3_021.py
+success_w_gpt_only
+print_perf failed! wrong_3_021.py
+'rps'
+
+
+wrong_3_023.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.475 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.921 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.222 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_136.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.071 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.721 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.007 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.040 |
++---------------------+-------+
+
+
+wrong_3_108.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.912 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.457 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.086 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.250 |
++---------------------+-------+
+
+
+wrong_3_231.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.084 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.050 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.659 |
+|       syn_time      | 0.104 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.250 |
++---------------------+-------+
+
+
+wrong_3_068.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.232 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.451 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.401 |
+|       syn_time      | 0.065 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.296 |
++---------------------+-------+
+
+
+wrong_3_003.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.898 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.949 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.032 |
+|    spec_syn_time    | 0.574 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.033 |
++---------------------+-------+
+
+
+wrong_3_106.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.592 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.572 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.034 |
+|    spec_syn_time    | 0.627 |
+|       syn_time      | 0.064 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.535 |
++---------------------+-------+
+
+
+wrong_3_027.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.985 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.051 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 0.157 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.306 |
++---------------------+-------+
+
+
+wrong_3_006.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.881 |
+| ol_refactoring_time | 0.289 |
+|       gcr_time      | 0.506 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_162.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.439 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.918 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.184 |
+|       syn_time      | 0.035 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_087.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.103 |
+| ol_refactoring_time | 8.187  |
+|       gcr_time      | 0.793  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.243  |
+|    spec_syn_time    | 7.543  |
+|       syn_time      | 6.884  |
+|       gpt_time      | 0.004  |
+|         rps         | 0.744  |
++---------------------+--------+
+
+
+wrong_3_004.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.064 |
+| ol_refactoring_time | 0.469 |
+|       gcr_time      | 0.980 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.032 |
+|    spec_syn_time    | 0.578 |
+|       syn_time      | 0.010 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.033 |
++---------------------+-------+
+
+
+wrong_3_185.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.848 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.297 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.151 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.069 |
++---------------------+-------+
+
+
+wrong_3_099.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.667 |
+| ol_refactoring_time | 0.294  |
+|       gcr_time      | 0.028  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.009  |
+|    spec_syn_time    | 14.268 |
+|       syn_time      | 14.012 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.409  |
++---------------------+--------+
+
+
+wrong_3_146.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.811 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 1.041  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.027  |
+|    spec_syn_time    | 17.369 |
+|       syn_time      | 6.311  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.276  |
++---------------------+--------+
+
+
+wrong_3_274.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.929 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.324 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.256 |
+|       syn_time      | 0.008 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_119.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.565 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.991 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.215 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.190 |
++---------------------+-------+
+
+
+wrong_3_238.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.269 |
+| ol_refactoring_time | 3.616 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.421 |
+|       syn_time      | 0.048 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.810 |
++---------------------+-------+
+
+
+wrong_3_225.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.705 |
+| ol_refactoring_time | 0.474 |
+|       gcr_time      | 1.401 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.023 |
+|    spec_syn_time    | 0.668 |
+|       syn_time      | 0.105 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.583 |
++---------------------+-------+
+
+
+wrong_3_194.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.417 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.901 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.160 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.095 |
++---------------------+-------+
+
+
+wrong_3_037.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.596 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.849 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.341 |
+|       syn_time      | 0.044 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.133 |
++---------------------+-------+
+
+
+wrong_3_013.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.489 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.962 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.153 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.125 |
++---------------------+-------+
+
+
+wrong_3_260.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.888 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.990 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.469 |
+|       syn_time      | 0.069 |
+|       gpt_time      | 0.072 |
+|         rps         | 0.429 |
++---------------------+-------+
+
+
+wrong_3_015.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.362 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.808 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.164 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.080 |
++---------------------+-------+
+
+
+wrong_3_234.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.538 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.000 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.184 |
+|       syn_time      | 0.041 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.280 |
++---------------------+-------+
+
+
+wrong_3_071.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.587 |
+| ol_refactoring_time | 3.726 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.559 |
+|       syn_time      | 0.100 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.796 |
++---------------------+-------+
+
+
+wrong_3_253.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.624 |
+| ol_refactoring_time | 0.504 |
+|       gcr_time      | 0.925 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.145 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.043 |
++---------------------+-------+
+
+
+wrong_3_066.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.383 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.806 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.146 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.074 |
+|         rps         | 0.087 |
++---------------------+-------+
+
+
+wrong_3_139.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.237 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.561 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.217 |
+|       syn_time      | 0.032 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.206 |
++---------------------+-------+
+
+
+wrong_3_092.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.434 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.893 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.206 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_226.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.493 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.387 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.022 |
+|    spec_syn_time    | 0.651 |
+|       syn_time      | 0.106 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.583 |
++---------------------+-------+
+
+
+wrong_3_283.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.388 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.078 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_3_239.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.249 |
+| ol_refactoring_time | 3.597 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.402 |
+|       syn_time      | 0.048 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.822 |
++---------------------+-------+
+
+
+wrong_3_060.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.526 |
+| ol_refactoring_time | 0.437 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.071 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_214.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 34.361 |
+| ol_refactoring_time | 0.289  |
+|       gcr_time      | 0.049  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.154  |
+|    spec_syn_time    | 33.475 |
+|       syn_time      | 32.220 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.356  |
++---------------------+--------+
+
+
+wrong_3_244.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.836 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.333 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.116 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.148 |
++---------------------+-------+
+
+
+wrong_3_174.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.927 |
+| ol_refactoring_time | 0.291  |
+|       gcr_time      | 2.453  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.035  |
+|    spec_syn_time    | 11.443 |
+|       syn_time      | 0.866  |
+|       gpt_time      | 0.004  |
+|         rps         | 0.825  |
++---------------------+--------+
+
+
+wrong_3_009.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.594 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.685 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.484 |
+|       syn_time      | 0.099 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.694 |
++---------------------+-------+
+
+
+wrong_3_160.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.439 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.939 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.160 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_173.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.383 |
+| ol_refactoring_time | 3.614 |
+|       gcr_time      | 0.041 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.460 |
+|       syn_time      | 0.075 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.830 |
++---------------------+-------+
+
+
+wrong_3_102.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.807 |
+| ol_refactoring_time | 0.501 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.227 |
+|       syn_time      | 0.022 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.034 |
++---------------------+-------+
+
+
+wrong_3_302.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.391 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.080 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_251.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.508 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.236 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.020 |
+|    spec_syn_time    | 0.892 |
+|       syn_time      | 0.058 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.296 |
++---------------------+-------+
+
+
+wrong_3_296.py
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 30.388 |
+| ol_refactoring_time | 0.296  |
+|       gcr_time      | 0.040  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.056  |
+|    spec_syn_time    | 24.676 |
+|       syn_time      | 13.795 |
+|       gpt_time      | 0.003  |
+|         rps         | 1.289  |
++---------------------+--------+
+
+
+wrong_3_252.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.120 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.593 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.181 |
+|       syn_time      | 0.035 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.042 |
++---------------------+-------+
+
+
+wrong_3_275.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.805 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.309 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.119 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_257.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.314 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.799 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.149 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.087 |
++---------------------+-------+
+
+
+wrong_3_182.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.792 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.567 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.032 |
+|    spec_syn_time    | 0.793 |
+|       syn_time      | 0.104 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.523 |
++---------------------+-------+
+
+
+wrong_3_190.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.321 |
+| ol_refactoring_time | 3.608 |
+|       gcr_time      | 0.036 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.470 |
+|       syn_time      | 0.071 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.789 |
++---------------------+-------+
+
+
+wrong_3_220.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.698 |
+| ol_refactoring_time | 0.466 |
+|       gcr_time      | 1.058 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.010 |
+|    spec_syn_time    | 0.123 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_3_232.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.312 |
+| ol_refactoring_time | 0.294  |
+|       gcr_time      | 1.160  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.023  |
+|    spec_syn_time    | 16.698 |
+|       syn_time      | 6.286  |
+|       gpt_time      | 0.072  |
+|         rps         | 0.360  |
++---------------------+--------+
+
+
+wrong_3_246.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 37.362 |
+| ol_refactoring_time | 0.292  |
+|       gcr_time      | 0.017  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.039  |
+|    spec_syn_time    | 36.921 |
+|       syn_time      | 36.086 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.684  |
++---------------------+--------+
+
+
+wrong_3_258.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 20.858 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.021  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.039  |
+|    spec_syn_time    | 20.387 |
+|       syn_time      | 19.746 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.729  |
++---------------------+--------+
+
+
+wrong_3_240.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.941 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.579 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.007 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.316 |
++---------------------+-------+
+
+
+wrong_3_067.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.381 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.072 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_254.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.975 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.016 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.348 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.720 |
++---------------------+-------+
+
+
+wrong_3_055.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.492 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.940 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.187 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.174 |
++---------------------+-------+
+
+
+wrong_3_040.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.474 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.952 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.183 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.043 |
++---------------------+-------+
+
+
+wrong_3_180.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.315 |
+| ol_refactoring_time | 0.852 |
+|       gcr_time      | 0.022 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.026 |
+|    spec_syn_time    | 0.304 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.491 |
++---------------------+-------+
+
+
+wrong_3_048.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.323 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.457 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.022 |
+|    spec_syn_time    | 0.450 |
+|       syn_time      | 0.073 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.355 |
++---------------------+-------+
+
+
+wrong_3_039.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.385 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.072 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_145.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.444 |
+| ol_refactoring_time | 0.289  |
+|       gcr_time      | 1.077  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.026  |
+|    spec_syn_time    | 16.974 |
+|       syn_time      | 6.300  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.321  |
++---------------------+--------+
+
+
+wrong_3_211.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.570 |
+| ol_refactoring_time | 7.690 |
+|       gcr_time      | 0.162 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.385 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.003 |
+|         rps         | 1.098 |
++---------------------+-------+
+
+
+wrong_3_002.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.492 |
+| ol_refactoring_time | 0.469 |
+|       gcr_time      | 0.963 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.031 |
+|    spec_syn_time    | 0.926 |
+|       syn_time      | 0.074 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.167 |
++---------------------+-------+
+
+
+wrong_3_215.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 34.268 |
+| ol_refactoring_time | 0.297  |
+|       gcr_time      | 0.048  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.154  |
+|    spec_syn_time    | 33.370 |
+|       syn_time      | 31.953 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.298  |
++---------------------+--------+
+
+
+wrong_3_181.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.193 |
+| ol_refactoring_time | 0.854 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.026 |
+|    spec_syn_time    | 0.299 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.491 |
++---------------------+-------+
+
+
+wrong_3_012.py
+success_w_gpt_only
+print_perf failed! wrong_3_012.py
+'rps'
+
+
+wrong_3_050.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.269 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.741 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.087 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.071 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_290.py
+success_w_gpt_only
+print_perf failed! wrong_3_290.py
+'ol_refactoring_time'
+
+
+wrong_3_236.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.229 |
+| ol_refactoring_time | 3.600 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.403 |
+|       syn_time      | 0.048 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.805 |
++---------------------+-------+
+
+
+wrong_3_005.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.476 |
+| ol_refactoring_time | 0.472 |
+|       gcr_time      | 1.532 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.028 |
+|    spec_syn_time    | 0.241 |
+|       syn_time      | 0.020 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.286 |
++---------------------+-------+
+
+
+wrong_3_056.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.223 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.871  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.022  |
+|    spec_syn_time    | 16.979 |
+|       syn_time      | 6.330  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.304  |
++---------------------+--------+
+
+
+wrong_3_007.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.254 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 1.514 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.380 |
+|       syn_time      | 0.019 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.455 |
++---------------------+-------+
+
+
+wrong_3_151.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.757 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.394 |
+|       syn_time      | 0.064 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.190 |
++---------------------+-------+
+
+
+wrong_3_131.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 15.181 |
+| ol_refactoring_time | 0.294  |
+|       gcr_time      | 0.019  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.037  |
+|    spec_syn_time    | 14.724 |
+|       syn_time      | 14.101 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.714  |
++---------------------+--------+
+
+
+wrong_3_148.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.418 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.877 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.210 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_286.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.245 |
+| ol_refactoring_time | 3.637 |
+|       gcr_time      | 0.018 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.471 |
+|       syn_time      | 0.074 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.968 |
++---------------------+-------+
+
+
+wrong_3_058.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.535 |
+| ol_refactoring_time | 0.438 |
+|       gcr_time      | 0.005 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.073 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.222 |
++---------------------+-------+
+
+
+wrong_3_171.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.757 |
+| ol_refactoring_time | 0.289 |
+|       gcr_time      | 1.263 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.119 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_299.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.457 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.910 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.212 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_188.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.608 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.892 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.343 |
+|       syn_time      | 0.037 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.208 |
++---------------------+-------+
+
+
+wrong_3_093.py
+structure mutation
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.299 |
+| ol_refactoring_time | 7.480  |
+|       gcr_time      | 0.247  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.017  |
+|    spec_syn_time    | 0.125  |
+|       syn_time      | 0.012  |
+|       gpt_time      | 0.004  |
+|         rps         | 0.130  |
++---------------------+--------+
+
+
+wrong_3_281.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.802 |
+| ol_refactoring_time | 0.468 |
+|       gcr_time      | 0.979 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.287 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.095 |
++---------------------+-------+
+
+
+wrong_3_176.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.369 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.474 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.499 |
+|       syn_time      | 0.081 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.543 |
++---------------------+-------+
+
+
+wrong_3_063.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.845 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.219 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.020 |
+|    spec_syn_time    | 0.248 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.185 |
++---------------------+-------+
+
+
+wrong_3_282.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.591 |
+| ol_refactoring_time | 0.298 |
+|       gcr_time      | 0.969 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.297 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.095 |
++---------------------+-------+
+
+
+wrong_3_109.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.316 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.471 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.235 |
+|       syn_time      | 0.032 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.553 |
++---------------------+-------+
+
+
+wrong_3_294.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.671 |
+| ol_refactoring_time | 5.795 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.025 |
+|    spec_syn_time    | 0.732 |
+|       syn_time      | 0.093 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.814 |
++---------------------+-------+
+
+
+wrong_3_292.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.118 |
+| ol_refactoring_time | 4.625 |
+|       gcr_time      | 0.019 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.050 |
+|    spec_syn_time    | 0.341 |
+|       syn_time      | 0.094 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.308 |
++---------------------+-------+
+
+
+wrong_3_120.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.292 |
+| ol_refactoring_time | 0.473 |
+|       gcr_time      | 1.464 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.230 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.281 |
++---------------------+-------+
+
+
+wrong_3_103.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.235 |
+| ol_refactoring_time | 0.302 |
+|       gcr_time      | 0.741 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.145 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_295.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.205 |
+| ol_refactoring_time | 0.299 |
+|       gcr_time      | 0.710 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.148 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_138.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.279 |
+| ol_refactoring_time | 0.303 |
+|       gcr_time      | 0.581 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.226 |
+|       syn_time      | 0.032 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.206 |
++---------------------+-------+
+
+
+wrong_3_298.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.288 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.480 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.386 |
+|       syn_time      | 0.072 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.361 |
++---------------------+-------+
+
+
+wrong_3_177.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.759 |
+| ol_refactoring_time | 2.324 |
+|       gcr_time      | 0.200 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.128 |
+|       syn_time      | 0.005 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.857 |
++---------------------+-------+
+
+
+wrong_3_250.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.708 |
+| ol_refactoring_time | 0.478 |
+|       gcr_time      | 0.928 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.216 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.160 |
++---------------------+-------+
+
+
+wrong_3_019.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.040 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.060 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.031 |
+|    spec_syn_time    | 0.328 |
+|       syn_time      | 0.047 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.456 |
++---------------------+-------+
+
+
+wrong_3_198.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.372 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.814 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.221 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_126.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.925 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.371 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.229 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.214 |
++---------------------+-------+
+
+
+wrong_3_074.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.439 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.895 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.212 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_195.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.328 |
+| ol_refactoring_time | 3.615 |
+|       gcr_time      | 0.044 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.423 |
+|       syn_time      | 0.048 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.830 |
++---------------------+-------+
+
+
+wrong_3_179.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 15.634 |
+| ol_refactoring_time | 0.508  |
+|       gcr_time      | 0.025  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.037  |
+|    spec_syn_time    | 14.566 |
+|       syn_time      | 14.069 |
+|       gpt_time      | 0.072  |
+|         rps         | 0.633  |
++---------------------+--------+
+
+
+wrong_3_035.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.489 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.951 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.152 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.120 |
++---------------------+-------+
+
+
+wrong_3_086.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.884 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.286 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.233 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.080 |
++---------------------+-------+
+
+
+wrong_3_268.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.315 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.003 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.091 |
++---------------------+-------+
+
+
+wrong_3_010.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.594 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.597 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.510 |
+|       syn_time      | 0.099 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.579 |
++---------------------+-------+
+
+
+wrong_3_168.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.122 |
+| ol_refactoring_time | 0.300 |
+|       gcr_time      | 1.341 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.391 |
+|       syn_time      | 0.066 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.321 |
++---------------------+-------+
+
+
+wrong_3_118.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.779 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 1.027 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.395 |
+|       syn_time      | 0.064 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.238 |
++---------------------+-------+
+
+
+wrong_3_287.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.154 |
+| ol_refactoring_time | 3.628 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.485 |
+|       syn_time      | 0.074 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.968 |
++---------------------+-------+
+
+
+wrong_3_001.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.396 |
+| ol_refactoring_time | 0.467 |
+|       gcr_time      | 0.691 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.193 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_097.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 11.265 |
+| ol_refactoring_time | 0.294  |
+|       gcr_time      | 1.202  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.059  |
+|    spec_syn_time    | 8.966  |
+|       syn_time      | 0.178  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.035  |
++---------------------+--------+
+
+
+wrong_3_279.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.636 |
+| ol_refactoring_time | 0.331 |
+|       gcr_time      | 0.973 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.306 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.095 |
++---------------------+-------+
+
+
+wrong_3_248.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.754 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 1.923 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.415 |
+|       syn_time      | 0.054 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.419 |
++---------------------+-------+
+
+
+wrong_3_233.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 17.987 |
+| ol_refactoring_time | 0.292  |
+|       gcr_time      | 1.058  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.022  |
+|    spec_syn_time    | 16.575 |
+|       syn_time      | 6.255  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.320  |
++---------------------+--------+
+
+
+wrong_3_064.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.808 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.342 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.116 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_165.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 15.113 |
+| ol_refactoring_time | 0.292  |
+|       gcr_time      | 0.018  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.039  |
+|    spec_syn_time    | 14.556 |
+|       syn_time      | 14.075 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.512  |
++---------------------+--------+
+
+
+wrong_3_077.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.501 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.985 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.146 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.083 |
++---------------------+-------+
+
+
+wrong_3_110.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.691 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.390 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.010 |
+|    spec_syn_time    | 2.889 |
+|       syn_time      | 0.091 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.562 |
++---------------------+-------+
+
+
+wrong_3_033.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.656 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.068 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.214 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.174 |
++---------------------+-------+
+
+
+wrong_3_125.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.931 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.379 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.229 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.214 |
++---------------------+-------+
+
+
+wrong_3_209.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.097 |
+| ol_refactoring_time | 0.295  |
+|       gcr_time      | 0.051  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.032  |
+|    spec_syn_time    | 12.110 |
+|       syn_time      | 11.317 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.865  |
++---------------------+--------+
+
+
+wrong_3_153.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.703 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.000 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.386 |
+|       syn_time      | 0.064 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.190 |
++---------------------+-------+
+
+
+wrong_3_218.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.900 |
+| ol_refactoring_time | 0.298 |
+|       gcr_time      | 0.047 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.183 |
+|    spec_syn_time    | 5.930 |
+|       syn_time      | 5.568 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.235 |
++---------------------+-------+
+
+
+wrong_3_114.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.325 |
+| ol_refactoring_time | 0.289 |
+|       gcr_time      | 0.806 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.184 |
+|       syn_time      | 0.035 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_272.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.625 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.131 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.125 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.160 |
++---------------------+-------+
+
+
+wrong_3_144.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.829 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.126 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.296 |
+|       syn_time      | 0.005 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.167 |
++---------------------+-------+
+
+
+wrong_3_062.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.625 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 1.102 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.149 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.120 |
++---------------------+-------+
+
+
+wrong_3_047.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.390 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.384 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.598 |
+|       syn_time      | 0.102 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.267 |
++---------------------+-------+
+
+
+wrong_3_222.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.025 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.319 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.330 |
+|       syn_time      | 0.042 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.296 |
++---------------------+-------+
+
+
+wrong_3_091.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.582 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.212 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.143 |
++---------------------+-------+
+
+
+wrong_3_166.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.386 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.075 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_3_265.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.817 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.994 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.010 |
+|    spec_syn_time    | 0.404 |
+|       syn_time      | 0.041 |
+|       gpt_time      | 0.071 |
+|         rps         | 0.241 |
++---------------------+-------+
+
+
+wrong_3_094.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.812 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.270 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.204 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_308.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.738 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.361 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.182 |
++---------------------+-------+
+
+
+wrong_3_017.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.255 |
+| ol_refactoring_time | 3.606 |
+|       gcr_time      | 0.045 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.336 |
+|       syn_time      | 0.047 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.820 |
++---------------------+-------+
+
+
+wrong_3_127.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.962 |
+| ol_refactoring_time | 0.513 |
+|       gcr_time      | 1.217 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.126 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.143 |
++---------------------+-------+
+
+
+wrong_3_041.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.471 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.147 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.273 |
++---------------------+-------+
+
+
+wrong_3_203.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.606 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.130 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.286 |
++---------------------+-------+
+
+
+wrong_3_183.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.570 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 1.043 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.185 |
+|       syn_time      | 0.035 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_161.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.544 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.021 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.150 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.083 |
++---------------------+-------+
+
+
+wrong_3_032.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.040 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.678 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.316 |
++---------------------+-------+
+
+
+wrong_3_078.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.458 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.004 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.143 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.273 |
++---------------------+-------+
+
+
+wrong_3_230.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.044 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 1.312 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.350 |
+|       syn_time      | 0.042 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.222 |
++---------------------+-------+
+
+
+wrong_3_137.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.840 |
+| ol_refactoring_time | 1.565 |
+|       gcr_time      | 0.036 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.008 |
+|    spec_syn_time    | 0.164 |
+|       syn_time      | 0.010 |
+|       gpt_time      | 0.003 |
+|         rps         | 1.000 |
++---------------------+-------+
+
+
+wrong_3_054.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.663 |
+| ol_refactoring_time | 0.459 |
+|       gcr_time      | 0.946 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.185 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.217 |
++---------------------+-------+
+
+
+wrong_3_284.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.799 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.740 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.519 |
+|       syn_time      | 0.119 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.532 |
++---------------------+-------+
+
+
+wrong_3_266.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.242 |
+| ol_refactoring_time | 0.331 |
+|       gcr_time      | 1.260 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.536 |
+|       syn_time      | 0.024 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.412 |
++---------------------+-------+
+
+
+wrong_3_057.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.166 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.861  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.022  |
+|    spec_syn_time    | 16.978 |
+|       syn_time      | 6.316  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.304  |
++---------------------+--------+
+
+
+wrong_3_261.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 20.866 |
+| ol_refactoring_time | 0.295  |
+|       gcr_time      | 0.011  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.039  |
+|    spec_syn_time    | 20.395 |
+|       syn_time      | 19.745 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.667  |
++---------------------+--------+
+
+
+wrong_3_105.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.316 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.466 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.392 |
+|       syn_time      | 0.072 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.531 |
++---------------------+-------+
+
+
+wrong_3_098.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.193 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.436 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.337 |
+|       syn_time      | 0.042 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.692 |
++---------------------+-------+
+
+
+wrong_3_221.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.370 |
+| ol_refactoring_time | 0.326 |
+|       gcr_time      | 1.341 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.020 |
+|    spec_syn_time    | 0.539 |
+|       syn_time      | 0.083 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_3_156.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.853 |
+| ol_refactoring_time | 0.327 |
+|       gcr_time      | 0.270 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.234 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_178.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 3.305 |
+| ol_refactoring_time | 2.479 |
+|       gcr_time      | 0.215 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.424 |
+|       syn_time      | 0.065 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.841 |
++---------------------+-------+
+
+
+wrong_3_083.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.980 |
+| ol_refactoring_time | 0.522 |
+|       gcr_time      | 0.977 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.398 |
+|       syn_time      | 0.063 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.208 |
++---------------------+-------+
+
+
+wrong_3_069.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.357 |
+| ol_refactoring_time | 0.316 |
+|       gcr_time      | 0.789 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.204 |
+|       syn_time      | 0.037 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_149.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.515 |
+| ol_refactoring_time | 0.324 |
+|       gcr_time      | 0.941 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.174 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.083 |
++---------------------+-------+
+
+
+wrong_3_129.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 15.169 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.019  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.037  |
+|    spec_syn_time    | 14.710 |
+|       syn_time      | 14.096 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.744  |
++---------------------+--------+
+
+
+wrong_3_081.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.414 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.943 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.151 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.083 |
++---------------------+-------+
+
+
+wrong_3_150.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.318 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.429 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.459 |
+|       syn_time      | 0.070 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.571 |
++---------------------+-------+
+
+
+wrong_3_123.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.930 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.376 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.231 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.214 |
++---------------------+-------+
+
+
+wrong_3_285.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.608 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.044 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.192 |
+|       syn_time      | 0.041 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_076.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.290 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.824 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.083 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.107 |
++---------------------+-------+
+
+
+wrong_3_223.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.116 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.321 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.348 |
+|       syn_time      | 0.042 |
+|       gpt_time      | 0.072 |
+|         rps         | 0.259 |
++---------------------+-------+
+
+
+wrong_3_219.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.677 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.047 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.286 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_3_147.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.443 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 1.000 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.126 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_3_111.py
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.117 |
+| ol_refactoring_time | 0.299  |
+|       gcr_time      | 0.833  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.022  |
+|    spec_syn_time    | 16.906 |
+|       syn_time      | 6.300  |
+|       gpt_time      | 0.003  |
+|         rps         | 0.304  |
++---------------------+--------+
+
+
+wrong_3_036.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.741 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.923 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.410 |
+|       syn_time      | 0.045 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.375 |
++---------------------+-------+
+
+
+wrong_3_124.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.927 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.373 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.230 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.214 |
++---------------------+-------+
+
+
+wrong_3_042.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.383 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.071 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_031.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.381 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.073 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_085.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.942 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.015 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.009 |
+|    spec_syn_time    | 0.164 |
+|       syn_time      | 0.010 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.605 |
++---------------------+-------+
+
+
+wrong_3_187.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.210 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.379 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.448 |
+|       syn_time      | 0.037 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.385 |
++---------------------+-------+
+
+
+wrong_3_305.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.297 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.806 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.160 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_291.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.235 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.717 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.180 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_142.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.716 |
+| ol_refactoring_time | 3.711 |
+|       gcr_time      | 0.038 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.750 |
+|       syn_time      | 0.056 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.875 |
++---------------------+-------+
+
+
+wrong_3_262.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.599 |
+| ol_refactoring_time | 0.473 |
+|       gcr_time      | 0.922 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.010 |
+|    spec_syn_time    | 0.125 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_3_210.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.348 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.811 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.163 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.167 |
++---------------------+-------+
+
+
+wrong_3_079.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 34.035 |
+| ol_refactoring_time | 0.300  |
+|       gcr_time      | 0.039  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.018  |
+|    spec_syn_time    | 33.572 |
+|       syn_time      | 32.769 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.774  |
++---------------------+--------+
+
+
+wrong_3_304.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.697 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.278 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.079 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.043 |
++---------------------+-------+
+
+
+wrong_3_116.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.424 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.923 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.160 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.043 |
++---------------------+-------+
+
+
+wrong_3_278.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.559 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.036 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.121 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.029 |
++---------------------+-------+
+
+
+wrong_3_293.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 7.429 |
+| ol_refactoring_time | 6.411 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.025 |
+|    spec_syn_time    | 0.872 |
+|       syn_time      | 0.121 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.818 |
++---------------------+-------+
+
+
+wrong_3_264.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.528 |
+| ol_refactoring_time | 0.439 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.072 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_277.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.471 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.025 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.123 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.029 |
++---------------------+-------+
+
+
+wrong_3_259.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.816 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.501 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_154.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.535 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.961 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.213 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.190 |
++---------------------+-------+
+
+
+wrong_3_029.py
+success_w_gpt_only
+print_perf failed! wrong_3_029.py
+'ol_refactoring_time'
+
+
+wrong_3_217.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.789 |
+| ol_refactoring_time | 0.293  |
+|       gcr_time      | 0.048  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.158  |
+|    spec_syn_time    | 17.853 |
+|       syn_time      | 16.552 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.260  |
++---------------------+--------+
+
+
+wrong_3_206.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.229 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.782 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.090 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.143 |
++---------------------+-------+
+
+
+wrong_3_038.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.359 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.926 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.091 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_175.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.295 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 1.275 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.497 |
+|       syn_time      | 0.081 |
+|       gpt_time      | 0.071 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_3_213.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.806 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.346 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.083 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.217 |
++---------------------+-------+
+
+
+wrong_3_053.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.527 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.029 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.126 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_3_269.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.310 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.003 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.091 |
++---------------------+-------+
+
+
+wrong_3_084.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.949 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.015 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.009 |
+|    spec_syn_time    | 0.177 |
+|       syn_time      | 0.010 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.595 |
++---------------------+-------+
+
+
+wrong_3_167.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.026 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.579 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.083 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.125 |
++---------------------+-------+
+
+
+wrong_3_300.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.065 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.580 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.145 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_301.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.193 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.023 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.233 |
+|    spec_syn_time    | 1.206 |
+|       syn_time      | 0.194 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.210 |
++---------------------+-------+
+
+
+wrong_3_163.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.489 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 0.936 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.221 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_164.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.532 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.975 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.218 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_070.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.399 |
+| ol_refactoring_time | 3.744 |
+|       gcr_time      | 0.031 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.587 |
+|       syn_time      | 0.101 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.796 |
++---------------------+-------+
+
+
+wrong_3_113.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.460 |
+| ol_refactoring_time | 0.469 |
+|       gcr_time      | 1.393 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.020 |
+|    spec_syn_time    | 0.505 |
+|       syn_time      | 0.044 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.433 |
++---------------------+-------+
+
+
+wrong_3_082.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.916 |
+| ol_refactoring_time | 3.618 |
+|       gcr_time      | 0.053 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 1.090 |
+|       syn_time      | 0.172 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.732 |
++---------------------+-------+
+
+
+wrong_3_016.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.942 |
+| ol_refactoring_time | 0.413 |
+|       gcr_time      | 0.023 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.022 |
+|    spec_syn_time    | 0.188 |
+|       syn_time      | 0.035 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.071 |
++---------------------+-------+
+
+
+wrong_3_044.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.075 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.385 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.297 |
+|       syn_time      | 0.047 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.357 |
++---------------------+-------+
+
+
+wrong_3_088.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 3.105 |
+| ol_refactoring_time | 2.079 |
+|       gcr_time      | 0.024 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.642 |
+|       syn_time      | 0.135 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.841 |
++---------------------+-------+
+
+
+wrong_3_242.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.201 |
+| ol_refactoring_time | 0.455 |
+|       gcr_time      | 0.358 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.026 |
+|    spec_syn_time    | 0.286 |
+|       syn_time      | 0.044 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.207 |
++---------------------+-------+
+
+
+wrong_3_205.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.279 |
+| ol_refactoring_time | 3.777 |
+|       gcr_time      | 0.025 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.337 |
+|       syn_time      | 0.038 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.839 |
++---------------------+-------+
+
+
+wrong_3_128.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 16.911 |
+| ol_refactoring_time | 0.476  |
+|       gcr_time      | 0.019  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 2.054  |
+|    spec_syn_time    | 14.251 |
+|       syn_time      | 13.629 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.744  |
++---------------------+--------+
+
+
+wrong_3_052.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.385 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.074 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_107.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.864 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.413 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.088 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.267 |
++---------------------+-------+
+
+
+wrong_3_028.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.379 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.834 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.210 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_288.py
+structure mutation
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.184 |
+| ol_refactoring_time | 3.611 |
+|       gcr_time      | 0.027 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.449 |
+|       syn_time      | 0.043 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.680 |
++---------------------+-------+
+
+
+wrong_3_089.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.739 |
+| ol_refactoring_time | 2.084 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.019 |
+|    spec_syn_time    | 0.610 |
+|       syn_time      | 0.132 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.841 |
++---------------------+-------+
+
+
+wrong_3_306.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.531 |
+| ol_refactoring_time | 0.441 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.073 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_273.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.838 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.341 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.119 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_075.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.032 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.566 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.081 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.107 |
++---------------------+-------+
+
+
+wrong_3_271.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.562 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.191 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.020 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.100 |
++---------------------+-------+
+
+
+wrong_3_224.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.285 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.356 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.479 |
+|       syn_time      | 0.079 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.515 |
++---------------------+-------+
+
+
+wrong_3_245.py
+fail_other
+{'001': False, '002': False, '003': True, '004': True, '005': True, '006': True}
+{'remove_extras': {'lst': 'lst', 'i': 'n', 'ref_b': 'b', 'ref_a': 'a'}}
+
+
+wrong_3_045.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.383 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.074 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_034.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.760 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.189 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.164 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.161 |
++---------------------+-------+
+
+
+wrong_3_200.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.861 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.049 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.302 |
+|    spec_syn_time    | 0.307 |
+|       syn_time      | 0.178 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.227 |
++---------------------+-------+
+
+
+wrong_3_122.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.939 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.376 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.238 |
+|       syn_time      | 0.004 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.214 |
++---------------------+-------+
+
+
+wrong_3_196.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.780 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 0.281 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.147 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.042 |
++---------------------+-------+
+
+
+wrong_3_197.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.389 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.076 |
+|       syn_time      | 0.001 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_256.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.328 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.807 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.152 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.125 |
++---------------------+-------+
+
+
+wrong_3_117.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.751 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.259 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.149 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_043.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.385 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.074 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_249.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.818 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.499 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.014 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_216.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.720 |
+| ol_refactoring_time | 0.298  |
+|       gcr_time      | 0.049  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.159  |
+|    spec_syn_time    | 17.799 |
+|       syn_time      | 16.545 |
+|       gpt_time      | 0.004  |
+|         rps         | 0.200  |
++---------------------+--------+
+
+
+wrong_3_090.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.680 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 1.046 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.022 |
+|    spec_syn_time    | 0.188 |
+|       syn_time      | 0.039 |
+|       gpt_time      | 0.071 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_186.py
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.228 |
+| ol_refactoring_time | 0.299 |
+|       gcr_time      | 0.382 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.463 |
+|       syn_time      | 0.061 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.320 |
++---------------------+-------+
+
+
+wrong_3_201.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.749 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.266 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.143 |
+|       syn_time      | 0.028 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_046.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.424 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.901 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.212 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.048 |
++---------------------+-------+
+
+
+wrong_3_018.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.265 |
+| ol_refactoring_time | 3.592 |
+|       gcr_time      | 0.045 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.360 |
+|       syn_time      | 0.047 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.820 |
++---------------------+-------+
+
+
+wrong_3_276.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.047 |
+| ol_refactoring_time | 0.504 |
+|       gcr_time      | 0.326 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.126 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.148 |
++---------------------+-------+
+
+
+wrong_3_307.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.648 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 1.278 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.006 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.100 |
++---------------------+-------+
+
+
+wrong_3_235.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.485 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.938 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.211 |
+|       syn_time      | 0.031 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_227.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.467 |
+| ol_refactoring_time | 0.297 |
+|       gcr_time      | 1.014 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.011 |
+|    spec_syn_time    | 0.133 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_3_014.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.576 |
+| ol_refactoring_time | 0.298 |
+|       gcr_time      | 1.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.153 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.154 |
++---------------------+-------+
+
+
+wrong_3_115.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.384 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.005 |
+|    spec_syn_time    | 0.073 |
+|       syn_time      | 0.002 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.200 |
++---------------------+-------+
+
+
+wrong_3_228.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.806 |
+| ol_refactoring_time | 0.290 |
+|       gcr_time      | 1.163 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.010 |
+|    spec_syn_time    | 0.268 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.417 |
++---------------------+-------+
+
+
+wrong_3_011.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.786 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 1.760 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.521 |
+|       syn_time      | 0.099 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.610 |
++---------------------+-------+
+
+
+wrong_3_202.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.626 |
+| ol_refactoring_time | 0.296 |
+|       gcr_time      | 0.050 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.301 |
+|    spec_syn_time    | 0.023 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.212 |
++---------------------+-------+
+
+
+wrong_3_026.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.881 |
+| ol_refactoring_time | 0.291 |
+|       gcr_time      | 0.046 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.030 |
+|    spec_syn_time    | 0.150 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.462 |
++---------------------+-------+
+
+
+wrong_3_172.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.183 |
+| ol_refactoring_time | 3.607 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.345 |
+|       syn_time      | 0.046 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.825 |
++---------------------+-------+
+
+
+wrong_3_065.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.047 |
+| ol_refactoring_time | 0.467 |
+|       gcr_time      | 0.367 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.024 |
+|    spec_syn_time    | 0.120 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.003 |
+|         rps         | 0.148 |
++---------------------+-------+
+
+
+wrong_3_130.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 15.079 |
+| ol_refactoring_time | 0.296  |
+|       gcr_time      | 0.010  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.038  |
+|    spec_syn_time    | 14.723 |
+|       syn_time      | 14.097 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.744  |
++---------------------+--------+
+
+
+wrong_3_134.py
+success_wo_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 18.981 |
+| ol_refactoring_time | 0.295  |
+|       gcr_time      | 0.019  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 5.060  |
+|    spec_syn_time    | 13.500 |
+|       syn_time      | 12.873 |
+|       gpt_time      | 0.003  |
+|         rps         | 0.738  |
++---------------------+--------+
+
+
+wrong_3_141.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.982 |
+| ol_refactoring_time | 0.293 |
+|       gcr_time      | 0.756 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.018 |
+|    spec_syn_time    | 0.845 |
+|       syn_time      | 0.127 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.031 |
++---------------------+-------+
+
+
+wrong_3_095.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.055 |
+| ol_refactoring_time | 0.292 |
+|       gcr_time      | 0.542 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.015 |
+|    spec_syn_time    | 0.179 |
+|       syn_time      | 0.034 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+wrong_3_193.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.916 |
+| ol_refactoring_time | 0.295 |
+|       gcr_time      | 0.692 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.038 |
+|    spec_syn_time    | 1.468 |
+|       syn_time      | 0.235 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.222 |
++---------------------+-------+
+
+
+wrong_3_155.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.634 |
+| ol_refactoring_time | 0.294 |
+|       gcr_time      | 1.049 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.016 |
+|    spec_syn_time    | 0.223 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.286 |
++---------------------+-------+
+
+
+wrong_3_267.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.379 |
+| ol_refactoring_time | 2.642 |
+|       gcr_time      | 2.197 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.017 |
+|    spec_syn_time    | 0.443 |
+|       syn_time      | 0.048 |
+|       gpt_time      | 0.004 |
+|         rps         | 0.800 |
++---------------------+-------+
+
+
+wrong_3_080.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.397 |
+| ol_refactoring_time | 0.471 |
+|       gcr_time      | 0.731 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.021 |
+|    spec_syn_time    | 0.146 |
+|       syn_time      | 0.029 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.045 |
++---------------------+-------+
+
+
+
+Summary for question_3 (sampling_rate = 100%, exp_idx = 0)
+print_ques_perf failed! question_3
+unsupported operand type(s) for /: 'str' and 'int'
+
+
+
+fail_list
+wrong_3_245.py
