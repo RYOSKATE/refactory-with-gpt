@@ -1173,11 +1173,11 @@ class BlockRepair:
 
             pt = PrettyTable()
             pt.field_names = ["Metric", "Value"]
+            c_success_w_mut = status_list.count("success_wo_mut")
             c_success_wo_mut = status_list.count("success_wo_mut")
             c_success_w_gpt_better = status_list.count("success_w_gpt_better")
             c_success_w_gpt_only = status_list.count("success_w_gpt_only")
-            c_success = c_success_wo_mut + \
-                status_list.count("success_w_mut") + \
+            c_success = c_success_w_mut + c_success_wo_mut + \
                 c_success_w_gpt_better + c_success_w_gpt_only
 
             pt.add_row(["rep_rate", "%.3f" % (c_success / len(status_list))])
