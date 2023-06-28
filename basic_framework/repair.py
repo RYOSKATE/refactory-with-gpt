@@ -1187,7 +1187,7 @@ class BlockRepair:
                 pt.add_row(["rep_rate_w_gpt_better", "%.3f" %
                             (c_success_w_gpt_better / len(status_list))])
                 pt.add_row(["rep_rate_w_gpt_only", "%.3f" %
-                            c_success_w_gpt_only / len(status_list)])
+                            (c_success_w_gpt_only / len(status_list))])
 
             if c_success > 0:
                 pt.add_row(["time_cost", "%.3f" % numpy.mean(time_list)])
