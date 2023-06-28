@@ -1186,7 +1186,7 @@ class BlockRepair:
             if self.__is_gpt:
                 pt.add_row(["rep_rate_w_gpt_better", "%.3f" %
                             (c_success_w_gpt_better / len(status_list))])
-                pt.add_row(["rep_rate_w_gpt_only", "%d" %
+                pt.add_row(["rep_rate_w_gpt_only", "%.3f" %
                             c_success_w_gpt_only / len(status_list)])
 
             if c_success > 0:
