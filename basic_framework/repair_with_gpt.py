@@ -22,7 +22,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
         except Exception as e:
             import sys
             print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
-                  "/"+str(max_retry_count)+"]"+str(e)+"\n", file=sys.stderr)
+                  "/"+str(max_retry_count)+"]"+str(e)+"\n")
             retry_count += 1
             continue
 

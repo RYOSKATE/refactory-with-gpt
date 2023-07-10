@@ -301,7 +301,7 @@ class ORO:
 
 
 class BlockRepair:
-    def __init__(self, ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, is_gpt):
+    def __init__(self, ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt):
         self.__ques_dir_path = ques_dir_path
         self.__ans_dir_path = ques_dir_path + "/ans"
         self.__code_dir_path = ques_dir_path + "/code"
@@ -315,7 +315,7 @@ class BlockRepair:
         self.__is_offline_ref = is_offline_ref
         self.__is_online_ref = is_online_ref
         self.__is_mutation = is_mutation
-        self.__is_gpt = is_gpt
+        self.__use_gpt = use_gpt
 
     def __get_corr_func_list_map(self, corr_code_map):
         corr_func_list_map = {}
@@ -1183,7 +1183,7 @@ class BlockRepair:
             pt.add_row(["rep_rate", "%.3f" % (c_success / len(status_list))])
             pt.add_row(["rep_rate_wo_mut", "%.3f" %
                         (c_success_wo_mut / len(status_list))])
-            if self.__is_gpt:
+            if not self.__use_gpt == "none":
                 pt.add_row(["rep_rate_w_gpt_better", "%.3f" %
                             (c_success_w_gpt_better / len(status_list))])
                 pt.add_row(["rep_rate_w_gpt_only", "%.3f" %
@@ -1223,7 +1223,7 @@ class BlockRepair:
                 pt.add_row(["spec_syn_time", "%.3f" %
                             code_perf_map["spec_syn_time"]])
                 pt.add_row(["syn_time", "%.3f" % code_perf_map["syn_time"]])
-                if self.__is_gpt:
+                if not self.__use_gpt == "none":
                     pt.add_row(["gpt_time", "%.3f" %
                                 code_perf_map["gpt_time"]])
                 pt.add_row(["rps", "%.3f" % code_perf_map["rps"]])
@@ -1411,11 +1411,16 @@ class BlockRepair:
 
                         rep_perf_map = {}
                         try:
+                            if self.__use_gpt == "only":
+                                # この場合は例外に飛ばしてChatGPTだけでコード修正。
+                                code_perf_map["status"] = "fail_syntax_error"
+                                perf_map[sr][exp_idx][bug_file_name] = code_perf_map
+                                raise Exception('bug code has syntax error')
                             if not syntax_check(bug_code):
                                 print("fail_syntax_error")
                                 code_perf_map["status"] = "fail_syntax_error"
                                 perf_map[sr][exp_idx][bug_file_name] = code_perf_map
-                                if self.__is_gpt:
+                                if not self.__use_gpt == "none":
                                     # この場合は例外に飛ばしてChatGPTの修正コードを採用する。
                                     raise Exception(
                                         'bug code has syntax error')
@@ -1473,7 +1478,7 @@ class BlockRepair:
                         if "success" in code_perf_map["status"]:
                             code_perf_map["patch_size"] = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                        code_perf_map["rep_code"])
-                            if self.__is_gpt and 1 < code_perf_map["patch_size"]:
+                            if not self.__use_gpt == "none" and 1 < code_perf_map["patch_size"]:
                                 # ここでcode_perf_map["rep_code"]をサンプルにChatGPTにこれより修正量の小さい修正コードを作らせる。
                                 sample_correct_code_blocks = [
                                     code_perf_map["rep_code"]]
@@ -1503,7 +1508,7 @@ class BlockRepair:
                                 code_perf_map["bug_ast_size"]
                             rps_list.append(code_perf_map["rps"])
                         else:
-                            if self.__is_gpt and ("timeout" not in code_perf_map["status"]):
+                            if not self.__use_gpt == "none"  and ("timeout" not in code_perf_map["status"]):
                                 # この場合も模範解答をサンプルにChatGPTに修正コードを作らせる。
                                 sample_correct_code_blocks = [
                                     t[1] for t in ref_fn_code_list]

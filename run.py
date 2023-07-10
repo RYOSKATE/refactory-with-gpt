@@ -1,4 +1,5 @@
 import argparse
+import sys
 from refactor_run import ofl_refactor
 from block_repair_run import repair_dataset, oro_dataset, cmb_csv_logs
 
@@ -28,8 +29,9 @@ if __name__ == "__main__":
     parser.add_argument("-y", "--oro_json", help="only do only refactoring and store the results.",
                         action="store_true", default=False)
 
-    parser.add_argument("-g", "--gpt", help="allow chat gpt to repair code.",
-                        action="store_true", default=False)
+    parser.add_argument("-g", "--gpt", help="allow chat gpt to repair code('both', 'only', 'none')",
+                        choices=['both', 'only', 'none'],  default='none')
+
 
     args = parser.parse_args()
 
@@ -66,9 +68,13 @@ if __name__ == "__main__":
                     ofl_refactor(args.data_dir, args.questions,
                                  sampling_rate=sr, exp_idx=exp_idx)
 
-    if args.block_repair:
-        repair_dataset(args.data_dir, args.questions, args.offline_refactoring,
-                       args.online_refactoring, sr_list, exp_time, True, args.mutation,  args.gpt)
+    stdout_file_name = args.questions[0] + "_sr" + str(sr_list[0])+ "_gpt_" + args.gpt + ".txt"
+    with open('results/'+stdout_file_name, 'w') as f:
+        # 標準出力をリダイレクト
+        sys.stdout = f
+        if args.block_repair:
+            repair_dataset(args.data_dir, args.questions, args.offline_refactoring,
+                        args.online_refactoring, sr_list, exp_time, True, args.mutation,  args.gpt)
 
     if args.cmb_log:
         if args.online_refactoring:
