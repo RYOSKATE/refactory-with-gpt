@@ -47,7 +47,7 @@ def perf_to_csv(ques_dir_path, perf_map_dict, sr_list, online_or_offline, use_gp
     global csv_header
 
     ques_name = ques_dir_path.split("/")[-1]
-    csv_path = ques_name + "_sr" + str(sr_list[0])+ "_gpt_" + use_gpt + ".csv"
+    csv_path = "results/" + ques_name + "_sr" + str(sr_list[0])+ "_gpt_" + use_gpt + ".csv"
     # csv_path = ques_dir_path + "/refactory_" + online_or_offline + ("" if use_gpt == 'none' else "_gpc") + ".csv"
 
     with open(csv_path, 'w') as f:
