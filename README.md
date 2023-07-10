@@ -126,6 +126,19 @@ Logs of individual questions, generated under the same settings, can be collated
 ## セットアップ
 
 ```bash
+# for 5.10.0-23-cloud-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64 GNU/Linux
+sudo apt update -y
+sudo apt install -y git curl unzip
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+asdf plugin-add python
+python3 -m pip install pip==23.1.2
+git clone このリポジトリ
+cd refactory-vs-gpt
+```
+
+```bash
 asdf install
 unzip data.zip
 pip3 install -r requirements.txt
