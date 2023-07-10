@@ -121,15 +121,43 @@ Where, \* is either 'online', 'offline', or 'norefactor' depending of whether Re
 
 Logs of individual questions, generated under the same settings, can be collated through use of `-c` flag.
 
+# vs GPT 用
+
+## セットアップ
+
+```bash
+asdf install
+unzip data.zip
+pip3 install -r requirements.txt
+```
+
 ## 実行方法
 
 ```bash
 export OPENAI_API_KEY='sk-...'
-export OPENAI_ORGANIZATION="org-..."
-python run-gpt.py
+#Q1～Q5でQ3が一番早く終わる
+python3 run.py -d ./data -q question_3 -s 100 -o -m -b
+# -g bothをつけるとgptを利用した修正を行う、 -g onlyのときはgptだけで修正する
+python3 run.py -d ./data -q question_3 -s 100 -o -m -b -g both
+```
+
+results/に\*.txt で途中経過や最後にサマリを出力。
+最後まで実行すると csv 形式で出力。
+
+```bash
+# 放置実行用
+export OPENAI_API_KEY='sk-...'
+nohup ./exec.sh 100 &
 ```
 
 # メモ
+
+GPT 修正の関数のみ個別に動作確認のために呼び出す場合
+
+```bash
+export OPENAI_API_KEY='sk-...'
+python3 run-gpt.py
+```
 
 ## 論文メモ
 
@@ -209,70 +237,3 @@ of Code Attempt Attempt W/O R W/ R Taken (sec) Size (RPS)
     - `basic_framework/repair.py`に`repair_with_gpt`する処理や計測項目追加
 - 比較実行
   - `## 実行結果メモ`に。
-
-## 実行結果メモ
-
-`python3 run.py -d ./data -q question_1 -s 100 -o -m -b`
-
-### 変更前
-
-```bash
-Summary for question_1 (sampling_rate = 100%, exp_idx = 0)
-+-----------------+-------+
-|      Metric     | Value |
-+-----------------+-------+
-|     rep_rate    | 0.991 |
-| rep_rate_wo_mut | 0.863 |
-|    time_cost    | 3.449 |
-|       rps       | 0.409 |
-+-----------------+-------+
-```
-
-### 変更後
-
-`results/`へ保存。
-
-### 全実行
-
-```bash
-python3 run.py -d ./data -q question_1 -s 100 -o -m -b
-python3 run.py -d ./data -q question_1 -s 100 -o -m -b -g both
-python3 run.py -d ./data -q question_2 -s 100 -o -m -b
-python3 run.py -d ./data -q question_2 -s 100 -o -m -b -g both
-python3 run.py -d ./data -q question_3 -s 100 -o -m -b
-python3 run.py -d ./data -q question_3 -s 100 -o -m -b -g both
-python3 run.py -d ./data -q question_4 -s 100 -o -m -b
-python3 run.py -d ./data -q question_4 -s 100 -o -m -b -g both
-python3 run.py -d ./data -q question_5 -s 100 -o -m -b
-python3 run.py -d ./data -q question_5 -s 100 -o -m -b -g both
-```
-
-```bash
-python3 run.py -d ./data -q question_1 -s 0 -o -m -b
-python3 run.py -d ./data -q question_1 -s 0 -o -m -b -g both
-python3 run.py -d ./data -q question_2 -s 0 -o -m -b
-python3 run.py -d ./data -q question_2 -s 0 -o -m -b -g both
-python3 run.py -d ./data -q question_3 -s 0 -o -m -b
-python3 run.py -d ./data -q question_3 -s 0 -o -m -b -g both
-python3 run.py -d ./data -q question_4 -s 0 -o -m -b
-python3 run.py -d ./data -q question_4 -s 0 -o -m -b -g both
-python3 run.py -d ./data -q question_5 -s 0 -o -m -b
-python3 run.py -d ./data -q question_5 -s 0 -o -m -b -g both
-```
-
-### 測定実行環境
-
-Oracle Cloud
-
-```
-  shape = "VM.Standard.A1.Flex"
-  shape_source_id = "ocid1.image.oc1.ap-tokyo-1.aaaaaaaatbmq2hdaoqg4iui4rqfjr5knskcuktmgm2e7awey63nxar7pkzfa"
-  memory_in_gbs = "6"
-	ocpus = "1"
-```
-
-```bash
-# 放置実行用
-export OPENAI_API_KEY='sk-...'
-nohup ./exec.sh 100 &
-```
