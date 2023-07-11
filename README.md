@@ -127,21 +127,28 @@ Logs of individual questions, generated under the same settings, can be collated
 
 ```bash
 # for 5.10.0-23-cloud-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64 GNU/Linux
+:> agents_to_install.csv && \
+echo '"projects/research-392412/zones/asia-northeast1-b/instances/ishizue-refactory-with-gpt","[{""type"":""ops-agent""}]"' >> agents_to_install.csv && \
+curl -sSO https://dl.google.com/cloudagents/mass-provision-google-cloud-ops-agents.py && \
+python3 mass-provision-google-cloud-ops-agents.py --file agents_to_install.csv
+
 sudo apt update -y
 sudo apt install -y git curl unzip zip
+sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
 echo ". \$HOME/.asdf/asdf.sh" >> ~/.bashrc
 echo ". \$HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
+source  ~/.bashrc
 asdf plugin-add python
-python3 -m pip install pip==23.1.2
 git clone このリポジトリ
 cd refactory-vs-gpt
 ```
 
 ```bash
 asdf install
-unzip data.zip
+#python3 -m pip install pip==23.1.2
 pip3 install -r requirements.txt
+unzip data.zip
 ```
 
 ## 実行方法
@@ -161,7 +168,7 @@ results/に\*.txt で途中経過や最後にサマリを出力。
 # 放置実行用
 export SLACK_TOKEN="xoxb-..."
 export OPENAI_API_KEY='sk-...'
-nohup ./exec.sh 100 &
+sudo nohup ./exec.sh 100 &
 ```
 
 # メモ
