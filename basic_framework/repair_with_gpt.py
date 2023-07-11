@@ -12,13 +12,13 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # 実装参考:https://zenn.dev/ryo_kawamata/articles/b39ba0452fec81
 
 
-def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], max_retry_count=3) -> str:
+def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3) -> str:
     retry_count = 0
     extra_messages = []
     while retry_count < max_retry_count:
         try:
             generated_text = repair_code_by_gpt(
-                bug_code, description, sample_correct_code_blocks, extra_messages)
+                bug_code, description, sample_correct_code_blocks, gpt_model, extra_messages)
         except Exception as e:
             import sys
             print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
@@ -66,7 +66,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
     return code
 
 
-def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], extra_messages: list[str] = []) -> tuple[str, bool]:
+def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     order = f"""
     description: "${description}"
@@ -91,7 +91,7 @@ def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_bloc
 
     """
     completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model=gpt_model,
         messages=[
             {"role": "system", "content": "You are an excellent Python programmer."},
             {"role": "user", "content": order},

@@ -301,7 +301,7 @@ class ORO:
 
 
 class BlockRepair:
-    def __init__(self, ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt):
+    def __init__(self, ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt, gpt_model):
         self.__ques_dir_path = ques_dir_path
         self.__ans_dir_path = ques_dir_path + "/ans"
         self.__code_dir_path = ques_dir_path + "/code"
@@ -316,6 +316,7 @@ class BlockRepair:
         self.__is_online_ref = is_online_ref
         self.__is_mutation = is_mutation
         self.__use_gpt = use_gpt
+        self.__gpt_model = gpt_model
 
     def __get_corr_func_list_map(self, corr_code_map):
         corr_func_list_map = {}
@@ -1484,7 +1485,7 @@ class BlockRepair:
                                     code_perf_map["rep_code"]]
                                 gtp_start_time = time.process_time()
                                 rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
-                                    code_perf_map["ori_bug_code"], description, sample_correct_code_blocks)
+                                    code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model)
                                 code_perf_map["gpt_time"] = time.process_time(
                                 ) - gtp_start_time
                                 rep_code_with_gpt = regularize(
@@ -1514,7 +1515,7 @@ class BlockRepair:
                                     t[1] for t in ref_fn_code_list]
                                 gtp_start_time = time.process_time()
                                 rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
-                                    bug_code, description, sample_correct_code_blocks)
+                                    bug_code, description, sample_correct_code_blocks, self.__gpt_model)
                                 code_perf_map["gpt_time"] = time.process_time(
                                 ) - gtp_start_time
                                 rep_code_with_gpt = regularize(

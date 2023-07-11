@@ -130,8 +130,8 @@ Logs of individual questions, generated under the same settings, can be collated
 sudo apt update -y
 sudo apt install -y git curl unzip zip
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+echo ". \$HOME/.asdf/asdf.sh" >> ~/.bashrc
+echo ". \$HOME/.asdf/completions/asdf.bash" >> ~/.bashrc
 asdf plugin-add python
 python3 -m pip install pip==23.1.2
 git clone このリポジトリ

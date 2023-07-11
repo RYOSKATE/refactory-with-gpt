@@ -43,11 +43,18 @@ def gen_row(ques_name, sr, exp_idx, file_name, code_perf_map):
     return row
 
 
-def perf_to_csv(ques_dir_path, perf_map_dict, sr_list, online_or_offline, use_gpt):
+def perf_to_csv(ques_dir_path, perf_map_dict, sr_list, online_or_offline, use_gpt, gpt_model):
     global csv_header
 
     ques_name = ques_dir_path.split("/")[-1]
-    csv_path = "results/" + ques_name + "_sr" + str(sr_list[0])+ "_gpt_" + use_gpt + ".csv"
+
+    csv_path = "results/" + ques_name + "_sr" + str(sr_list[0])
+    if use_gpt == 'none':
+        csv_path += "_gpt_none"
+    else:
+        csv_path += "_" + gpt_model + "_" + use_gpt
+    csv_path += ".csv"
+
     # csv_path = ques_dir_path + "/refactory_" + online_or_offline + ("" if use_gpt == 'none' else "_gpc") + ".csv"
 
     with open(csv_path, 'w') as f:
@@ -69,13 +76,13 @@ def perf_to_csv(ques_dir_path, perf_map_dict, sr_list, online_or_offline, use_gp
                     csv_w.writerow(row)
 
 
-def repair_ques(ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt):
+def repair_ques(ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt, gpt_model):
     br = BlockRepair(ques_dir_path, is_offline_ref=is_offline_ref, is_online_ref=is_online_ref,
-                     is_mutation=is_mutation, sr_list=sr_list, exp_time=exp_time, use_gpt=use_gpt)
+                     is_mutation=is_mutation, sr_list=sr_list, exp_time=exp_time, use_gpt=use_gpt, gpt_model=gpt_model)
     return br.run()
 
 
-def repair_dataset(data_dir_path, ques_name_list, is_offline_ref, is_online_ref, sr_list, exp_time, is_csv_log, is_mutation, use_gpt):
+def repair_dataset(data_dir_path, ques_name_list, is_offline_ref, is_online_ref, sr_list, exp_time, is_csv_log, is_mutation, use_gpt, gpt_model):
     if ques_name_list is None:
         ques_name_list = list(os.listdir(data_dir_path))
 
@@ -83,7 +90,7 @@ def repair_dataset(data_dir_path, ques_name_list, is_offline_ref, is_online_ref,
         ques_dir_path = data_dir_path + "/" + ques_dir_name
 
         ques_perf_map = repair_ques(
-            ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt)
+            ques_dir_path, is_offline_ref, is_online_ref, is_mutation, sr_list, exp_time, use_gpt, gpt_model)
 
         online_or_offline = None
         if is_online_ref:
@@ -94,7 +101,7 @@ def repair_dataset(data_dir_path, ques_name_list, is_offline_ref, is_online_ref,
             online_or_offline = "norefactor"
 
         if is_csv_log:
-            perf_to_csv(ques_dir_path, ques_perf_map, sr_list, online_or_offline, use_gpt)
+            perf_to_csv(ques_dir_path, ques_perf_map, sr_list, online_or_offline, use_gpt, gpt_model)
 
 
 def oro_dataset(data_dir_path, ques_name_list, sr_list, exp_time):

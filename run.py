@@ -31,6 +31,9 @@ if __name__ == "__main__":
 
     parser.add_argument("-g", "--gpt", help="allow chat gpt to repair code('both', 'only', 'none')",
                         choices=['both', 'only', 'none'],  default='none')
+    
+    parser.add_argument("-gm", "--gpt_model", help='select gpt model (default "gpt-3.5-turbo")',
+                        default='gpt-3.5-turbo')
 
 
     args = parser.parse_args()
@@ -68,13 +71,18 @@ if __name__ == "__main__":
                     ofl_refactor(args.data_dir, args.questions,
                                  sampling_rate=sr, exp_idx=exp_idx)
 
-    stdout_file_name = args.questions[0] + "_sr" + str(sr_list[0])+ "_gpt_" + args.gpt + ".txt"
+    stdout_file_name = args.questions[0] + "_sr" + str(sr_list[0])                
+    if args.gpt == 'none':
+        stdout_file_name += "_gpt_none"
+    else:
+        stdout_file_name += "_" + args.gpt_model + "_" + args.gpt
+    stdout_file_name += ".txt"
     with open('results/'+stdout_file_name, 'w') as f:
         # 標準出力をリダイレクト
         sys.stdout = f
         if args.block_repair:
             repair_dataset(args.data_dir, args.questions, args.offline_refactoring,
-                        args.online_refactoring, sr_list, exp_time, True, args.mutation,  args.gpt)
+                        args.online_refactoring, sr_list, exp_time, True, args.mutation, args.gpt, args.gpt_model)
 
     if args.cmb_log:
         if args.online_refactoring:
