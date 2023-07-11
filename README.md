@@ -159,6 +159,7 @@ results/に\*.txt で途中経過や最後にサマリを出力。
 
 ```bash
 # 放置実行用
+export SLACK_TOKEN="xoxb-..."
 export OPENAI_API_KEY='sk-...'
 nohup ./exec.sh 100 &
 ```
