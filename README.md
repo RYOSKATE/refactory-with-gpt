@@ -128,7 +128,7 @@ Logs of individual questions, generated under the same settings, can be collated
 ```bash
 # for 5.10.0-23-cloud-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64 GNU/Linux
 sudo apt update -y
-sudo apt install -y git curl unzip
+sudo apt install -y git curl unzip zip
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
