@@ -1,0 +1,2158 @@
+Question,Sampling Rate,Experiment ID,File Name,Status,Match (Rfty Code),Match (Ori Code),Buggy Code,Buggy Mutation,Refactored Correct Code,Original Correct File Name,Rule ID,Repair,Stru. Matching Time,Online Refactoring Time,GCR Time,Stru. Mutation Time,Block Mapping Time,Variable Mapping Time,Specification&Synthesis Time,GPT Time,Total Time,#Passed Test Case,#Test Case,RPS
+question_3,100,0,wrong_3_087.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.012,0.019,N/A,N/A,N/A
+question_3,100,0,wrong_3_275.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_058.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_089.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_289.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for i in range ( len ( lst ) ) :
+        judge = 0
+        for j in range ( i ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                judge = 1
+        if ( judge == 0 ) :
+            new_list += [ lst [ i ] ]
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_182.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_201.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst1 = [ ]
+    for item in lst :
+        if ( item in lst1 ) :
+            continue
+        else :
+            lst1 . append ( item )
+    return lst1
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_180.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_006.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for number in lst :
+        if ( number not in new_list ) :
+            new_list . append ( number )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_066.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for element in lst :
+        if ( element not in result ) :
+            result . append ( element )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_112.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    answer = [ ]
+    for i in lst :
+        for a in answer :
+            if ( i == a ) :
+                break
+        else :
+            answer . append ( i )
+    return answer
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_032.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    sumx = [ ]
+    for i in lst :
+        if ( i not in sumx ) :
+            sumx . append ( i )
+    return sumx
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_230.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_287.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_262.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_271.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    s = [ ]
+    for i in lst :
+        if ( i not in s ) :
+            s . append ( i )
+    return s
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_136.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for item in lst :
+        if ( item not in new_list ) :
+            new_list . append ( item )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_011.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_254.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_202.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_239.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    l = len ( lst )
+    i = 0
+    while ( i < l ) :
+        j = ( i + 1 )
+        while ( j < l ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                del lst [ j ]
+                l -= 1
+            else :
+                j += 1
+        i += 1
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_3,100,0,wrong_3_117.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i in newlist ) :
+            continue
+        else :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_265.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    listt = lst [ : : ( - 1 ) ]
+    for element in listt :
+        if ( listt . count ( element ) > 1 ) :
+            listt . remove ( element )
+    return listt [ : : ( - 1 ) ]
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_155.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for ele in lst :
+        if ( ele not in result ) :
+            result . append ( ele )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_257.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for elem in lst :
+        if ( elem not in new_list ) :
+            new_list . append ( elem )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_028.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    store = [ ]
+    for ele in lst :
+        if ( ele not in store ) :
+            store . append ( ele )
+    return store
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_205.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_281.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_166.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_043.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_253.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for i in lst :
+        if ( i not in new_list ) :
+            new_list . append ( i )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_034.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for ele in lst :
+        if ( ele not in new_lst ) :
+            new_lst . append ( ele )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_004.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    occurrences = ( )
+    new_lst = [ ]
+    for item in lst :
+        if ( item not in occurrences ) :
+            occurrences += ( item , )
+            new_lst . append ( item )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_130.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_295.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    keep = [ ]
+    for i in lst :
+        if ( i not in keep ) :
+            keep . append ( i )
+    return keep
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_211.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_109.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_123.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_083.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_236.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    l = len ( lst )
+    i = 0
+    while ( i < l ) :
+        j = ( i + 1 )
+        while ( j < l ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                del lst [ j ]
+                l -= 1
+            else :
+                j += 1
+        i += 1
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_3,100,0,wrong_3_210.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for elem in lst :
+        if ( elem not in new_list ) :
+            new_list . append ( elem )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_025.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_146.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_108.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_106.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_193.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    count = 0
+    rev_lst = lst . copy ( )
+    rev_lst . reverse ( )
+    ori_len = len ( lst )
+    new_lst = lst . copy ( )
+    for i in range ( ori_len ) :
+        if ( rev_lst [ i ] in rev_lst [ ( i + 1 ) : ] ) :
+            new_lst . pop ( ( ( ori_len - i ) - 1 ) )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_154.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for ele in lst :
+        if ( ele not in result ) :
+            result . append ( ele )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_097.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_243.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_124.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_208.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_252.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for ele in lst :
+        if ( ele not in new ) :
+            new . append ( ele )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_037.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    output = [ ]
+    for entry in lst :
+        if ( output . count ( entry ) == 0 ) :
+            output . append ( entry )
+    return output
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_240.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_169.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for repeat in range ( len ( lst ) ) :
+        if ( lst [ repeat ] not in a ) :
+            a . append ( lst [ repeat ] )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_194.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for item in lst :
+        if ( item not in new_list ) :
+            new_list . append ( item )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_308.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    t = [ ]
+    for i in lst :
+        if ( i not in t ) :
+            t . append ( i )
+    return t
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_181.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_148.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst2 = [ ]
+    for i in lst :
+        if ( i not in lst2 ) :
+            lst2 . append ( i )
+    return lst2
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_059.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst_final = [ ]
+    for i in lst :
+        if ( i not in lst_final ) :
+            lst_final . append ( i )
+    return lst_final
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_064.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_176.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_152.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for x in lst :
+        if ( x not in result ) :
+            result . append ( x )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_218.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for i in lst :
+        if ( i not in new ) :
+            new . append ( i )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_286.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_039.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_149.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_250.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for element in lst :
+        if ( newlist . count ( element ) == 0 ) :
+            newlist += [ element ]
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_057.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_141.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in range ( len ( lst ) ) :
+        if ( lst [ i ] not in result ) :
+            result . append ( lst [ i ] )
+            continue
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_016.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst . reverse ( )
+    for i in lst :
+        if ( lst . count ( i ) > 1 ) :
+            j = 0
+            while ( j < lst . count ( i ) ) :
+                lst . remove ( i )
+                j += 1
+    lst . reverse ( )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_161.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_033.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for ele in lst :
+        if ( ele not in new_lst ) :
+            new_lst . append ( ele )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_269.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_013.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_068.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_156.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for i in lst :
+        if ( i not in new ) :
+            new . append ( i )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_220.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_221.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_052.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_110.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_047.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = ( )
+    for x in lst :
+        if ( lst . count ( x ) > 1 ) :
+            new += [ ]
+        else :
+            new += [ x ]
+    return new
+def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.008,N/A,N/A,N/A
+question_3,100,0,wrong_3_086.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_251.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_053.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_088.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_3,100,0,wrong_3_019.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_173.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_232.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_056.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_189.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_244.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_219.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_021.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    i = 0
+    while ( i < len ( lst ) ) :
+        j = ( i + 1 )
+        while ( j < len ( lst ) ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                lst = ( lst [ : j ] + lst [ ( j + 1 ) : ] )
+            else :
+                j += 1
+        i += 1
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_222.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_071.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_084.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_012.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_301.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_111.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    final = [ ]
+    for x in lst :
+        if ( x not in final ) :
+            final . append ( x )
+    return final
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_175.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_090.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i in result ) :
+            continue
+        result += [ i ]
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_018.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_217.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_237.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    l = len ( lst )
+    i = 0
+    while ( i < l ) :
+        j = ( i + 1 )
+        while ( j < l ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                del lst [ j ]
+                l -= 1
+            else :
+                j += 1
+        i += 1
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_003.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    occurrences = ( )
+    new_lst = [ ]
+    for item in lst :
+        if ( item not in occurrences ) :
+            occurrences += ( item , )
+            new_lst . append ( item )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_128.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_204.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_282.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_185.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    removed = [ ]
+    for e in lst :
+        if ( e not in removed ) :
+            removed . append ( e )
+    return removed
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_234.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_168.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for repeat in lst :
+        if ( repeat not in a ) :
+            a . append ( repeat )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_015.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_054.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_051.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_199.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.007,N/A,N/A,N/A
+question_3,100,0,wrong_3_107.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_150.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_081.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlst = [ ]
+    for i in lst :
+        if ( i not in newlst ) :
+            newlst . append ( i )
+    return newlst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_172.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_273.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_241.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_060.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_010.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_268.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_121.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_085.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_122.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_215.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_126.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_207.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_248.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_290.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for element in lst :
+        if ( not is_same ( element , new_list ) ) :
+            new_list . append ( element )
+        else :
+            continue
+    return new_list
+def is_same ( test , lst ) :
+    for e in lst :
+        if ( e == test ) :
+            return True
+        else :
+            continue
+    return False
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_3,100,0,wrong_3_164.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for i in lst :
+        if ( i not in new ) :
+            new . append ( i )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.009,0.011,N/A,N/A,N/A
+question_3,100,0,wrong_3_225.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_303.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for i in lst :
+        if ( i in a ) :
+            continue
+        a . extend ( [ i ] )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_255.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_153.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for x in lst :
+        if ( x not in result ) :
+            result . append ( x )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_031.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_195.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_279.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_184.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    removed = [ ]
+    for e in lst :
+        if ( e not in removed ) :
+            removed . append ( e )
+    return removed
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_203.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_100.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst . reverse ( )
+    for item in lst :
+        while ( lst . count ( item ) != 1 ) :
+            lst . remove ( item )
+    lst . reverse ( )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_024.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_041.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_261.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_191.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst1 = [ ]
+    for i in lst :
+        check = True
+        for j in lst1 :
+            if ( j == i ) :
+                check = False
+        if check :
+            lst1 += [ i ]
+    return lst1
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_138.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst1 = [ ]
+    for i in range ( len ( lst ) ) :
+        if ( lst [ i ] not in lst1 ) :
+            lst1 . append ( lst [ i ] )
+    return lst1
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_206.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_259.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for number in lst :
+        if ( number not in new_list ) :
+            new_list . append ( number )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_162.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlst = [ ]
+    for i in lst :
+        if ( i not in newlst ) :
+            newlst . append ( i )
+    return newlst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_105.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_196.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_092.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for item in lst :
+        if ( item not in result ) :
+            result . append ( item )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_298.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for x in range ( len ( lst ) ) :
+        if ( lst [ x ] not in new ) :
+            new . append ( lst [ x ] )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_267.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_082.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_072.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlst = [ ]
+    for i in lst :
+        if ( i not in newlst ) :
+            newlst . append ( i )
+    return newlst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_139.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst1 = [ ]
+    for i in range ( len ( lst ) ) :
+        if ( lst [ i ] not in lst1 ) :
+            lst1 . append ( lst [ i ] )
+    return lst1
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_256.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for elem in lst :
+        if ( elem not in new_list ) :
+            new_list . append ( elem )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_026.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    counter = 0
+    while ( counter < len ( lst ) ) :
+        for i in lst [ 1 : ] :
+            if ( lst [ counter ] == i ) :
+                lst = lst . append ( i )
+    return lst
+def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_213.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for element in lst :
+        if ( element in new_list ) :
+            continue
+        else :
+            new_list . append ( element )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_009.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_216.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_078.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_048.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_134.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_179.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_224.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_245.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_197.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_163.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_098.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_080.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for x in lst :
+        if ( x not in new_lst ) :
+            new_lst . append ( x )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_063.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_260.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_174.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_145.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_065.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_101.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_094.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for i in lst :
+        if ( i not in new ) :
+            new . append ( i )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_227.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_283.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_120.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    seq = ( lst [ 0 ] , )
+    for i in lst :
+        if ( i not in seq ) :
+            seq = ( seq + ( i , ) )
+    return seq
+def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_067.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_300.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for x in lst :
+        if ( x not in new ) :
+            new . append ( x )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_116.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_285.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_017.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_115.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_278.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_294.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_001.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    output = [ ]
+    for i in lst :
+        if ( i not in output ) :
+            output . append ( i )
+    return output
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_140.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    my_lst = [ ]
+    for i in lst :
+        if ( i not in my_lst ) :
+            my_lst . append ( i )
+    return my_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_030.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_263.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_291.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst1 = [ ]
+    for i in lst :
+        if ( i not in lst1 ) :
+            lst1 . append ( i )
+    return lst1
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_076.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst . reverse ( )
+    for element in lst :
+        if ( lst . count ( element ) > 1 ) :
+            lst . remove ( element )
+    lst . reverse ( )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_070.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_157.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_143.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_005.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_178.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_008.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_270.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_304.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for i in lst :
+        if ( i in a ) :
+            continue
+        else :
+            a . extend ( [ i ] )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_190.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_238.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    l = len ( lst )
+    i = 0
+    while ( i < l ) :
+        j = ( i + 1 )
+        while ( j < l ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                del lst [ j ]
+                l -= 1
+            else :
+                j += 1
+        i += 1
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.008,N/A,N/A,N/A
+question_3,100,0,wrong_3_277.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_055.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_040.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_023.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    list1 = [ ]
+    for i in lst :
+        if ( i not in list1 ) :
+            list1 . append ( i )
+    return list1
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_129.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_020.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    i = 0
+    while ( i < len ( lst ) ) :
+        j = ( i + 1 )
+        while ( j < len ( lst ) ) :
+            if ( lst [ i ] == lst [ j ] ) :
+                lst = ( lst [ : j ] + lst [ ( j + 1 ) : ] )
+            else :
+                j += 1
+        i += 1
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_044.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_091.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for item in lst :
+        if ( item not in result ) :
+            result . append ( item )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_288.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for i in lst :
+        if ( i not in new ) :
+            new . append ( i )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_214.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_061.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    o = [ ]
+    for i in lst :
+        if ( i not in o ) :
+            o . append ( i )
+    return o
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_102.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst . reverse ( )
+    for item in lst :
+        while ( lst . count ( item ) != 1 ) :
+            lst . remove ( item )
+    lst . reverse ( )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_266.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    listt = lst . copy ( )
+    listt . reverse ( )
+    for element in listt :
+        if ( listt . count ( element ) > 1 ) :
+            listt . remove ( element )
+    listt . reverse ( )
+    return listt
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_226.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_077.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlst = [ ]
+    for i in lst :
+        if ( i not in newlst ) :
+            newlst . append ( i )
+    return newlst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_229.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_186.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for elem in lst :
+        if ( elem not in new_list ) :
+            new_list . append ( elem )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_264.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_131.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_119.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for ele in lst :
+        if ( ele not in new_lst ) :
+            new_lst . append ( ele )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_170.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for repeat in range ( len ( lst ) ) :
+        if ( lst [ repeat ] not in a ) :
+            a += [ lst [ repeat ] ]
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_272.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_233.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_099.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for item in lst :
+        if ( item not in newlist ) :
+            newlist . append ( item )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_188.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for elem in lst :
+        if ( elem not in new_list ) :
+            new_list . append ( elem )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_050.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_296.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    x = 0
+    while ( x < len ( lst ) ) :
+        if ( lst [ x ] not in new ) :
+            new . append ( lst [ x ] )
+        x += 1
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_045.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_036.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    output = [ ]
+    for entry in lst :
+        if ( output . count ( entry ) == 0 ) :
+            output . append ( entry )
+    return output
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_249.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for number in lst :
+        if ( number not in new_list ) :
+            new_list . append ( number )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_046.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for i in lst :
+        if ( i not in a ) :
+            a . append ( i )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_299.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for i in lst :
+        if ( i not in a ) :
+            a . append ( i )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_096.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_292.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_165.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_151.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for x in lst :
+        if ( x not in result ) :
+            result . append ( x )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_276.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_125.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_223.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_132.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_073.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_127.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_183.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    removed = [ ]
+    for e in lst :
+        if ( e not in removed ) :
+            removed . append ( e )
+    return removed
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_042.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_274.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_075.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    lst . reverse ( )
+    newlist = [ ]
+    for element in lst :
+        if ( lst . count ( element ) > 1 ) :
+            lst . remove ( element )
+    lst . reverse ( )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_284.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_200.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_160.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    pst = [ ]
+    for i in lst :
+        if ( i not in pst ) :
+            pst . append ( i )
+    return pst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_228.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_171.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_147.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_187.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for elem in lst :
+        if ( elem not in new_list ) :
+            new_list . append ( elem )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_007.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_049.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_038.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_209.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_293.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_079.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_002.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    occurrences = ( )
+    new_lst = [ ]
+    for item in lst :
+        if ( item not in occurrences ) :
+            occurrences += ( item , )
+            new_lst . append ( item )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_159.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_133.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_246.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_258.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_235.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newseq = [ ]
+    for element in lst :
+        if ( element not in newseq ) :
+            newseq . append ( element )
+    return newseq
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_144.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_192.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    count = 0
+    rev_lst = lst [ : : ( - 1 ) ]
+    ori_len = len ( lst )
+    for i in range ( ori_len ) :
+        if ( rev_lst [ i ] in rev_lst [ ( i + 1 ) : ] ) :
+            lst . pop ( ( ( ori_len - i ) - 1 ) )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_113.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_027.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_137.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_306.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.009,0.011,N/A,N/A,N/A
+question_3,100,0,wrong_3_167.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlst = [ ]
+    for i in lst :
+        if ( i not in newlst ) :
+            newlst . append ( i )
+    return newlst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_118.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for ele in lst :
+        if ( ele not in new_lst ) :
+            new_lst . append ( ele )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_014.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_035.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for ele in lst :
+        if ( ele not in new_lst ) :
+            new_lst . append ( ele )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_231.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_142.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ j ] == lst [ i ] ) :
+                lst . pop ( j )
+                return remove_extras ( lst )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_074.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    result = [ ]
+    for i in lst :
+        if ( i not in result ) :
+            result . append ( i )
+    return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_305.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_247.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_242.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_135.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_029.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_302.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    newlist = [ ]
+    for i in lst :
+        if ( i not in newlist ) :
+            newlist . append ( i )
+    return newlist
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_114.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_307.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    t = [ ]
+    for i in lst :
+        if ( i not in t ) :
+            t . append ( i )
+    return t
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_280.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_list = [ ]
+    for x in lst :
+        if ( x not in new_list ) :
+            new_list . append ( x )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_177.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_069.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    remove_lst = [ ]
+    for i in lst :
+        if ( i not in remove_lst ) :
+            remove_lst . append ( i )
+    return remove_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_212.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_198.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    for x in lst :
+        if ( x not in new ) :
+            new . append ( x )
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_297.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new = [ ]
+    x = 0
+    while ( x < len ( lst ) ) :
+        if ( lst [ x ] not in new ) :
+            new . append ( lst [ x ] )
+        x += 1
+    return new
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_093.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_3,100,0,wrong_3_022.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for element in lst :
+        if ( element not in new_lst ) :
+            new_lst . append ( element )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_158.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    new_lst = [ ]
+    for i in lst :
+        if ( i not in new_lst ) :
+            new_lst . append ( i )
+    return new_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_062.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    o = [ ]
+    for i in lst :
+        if ( i not in o ) :
+            o . append ( i )
+    return o
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_095.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    output = [ ]
+    seen = [ ]
+    for value in lst :
+        if ( value not in seen ) :
+            output . append ( value )
+            seen . append ( value )
+    return output
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_104.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for i in lst :
+        if ( i not in a ) :
+            a . append ( i )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_3,100,0,wrong_3_103.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def remove_extras ( lst ) :
+    a = [ ]
+    for i in lst :
+        if ( i not in a ) :
+            a . append ( i )
+    return a
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A

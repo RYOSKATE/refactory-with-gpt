@@ -1,0 +1,3598 @@
+Question,Sampling Rate,Experiment ID,File Name,Status,Match (Rfty Code),Match (Ori Code),Buggy Code,Buggy Mutation,Refactored Correct Code,Original Correct File Name,Rule ID,Repair,Stru. Matching Time,Online Refactoring Time,GCR Time,Stru. Mutation Time,Block Mapping Time,Variable Mapping Time,Specification&Synthesis Time,GPT Time,Total Time,#Passed Test Case,#Test Case,RPS
+question_4,100,0,wrong_4_005.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.011,0.016,N/A,N/A,N/A
+question_4,100,0,wrong_4_014.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_284.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_085.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_247.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_354.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_277.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_074.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_060.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_226.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_181.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_111.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_087.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_152.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_155.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_307.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_242.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_117.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_011.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_311.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_139.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_197.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_121.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_037.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_059.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_253.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_264.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_224.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_023.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_073.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_094.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_057.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_292.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_306.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_019.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_041.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_077.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_044.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_272.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_076.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_187.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_124.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_269.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_022.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_161.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_323.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_262.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_332.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_249.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_333.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_337.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_103.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_029.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_106.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_267.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_045.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_246.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_250.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    swap = True
+    while swap :
+        swap = False
+        for tag in range ( ( len ( lst ) - 1 ) ) :
+            if ( lst [ tag ] [ 1 ] < lst [ ( tag + 1 ) ] [ 1 ] ) :
+                ( lst [ tag ] , lst [ ( tag + 1 ) ] ) = ( lst [ ( tag + 1 ) ] , lst [ tag ] )
+                swap = True
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_174.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_190.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_345.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_028.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_112.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_238.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_330.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_015.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_214.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_274.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_083.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_142.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_232.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_071.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_164.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_297.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_007.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_160.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_184.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_056.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_091.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_327.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_172.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_080.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_093.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_084.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_340.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    l = len ( lst )
+    for i in range ( 0 , l ) :
+        for j in range ( 0 , ( ( l - i ) - 1 ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                temp = lst [ j ]
+                lst [ j ] = lst [ ( j + 1 ) ]
+                lst [ ( j + 1 ) ] = temp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_222.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_072.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_185.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_078.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_318.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_120.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_216.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_243.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_263.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_275.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_244.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_230.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_319.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_254.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_342.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_138.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    sort = [ ]
+    while lst :
+        smallest = lst [ 0 ]
+        for element in lst :
+            if ( element [ 1 ] > smallest [ 1 ] ) :
+                smallest = element
+        lst . remove ( smallest )
+        sort . append ( smallest )
+    return sort
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_227.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_349.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_050.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_008.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_149.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.009,0.012,N/A,N/A,N/A
+question_4,100,0,wrong_4_123.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_170.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_347.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_024.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_166.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_335.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_225.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_183.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.004,N/A,N/A,N/A
+question_4,100,0,wrong_4_017.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.004,N/A,N/A,N/A
+question_4,100,0,wrong_4_086.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_154.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_356.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_134.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_143.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.010,N/A,N/A,N/A
+question_4,100,0,wrong_4_129.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_251.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_287.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_066.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_031.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    if ( len ( lst ) == 0 ) :
+        return [ ]
+    elif ( len ( lst ) == 1 ) :
+        return lst
+    else :
+        mid = ( len ( lst ) // 2 )
+        lst1 = sort_age ( lst [ : mid ] )
+        lst2 = sort_age ( lst [ mid : ] )
+        result = [ ]
+        while ( lst1 and lst2 ) :
+            if ( lst1 [ 0 ] [ 1 ] < lst2 [ 0 ] [ 1 ] ) :
+                result . append ( lst2 . pop ( 0 ) )
+            else :
+                result . append ( lst1 . pop ( 0 ) )
+        result . extend ( lst1 )
+        result . extend ( lst2 )
+        return result
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.008,N/A,N/A,N/A
+question_4,100,0,wrong_4_215.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_320.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_034.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_205.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_258.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_113.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_204.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.010,N/A,N/A,N/A
+question_4,100,0,wrong_4_271.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    if ( len ( lst ) < 2 ) :
+        return lst
+    midpoint = ( len ( lst ) // 2 )
+    left = sort_age ( lst [ : midpoint ] )
+    right = sort_age ( lst [ midpoint : ] )
+    new_list = [ ]
+    while ( left and right ) :
+        if ( left [ 0 ] [ 1 ] < right [ 0 ] [ 1 ] ) :
+            new_list . append ( right . pop ( 0 ) )
+        else :
+            new_list . append ( left . pop ( 0 ) )
+    new_list . extend ( left )
+    new_list . extend ( right )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_032.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_309.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_016.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_079.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_308.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_270.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    if ( len ( lst ) < 2 ) :
+        return lst
+    midpoint = ( len ( lst ) // 2 )
+    left = sort_age ( lst [ : midpoint ] )
+    right = sort_age ( lst [ midpoint : ] )
+    new_list = [ ]
+    while ( left and right ) :
+        if ( left [ 0 ] [ 1 ] < right [ 0 ] [ 1 ] ) :
+            new_list . append ( right . pop ( 0 ) )
+        else :
+            new_list . append ( left . pop ( 0 ) )
+    new_list . extend ( left )
+    new_list . extend ( right )
+    return new_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_128.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_145.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    ( males , females ) = ( [ ] , [ ] )
+    for i in lst :
+        if ( i [ 0 ] == 'M' ) :
+            males = ( males + [ i ] )
+        elif ( i [ 0 ] == 'F' ) :
+            females = ( females + [ i ] )
+        lst = lst [ 1 : ]
+    return merge ( merge_sort ( males ) , merge_sort ( females ) )
+def merge ( left , right ) :
+    results = [ ]
+    while ( left and right ) :
+        if ( left [ 0 ] [ 1 ] > right [ 0 ] [ 1 ] ) :
+            results . append ( left . pop ( 0 ) )
+        else :
+            results . append ( right . pop ( 0 ) )
+    results . extend ( left )
+    results . extend ( right )
+    return results
+def merge_sort ( lst ) :
+    if ( len ( lst ) < 2 ) :
+        return lst
+    mid = ( len ( lst ) // 2 )
+    left = merge_sort ( lst [ : mid ] )
+    right = merge_sort ( lst [ mid : ] )
+    return merge ( left , right )
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.009,N/A,N/A,N/A
+question_4,100,0,wrong_4_035.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_108.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_165.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_203.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_178.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_286.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_098.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_322.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_126.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_321.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_026.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_061.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_148.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_168.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_288.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_329.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_110.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_114.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_312.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( ( len ( lst ) - 1 ) - i ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_130.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_052.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    newlst = [ ]
+    while lst :
+        oldest = lst [ 0 ] [ 1 ]
+        for person in lst :
+            if ( person [ 1 ] > oldest ) :
+                oldest = person [ 1 ]
+        for person in lst :
+            if ( person [ 1 ] == oldest ) :
+                newlst . append ( person )
+                lst . remove ( person )
+                break
+    return newlst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_304.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.004,N/A,N/A,N/A
+question_4,100,0,wrong_4_002.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_357.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_167.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_302.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( ( len ( lst ) - i ) - 1 ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_257.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_290.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_131.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_009.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_054.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_003.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_169.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_004.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_137.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_265.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_278.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_283.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( ( len ( lst ) - 1 ) - i ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_255.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_273.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_210.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_202.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_341.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    l = len ( lst )
+    for i in range ( 0 , l ) :
+        for j in range ( 0 , ( ( l - i ) - 1 ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                temp = lst [ j ]
+                lst [ j ] = lst [ ( j + 1 ) ]
+                lst [ ( j + 1 ) ] = temp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_176.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_195.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_339.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_348.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_010.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_291.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_338.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_099.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_240.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_217.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_125.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_221.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_101.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_186.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_206.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_133.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_122.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_068.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_239.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_241.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_118.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.009,0.012,N/A,N/A,N/A
+question_4,100,0,wrong_4_328.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_237.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_245.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_314.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_046.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_140.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_064.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_159.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_109.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_048.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_256.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_039.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_325.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_261.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_104.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_351.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_070.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_303.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_293.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_194.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_285.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_248.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_200.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_175.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_315.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_192.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_179.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_355.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_053.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_218.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_299.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_276.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_062.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_296.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_346.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_353.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_235.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_012.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_036.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    l = len ( lst )
+    for i in range ( l ) :
+        largest = lst [ i ]
+        for j in range ( ( i + 1 ) , l ) :
+            if ( lst [ j ] [ 1 ] > largest [ 1 ] ) :
+                largest = lst [ j ]
+                ( lst [ i ] , lst [ j ] ) = ( lst [ j ] , lst [ i ] )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_058.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_150.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_027.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_177.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_088.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_300.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_266.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_201.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_158.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_095.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_252.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_119.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_268.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_075.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_196.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_219.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_144.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.003,0.010,N/A,N/A,N/A
+question_4,100,0,wrong_4_102.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_343.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_236.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_289.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_033.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_030.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_294.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_115.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_163.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_141.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_162.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_055.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_223.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_136.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_001.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_310.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_344.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_040.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_352.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_153.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_151.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_021.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_049.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_097.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_188.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_096.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_182.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_316.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_208.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_231.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_020.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_180.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_116.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_146.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_006.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_105.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_279.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_324.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_042.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_229.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_132.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_063.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_193.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_259.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_171.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.009,0.011,N/A,N/A,N/A
+question_4,100,0,wrong_4_280.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_157.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_107.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_295.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_233.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_199.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_207.py,fail_exception,N/A,1,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_173.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_228.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_211.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_051.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_331.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_334.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_198.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_135.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_082.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_326.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_156.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_013.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_213.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_191.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_209.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_336.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_025.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_305.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_298.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_317.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_018.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_090.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_281.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( ( len ( lst ) - 1 ) - i ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_350.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_234.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_067.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_313.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_301.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    lst . sort ( key = ( lambda x : x [ 1 ] ) , reverse = True )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.004,N/A,N/A,N/A
+question_4,100,0,wrong_4_089.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_047.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_260.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_282.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( ( len ( lst ) - 1 ) - i ) ) :
+            if ( lst [ j ] [ 1 ] < lst [ ( j + 1 ) ] [ 1 ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_065.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_038.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_069.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_127.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_092.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_043.py,fail_exception,N/A,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.007,N/A,N/A,N/A
+question_4,100,0,wrong_4_212.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_189.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_220.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.005,N/A,N/A,N/A
+question_4,100,0,wrong_4_081.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( 0 , ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_100.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] [ 1 ] < lst [ j ] [ 1 ] ) :
+                tmp = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = tmp
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
+question_4,100,0,wrong_4_147.py,success_w_gpt_only,N/A,1,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    sorted_lst = [ ]
+    while lst :
+        oldest = lst [ 0 ]
+        for elem in lst :
+            if ( elem [ 1 ] > oldest [ 1 ] ) :
+                oldest = elem
+        lst . remove ( oldest )
+        sorted_lst . append ( oldest )
+    return sorted_lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.002,0.006,N/A,N/A,N/A
