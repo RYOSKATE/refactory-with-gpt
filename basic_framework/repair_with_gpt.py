@@ -1,4 +1,5 @@
 from __future__ import annotations
+import time
 import openai
 import os
 from mistletoe import Document
@@ -23,6 +24,8 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             import sys
             print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
                   "/"+str(max_retry_count)+"]"+str(e)+"\n")
+            if 'Rate limit reached' in str(e):
+                time.sleep(20)
             retry_count += 1
             continue
 
