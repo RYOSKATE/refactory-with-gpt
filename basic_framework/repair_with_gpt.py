@@ -18,10 +18,9 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3) -> str:
-    regularized_bug_code = regularize(bug_code)
     min_patch_size = sys.maxsize
     for reference_code in sample_correct_code_blocks:
-        min_patch_size = min(min_patch_size, zss_multi_func_code_distance(regularized_bug_code, regularize(reference_code)))
+        min_patch_size = min(min_patch_size, zss_multi_func_code_distance(bug_code, reference_code))
 
     retry_count = 0
     extra_messages = []
@@ -56,8 +55,8 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 
         # Check whether the fixed code is same with the original wrong code
         fixed_code = regularize(code)
-        if regularized_bug_code.strip() == fixed_code.strip():
-            print('regularized_bug_code.strip() == fixed_code.strip()')
+        if bug_code.strip() == fixed_code.strip():
+            print('bug_code.strip() == fixed_code.strip()')
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
@@ -70,7 +69,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             continue
 
         # Check whether the fixed code is same with the original wrong code
-        patch_size = zss_multi_func_code_distance(regularized_bug_code, fixed_code)
+        patch_size = zss_multi_func_code_distance(bug_code, fixed_code)
         if min_patch_size <= patch_size:
             print(f'min_patch_size ({min_patch_size}) <= patch_size ({patch_size})')
             retry_count += 1
