@@ -141,14 +141,15 @@ def get_code_blocks(text: str):
     return "\n\n".join(code_blocks)
 
 
-def save_results(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model: str, rep_code: str, patch_size: Optional[int]):
+def save_results(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model: str, patch_size: float, gpt_rep_code: str, gpt_patch_size: Optional[float]):
     data = {
         "bug_code": bug_code,
         "description": description,
         "sample_correct_code_blocks": sample_correct_code_blocks,
         "gpt_model": gpt_model,
-        "rep_code": rep_code,
-        "patch_size": patch_size
+        "patch_size": patch_size,
+        "gpt_rep_code": gpt_rep_code,
+        "gpt_patch_size": gpt_patch_size,
     }
 
     input = {key: data[key] for key in ["bug_code", "description", "sample_correct_code_blocks", "gpt_model"]}
