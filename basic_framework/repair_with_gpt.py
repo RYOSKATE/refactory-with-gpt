@@ -64,7 +64,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "The semantics of your fixed code is different from the model solution code. Make the semantics of your fixed code completely same with the model solution code keeping the patch size small."
+                "content": "Your corrected code's semantics differ from the model solution. Ensure the semantics match the model solution while minimizing the patch size."
             })
             continue
 
@@ -79,7 +79,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "The patch size is equal to or larger than the model solution code. Make the syntax of your fixed code more similar with the original code keeping the semantics of your fixed code completely same with the model solution code."
+                "content": "Your changes are more extensive than the model solution. Adjust the syntax of your corrected code to closely resemble the original, ensuring the semantics align with the model solution."
             })
             continue
 
@@ -118,7 +118,7 @@ As a Python programming expert, your objective is to correct the incorrect code 
 - Make only essential modifications to the incorrect code, preserving its essence.
 - Start by listing all user-defined identifiers in the incorrect code. Use as many of these identifiers as possible in your corrected code.
 - Your correct code's semantics should mirror the model solution.
-- Ensure the syntax of the corrected code closely mirrors the incorrect original, more so than the model solution.
+- Ensure the syntax of the corrected code closely resembles the incorrect original, more so than the model solution.
 - Retain variable and function names, comments, whitespaces, line break characters, parentheses, `pass`, `break`, `continue`, and any redundant expressions like `list([])`.
 - Avoid changing the names of user-defined identifiers from the incorrect original.
 - Avoid deleting whitespaces, line breaks, parentheses, `pass`, `break`, `continue`, or any superfluous statements and function calls.
