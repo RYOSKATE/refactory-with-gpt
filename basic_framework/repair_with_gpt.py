@@ -112,33 +112,21 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     prompt = f"""
-Act as an expert in Python programming, your task is to fix the original wrong code for the problem following the rules and the output format.
-The semantics of your fixed code should be completely same with the model solution code.
-The patch should be as small as possible so that the original wrong code can be fixed with a minimum of changes.
-To make the patch size minimum, list user-defined identifiers in the original wrong code and write fixed code consisting of all the user-defined identifiers in the original wrong code.
+As a Python programming expert, your objective is to correct the incorrect code provided. Follow these guidelines:
+    
+- Ensure your corrected code produces the same output and logic as the provided model solution.
+- Make only essential modifications to the incorrect code, preserving its essence.
+- Start by listing all user-defined identifiers in the incorrect code. Use as many of these identifiers as possible in your corrected code.
+- Your correct code's semantics should mirror the model solution.
+- Ensure the syntax of the corrected code closely mirrors the incorrect original, more so than the model solution.
+- Retain variable and function names, comments, whitespaces, line break characters, parentheses, `pass`, `break`, `continue`, and any redundant expressions like `list([])`.
+- Avoid changing the names of user-defined identifiers from the incorrect original.
+- Avoid deleting whitespaces, line breaks, parentheses, `pass`, `break`, `continue`, or any superfluous statements and function calls.
 
-# Rules
-- Make the semantics of your fixed code completely same with the model solution code.
-- Make the syntax of your fixed code more similar with the original wrong code than the model solution code.
-- Keep variable and function names.
-- Keep comments.
-- Keep whitespaces.
-- Keep line break characters.
-- Keep parentheses.
-- Keep `pass` statements.
-- Keep `break` statements.
-- Keep `continue` statements.
-- Keep useless statements.
-- Keep useless C like `list([])`.
-- DO NOT change user-defined identifier names in the original wrong code.
-- DO NOT remove whitespaces, line breaks and parentheses.
-- DO NOT remove `pass`, `break` and `continue` statements.
-- DO NOT remove useless statements and function calls.
-
-# Problem description
+# Problem Description
 {description}
 
-# Original wrong code to be fixed
+# Incorrect Code
 ```python
 {bug_code}
 ```
@@ -146,16 +134,17 @@ To make the patch size minimum, list user-defined identifiers in the original wr
 
     for index in range(len(sample_correct_code_blocks)):
         prompt += f"""
-# Model solution {index + 1}
+# Model Solution {index + 1}
 {sample_correct_code_blocks[index]}
 """
 
         prompt += f'''
-# Output format
+# Output Format
 """
-# User-defined identifier list in original wrong code
+User-defined identifiers from the incorrect code:
 - ...
-# Fixed code consisting of all user-defined identifiers in original wrong code
+
+Corrected code employing the listed identifiers:
 ```python
 <Python code>
 ```
