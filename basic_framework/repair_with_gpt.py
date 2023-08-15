@@ -1,5 +1,7 @@
 from __future__ import annotations
 import openai
+import json
+import hashlib
 import os
 from mistletoe import Document
 from mistletoe.block_token import CodeFence
@@ -13,11 +15,13 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3) -> str:
+    _save_inputs(bug_code, description, sample_correct_code_blocks, gpt_model, max_retry_count)
+
     retry_count = 0
     extra_messages = []
     while retry_count < max_retry_count:
         try:
-            generated_text = repair_code_by_gpt(
+            generated_text = _repair_code_by_gpt(
                 bug_code, description, sample_correct_code_blocks, gpt_model, extra_messages)
         except Exception as e:
             import sys
@@ -66,7 +70,31 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
     return code
 
 
-def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
+def _calc_hash(text: str) -> str:
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
+
+def _save_inputs(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3):
+    """
+    Convert all parameters into a single JSON string and save it to a file.
+    The file name is the hash value of the JSON string.
+    """
+    
+    data = {
+        "bug_code": bug_code,
+        "description": description,
+        "sample_correct_code_blocks": sample_correct_code_blocks,
+        "gpt_model": gpt_model,
+        "max_retry_count": max_retry_count
+    }
+
+    json_data = json.dumps(data)
+    file_hash = _calc_hash(json_data)
+    with open(f'{file_hash}.json', 'w') as file:
+        file.write(json_data)
+
+
+def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     order = f"""
     description: "${description}"
