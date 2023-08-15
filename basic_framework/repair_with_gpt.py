@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import Optional
 import openai
 import json
 import hashlib
@@ -15,8 +16,6 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3) -> str:
-    _save_inputs(bug_code, description, sample_correct_code_blocks, gpt_model, max_retry_count)
-
     retry_count = 0
     extra_messages = []
     while retry_count < max_retry_count:
@@ -69,29 +68,6 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 
     return code
 
-
-def _calc_hash(text: str) -> str:
-    return hashlib.sha256(text.encode('utf-8')).hexdigest()
-
-
-def _save_inputs(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3):
-    """
-    Convert all parameters into a single JSON string and save it to a file.
-    The file name is the hash value of the JSON string.
-    """
-    
-    data = {
-        "bug_code": bug_code,
-        "description": description,
-        "sample_correct_code_blocks": sample_correct_code_blocks,
-        "gpt_model": gpt_model,
-        "max_retry_count": max_retry_count
-    }
-
-    json_data = json.dumps(data)
-    file_hash = _calc_hash(json_data)
-    with open(f'{file_hash}.json', 'w') as file:
-        file.write(json_data)
 
 
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
@@ -163,3 +139,24 @@ def get_code_blocks(text: str):
             code_blocks.append(token.children[0].content)
 
     return "\n\n".join(code_blocks)
+
+
+def save_results(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model: str, rep_code: str, patch_size: Optional[int]):
+    data = {
+        "bug_code": bug_code,
+        "description": description,
+        "sample_correct_code_blocks": sample_correct_code_blocks,
+        "gpt_model": gpt_model,
+        "rep_code": rep_code,
+        "patch_size": patch_size
+    }
+
+    input = {key: data[key] for key in ["bug_code", "description", "sample_correct_code_blocks", "gpt_model"]}
+
+    file_hash = _calc_hash(json.dumps(input))
+    with open(f'results/json/{file_hash}.json', 'w') as file:
+        file.write(json.dumps(data))
+
+
+def _calc_hash(text: str) -> str:
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()

@@ -15,7 +15,7 @@ from fastcache import clru_cache
 from basic_framework.holes import Holes
 from basic_framework.f1x import *
 from basic_framework.feedback import *
-from basic_framework.repair_with_gpt import read_file_contents, repair_code_by_gpt_with_retry
+from basic_framework.repair_with_gpt import read_file_contents, repair_code_by_gpt_with_retry, save_results
 from basic_framework.utils import *
 from basic_framework.distance import *
 from basic_framework.block import *
@@ -1492,12 +1492,14 @@ class BlockRepair:
                                     rep_code_with_gpt_raw)
                                 tr_dict = self.__tester.tv_code(
                                     rep_code_with_gpt)
+                                gpt_patch_size = None
                                 if self.__tester.is_pass(tr_dict):
                                     gpt_patch_size = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                   rep_code_with_gpt)
                                     if gpt_patch_size < code_perf_map["patch_size"]:
                                         code_perf_map["status"] = "success_w_gpt_better"
                                         code_perf_map["rep_code"] = rep_code_with_gpt
+                                save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, rep_code_with_gpt, gpt_patch_size)
 
                             # special case in patch size calculation
                             if code_perf_map["patch_size"] == 0 and code_perf_map["ori_bug_code"] != code_perf_map["rep_code"]:
