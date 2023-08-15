@@ -1,5 +1,6 @@
 from __future__ import annotations
 from typing import Optional
+from basic_framework.core_testing import Tester
 from basic_framework.distance import zss_multi_func_code_distance
 import openai
 import json
@@ -17,7 +18,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # 実装参考:https://zenn.dev/ryo_kawamata/articles/b39ba0452fec81
 
 
-def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3) -> str:
+def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3, tester: Optional[Tester]=None) -> str:
     min_patch_size = sys.maxsize
     for reference_code in sample_correct_code_blocks:
         min_patch_size = min(min_patch_size, zss_multi_func_code_distance(bug_code, reference_code))
@@ -34,9 +35,9 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             retry_count += 1
             continue
 
-        print('------------')
-        print(generated_text)
-        print('------------')
+        # print('------------')
+        # print(generated_text)
+        # print('------------')
 
         code = get_code_blocks(generated_text)
 
@@ -53,10 +54,10 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             continue
 
-        # Check whether the fixed code is same with the original wrong code
+        # Check whether the corrected code is semantically correct
         fixed_code = regularize(code)
-        if bug_code.strip() == fixed_code.strip():
-            print('bug_code.strip() == fixed_code.strip()')
+        if bug_code.strip() == fixed_code.strip() or (tester and not tester.is_pass(tester.tv_code(fixed_code))):
+            # print('bug_code.strip() == fixed_code.strip()')
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
@@ -68,10 +69,10 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             continue
 
-        # Check whether the fixed code is same with the original wrong code
+        # Check whether the patch size is smaller than reference code
         patch_size = zss_multi_func_code_distance(bug_code, fixed_code)
         if min_patch_size <= patch_size:
-            print(f'min_patch_size ({min_patch_size}) <= patch_size ({patch_size})')
+            # print(f'min_patch_size ({min_patch_size}) <= patch_size ({patch_size})')
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
