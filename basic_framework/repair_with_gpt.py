@@ -115,11 +115,11 @@ def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blo
 Act as an expert in Python programming, your task is to fix the original wrong code for the problem following the rules and the output format.
 The semantics of your fixed code should be completely same with the model solution code.
 The patch should be as small as possible so that the original wrong code can be fixed with a minimum of changes.
-To make the patch size minimum, list user-defined identifiers in the original wrong code and write fixed code consisting of all the user-defined identifiers.
+To make the patch size minimum, list user-defined identifiers in the original wrong code and write fixed code consisting of all the user-defined identifiers in the original wrong code.
 
 # Rules
 - Make the semantics of your fixed code completely same with the model solution code.
-- Make the syntax of your fixed code similar with the original wrong code.
+- Make the syntax of your fixed code more similar with the original wrong code than the model solution code.
 - Keep variable and function names.
 - Keep comments.
 - Keep whitespaces.
@@ -155,7 +155,7 @@ To make the patch size minimum, list user-defined identifiers in the original wr
 """
 # User-defined identifier list in original wrong code
 - ...
-# Fixed code consisting of all user-defined identifiers
+# Fixed code consisting of all user-defined identifiers in original wrong code
 ```python
 <Python code>
 ```
