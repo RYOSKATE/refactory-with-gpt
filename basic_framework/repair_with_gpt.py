@@ -44,7 +44,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "Write Python code that can be executed with the Python exec function."
+                "content": "Write fixed code."
             })
             continue
 
@@ -92,7 +92,7 @@ To keep the patch size small, list user-defined identifiers in the original code
 - Keep `continue` statements.
 - Keep redundant statements.
 - DO NOT change user-defined identifier names in the original code.
-- DO NOT remove redundant whitespaces, line breaks and parentheses in the original code.
+- DO NOT remove redundant whitespaces, line breaks and parentheses.
 - DO NOT remove redundant `pass`, `break` and `continue` statements.
 
 # Problem description
