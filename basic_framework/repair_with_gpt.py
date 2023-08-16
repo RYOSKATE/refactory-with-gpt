@@ -1,9 +1,11 @@
 from __future__ import annotations
 from typing import Optional
+from basic_framework.distance import zss_multi_func_code_distance
 import openai
 import json
 import hashlib
 import os
+import sys
 from mistletoe import Document
 from mistletoe.block_token import CodeFence
 
@@ -16,6 +18,11 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3) -> str:
+    regularized_bug_code = regularize(bug_code)
+    min_patch_size = sys.maxsize
+    for reference_code in sample_correct_code_blocks:
+        min_patch_size = min(min_patch_size, zss_multi_func_code_distance(bug_code, reference_code))
+
     retry_count = 0
     extra_messages = []
     while retry_count < max_retry_count:
@@ -23,7 +30,6 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             generated_text = _repair_code_by_gpt(
                 bug_code, description, sample_correct_code_blocks, gpt_model, extra_messages)
         except Exception as e:
-            import sys
             print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
                   "/"+str(max_retry_count)+"]"+str(e)+"\n")
             retry_count += 1
@@ -48,7 +54,9 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             continue
 
-        if regularize(bug_code) == regularize(code):
+        # Check whether the fixed code is same with the original wrong code
+        fixed_code = regularize(code)
+        if regularized_bug_code.strip() == fixed_code.strip():
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
@@ -57,6 +65,20 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             extra_messages.append({
                 "role": "user",
                 "content": "The semantics of your code is different from the model solution code. Please fixed it."
+            })
+            continue
+
+        # Check whether the fixed code is same with the original wrong code
+        patch_size = zss_multi_func_code_distance(regularized_bug_code, fixed_code)
+        if min_patch_size <= patch_size:
+            retry_count += 1
+            extra_messages.append({
+                "role": "assistant",
+                "content": generated_text
+            })
+            extra_messages.append({
+                "role": "user",
+                "content": "The patch size is equal to or larger than the model solution code. Minimize the patch between the original code and the fixed code."
             })
             continue
 
