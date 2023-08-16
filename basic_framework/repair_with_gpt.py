@@ -19,7 +19,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # 実装参考:https://zenn.dev/ryo_kawamata/articles/b39ba0452fec81
 
 
-def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3, tester: Optional[Tester]=None) -> str:
+def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3, tester: Optional[Tester]=None) -> Optional[str]:
     min_patch_size = sys.maxsize
     for reference_code in sample_correct_code_blocks:
         min_patch_size = min(min_patch_size, zss_multi_func_code_distance(bug_code, reference_code))
