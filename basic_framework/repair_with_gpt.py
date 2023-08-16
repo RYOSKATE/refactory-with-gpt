@@ -65,14 +65,14 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "The semantics of the fixed code is different from the model solution code. Make the semantics of the fixed code completely same with the model solution code."
+                "content": "The semantics of your fixed code is different from the model solution code. Make the semantics of your fixed code completely same with the model solution code keeping the patch size small."
             })
             continue
 
         # Check whether the fixed code is same with the original wrong code
         patch_size = zss_multi_func_code_distance(regularized_bug_code, fixed_code)
         if min_patch_size <= patch_size:
-            print('min_patch_size <= patch_size')
+            print(f'min_patch_size ({min_patch_size}) <= patch_size ({patch_size})')
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
@@ -80,7 +80,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "The patch size is equal to or larger than the model solution code. Minimize the patch between the original code and the fixed code by making the syntax of the fixed code similar with the original code."
+                "content": "The patch size is equal to or larger than the model solution code. Make the syntax of your fixed code more similar with the original code keeping the semantics of your fixed code completely same with the model solution code."
             })
             continue
 
@@ -116,7 +116,7 @@ def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blo
 Act as an expert in Python programming, your task is to fix the original wrong code for the problem following the rules and the output format.
 The semantics of your fixed code should be completely same with the model solution code.
 The patch should be as small as possible so that the original wrong code can be fixed with a minimum of changes.
-To make the patch size small, list user-defined identifiers in the original wrong code and write fixed code consisting of all the user-defined identifiers.
+To make the patch size minimum, list user-defined identifiers in the original wrong code and write fixed code consisting of all the user-defined identifiers.
 
 # Rules
 - Make the semantics of your fixed code completely same with the model solution code.
@@ -156,7 +156,7 @@ To make the patch size small, list user-defined identifiers in the original wron
 """
 # User-defined identifier list in original wrong code
 - ...
-# Fixed code consisting of all the user-defined identifiers
+# Fixed code consisting of all user-defined identifiers
 ```python
 <Python code>
 ```
