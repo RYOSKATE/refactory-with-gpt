@@ -64,7 +64,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "The semantics of your code is different from the model solution code. Please fixed it."
+                "content": "The semantics of the fixed code is different from the model solution code. Make the semantics of the fixed code completely same with the model solution code."
             })
             continue
 
@@ -78,7 +78,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "The patch size is equal to or larger than the model solution code. Minimize the patch between the original code and the fixed code."
+                "content": "The patch size is equal to or larger than the model solution code. Minimize the patch between the original code and the fixed code by making the syntax of the fixed code similar with the original code."
             })
             continue
 
@@ -111,13 +111,13 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     prompt = f"""
-Your task is to fix the Python program code for the problem following the rules and the output.
-The semantics of the fixed code should be completely same with the model solutions.
+Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules and the output.
+The semantics of the fixed code should be completely same with the model solution code.
 However, the patch should be as small as possible so that the original code can be fixed with a minimum of changes.
 To keep the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
 
 # Rules
-- Make the semantics of the fixed code same with the model solutions.
+- Make the semantics of the fixed code completely same with the model solution code.
 - Make the syntax of the fixed code similar with the original code.
 - Keep variable and function names.
 - Keep comments.
