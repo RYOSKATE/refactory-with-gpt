@@ -44,7 +44,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             extra_messages.append({
                 "role": "user",
-                "content": "Write a code block of code that can be executed with the Python exec function."
+                "content": "Write Python code that can be executed with the Python exec function."
             })
             continue
 
@@ -79,7 +79,7 @@ def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blo
     prompt = f"""
 Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules.
 The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
-To keep the patch size small, list user-defined identifiers in the original code, then write fixed code consisting of all the identifiers.
+To keep the patch size small, list user-defined identifiers in the original code at first then write fixed code consisting of all the identifiers.
 
 # Rules
 - Keep variable and function names.
@@ -91,8 +91,8 @@ To keep the patch size small, list user-defined identifiers in the original code
 - Keep `break` statements.
 - Keep `continue` statements.
 - Keep redundant statements.
-- DO NOT change user-defined identifier names.
-- DO NOT remove redundant whitespaces, line breaks and parentheses.
+- DO NOT change user-defined identifier names in the original code.
+- DO NOT remove redundant whitespaces, line breaks and parentheses in the original code.
 - DO NOT remove redundant `pass`, `break` and `continue` statements.
 
 # Problem description
@@ -115,10 +115,9 @@ To keep the patch size small, list user-defined identifiers in the original code
 """
 # User-defined identifier list in original code
 - ...
-
 # Fixed code consisting of all the original identifiers
 ```python
-def ...
+...
 ```
 """
 '''
