@@ -61,7 +61,7 @@ def main():
         else:
             lose += 1
 
-        print(f"org: {zss_multi_func_code_distance(regularized_bug_code, regularize(data['sample_correct_code_blocks'][0]))}, old: {old_patch_size}, new: {patch_size}\n\n")
+        print(f"org: {data['patch_size']}, org (re): {zss_multi_func_code_distance(regularized_bug_code, regularize(data['sample_correct_code_blocks'][0]))}, old: {old_patch_size}, new: {patch_size}\n\n")
 
     print(f"win: {win}, draw: {draw}, lose: {lose}\n\n")
 
