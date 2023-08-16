@@ -1481,25 +1481,28 @@ class BlockRepair:
                                                                                        code_perf_map["rep_code"])
                             if not self.__use_gpt == "none" and 1 < code_perf_map["patch_size"]:
                                 # ここでcode_perf_map["rep_code"]をサンプルにChatGPTにこれより修正量の小さい修正コードを作らせる。
-                                sample_correct_code_blocks = [
-                                    code_perf_map["rep_code"]]
-                                gtp_start_time = time.process_time()
-                                rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
-                                    code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, tester=self.__tester)
-                                code_perf_map["gpt_time"] = time.process_time(
-                                ) - gtp_start_time
-                                rep_code_with_gpt = regularize(
-                                    rep_code_with_gpt_raw)
-                                tr_dict = self.__tester.tv_code(
-                                    rep_code_with_gpt)
-                                gpt_patch_size = None
-                                if self.__tester.is_pass(tr_dict):
-                                    gpt_patch_size = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
-                                                                                  rep_code_with_gpt)
-                                    if gpt_patch_size < code_perf_map["patch_size"]:
-                                        code_perf_map["status"] = "success_w_gpt_better"
-                                        code_perf_map["rep_code"] = rep_code_with_gpt
-                                # save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, code_perf_map["patch_size"], rep_code_with_gpt, gpt_patch_size)
+                                try:
+                                    sample_correct_code_blocks = [
+                                        code_perf_map["rep_code"]]
+                                    gtp_start_time = time.process_time()
+                                    rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
+                                        code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, tester=self.__tester)
+                                    code_perf_map["gpt_time"] = time.process_time(
+                                    ) - gtp_start_time
+                                    rep_code_with_gpt = regularize(
+                                        rep_code_with_gpt_raw)
+                                    tr_dict = self.__tester.tv_code(
+                                        rep_code_with_gpt)
+                                    gpt_patch_size = None
+                                    if self.__tester.is_pass(tr_dict):
+                                        gpt_patch_size = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
+                                                                                    rep_code_with_gpt)
+                                        if gpt_patch_size < code_perf_map["patch_size"]:
+                                            code_perf_map["status"] = "success_w_gpt_better"
+                                            code_perf_map["rep_code"] = rep_code_with_gpt
+                                    # save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, code_perf_map["patch_size"], rep_code_with_gpt, gpt_patch_size)
+                                except Exception as e:
+                                    print(f"An error occured: {e}.")
 
                             # special case in patch size calculation
                             if code_perf_map["patch_size"] == 0 and code_perf_map["ori_bug_code"] != code_perf_map["rep_code"]:
