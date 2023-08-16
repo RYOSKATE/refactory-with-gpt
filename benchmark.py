@@ -39,7 +39,7 @@ def main():
 
         gpt_model = data['gpt_model']
         # gpt_model = 'gpt-4'
-        raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model)
+        raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model) or ''
 
         rep_code = regularize(raw_rep_code)
         patch_size = zss_multi_func_code_distance(data['bug_code'], rep_code)
