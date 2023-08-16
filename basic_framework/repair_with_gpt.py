@@ -115,12 +115,12 @@ def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blo
     prompt = f"""
 Act as an expert in Python programming, your task is to fix the original wrong code for the problem following the rules and the output format.
 The semantics of your fixed code should be completely same with the model solution code.
-The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
-To make the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
+The patch should be as small as possible so that the original wrong code can be fixed with a minimum of changes.
+To make the patch size small, list user-defined identifiers in the original wrong code and write fixed code consisting of all the user-defined identifiers.
 
 # Rules
 - Make the semantics of your fixed code completely same with the model solution code.
-- Make the syntax of your fixed code similar with the original code.
+- Make the syntax of your fixed code similar with the original wrong code.
 - Keep variable and function names.
 - Keep comments.
 - Keep whitespaces.
@@ -131,7 +131,7 @@ To make the patch size small, list user-defined identifiers in the original code
 - Keep `continue` statements.
 - Keep useless statements.
 - Keep useless C like `list([])`.
-- DO NOT change user-defined identifier names in the original code.
+- DO NOT change user-defined identifier names in the original wrong code.
 - DO NOT remove whitespaces, line breaks and parentheses.
 - DO NOT remove `pass`, `break` and `continue` statements.
 - DO NOT remove useless statements and function calls.
@@ -154,11 +154,11 @@ To make the patch size small, list user-defined identifiers in the original code
         prompt += f'''
 # Output format
 """
-# User-defined identifier list in original code
+# User-defined identifier list in original wrong code
 - ...
 # Fixed code consisting of all the user-defined identifiers
 ```python
-...
+<Python code>
 ```
 """
 '''
