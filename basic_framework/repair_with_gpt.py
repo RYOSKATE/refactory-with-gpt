@@ -7,7 +7,7 @@ import os
 from mistletoe import Document
 from mistletoe.block_token import CodeFence
 
-from basic_framework.utils import syntax_check
+from basic_framework.utils import regularize, syntax_check
 
 openai.organization = ''
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -48,6 +48,18 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             })
             continue
 
+        if regularize(bug_code) == regularize(code):
+            retry_count += 1
+            extra_messages.append({
+                "role": "assistant",
+                "content": generated_text
+            })
+            extra_messages.append({
+                "role": "user",
+                "content": "The semantics of your code is different from the model solution code. Please fixed it."
+            })
+            continue
+
         try:
             if not syntax_check(code):
                 raise SyntaxError('Generated code has syntax error')
@@ -55,7 +67,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             break
         except Exception as e:
             retry_count += 1
-            # evalでエラーが発生した場合はエラー内容をChatGPTのパラメーターに追加してリトライ
+            # evalでエラーが発生した場合はエラー内容をプロンプトに追加してリトライ
             extra_messages.append({
                 "role": "assistant",
                 "content": generated_text
@@ -77,11 +89,14 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     prompt = f"""
-Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules and the output.
-The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
+Your task is to fix the Python program code for the problem following the rules and the output.
+The semantics of the fixed code should be completely same with the model solutions.
+However, the patch should be as small as possible so that the original code can be fixed with a minimum of changes.
 To keep the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
 
 # Rules
+- Make the semantics of the fixed code same with the model solutions.
+- Make the syntax of the fixed code similar with the original code.
 - Keep variable and function names.
 - Keep comments.
 - Keep whitespaces.
@@ -91,6 +106,7 @@ To keep the patch size small, list user-defined identifiers in the original code
 - Keep `break` statements.
 - Keep `continue` statements.
 - Keep redundant statements.
+- Keep redundant function calls like `list([])`.
 - DO NOT change user-defined identifier names in the original code.
 - DO NOT remove redundant whitespaces, line breaks and parentheses.
 - DO NOT remove redundant `pass`, `break` and `continue` statements.
