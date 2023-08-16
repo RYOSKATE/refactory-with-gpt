@@ -79,11 +79,10 @@ def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blo
     prompt = f"""
 Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules.
 The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
-To keep the patch size small, you list identifiers in the original code at first, then write fixed code containig all the identifiers.
+To keep the patch size small, list user-defined identifiers in the original code, then write fixed code consisting of all the identifiers.
 
 # Rules
 - Keep variable and function names.
-- DO NOT change variable and functions names.
 - Keep comments.
 - Keep whitespaces.
 - Keep line break characters.
@@ -92,6 +91,7 @@ To keep the patch size small, you list identifiers in the original code at first
 - Keep `break` statements.
 - Keep `continue` statements.
 - Keep redundant statements.
+- DO NOT change user-defined identifier names.
 - DO NOT remove redundant whitespaces, line breaks and parentheses.
 - DO NOT remove redundant `pass`, `break` and `continue` statements.
 
@@ -113,10 +113,10 @@ To keep the patch size small, you list identifiers in the original code at first
         prompt += f'''
 # Output format
 """
-# Identifier list in original code
+# User-defined identifier list in original code
 - ...
 
-# Fixed code consisting of ALL the original identifiers
+# Fixed code consisting of all the original identifiers
 ```python
 def ...
 ```
