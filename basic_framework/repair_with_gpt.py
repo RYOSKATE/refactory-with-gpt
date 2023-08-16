@@ -111,14 +111,14 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     prompt = f"""
-Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules and the output.
-The semantics of the fixed code should be completely same with the model solution code.
-However, the patch should be as small as possible so that the original code can be fixed with a minimum of changes.
+Act as an expert in Python programming, your task is to fix the original wrong code for the problem following the rules and the output format.
+The semantics of your fixed code should be completely same with the model solution code.
+The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
 To keep the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
 
 # Rules
-- Make the semantics of the fixed code completely same with the model solution code.
-- Make the syntax of the fixed code similar with the original code.
+- Make the semantics of your fixed code completely same with the model solution code.
+- Make the syntax of your fixed code similar with the original code.
 - Keep variable and function names.
 - Keep comments.
 - Keep whitespaces.
@@ -136,7 +136,7 @@ To keep the patch size small, list user-defined identifiers in the original code
 # Problem description
 {description}
 
-# Original code to be fixed
+# Original wrong code to be fixed
 ```python
 {bug_code}
 ```
@@ -153,7 +153,7 @@ To keep the patch size small, list user-defined identifiers in the original code
 """
 # User-defined identifier list in original code
 - ...
-# Fixed code consisting of all the original identifiers
+# Fixed code consisting of all the user-defined identifiers
 ```python
 ...
 ```
