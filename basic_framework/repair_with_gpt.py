@@ -77,9 +77,9 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     prompt = f"""
-Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules.
+Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules and the output.
 The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
-To keep the patch size small, list user-defined identifiers in the original code at first then write fixed code consisting of all the identifiers.
+To keep the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
 
 # Rules
 - Keep variable and function names.
