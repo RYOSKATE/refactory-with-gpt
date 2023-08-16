@@ -29,9 +29,9 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             retry_count += 1
             continue
 
-        print('----------')
+        print('------------')
         print(generated_text)
-        print('----------')
+        print('------------')
 
         code = get_code_blocks(generated_text)
 
