@@ -30,7 +30,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
             generated_text = _repair_code_by_gpt(
                 bug_code, description, sample_correct_code_blocks, gpt_model, extra_messages)
         except Exception as e:
-            print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
+            print("[WARN] GPT Request Error. retry=[" + str(retry_count) +
                   "/"+str(max_retry_count)+"]"+str(e)+"\n")
             retry_count += 1
             continue
@@ -57,6 +57,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
         # Check whether the fixed code is same with the original wrong code
         fixed_code = regularize(code)
         if regularized_bug_code.strip() == fixed_code.strip():
+            print('regularized_bug_code.strip() == fixed_code.strip()')
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
@@ -71,6 +72,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
         # Check whether the fixed code is same with the original wrong code
         patch_size = zss_multi_func_code_distance(regularized_bug_code, fixed_code)
         if min_patch_size <= patch_size:
+            print('min_patch_size <= patch_size')
             retry_count += 1
             extra_messages.append({
                 "role": "assistant",
@@ -114,7 +116,7 @@ def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blo
 Act as an expert in Python programming, your task is to fix the original wrong code for the problem following the rules and the output format.
 The semantics of your fixed code should be completely same with the model solution code.
 The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
-To keep the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
+To make the patch size small, list user-defined identifiers in the original code and write fixed code consisting of all the identifiers.
 
 # Rules
 - Make the semantics of your fixed code completely same with the model solution code.
@@ -127,11 +129,12 @@ To keep the patch size small, list user-defined identifiers in the original code
 - Keep `pass` statements.
 - Keep `break` statements.
 - Keep `continue` statements.
-- Keep redundant statements.
-- Keep redundant function calls like `list([])`.
+- Keep useless statements.
+- Keep useless C like `list([])`.
 - DO NOT change user-defined identifier names in the original code.
-- DO NOT remove redundant whitespaces, line breaks and parentheses.
-- DO NOT remove redundant `pass`, `break` and `continue` statements.
+- DO NOT remove whitespaces, line breaks and parentheses.
+- DO NOT remove `pass`, `break` and `continue` statements.
+- DO NOT remove useless statements and function calls.
 
 # Problem description
 {description}
