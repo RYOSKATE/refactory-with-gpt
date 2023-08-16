@@ -77,18 +77,23 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 def _repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
 
     prompt = f"""
-Act as an expert in Python programming and create a patch to fix the Python program code for the problem following the rules.
+Act as an expert in Python programming, your task is to fix the Python program code for the problem following the rules.
+The patch should be as small as possible so that the original code can be fixed with a minimum of changes.
+To keep the patch size small, you list identifiers in the original code at first, then write fixed code containig all the identifiers.
 
 # Rules
-- The patch should be as close as possible to the original code.
-- Keep the patch size as small as possible.
-- Keep the original program structure as much as possible.
-- Keep the original order of the statements as much as possible.
-- Keep `pass`, `break` and `continue` statements as much as possible.
-- Keep the original function and vairable names, and ignore the names in reference code.
-- Keep the original parentheses as much as possible even though they are redundant.
-- Keep the original statements as much as possible even though they are redundant.
-- Keep the original conditional branches as much as possible even though they are redundant.
+- Keep variable and function names.
+- DO NOT change variable and functions names.
+- Keep comments.
+- Keep whitespaces.
+- Keep line break characters.
+- Keep parentheses.
+- Keep `pass` statements.
+- Keep `break` statements.
+- Keep `continue` statements.
+- Keep redundant statements.
+- DO NOT remove redundant whitespaces, line breaks and parentheses.
+- DO NOT remove redundant `pass`, `break` and `continue` statements.
 
 # Problem description
 {description}
@@ -101,16 +106,19 @@ Act as an expert in Python programming and create a patch to fix the Python prog
 
     for index in range(len(sample_correct_code_blocks)):
         prompt += f"""
-# Model solution {index + 1} (Ignore naming rules)
+# Model solution {index + 1}
 {sample_correct_code_blocks[index]}
 """
 
         prompt += f'''
 # Output format
 """
-# Fixed code with fewest changes
+# Identifier list in original code
+- ...
+
+# Fixed code consisting of ALL the original identifiers
 ```python
-...
+def ...
 ```
 """
 '''
@@ -125,7 +133,7 @@ Act as an expert in Python programming and create a patch to fix the Python prog
         max_tokens=1024,    # 生成する文章の最大単語数
         n=1,                # いくつの返答を生成するか
         stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
-        temperature=0.7,    # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
+        temperature=0,      # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
     )
     return completion.choices[0].message.content
 

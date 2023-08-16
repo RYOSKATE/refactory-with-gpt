@@ -14,7 +14,8 @@ def main():
     # Select top 20 files
     json_file_names = json_file_names[:20]
 
-    json_file_names = ['cc1ec49af3dec285599a05918d26cf0b847c657f8a2d85bf0b5cce69c1e43578.json']
+    # json_file_names = ['cc1ec49af3dec285599a05918d26cf0b847c657f8a2d85bf0b5cce69c1e43578.json']
+    json_file_names = ['6b15490da95ed587034925cf2f2a869f4774df2adb5596787f9e4a2f58b7611c.json', 'cc1ec49af3dec285599a05918d26cf0b847c657f8a2d85bf0b5cce69c1e43578.json']
 
     win = 0
     draw = 0
@@ -36,8 +37,9 @@ def main():
         print(data['gpt_rep_code'])
         old_patch_size = zss_multi_func_code_distance(data['bug_code'], data['gpt_rep_code'])
 
-        gpt_model="gpt-3.5-turbo"
-        raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], data['gpt_model'])
+        gpt_model = data['gpt_model']
+        # gpt_model = 'gpt-4'
+        raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model)
 
         rep_code = regularize(raw_rep_code)
         patch_size = zss_multi_func_code_distance(data['bug_code'], rep_code)
