@@ -21,7 +21,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
     regularized_bug_code = regularize(bug_code)
     min_patch_size = sys.maxsize
     for reference_code in sample_correct_code_blocks:
-        min_patch_size = min(min_patch_size, zss_multi_func_code_distance(bug_code, reference_code))
+        min_patch_size = min(min_patch_size, zss_multi_func_code_distance(regularized_bug_code, regularize(reference_code)))
 
     retry_count = 0
     extra_messages = []
