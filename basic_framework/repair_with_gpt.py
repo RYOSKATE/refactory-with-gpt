@@ -2,6 +2,7 @@ from __future__ import annotations
 from typing import Optional
 from basic_framework.core_testing import Tester
 from basic_framework.distance import zss_multi_func_code_distance
+import time
 import openai
 import json
 import hashlib
@@ -32,6 +33,8 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
         except Exception as e:
             print("[WARN] GPT Request Error. retry=[" + str(retry_count) +
                   "/"+str(max_retry_count)+"]"+str(e)+"\n")
+            if 'Rate limit reached' in str(e):
+                time.sleep(20)
             retry_count += 1
             continue
 
