@@ -7,6 +7,7 @@ import openai
 import json
 import hashlib
 import os
+import re
 import sys
 from mistletoe import Document
 from mistletoe.block_token import CodeFence
@@ -128,30 +129,27 @@ As a Python programming expert, your objective is to correct the incorrect code 
 - Avoid changing the names of user-defined identifiers from the incorrect original.
 - Avoid deleting whitespaces, line breaks, parentheses, `pass`, `break`, `continue`, or any superfluous statements and function calls.
 
-# Problem Description
-{description}
-
 # Incorrect Code
 ```python
-{bug_code}
+{remove_redundant_spaces(bug_code)}
 ```
 """
 
     for index in range(len(sample_correct_code_blocks)):
         prompt += f"""
 # Model Solution {index + 1}
-{sample_correct_code_blocks[index]}
+{remove_redundant_spaces(sample_correct_code_blocks[index])}
 """
 
         prompt += f'''
 # Output Format
 """
 User-defined identifiers from the incorrect code:
-- ...
+- <identifier>
 
 Corrected code employing the listed identifiers:
 ```python
-<Python code>
+...
 ```
 """
 '''
@@ -163,12 +161,58 @@ Corrected code employing the listed identifiers:
             {"role": "system", "content": prompt},
             *extra_messages,
         ],
+        request_timeout=60,
         max_tokens=1024,    # 生成する文章の最大単語数
         n=1,                # いくつの返答を生成するか
         stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
         temperature=0,      # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
     )
     return completion.choices[0].message.content
+
+
+def remove_redundant_spaces(code):
+    code = replace_whitespace_with_tab(code)
+    code = re.sub(r' *\( *', '(', code)
+    code = re.sub(r' *\) *', ')', code)
+    code = re.sub(r' *\{ *', '{', code)
+    code = re.sub(r' *\} *', '}', code)
+    code = re.sub(r' *\[ *', '[', code)
+    code = re.sub(r' *\] *', ']', code)
+    code = re.sub(r' *\. *', '.', code)
+    code = re.sub(r' *\,', ',', code)
+    code = re.sub(r' *\:', ':', code)
+    code = re.sub(r'([\)\]\}])(and|or|not|in)', r'\1 \2', code)
+    code = re.sub(r'(and|or|not|in|if|while|for)([\(\[\{])', r'\1 \2', code)
+    code = re.sub(r'([\)\]\}])([+\-\*\/!=<>])', r'\1 \2', code)
+    code = re.sub(r'([+\-\*\/=<>])([\(\[\{])', r'\1 \2', code)
+    code = replace_tab_with_whitespace(code)
+    return code
+
+
+def replace_tab_with_whitespace(code, spaces_per_tab=4):
+    lines = code.split("\n")
+    for i in range(len(lines)):
+        count = 0
+        for char in lines[i]:
+            if char == "\t":
+                count += 1
+            else:
+                break
+        lines[i] = " "*(count*spaces_per_tab) + lines[i][count:]
+    return "\n".join(lines)
+
+
+def replace_whitespace_with_tab(code):
+    lines = code.split("\n")
+    for i in range(len(lines)):
+        count = 0
+        for char in lines[i]:
+            if char == " ":
+                count += 1
+            else:
+                break
+        lines[i] = "\t"*(count//4) + lines[i][count:]
+    return "\n".join(lines)
 
 
 def read_file_contents(file_path):
