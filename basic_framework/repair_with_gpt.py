@@ -161,7 +161,7 @@ Corrected code employing the listed identifiers:
             {"role": "system", "content": prompt},
             *extra_messages,
         ],
-        request_timeout=60,
+        # request_timeout=60,
         max_tokens=1024,    # 生成する文章の最大単語数
         n=1,                # いくつの返答を生成するか
         stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
