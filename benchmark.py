@@ -23,44 +23,51 @@ def main():
     worsened = 0
 
     for json_file_name in json_file_names:
-        data = read_json(f'results/json/{json_file_name}')
-        print(data)
-        print()
+        try:
+            data = read_json(f'results/json/{json_file_name}')
+            print(data)
+            print()
 
-        print(f'# Buggy Code ({json_file_name})')
-        print(remove_redundant_spaces(data['bug_code']))
+            # Whether data['bug_code'] contains 'sort_age' or not
+            if 'sort_age' not in data['bug_code']:
+                continue
 
-        for reference_code in data['sample_correct_code_blocks']:
-            print('# Reference Code')
-            print(remove_redundant_spaces(reference_code))
+            print(f'# Buggy Code ({json_file_name})')
+            print(remove_redundant_spaces(data['bug_code']))
 
-        print('# Repaired Code by GPT-3.5-Turbo with Old Prompt')
-        print(remove_redundant_spaces(data['gpt_rep_code']))
+            for reference_code in data['sample_correct_code_blocks']:
+                print('# Reference Code')
+                print(remove_redundant_spaces(reference_code))
 
-        gpt_model = data['gpt_model']
-        # gpt_model = 'gpt-4'
-        raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model) or ''
+            print('# Repaired Code by GPT-3.5-Turbo with Old Prompt')
+            print(remove_redundant_spaces(data['gpt_rep_code']))
 
-        rep_code = regularize(raw_rep_code)
-        patch_size = zss_multi_func_code_distance(data['bug_code'], rep_code)
+            gpt_model = data['gpt_model']
+            # gpt_model = 'gpt-4'
+            raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model) or ''
 
-        print('# Repaired Code by GPT-3.5-Turbo with New Prompt')
-        print(rep_code)
+            rep_code = regularize(raw_rep_code)
+            patch_size = zss_multi_func_code_distance(data['bug_code'], rep_code)
 
-        old_patch_size = data['gpt_patch_size']
-        if old_patch_size == None or old_patch_size == 0:
-            old_patch_size = 999
-        if patch_size == None or patch_size == 0:
-            patch_size = 999
+            print('# Repaired Code by GPT-3.5-Turbo with New Prompt')
+            print(rep_code)
 
-        print(f"org: {data['patch_size']}, old: {old_patch_size}, new: {patch_size}\n\n")
+            old_patch_size = data['gpt_patch_size']
+            if not old_patch_size:
+                old_patch_size = 999
+            if not raw_rep_code or not patch_size:
+                patch_size = 999
 
-        if old_patch_size > patch_size:
-            improved += 1
-        elif data['patch_size'] > old_patch_size:
-            worsened += 1
-        else:
-            same += 1
+            print(f"org: {data['patch_size']}, old: {old_patch_size}, new: {patch_size}\n\n")
+
+            if old_patch_size > patch_size:
+                improved += 1
+            elif data['patch_size'] > old_patch_size:
+                worsened += 1
+            else:
+                same += 1
+        except Exception as e:
+            print(f"Failed to load {json_file_name} due to {e}")
 
     print(f"improved: {improved}, same: {same}, worsened: {worsened}\n\n")
 
