@@ -1502,7 +1502,7 @@ class BlockRepair:
                                             if gpt_patch_size < code_perf_map["patch_size"]:
                                                 code_perf_map["status"] = "success_w_gpt_better"
                                                 code_perf_map["rep_code"] = rep_code_with_gpt
-                                    save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, code_perf_map["patch_size"], rep_code_with_gpt, gpt_patch_size)
+                                    # save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, code_perf_map["patch_size"], rep_code_with_gpt, gpt_patch_size)
                                 except Exception as e:
                                     print("Failed to correct code with GPT: ", str(e))
                                     traceback.print_exc()
