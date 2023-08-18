@@ -1487,6 +1487,8 @@ class BlockRepair:
                                     gtp_start_time = time.process_time()
                                     rep_code_with_gpt_raw = repair_code_by_gpt_with_retry(
                                         code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, tester=self.__tester)
+                                    rep_code_with_gpt = None
+                                    gpt_patch_size = None
                                     if rep_code_with_gpt_raw:
                                         code_perf_map["gpt_time"] = time.process_time(
                                         ) - gtp_start_time
@@ -1494,14 +1496,13 @@ class BlockRepair:
                                             rep_code_with_gpt_raw)
                                         tr_dict = self.__tester.tv_code(
                                             rep_code_with_gpt)
-                                        gpt_patch_size = None
                                         if self.__tester.is_pass(tr_dict):
                                             gpt_patch_size = zss_multi_func_code_distance(code_perf_map["ori_bug_code"],
                                                                                         rep_code_with_gpt)
                                             if gpt_patch_size < code_perf_map["patch_size"]:
                                                 code_perf_map["status"] = "success_w_gpt_better"
                                                 code_perf_map["rep_code"] = rep_code_with_gpt
-                                        # save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, code_perf_map["patch_size"], rep_code_with_gpt, gpt_patch_size)
+                                    # save_results(code_perf_map["ori_bug_code"], description, sample_correct_code_blocks, self.__gpt_model, code_perf_map["patch_size"], rep_code_with_gpt, gpt_patch_size)
                                 except Exception as e:
                                     print("Failed to correct code with GPT: ", str(e))
                                     traceback.print_exc()

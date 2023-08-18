@@ -19,6 +19,15 @@ class Tester:
                 len(list(self.__output_dict.keys())) == 0:
             raise Tester.NoTestCaseException()
 
+        for name, path in self.__input_dict.items():
+            self.input_dict = {}
+            with open(path, "r") as f:
+                self.input_dict[name] = f.read()
+        for name, path in self.__output_dict.items():
+            self.output_dict = {}
+            with open(path, "r") as f:
+                self.output_dict[name] = f.read()
+
         self.__front_code = ""
         if os.path.isfile(ques_dir_path + "/code/global.py"):
             with open(ques_dir_path + "/code/global.py", "r") as f:

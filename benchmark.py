@@ -2,6 +2,7 @@
 # ChatGPT起動
 import os
 import json
+from basic_framework.core_testing import Tester
 from basic_framework.distance import zss_multi_func_code_distance
 
 from basic_framework.repair_with_gpt import remove_redundant_spaces, repair_code_by_gpt_with_retry
@@ -21,6 +22,7 @@ def main():
     improved = 0
     same = 0
     worsened = 0
+    tester = Tester('data/question_4')
 
     for json_file_name in json_file_names:
         try:
@@ -44,7 +46,7 @@ def main():
 
             gpt_model = data['gpt_model']
             # gpt_model = 'gpt-4'
-            raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model) or ''
+            raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model, tester=tester) or ''
 
             rep_code = regularize(raw_rep_code)
             patch_size = zss_multi_func_code_distance(data['bug_code'], rep_code)
@@ -58,11 +60,13 @@ def main():
             if not raw_rep_code or not patch_size:
                 patch_size = 999
 
+            print(f"old: {tester.is_pass(tester.tv_code(data['gpt_rep_code']))}, new: {tester.is_pass(tester.tv_code(rep_code))}\n\n")
+
             print(f"org: {data['patch_size']}, old: {old_patch_size}, new: {patch_size}\n\n")
 
             if old_patch_size > patch_size:
                 improved += 1
-            elif data['patch_size'] > old_patch_size:
+            elif patch_size > old_patch_size:
                 worsened += 1
             else:
                 same += 1
