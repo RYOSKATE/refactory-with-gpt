@@ -20,101 +20,6 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # 実装参考:https://zenn.dev/ryo_kawamata/articles/b39ba0452fec81
 
 
-# def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3, tester: Optional[Tester]=None) -> str:
-#     retry_count = 0
-#     extra_messages = []
-#     while retry_count < max_retry_count:
-#         try:
-#             generated_text = repair_code_by_gpt(
-#                 bug_code, description, sample_correct_code_blocks, gpt_model, extra_messages)
-#         except Exception as e:
-#             import sys
-#             print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
-#                   "/"+str(max_retry_count)+"]"+str(e)+"\n")
-#             if 'Rate limit reached' in str(e):
-#                 time.sleep(20)
-#             retry_count += 1
-#             continue
-
-#         code = get_code_blocks(generated_text)
-
-#         # コード部分が空の場合
-#         if code == "":
-#             retry_count += 1
-#             extra_messages.append({
-#                 "role": "assistant",
-#                 "content": generated_text
-#             })
-#             extra_messages.append({
-#                 "role": "user",
-#                 "content": "Write a code block of code that can be executed with the Python exec function."
-#             })
-#             continue
-
-#         try:
-#             if not syntax_check(code):
-#                 raise SyntaxError('Generated code has syntax error')
-#             exec(code, globals())
-#             break
-#         except Exception as e:
-#             retry_count += 1
-#             # evalでエラーが発生した場合はエラー内容をChatGPTのパラメーターに追加してリトライ
-#             extra_messages.append({
-#                 "role": "assistant",
-#                 "content": generated_text
-#             })
-#             extra_messages.append({
-#                 "role": "user",
-#                 "content": f"I ran it and got an error {e}. Please correct it."
-#             })
-#             continue
-
-#     if not retry_count < max_retry_count:
-#         print(f"Error: Failed to fix with GPT")
-#         return
-
-#     return code
-
-
-# def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
-
-#     order = f"""
-#     description: "${description}"
-
-#     ```python
-#     {bug_code}
-#     ```
-
-#     Please modify the above Python program code to work correctly as specified in the description.
-#     Please observe the following rules when outputting code.
-
-#     - Code is enclosed in Markdown code blocks.
-#     - Formatted to be executable with Python's exec function.
-#     - Keep the modified code as many characters as possible as the original code.
-#     - Do not add or delete comment text.
-#     - Do not add or delete whitespace or.
-#     - Do not add or delete line break characters.
-#     - Do not change variable or function names.
-#     - Please modify the code to be closer to the unmodified code than the following model solution.
-    
-#     {sample_correct_code_blocks}
-
-#     """
-#     completion = openai.ChatCompletion.create(
-#         model=gpt_model,
-#         messages=[
-#             {"role": "system", "content": "You are an excellent Python programmer."},
-#             {"role": "user", "content": order},
-#             *extra_messages,
-#         ],
-#         max_tokens=1024,    # 生成する文章の最大単語数
-#         n=1,                # いくつの返答を生成するか
-#         stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
-#         temperature=0.0,    # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
-#     )
-#     return completion.choices[0].message.content
-
-
 def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3, tester: Optional[Tester]=None) -> Optional[str]:
     init_prompt = prompt = f'''
 As a Python programming expert, your objective is to correct the incorrect code provided. Follow these guidelines:
@@ -229,10 +134,10 @@ Amended code:
                 extra_messages.append({
                     "role": "user",
                     "content": """
-    Your current code's functionality doesn't match the model solution.
-    Rewrite your code to match the model solution's functionality.
-    If there are unnecessary identifiers in your original code, feel free to omit them for accuracy
-    """.strip()
+Your code's functionality doesn't match the model solution.
+Rewrite your code to match the model solution's functionality.
+If there are unnecessary identifiers in your original code, feel free to omit them for accuracy.
+                    """.strip()
                 })
             continue
 
@@ -247,7 +152,10 @@ Amended code:
             })
             extra_messages.append({
                 "role": "user",
-                "content": "Your changes are more extensive than the model solution. Adjust the syntax of your corrected code to closely resemble the original, ensuring the semantics align with the model solution."
+                "content": """
+Your changes are more extensive than the model solution.
+Adjust the syntax of your code to closely resemble the original, ensuring the semantics align with the model solution.
+                """.strip()
             })
             continue
 
@@ -284,7 +192,7 @@ def _repair_code_by_gpt(prompt: str, gpt_model="gpt-3.5-turbo", extra_messages: 
             {"role": "system", "content": prompt},
             *extra_messages,
         ],
-        request_timeout=60,
+        # request_timeout=60,
         max_tokens=2024,    # 生成する文章の最大単語数
         n=1,                # いくつの返答を生成するか
         stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
@@ -390,3 +298,100 @@ def save_results(bug_code: str, description: str, sample_correct_code_blocks: li
 
 def _calc_hash(text: str) -> str:
     return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
+
+# def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", max_retry_count=3, tester: Optional[Tester]=None) -> str:
+#     retry_count = 0
+#     extra_messages = []
+#     while retry_count < max_retry_count:
+#         try:
+#             generated_text = repair_code_by_gpt(
+#                 bug_code, description, sample_correct_code_blocks, gpt_model, extra_messages)
+#         except Exception as e:
+#             import sys
+#             print("[WARN]ChatGPT Request Error. retry=[" + str(retry_count) +
+#                   "/"+str(max_retry_count)+"]"+str(e)+"\n")
+#             if 'Rate limit reached' in str(e):
+#                 time.sleep(20)
+#             retry_count += 1
+#             continue
+
+#         code = get_code_blocks(generated_text)
+
+#         # コード部分が空の場合
+#         if code == "":
+#             retry_count += 1
+#             extra_messages.append({
+#                 "role": "assistant",
+#                 "content": generated_text
+#             })
+#             extra_messages.append({
+#                 "role": "user",
+#                 "content": "Write a code block of code that can be executed with the Python exec function."
+#             })
+#             continue
+
+#         try:
+#             if not syntax_check(code):
+#                 raise SyntaxError('Generated code has syntax error')
+#             exec(code, globals())
+#             break
+#         except Exception as e:
+#             retry_count += 1
+#             # evalでエラーが発生した場合はエラー内容をChatGPTのパラメーターに追加してリトライ
+#             extra_messages.append({
+#                 "role": "assistant",
+#                 "content": generated_text
+#             })
+#             extra_messages.append({
+#                 "role": "user",
+#                 "content": f"I ran it and got an error {e}. Please correct it."
+#             })
+#             continue
+
+#     if not retry_count < max_retry_count:
+#         print(f"Error: Failed to fix with GPT")
+#         return
+
+#     return code
+
+
+# def repair_code_by_gpt(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model="gpt-3.5-turbo", extra_messages: list[str] = []) -> tuple[str, bool]:
+
+#     order = f"""
+#     description: "${description}"
+
+#     ```python
+#     {bug_code}
+#     ```
+
+#     Please modify the above Python program code to work correctly as specified in the description.
+#     Please observe the following rules when outputting code.
+
+#     - Code is enclosed in Markdown code blocks.
+#     - Formatted to be executable with Python's exec function.
+#     - Keep the modified code as many characters as possible as the original code.
+#     - Do not add or delete comment text.
+#     - Do not add or delete whitespace or.
+#     - Do not add or delete line break characters.
+#     - Do not change variable or function names.
+#     - Please modify the code to be closer to the unmodified code than the following model solution.
+    
+#     {sample_correct_code_blocks}
+
+#     """
+#     completion = openai.ChatCompletion.create(
+#         model=gpt_model,
+#         messages=[
+#             {"role": "system", "content": "You are an excellent Python programmer."},
+#             {"role": "user", "content": order},
+#             *extra_messages,
+#         ],
+#         max_tokens=1024,    # 生成する文章の最大単語数
+#         n=1,                # いくつの返答を生成するか
+#         stop=None,          # 指定した単語が出現した場合、文章生成を打ち切る
+#         temperature=0.0,    # 出力する単語のランダム性（0から2の範囲） 0であれば毎回返答内容固定
+#     )
+#     return completion.choices[0].message.content
+
+
