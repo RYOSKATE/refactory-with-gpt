@@ -60,8 +60,7 @@ def repair_code_by_gpt_with_retry(bug_code: str, description: str, sample_correc
 
         # Check whether the corrected code is semantically correct
         fixed_code = regularize(code)
-        if bug_code.strip() == fixed_code.strip():
-        # if bug_code.strip() == fixed_code.strip() or (tester and not tester.is_pass(tester.tv_code(fixed_code))):
+        if bug_code.strip() == fixed_code.strip() or (tester and not tester.is_pass(tester.tv_code(fixed_code))):
             print('the corrected code is incorrect')
             retry_count += 1
             extra_messages.append({
@@ -247,7 +246,7 @@ def get_code_blocks(text: str):
     return "\n\n".join(code_blocks)
 
 
-def save_results(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model: str, patch_size: float, gpt_rep_code: str, gpt_patch_size: Optional[float]):
+def save_results(bug_code: str, description: str, sample_correct_code_blocks: list[str], gpt_model: str, patch_size: float, gpt_rep_code: Optional[str], gpt_patch_size: Optional[float]):
     data = {
         "bug_code": bug_code,
         "description": description,

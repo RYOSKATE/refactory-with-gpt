@@ -13,7 +13,7 @@ def main():
     json_file_names = os.listdir('results/json')
 
     # Select top 20 files
-    json_file_names = json_file_names[2000:3000]
+    json_file_names = json_file_names[:100]
 
     # json_file_names = ['cc1ec49af3dec285599a05918d26cf0b847c657f8a2d85bf0b5cce69c1e43578.json']
     # json_file_names = ['2558a8555f9b8bf9a18a31da5b0160f87d4eccfb9d124446de558445fdeeec37.json', '6b15490da95ed587034925cf2f2a869f4774df2adb5596787f9e4a2f58b7611c.json', 'cc1ec49af3dec285599a05918d26cf0b847c657f8a2d85bf0b5cce69c1e43578.json', '4ee6cf842a7d1531bcfd39697901e7852c3e42439d8c583e2b53864add42f8ca.json']
@@ -22,6 +22,7 @@ def main():
     improved = 0
     same = 0
     worsened = 0
+    tester = Tester('data/question_4')
 
     for json_file_name in json_file_names:
         try:
@@ -45,7 +46,7 @@ def main():
 
             gpt_model = data['gpt_model']
             # gpt_model = 'gpt-4'
-            raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model, tester=Tester('data/question_4')) or ''
+            raw_rep_code: str = repair_code_by_gpt_with_retry(data['bug_code'], data['description'], data['sample_correct_code_blocks'], gpt_model, tester=tester) or ''
 
             rep_code = regularize(raw_rep_code)
             patch_size = zss_multi_func_code_distance(data['bug_code'], rep_code)
@@ -58,6 +59,8 @@ def main():
                 old_patch_size = 999
             if not raw_rep_code or not patch_size:
                 patch_size = 999
+
+            print(f"old: {tester.is_pass(tester.tv_code(data['gpt_rep_code']))}, new: {tester.is_pass(tester.tv_code(rep_code))}\n\n")
 
             print(f"org: {data['patch_size']}, old: {old_patch_size}, new: {patch_size}\n\n")
 
