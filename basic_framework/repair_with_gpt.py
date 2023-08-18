@@ -356,7 +356,7 @@ def save_results(bug_code: str, description: str, sample_correct_code_blocks: li
 
     file_hash = _calc_hash(json.dumps(input))
     with open(f'results/json/{file_hash}.json', 'w') as file:
-        file.write(json.dumps(data))
+        file.write(json.dumps(data, indent=4))
 
 
 def _calc_hash(text: str) -> str:
