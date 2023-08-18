@@ -66,7 +66,7 @@ def main():
 
             if old_patch_size > patch_size:
                 improved += 1
-            elif data['patch_size'] > old_patch_size:
+            elif patch_size > old_patch_size:
                 worsened += 1
             else:
                 same += 1
