@@ -1,0 +1,5351 @@
+
+
+Repair submissions in question_2
+
+
+wrong_2_072.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.105 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.030 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.220 |
+|    spec_syn_time    | 0.438 |
+|       syn_time      | 0.120 |
+|         rps         | 0.445 |
++---------------------+-------+
+
+
+wrong_2_038.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.048 |
+| ol_refactoring_time | 4.311 |
+|       gcr_time      | 0.077 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.245 |
+|    spec_syn_time    | 0.998 |
+|       syn_time      | 0.179 |
+|         rps         | 0.802 |
++---------------------+-------+
+
+
+wrong_2_271.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.281 |
+| ol_refactoring_time | 0.095 |
+|       gcr_time      | 0.034 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.227 |
+|    spec_syn_time    | 0.597 |
+|       syn_time      | 0.116 |
+|         rps         | 0.459 |
++---------------------+-------+
+
+
+wrong_2_429.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.363 |
+| ol_refactoring_time | 3.799 |
+|       gcr_time      | 0.066 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.455 |
+|    spec_syn_time    | 0.801 |
+|       syn_time      | 0.108 |
+|         rps         | 0.652 |
++---------------------+-------+
+
+
+wrong_2_243.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.946 |
+| ol_refactoring_time | 0.004 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.291 |
+|    spec_syn_time    | 0.479 |
+|       syn_time      | 0.086 |
+|         rps         | 0.359 |
++---------------------+-------+
+
+
+wrong_2_073.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.294 |
+| ol_refactoring_time | 11.527 |
+|       gcr_time      | 0.105  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.337  |
+|    spec_syn_time    | 0.759  |
+|       syn_time      | 0.161  |
+|         rps         | 0.822  |
++---------------------+--------+
+
+
+wrong_2_343.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthdays': 'birthday', 'result': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'result': 'count', 'months': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_139.py
+fail_exception
+
+
+wrong_2_132.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'unique_day_counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_314.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.036 |
+| ol_refactoring_time | 0.076 |
+|       gcr_time      | 0.029 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.215 |
+|    spec_syn_time    | 0.402 |
+|       syn_time      | 0.085 |
+|         rps         | 0.621 |
++---------------------+-------+
+
+
+wrong_2_034.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.265 |
+| ol_refactoring_time | 6.494 |
+|       gcr_time      | 0.158 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.298 |
+|    spec_syn_time    | 0.947 |
+|       syn_time      | 0.173 |
+|         rps         | 1.125 |
++---------------------+-------+
+
+
+wrong_2_248.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.793 |
+| ol_refactoring_time | 0.167 |
+|       gcr_time      | 0.095 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.244 |
+|    spec_syn_time    | 0.895 |
+|       syn_time      | 0.189 |
+|         rps         | 0.636 |
++---------------------+-------+
+
+
+wrong_2_308.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_173.py
+fail_exception
+
+
+wrong_2_355.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.191 |
+| ol_refactoring_time | 0.204 |
+|       gcr_time      | 0.109 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.275 |
+|    spec_syn_time    | 1.149 |
+|       syn_time      | 0.356 |
+|         rps         | 0.622 |
++---------------------+-------+
+
+
+wrong_2_397.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.217 |
+| ol_refactoring_time | 3.051 |
+|       gcr_time      | 0.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.288 |
+|    spec_syn_time    | 0.644 |
+|       syn_time      | 0.152 |
+|         rps         | 0.626 |
++---------------------+-------+
+
+
+wrong_2_194.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.491 |
+| ol_refactoring_time | 8.753  |
+|       gcr_time      | 0.251  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.353  |
+|    spec_syn_time    | 0.734  |
+|       syn_time      | 0.118  |
+|         rps         | 0.852  |
++---------------------+--------+
+
+
+wrong_2_105.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_316.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 17.473 |
+| ol_refactoring_time | 16.500 |
+|       gcr_time      | 0.227  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.203  |
+|    spec_syn_time    | 0.224  |
+|       syn_time      | 0.028  |
+|         rps         | 0.604  |
++---------------------+--------+
+
+
+wrong_2_424.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.639 |
+| ol_refactoring_time | 5.483 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.293 |
+|    spec_syn_time    | 0.561 |
+|       syn_time      | 0.118 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_2_163.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.430 |
+| ol_refactoring_time | 0.181 |
+|       gcr_time      | 0.033 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.239 |
+|    spec_syn_time    | 0.647 |
+|       syn_time      | 0.138 |
+|         rps         | 0.631 |
++---------------------+-------+
+
+
+wrong_2_178.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.663 |
+| ol_refactoring_time | 5.853 |
+|       gcr_time      | 0.438 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.339 |
+|    spec_syn_time    | 1.214 |
+|       syn_time      | 0.193 |
+|         rps         | 0.804 |
++---------------------+-------+
+
+
+wrong_2_260.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_026.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.695 |
+| ol_refactoring_time | 0.091 |
+|       gcr_time      | 0.052 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.196 |
+|    spec_syn_time    | 1.060 |
+|       syn_time      | 0.369 |
+|         rps         | 0.591 |
++---------------------+-------+
+
+
+wrong_2_210.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'x': 'buggy_x', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_386.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_198.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'k': 'birthday', 'checker': 'count'}, 'unique_month': {'day': 'month', 'possible_birthdays': 'possible_birthdays', 'k': 'birthday', 'checker': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_211.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'result': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'result': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_075.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.142 |
+| ol_refactoring_time | 11.538 |
+|       gcr_time      | 0.069  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.337  |
+|    spec_syn_time    | 0.737  |
+|       syn_time      | 0.159  |
+|         rps         | 0.737  |
++---------------------+--------+
+
+
+wrong_2_191.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_262.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_189.py
+fail_exception
+
+
+wrong_2_140.py
+fail_exception
+
+
+wrong_2_046.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.566 |
+| ol_refactoring_time | 11.626 |
+|       gcr_time      | 0.090  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.343  |
+|    spec_syn_time    | 0.834  |
+|       syn_time      | 0.180  |
+|         rps         | 0.833  |
++---------------------+--------+
+
+
+wrong_2_192.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.610 |
+| ol_refactoring_time | 0.087 |
+|       gcr_time      | 0.062 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.221 |
+|    spec_syn_time    | 0.931 |
+|       syn_time      | 0.174 |
+|         rps         | 0.641 |
++---------------------+-------+
+
+
+wrong_2_337.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.330 |
+| ol_refactoring_time | 12.252 |
+|       gcr_time      | 0.520  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.297  |
+|    spec_syn_time    | 0.832  |
+|       syn_time      | 0.216  |
+|         rps         | 0.669  |
++---------------------+--------+
+
+
+wrong_2_119.py
+fail_exception
+
+
+wrong_2_047.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.661 |
+| ol_refactoring_time | 0.086 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.245 |
+|    spec_syn_time    | 0.992 |
+|       syn_time      | 0.191 |
+|         rps         | 1.000 |
++---------------------+-------+
+
+
+wrong_2_407.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.183 |
+| ol_refactoring_time | 0.068 |
+|       gcr_time      | 0.029 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.222 |
+|    spec_syn_time    | 0.557 |
+|       syn_time      | 0.115 |
+|         rps         | 0.566 |
++---------------------+-------+
+
+
+wrong_2_325.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_232.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.945 |
+| ol_refactoring_time | 0.088 |
+|       gcr_time      | 0.061 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.316 |
+|    spec_syn_time    | 1.090 |
+|       syn_time      | 0.224 |
+|         rps         | 0.815 |
++---------------------+-------+
+
+
+wrong_2_007.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.089 |
+| ol_refactoring_time | 0.163 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.225 |
+|    spec_syn_time    | 1.161 |
+|       syn_time      | 0.254 |
+|         rps         | 0.631 |
++---------------------+-------+
+
+
+wrong_2_001.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.361 |
+| ol_refactoring_time | 8.411  |
+|       gcr_time      | 0.686  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.173  |
+|    spec_syn_time    | 0.626  |
+|       syn_time      | 0.135  |
+|         rps         | 0.690  |
++---------------------+--------+
+
+
+wrong_2_347.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.738 |
+| ol_refactoring_time | 9.748  |
+|       gcr_time      | 0.164  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.167  |
+|    spec_syn_time    | 0.361  |
+|       syn_time      | 0.047  |
+|         rps         | 1.408  |
++---------------------+--------+
+
+
+wrong_2_242.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.782 |
+| ol_refactoring_time | 10.037 |
+|       gcr_time      | 0.093  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.131  |
+|    spec_syn_time    | 0.348  |
+|       syn_time      | 0.042  |
+|         rps         | 0.721  |
++---------------------+--------+
+
+
+wrong_2_345.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'only_date': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'only_month': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_282.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 11.422 |
+| ol_refactoring_time | 9.764  |
+|       gcr_time      | 0.304  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.349  |
+|    spec_syn_time    | 0.769  |
+|       syn_time      | 0.108  |
+|         rps         | 0.929  |
++---------------------+--------+
+
+
+wrong_2_016.py
+fail_exception
+
+
+wrong_2_295.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'total': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_369.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'months': 'birthday', 'i': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_377.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.512 |
+| ol_refactoring_time | 5.390 |
+|       gcr_time      | 0.021 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.295 |
+|    spec_syn_time    | 0.548 |
+|       syn_time      | 0.098 |
+|         rps         | 0.473 |
++---------------------+-------+
+
+
+wrong_2_043.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.710 |
+| ol_refactoring_time | 0.273 |
+|       gcr_time      | 0.036 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.243 |
+|    spec_syn_time    | 0.801 |
+|       syn_time      | 0.185 |
+|         rps         | 0.645 |
++---------------------+-------+
+
+
+wrong_2_307.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'possible_birthday': 'buggy_possible_birthday', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_240.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.901 |
+| ol_refactoring_time | 0.062 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.205 |
+|    spec_syn_time    | 0.412 |
+|       syn_time      | 0.057 |
+|         rps         | 0.406 |
++---------------------+-------+
+
+
+wrong_2_403.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'x': 'birthday', 'x_day': 'buggy_x_day'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_154.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_064.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.542 |
+| ol_refactoring_time | 0.164 |
+|       gcr_time      | 0.031 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.256 |
+|    spec_syn_time    | 0.923 |
+|       syn_time      | 0.147 |
+|         rps         | 0.524 |
++---------------------+-------+
+
+
+wrong_2_302.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.503 |
+| ol_refactoring_time | 0.004 |
+|       gcr_time      | 0.016 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.191 |
+|    spec_syn_time    | 0.147 |
+|       syn_time      | 0.022 |
+|         rps         | 0.012 |
++---------------------+-------+
+
+
+wrong_2_292.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'the_day': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'the_month': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_142.py
+fail_exception
+
+
+wrong_2_201.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.456 |
+| ol_refactoring_time | 0.161 |
+|       gcr_time      | 0.026 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.229 |
+|    spec_syn_time    | 0.676 |
+|       syn_time      | 0.139 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_066.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.550 |
+| ol_refactoring_time | 0.153 |
+|       gcr_time      | 0.025 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.264 |
+|    spec_syn_time    | 0.893 |
+|       syn_time      | 0.139 |
+|         rps         | 0.406 |
++---------------------+-------+
+
+
+wrong_2_099.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_183.py
+fail_exception
+
+
+wrong_2_005.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.396 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.162 |
+|    spec_syn_time    | 0.049 |
+|       syn_time      | 0.000 |
+|         rps         | 0.012 |
++---------------------+-------+
+
+
+wrong_2_230.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_063.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.230 |
+| ol_refactoring_time | 0.121 |
+|       gcr_time      | 0.048 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.211 |
+|    spec_syn_time    | 0.659 |
+|       syn_time      | 0.094 |
+|         rps         | 0.370 |
++---------------------+-------+
+
+
+wrong_2_322.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 40.053 |
+| ol_refactoring_time | 37.300 |
+|       gcr_time      | 0.363  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.329  |
+|    spec_syn_time    | 0.625  |
+|       syn_time      | 0.121  |
+|         rps         | 1.131  |
++---------------------+--------+
+
+
+wrong_2_165.py
+fail_exception
+
+
+wrong_2_382.py
+fail_exception
+
+
+wrong_2_356.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.753 |
+| ol_refactoring_time | 0.004 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.177 |
+|    spec_syn_time    | 0.408 |
+|       syn_time      | 0.047 |
+|         rps         | 0.241 |
++---------------------+-------+
+
+
+wrong_2_206.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.471 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.229 |
+|    spec_syn_time    | 0.707 |
+|       syn_time      | 0.141 |
+|         rps         | 0.578 |
++---------------------+-------+
+
+
+wrong_2_204.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.994 |
+| ol_refactoring_time | 0.081 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.230 |
+|    spec_syn_time    | 0.654 |
+|       syn_time      | 0.136 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_028.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.273 |
+| ol_refactoring_time | 0.107 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.218 |
+|    spec_syn_time    | 0.445 |
+|       syn_time      | 0.107 |
+|         rps         | 0.419 |
++---------------------+-------+
+
+
+wrong_2_168.py
+fail_exception
+
+
+wrong_2_051.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_363.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_423.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.341 |
+| ol_refactoring_time | 5.416 |
+|       gcr_time      | 0.013 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.297 |
+|    spec_syn_time    | 0.578 |
+|       syn_time      | 0.119 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_2_395.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.464 |
+| ol_refactoring_time | 11.143 |
+|       gcr_time      | 0.416  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.314  |
+|    spec_syn_time    | 0.913  |
+|       syn_time      | 0.207  |
+|         rps         | 0.680  |
++---------------------+--------+
+
+
+wrong_2_264.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.813 |
+| ol_refactoring_time | 7.695 |
+|       gcr_time      | 0.033 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.360 |
+|    spec_syn_time    | 0.364 |
+|       syn_time      | 0.037 |
+|         rps         | 0.407 |
++---------------------+-------+
+
+
+wrong_2_288.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'buggy_counter', 'conter': 'buggy_conter', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'buggy_counter', 'conter': 'buggy_conter', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_300.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 9.987 |
+| ol_refactoring_time | 8.680 |
+|       gcr_time      | 0.166 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.191 |
+|    spec_syn_time    | 0.641 |
+|       syn_time      | 0.094 |
+|         rps         | 0.547 |
++---------------------+-------+
+
+
+wrong_2_197.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.249 |
+| ol_refactoring_time | 0.179 |
+|       gcr_time      | 0.025 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.218 |
+|    spec_syn_time    | 0.657 |
+|       syn_time      | 0.115 |
+|         rps         | 0.340 |
++---------------------+-------+
+
+
+wrong_2_392.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.627 |
+| ol_refactoring_time | 0.172 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.234 |
+|    spec_syn_time    | 0.845 |
+|       syn_time      | 0.170 |
+|         rps         | 0.733 |
++---------------------+-------+
+
+
+wrong_2_203.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.009 |
+| ol_refactoring_time | 0.081 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.225 |
+|    spec_syn_time    | 0.668 |
+|       syn_time      | 0.137 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_387.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.412 |
+| ol_refactoring_time | 5.296 |
+|       gcr_time      | 0.023 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.293 |
+|    spec_syn_time    | 0.543 |
+|       syn_time      | 0.097 |
+|         rps         | 0.473 |
++---------------------+-------+
+
+
+wrong_2_076.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.437 |
+| ol_refactoring_time | 0.004 |
+|       gcr_time      | 0.016 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.161 |
+|    spec_syn_time    | 0.085 |
+|       syn_time      | 0.000 |
+|         rps         | 0.012 |
++---------------------+-------+
+
+
+wrong_2_095.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_074.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.061 |
+| ol_refactoring_time | 11.422 |
+|       gcr_time      | 0.075  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.242  |
+|    spec_syn_time    | 0.763  |
+|       syn_time      | 0.157  |
+|         rps         | 0.831  |
++---------------------+--------+
+
+
+wrong_2_304.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_431.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.202 |
+| ol_refactoring_time | 0.153 |
+|       gcr_time      | 0.047 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.232 |
+|    spec_syn_time    | 0.566 |
+|       syn_time      | 0.098 |
+|         rps         | 0.463 |
++---------------------+-------+
+
+
+wrong_2_123.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'tester': 'buggy_tester', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_089.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'dates': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_344.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'only_date': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_231.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'p': 'birthday', 'result': 'count', 'pd': 'buggy_pd'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'p': 'birthday', 'result': 'count', 'pm': 'buggy_pm'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_125.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'tester': 'buggy_tester', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'tester': 'buggy_tester', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_149.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_411.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.011 |
+| ol_refactoring_time | 0.031 |
+|       gcr_time      | 0.022 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.214 |
+|    spec_syn_time    | 0.474 |
+|       syn_time      | 0.093 |
+|         rps         | 0.526 |
++---------------------+-------+
+
+
+wrong_2_045.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.257 |
+| ol_refactoring_time | 0.209 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.243 |
+|    spec_syn_time    | 0.769 |
+|       syn_time      | 0.180 |
+|         rps         | 0.645 |
++---------------------+-------+
+
+
+wrong_2_094.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'result': 'buggy_result', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_235.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.017 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.034 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.206 |
+|    spec_syn_time    | 0.413 |
+|       syn_time      | 0.060 |
+|         rps         | 0.141 |
++---------------------+-------+
+
+
+wrong_2_250.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'value': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_362.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.284 |
+| ol_refactoring_time | 0.191 |
+|       gcr_time      | 0.024 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.217 |
+|    spec_syn_time    | 0.678 |
+|       syn_time      | 0.111 |
+|         rps         | 0.365 |
++---------------------+-------+
+
+
+wrong_2_263.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_108.py
+fail_exception
+
+
+wrong_2_049.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_071.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.573 |
+| ol_refactoring_time | 11.697 |
+|       gcr_time      | 0.047  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.349  |
+|    spec_syn_time    | 0.757  |
+|       syn_time      | 0.154  |
+|         rps         | 0.709  |
++---------------------+--------+
+
+
+wrong_2_417.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'n': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'n': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_151.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.413 |
+| ol_refactoring_time | 0.086 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.246 |
+|    spec_syn_time    | 0.730 |
+|       syn_time      | 0.145 |
+|         rps         | 0.728 |
++---------------------+-------+
+
+
+wrong_2_348.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.048 |
+| ol_refactoring_time | 6.433 |
+|       gcr_time      | 0.156 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.223 |
+|    spec_syn_time    | 0.877 |
+|       syn_time      | 0.176 |
+|         rps         | 1.108 |
++---------------------+-------+
+
+
+wrong_2_390.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.385 |
+| ol_refactoring_time | 0.164 |
+|       gcr_time      | 0.062 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.241 |
+|    spec_syn_time    | 0.885 |
+|       syn_time      | 0.187 |
+|         rps         | 0.636 |
++---------------------+-------+
+
+
+wrong_2_352.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.808 |
+| ol_refactoring_time | 0.162 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.194 |
+|    spec_syn_time    | 0.979 |
+|       syn_time      | 0.247 |
+|         rps         | 0.685 |
++---------------------+-------+
+
+
+wrong_2_020.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.164 |
+| ol_refactoring_time | 0.017 |
+|       gcr_time      | 0.018 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.235 |
+|    spec_syn_time    | 0.544 |
+|       syn_time      | 0.106 |
+|         rps         | 0.612 |
++---------------------+-------+
+
+
+wrong_2_117.py
+fail_exception
+
+
+wrong_2_402.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'x': 'birthday', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_141.py
+fail_exception
+
+
+wrong_2_085.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.144 |
+| ol_refactoring_time | 6.603 |
+|       gcr_time      | 0.192 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.356 |
+|    spec_syn_time    | 0.632 |
+|       syn_time      | 0.070 |
+|         rps         | 0.500 |
++---------------------+-------+
+
+
+wrong_2_285.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.124 |
+| ol_refactoring_time | 8.798  |
+|       gcr_time      | 0.230  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.224  |
+|    spec_syn_time    | 0.491  |
+|       syn_time      | 0.108  |
+|         rps         | 0.798  |
++---------------------+--------+
+
+
+wrong_2_247.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.030 |
+| ol_refactoring_time | 8.691  |
+|       gcr_time      | 0.216  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.353  |
+|    spec_syn_time    | 0.731  |
+|       syn_time      | 0.115  |
+|         rps         | 0.852  |
++---------------------+--------+
+
+
+wrong_2_010.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.044 |
+| ol_refactoring_time | 0.236 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.233 |
+|    spec_syn_time    | 1.058 |
+|       syn_time      | 0.241 |
+|         rps         | 0.589 |
++---------------------+-------+
+
+
+wrong_2_305.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_055.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.765 |
+| ol_refactoring_time | 10.499 |
+|       gcr_time      | 1.258  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.239  |
+|    spec_syn_time    | 1.008  |
+|       syn_time      | 0.402  |
+|         rps         | 0.878  |
++---------------------+--------+
+
+
+wrong_2_385.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.064 |
+| ol_refactoring_time | 0.155 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.205 |
+|    spec_syn_time    | 0.530 |
+|       syn_time      | 0.083 |
+|         rps         | 0.311 |
++---------------------+-------+
+
+
+wrong_2_426.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.345 |
+| ol_refactoring_time | 0.060 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.225 |
+|    spec_syn_time    | 0.640 |
+|       syn_time      | 0.142 |
+|         rps         | 0.565 |
++---------------------+-------+
+
+
+wrong_2_152.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'a': 'buggy_a', 'item': 'buggy_item', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'item': 'buggy_item', 'a': 'buggy_a', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_342.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.810 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.013 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.204 |
+|    spec_syn_time    | 0.407 |
+|       syn_time      | 0.060 |
+|         rps         | 0.141 |
++---------------------+-------+
+
+
+wrong_2_205.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.018 |
+| ol_refactoring_time | 0.081 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.227 |
+|    spec_syn_time    | 0.676 |
+|       syn_time      | 0.136 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_375.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.361 |
+| ol_refactoring_time | 10.488 |
+|       gcr_time      | 0.032  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.300  |
+|    spec_syn_time    | 0.810  |
+|       syn_time      | 0.193  |
+|         rps         | 0.838  |
++---------------------+--------+
+
+
+wrong_2_428.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_335.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.257 |
+| ol_refactoring_time | 12.110 |
+|       gcr_time      | 0.487  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.292  |
+|    spec_syn_time    | 0.919  |
+|       syn_time      | 0.244  |
+|         rps         | 0.680  |
++---------------------+--------+
+
+
+wrong_2_155.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'counter': 'buggy_counter', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_299.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'dates': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_083.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 3.176 |
+| ol_refactoring_time | 0.259 |
+|       gcr_time      | 0.059 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.333 |
+|    spec_syn_time    | 1.612 |
+|       syn_time      | 0.236 |
+|         rps         | 0.939 |
++---------------------+-------+
+
+
+wrong_2_091.py
+fail_timeout
+print_perf failed! wrong_2_091.py
+'tr'
+
+
+wrong_2_052.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 16.014 |
+| ol_refactoring_time | 12.280 |
+|       gcr_time      | 1.943  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.480  |
+|    spec_syn_time    | 0.772  |
+|       syn_time      | 0.138  |
+|         rps         | 0.722  |
++---------------------+--------+
+
+
+wrong_2_273.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.372 |
+| ol_refactoring_time | 0.005 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.190 |
+|    spec_syn_time    | 0.150 |
+|       syn_time      | 0.023 |
+|         rps         | 0.012 |
++---------------------+-------+
+
+
+wrong_2_259.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_224.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'date': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'mon': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_036.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.365 |
+| ol_refactoring_time | 0.088 |
+|       gcr_time      | 0.042 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.191 |
+|    spec_syn_time    | 0.857 |
+|       syn_time      | 0.155 |
+|         rps         | 0.510 |
++---------------------+-------+
+
+
+wrong_2_346.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'only_date': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'only_month': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_320.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.258 |
+| ol_refactoring_time | 3.148 |
+|       gcr_time      | 0.060 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.303 |
+|    spec_syn_time    | 0.499 |
+|       syn_time      | 0.083 |
+|         rps         | 0.533 |
++---------------------+-------+
+
+
+wrong_2_115.py
+fail_exception
+
+
+wrong_2_039.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.123 |
+| ol_refactoring_time | 4.383 |
+|       gcr_time      | 0.053 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.337 |
+|    spec_syn_time    | 0.929 |
+|       syn_time      | 0.161 |
+|         rps         | 0.779 |
++---------------------+-------+
+
+
+wrong_2_416.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.662 |
+| ol_refactoring_time | 11.463 |
+|       gcr_time      | 0.172  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.177  |
+|    spec_syn_time    | 0.571  |
+|       syn_time      | 0.104  |
+|         rps         | 0.629  |
++---------------------+--------+
+
+
+wrong_2_048.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.717 |
+| ol_refactoring_time | 11.131 |
+|       gcr_time      | 1.910  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.404  |
+|    spec_syn_time    | 0.807  |
+|       syn_time      | 0.160  |
+|         rps         | 0.660  |
++---------------------+--------+
+
+
+wrong_2_246.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.642 |
+| ol_refactoring_time | 8.876  |
+|       gcr_time      | 0.232  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.352  |
+|    spec_syn_time    | 0.773  |
+|       syn_time      | 0.119  |
+|         rps         | 0.887  |
++---------------------+--------+
+
+
+wrong_2_102.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_175.py
+fail_exception
+
+
+wrong_2_338.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.699 |
+| ol_refactoring_time | 12.250 |
+|       gcr_time      | 0.499  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.608  |
+|    spec_syn_time    | 0.870  |
+|       syn_time      | 0.237  |
+|         rps         | 0.674  |
++---------------------+--------+
+
+
+wrong_2_405.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'x': 'birthday', 'x_day': 'buggy_x_day'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'x': 'birthday', 'x_month': 'buggy_x_month'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_253.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.301 |
+| ol_refactoring_time | 0.161 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.192 |
+|    spec_syn_time    | 0.607 |
+|       syn_time      | 0.115 |
+|         rps         | 0.477 |
++---------------------+-------+
+
+
+wrong_2_425.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.479 |
+| ol_refactoring_time | 5.334 |
+|       gcr_time      | 0.020 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.294 |
+|    spec_syn_time    | 0.579 |
+|       syn_time      | 0.106 |
+|         rps         | 0.482 |
++---------------------+-------+
+
+
+wrong_2_294.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'total': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_227.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_298.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'result': 'count', 'count': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'result': 'count', 'count': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_190.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_270.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.031 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.227 |
+|    spec_syn_time    | 0.611 |
+|       syn_time      | 0.116 |
+|         rps         | 0.459 |
++---------------------+-------+
+
+
+wrong_2_245.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.639 |
+| ol_refactoring_time | 8.876  |
+|       gcr_time      | 0.228  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.355  |
+|    spec_syn_time    | 0.763  |
+|       syn_time      | 0.116  |
+|         rps         | 0.922  |
++---------------------+--------+
+
+
+wrong_2_303.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_214.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.350 |
+| ol_refactoring_time | 0.087 |
+|       gcr_time      | 0.064 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.202 |
+|    spec_syn_time    | 0.765 |
+|       syn_time      | 0.181 |
+|         rps         | 0.433 |
++---------------------+-------+
+
+
+wrong_2_274.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.991 |
+| ol_refactoring_time | 0.118 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.227 |
+|    spec_syn_time    | 0.611 |
+|       syn_time      | 0.116 |
+|         rps         | 0.459 |
++---------------------+-------+
+
+
+wrong_2_187.py
+fail_exception
+
+
+wrong_2_174.py
+fail_exception
+
+
+wrong_2_107.py
+fail_exception
+
+
+wrong_2_358.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.244 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.208 |
+|    spec_syn_time    | 0.796 |
+|       syn_time      | 0.118 |
+|         rps         | 0.437 |
++---------------------+-------+
+
+
+wrong_2_332.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.202 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.245 |
+|    spec_syn_time    | 0.744 |
+|       syn_time      | 0.118 |
+|         rps         | 0.629 |
++---------------------+-------+
+
+
+wrong_2_122.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.383 |
+| ol_refactoring_time | 3.069 |
+|       gcr_time      | 0.097 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.303 |
+|    spec_syn_time    | 0.708 |
+|       syn_time      | 0.158 |
+|         rps         | 0.707 |
++---------------------+-------+
+
+
+wrong_2_215.py
+fail_exception
+
+
+wrong_2_110.py
+fail_exception
+
+
+wrong_2_133.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'unique_day_counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'unique_month_counter': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_372.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.602 |
+| ol_refactoring_time | 8.645  |
+|       gcr_time      | 0.058  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.399  |
+|    spec_syn_time    | 1.018  |
+|       syn_time      | 0.202  |
+|         rps         | 1.031  |
++---------------------+--------+
+
+
+wrong_2_238.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_330.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.152 |
+| ol_refactoring_time | 0.060 |
+|       gcr_time      | 0.022 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.215 |
+|    spec_syn_time    | 0.716 |
+|       syn_time      | 0.120 |
+|         rps         | 0.631 |
++---------------------+-------+
+
+
+wrong_2_221.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.048 |
+| ol_refactoring_time | 0.031 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.246 |
+|    spec_syn_time    | 0.732 |
+|       syn_time      | 0.117 |
+|         rps         | 0.629 |
++---------------------+-------+
+
+
+wrong_2_383.py
+fail_exception
+
+
+wrong_2_317.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 17.421 |
+| ol_refactoring_time | 16.416 |
+|       gcr_time      | 0.201  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.265  |
+|    spec_syn_time    | 0.219  |
+|       syn_time      | 0.028  |
+|         rps         | 0.595  |
++---------------------+--------+
+
+
+wrong_2_084.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.098 |
+| ol_refactoring_time | 6.617 |
+|       gcr_time      | 0.166 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.335 |
+|    spec_syn_time    | 0.623 |
+|       syn_time      | 0.070 |
+|         rps         | 0.491 |
++---------------------+-------+
+
+
+wrong_2_398.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.349 |
+| ol_refactoring_time | 5.457 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.293 |
+|    spec_syn_time    | 0.550 |
+|       syn_time      | 0.098 |
+|         rps         | 0.473 |
++---------------------+-------+
+
+
+wrong_2_258.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_170.py
+fail_exception
+
+
+wrong_2_381.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'birthdate': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_113.py
+fail_exception
+
+
+wrong_2_408.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.109 |
+| ol_refactoring_time | 11.503 |
+|       gcr_time      | 0.105  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.389  |
+|    spec_syn_time    | 0.847  |
+|       syn_time      | 0.260  |
+|         rps         | 0.716  |
++---------------------+--------+
+
+
+wrong_2_181.py
+fail_exception
+
+
+wrong_2_103.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_327.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.232 |
+| ol_refactoring_time | 3.162 |
+|       gcr_time      | 0.082 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.311 |
+|    spec_syn_time    | 0.642 |
+|       syn_time      | 0.148 |
+|         rps         | 0.707 |
++---------------------+-------+
+
+
+wrong_2_311.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'buggy_counter', 'conter': 'buggy_conter', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_041.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'a': 'count', 'dates': 'birthday', 'days': 'buggy_days'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_012.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.098 |
+| ol_refactoring_time | 11.688 |
+|       gcr_time      | 0.105  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.277  |
+|    spec_syn_time    | 1.138  |
+|       syn_time      | 0.251  |
+|         rps         | 0.749  |
++---------------------+--------+
+
+
+wrong_2_213.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_312.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'buggy_counter', 'conter': 'buggy_conter', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'date': 'birthday', 'counter': 'buggy_counter', 'conter': 'buggy_conter', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_027.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'birthday_with_day': 'buggy_birthday_with_day', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday', 'birthday_with_month': 'buggy_birthday_with_month'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'day': 'buggy_day', 'birthday_with_month': 'buggy_birthday_with_month', 'birthday_day': 'buggy_birthday_day', 'unique_day_list': 'buggy_unique_day_list'}}
+
+
+wrong_2_127.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_111.py
+fail_exception
+
+
+wrong_2_070.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.358 |
+| ol_refactoring_time | 0.163 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.253 |
+|    spec_syn_time    | 0.902 |
+|       syn_time      | 0.145 |
+|         rps         | 0.524 |
++---------------------+-------+
+
+
+wrong_2_150.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.507 |
+| ol_refactoring_time | 0.045 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.247 |
+|    spec_syn_time    | 0.830 |
+|       syn_time      | 0.171 |
+|         rps         | 0.825 |
++---------------------+-------+
+
+
+wrong_2_336.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.913 |
+| ol_refactoring_time | 0.115 |
+|       gcr_time      | 0.021 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.169 |
+|    spec_syn_time    | 0.402 |
+|       syn_time      | 0.055 |
+|         rps         | 0.152 |
++---------------------+-------+
+
+
+wrong_2_143.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.814 |
+| ol_refactoring_time | 0.017 |
+|       gcr_time      | 0.027 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.184 |
+|    spec_syn_time    | 0.312 |
+|       syn_time      | 0.058 |
+|         rps         | 0.429 |
++---------------------+-------+
+
+
+wrong_2_223.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'date': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'mon': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_057.py
+fail_exception
+
+
+wrong_2_171.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'x': 'buggy_x', 'result': 'buggy_result', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'x': 'buggy_x', 'result': 'buggy_result', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'x': 'buggy_x', 'y': 'buggy_y', 'months': 'buggy_months', 'result': 'buggy_result'}}
+
+
+wrong_2_281.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 23.256 |
+| ol_refactoring_time | 20.697 |
+|       gcr_time      | 0.159  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.382  |
+|    spec_syn_time    | 0.842  |
+|       syn_time      | 0.173  |
+|         rps         | 1.189  |
++---------------------+--------+
+
+
+wrong_2_029.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 7.988 |
+| ol_refactoring_time | 6.487 |
+|       gcr_time      | 0.129 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.257 |
+|    spec_syn_time    | 0.750 |
+|       syn_time      | 0.147 |
+|         rps         | 1.144 |
++---------------------+-------+
+
+
+wrong_2_376.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.448 |
+| ol_refactoring_time | 10.595 |
+|       gcr_time      | 0.032  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.300  |
+|    spec_syn_time    | 0.791  |
+|       syn_time      | 0.190  |
+|         rps         | 0.837  |
++---------------------+--------+
+
+
+wrong_2_310.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.802 |
+| ol_refactoring_time | 0.143 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.215 |
+|    spec_syn_time    | 0.412 |
+|       syn_time      | 0.084 |
+|         rps         | 0.621 |
++---------------------+-------+
+
+
+wrong_2_276.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'only_date': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'only_month': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_261.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_025.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.402 |
+| ol_refactoring_time | 0.087 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.193 |
+|    spec_syn_time    | 1.063 |
+|       syn_time      | 0.366 |
+|         rps         | 0.591 |
++---------------------+-------+
+
+
+wrong_2_096.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_217.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'j': 'buggy_j', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_022.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.599 |
+| ol_refactoring_time | 0.061 |
+|       gcr_time      | 0.069 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.216 |
+|    spec_syn_time    | 0.940 |
+|       syn_time      | 0.122 |
+|         rps         | 0.729 |
++---------------------+-------+
+
+
+wrong_2_427.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'only_date': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'only_month': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_180.py
+fail_exception
+
+
+wrong_2_244.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'x': 'buggy_x', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'x': 'buggy_x', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_136.py
+fail_exception
+
+
+wrong_2_277.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_033.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'tpl': 'buggy_tpl', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'j': 'birthday', 'tpl': 'buggy_tpl', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_106.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_037.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.696 |
+| ol_refactoring_time | 0.158 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.193 |
+|    spec_syn_time    | 0.991 |
+|       syn_time      | 0.175 |
+|         rps         | 0.678 |
++---------------------+-------+
+
+
+wrong_2_069.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.279 |
+| ol_refactoring_time | 0.214 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.336 |
+|    spec_syn_time    | 1.684 |
+|       syn_time      | 0.235 |
+|         rps         | 0.939 |
++---------------------+-------+
+
+
+wrong_2_329.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.381 |
+| ol_refactoring_time | 0.109 |
+|       gcr_time      | 0.014 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.261 |
+|    spec_syn_time    | 0.847 |
+|       syn_time      | 0.141 |
+|         rps         | 0.810 |
++---------------------+-------+
+
+
+wrong_2_379.py
+fail_exception
+
+
+wrong_2_388.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.800 |
+| ol_refactoring_time | 0.003 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.289 |
+|    spec_syn_time    | 0.482 |
+|       syn_time      | 0.086 |
+|         rps         | 0.359 |
++---------------------+-------+
+
+
+wrong_2_199.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'checker': 'count', 'k': 'birthday'}, 'unique_month': {'day': 'month', 'possible_birthdays': 'possible_birthdays', 'checker': 'count', 'k': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_195.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.095 |
+| ol_refactoring_time | 0.162 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.169 |
+|    spec_syn_time    | 0.541 |
+|       syn_time      | 0.091 |
+|         rps         | 0.333 |
++---------------------+-------+
+
+
+wrong_2_409.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.973 |
+| ol_refactoring_time | 0.018 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.215 |
+|    spec_syn_time    | 0.469 |
+|       syn_time      | 0.092 |
+|         rps         | 0.526 |
++---------------------+-------+
+
+
+wrong_2_130.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.683 |
+| ol_refactoring_time | 5.371 |
+|       gcr_time      | 0.139 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.288 |
+|    spec_syn_time    | 0.608 |
+|       syn_time      | 0.109 |
+|         rps         | 0.512 |
++---------------------+-------+
+
+
+wrong_2_002.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.872 |
+| ol_refactoring_time | 0.031 |
+|       gcr_time      | 0.044 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.205 |
+|    spec_syn_time    | 0.414 |
+|       syn_time      | 0.059 |
+|         rps         | 0.260 |
++---------------------+-------+
+
+
+wrong_2_290.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 11.223 |
+| ol_refactoring_time | 9.680  |
+|       gcr_time      | 0.286  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.349  |
+|    spec_syn_time    | 0.662  |
+|       syn_time      | 0.079  |
+|         rps         | 0.969  |
++---------------------+--------+
+
+
+wrong_2_269.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 25.185 |
+| ol_refactoring_time | 23.658 |
+|       gcr_time      | 0.071  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.213  |
+|    spec_syn_time    | 0.732  |
+|       syn_time      | 0.133  |
+|         rps         | 1.008  |
++---------------------+--------+
+
+
+wrong_2_306.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'unique_day': 'count', 'i': 'buggy_i', 'days': 'buggy_days', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_234.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.558 |
+| ol_refactoring_time | 0.088 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.313 |
+|    spec_syn_time    | 1.095 |
+|       syn_time      | 0.223 |
+|         rps         | 0.815 |
++---------------------+-------+
+
+
+wrong_2_040.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.432 |
+| ol_refactoring_time | 0.017 |
+|       gcr_time      | 0.027 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.160 |
+|    spec_syn_time    | 0.086 |
+|       syn_time      | 0.000 |
+|         rps         | 0.012 |
++---------------------+-------+
+
+
+wrong_2_419.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'n': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'n': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_042.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'a': 'count', 'dates': 'birthday', 'days': 'buggy_days'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'a': 'count', 'dates': 'birthday', 'months': 'buggy_months'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_324.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_216.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'element': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_024.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.604 |
+| ol_refactoring_time | 0.086 |
+|       gcr_time      | 0.062 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.222 |
+|    spec_syn_time    | 0.908 |
+|       syn_time      | 0.181 |
+|         rps         | 0.699 |
++---------------------+-------+
+
+
+wrong_2_004.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_131.py
+fail_timeout
+print_perf failed! wrong_2_131.py
+'tr'
+
+
+wrong_2_088.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.888 |
+| ol_refactoring_time | 1.533 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.264 |
+|    spec_syn_time    | 1.006 |
+|       syn_time      | 0.141 |
+|         rps         | 0.406 |
++---------------------+-------+
+
+
+wrong_2_134.py
+fail_exception
+
+
+wrong_2_186.py
+fail_exception
+
+
+wrong_2_219.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'j': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_374.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'item': 'birthday', 'datetup': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_120.py
+fail_exception
+
+
+wrong_2_349.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.243 |
+| ol_refactoring_time | 6.523 |
+|       gcr_time      | 0.155 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.335 |
+|    spec_syn_time    | 0.869 |
+|       syn_time      | 0.167 |
+|         rps         | 1.098 |
++---------------------+-------+
+
+
+wrong_2_023.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.323 |
+| ol_refactoring_time | 0.073 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.224 |
+|    spec_syn_time    | 0.959 |
+|       syn_time      | 0.185 |
+|         rps         | 0.699 |
++---------------------+-------+
+
+
+wrong_2_212.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.117 |
+| ol_refactoring_time | 0.046 |
+|       gcr_time      | 0.044 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.205 |
+|    spec_syn_time    | 0.792 |
+|       syn_time      | 0.182 |
+|         rps         | 0.433 |
++---------------------+-------+
+
+
+wrong_2_098.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_220.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'j': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'j': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_350.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.883 |
+| ol_refactoring_time | 8.838  |
+|       gcr_time      | 2.383  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.210  |
+|    spec_syn_time    | 0.847  |
+|       syn_time      | 0.142  |
+|         rps         | 1.012  |
++---------------------+--------+
+
+
+wrong_2_179.py
+fail_exception
+
+
+wrong_2_229.py
+fail_exception
+
+
+wrong_2_432.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.160 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.033 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.215 |
+|    spec_syn_time    | 0.550 |
+|       syn_time      | 0.100 |
+|         rps         | 0.463 |
++---------------------+-------+
+
+
+wrong_2_011.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.906 |
+| ol_refactoring_time | 0.236 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.199 |
+|    spec_syn_time    | 0.945 |
+|       syn_time      | 0.223 |
+|         rps         | 0.546 |
++---------------------+-------+
+
+
+wrong_2_360.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.849 |
+| ol_refactoring_time | 4.922 |
+|       gcr_time      | 0.098 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.312 |
+|    spec_syn_time    | 1.098 |
+|       syn_time      | 0.231 |
+|         rps         | 0.799 |
++---------------------+-------+
+
+
+wrong_2_164.py
+fail_exception
+
+
+wrong_2_404.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.265 |
+| ol_refactoring_time | 3.106 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.285 |
+|    spec_syn_time    | 0.666 |
+|       syn_time      | 0.153 |
+|         rps         | 0.616 |
++---------------------+-------+
+
+
+wrong_2_138.py
+fail_exception
+
+
+wrong_2_209.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.280 |
+| ol_refactoring_time | 8.856  |
+|       gcr_time      | 0.211  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.311  |
+|    spec_syn_time    | 0.518  |
+|       syn_time      | 0.112  |
+|         rps         | 0.780  |
++---------------------+--------+
+
+
+wrong_2_104.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_077.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.979 |
+| ol_refactoring_time | 11.801 |
+|       gcr_time      | 0.003  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.350  |
+|    spec_syn_time    | 0.780  |
+|       syn_time      | 0.156  |
+|         rps         | 0.709  |
++---------------------+--------+
+
+
+wrong_2_065.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.762 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.221 |
+|    spec_syn_time    | 0.476 |
+|       syn_time      | 0.121 |
+|         rps         | 0.445 |
++---------------------+-------+
+
+
+wrong_2_166.py
+fail_exception
+
+
+wrong_2_370.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'data': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_124.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'tester': 'buggy_tester', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'tester': 'buggy_tester', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_251.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.046 |
+| ol_refactoring_time | 0.163 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.228 |
+|    spec_syn_time    | 0.620 |
+|       syn_time      | 0.117 |
+|         rps         | 0.459 |
++---------------------+-------+
+
+
+wrong_2_267.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.449 |
+| ol_refactoring_time | 0.046 |
+|       gcr_time      | 0.078 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.303 |
+|    spec_syn_time    | 0.759 |
+|       syn_time      | 0.166 |
+|         rps         | 0.570 |
++---------------------+-------+
+
+
+wrong_2_293.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.617 |
+| ol_refactoring_time | 12.179 |
+|       gcr_time      | 0.490  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.588  |
+|    spec_syn_time    | 0.906  |
+|       syn_time      | 0.259  |
+|         rps         | 0.674  |
++---------------------+--------+
+
+
+wrong_2_021.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.857 |
+| ol_refactoring_time | 12.153 |
+|       gcr_time      | 0.095  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.290  |
+|    spec_syn_time    | 0.896  |
+|       syn_time      | 0.099  |
+|         rps         | 0.856  |
++---------------------+--------+
+
+
+wrong_2_296.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'total': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_396.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 9.654 |
+| ol_refactoring_time | 8.712 |
+|       gcr_time      | 0.222 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.298 |
+|    spec_syn_time    | 0.202 |
+|       syn_time      | 0.021 |
+|         rps         | 0.486 |
++---------------------+-------+
+
+
+wrong_2_078.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.802 |
+| ol_refactoring_time | 0.073 |
+|       gcr_time      | 0.044 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.202 |
+|    spec_syn_time    | 0.329 |
+|       syn_time      | 0.054 |
+|         rps         | 0.152 |
++---------------------+-------+
+
+
+wrong_2_249.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.514 |
+| ol_refactoring_time | 12.556 |
+|       gcr_time      | 0.052  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.360  |
+|    spec_syn_time    | 0.722  |
+|       syn_time      | 0.176  |
+|         rps         | 0.678  |
++---------------------+--------+
+
+
+wrong_2_196.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.121 |
+| ol_refactoring_time | 0.194 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.218 |
+|    spec_syn_time    | 0.679 |
+|       syn_time      | 0.115 |
+|         rps         | 0.340 |
++---------------------+-------+
+
+
+wrong_2_241.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.401 |
+| ol_refactoring_time | 4.993 |
+|       gcr_time      | 0.037 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.078 |
+|    spec_syn_time    | 0.202 |
+|       syn_time      | 0.021 |
+|         rps         | 0.721 |
++---------------------+-------+
+
+
+wrong_2_287.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 9.860 |
+| ol_refactoring_time | 8.783 |
+|       gcr_time      | 0.191 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.310 |
+|    spec_syn_time    | 0.536 |
+|       syn_time      | 0.113 |
+|         rps         | 0.780 |
++---------------------+-------+
+
+
+wrong_2_003.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.707 |
+| ol_refactoring_time | 0.018 |
+|       gcr_time      | 0.028 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.203 |
+|    spec_syn_time    | 0.430 |
+|       syn_time      | 0.061 |
+|         rps         | 0.260 |
++---------------------+-------+
+
+
+wrong_2_079.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.682 |
+| ol_refactoring_time | 0.073 |
+|       gcr_time      | 0.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.203 |
+|    spec_syn_time    | 0.346 |
+|       syn_time      | 0.055 |
+|         rps         | 0.152 |
++---------------------+-------+
+
+
+wrong_2_087.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.372 |
+| ol_refactoring_time | 0.108 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.219 |
+|    spec_syn_time    | 0.901 |
+|       syn_time      | 0.134 |
+|         rps         | 0.580 |
++---------------------+-------+
+
+
+wrong_2_018.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.171 |
+| ol_refactoring_time | 0.082 |
+|       gcr_time      | 0.037 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.258 |
+|    spec_syn_time    | 0.571 |
+|       syn_time      | 0.086 |
+|         rps         | 0.316 |
++---------------------+-------+
+
+
+wrong_2_286.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.322 |
+| ol_refactoring_time | 8.888  |
+|       gcr_time      | 0.191  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.291  |
+|    spec_syn_time    | 0.559  |
+|       syn_time      | 0.114  |
+|         rps         | 0.789  |
++---------------------+--------+
+
+
+wrong_2_366.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_357.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.672 |
+| ol_refactoring_time | 0.004 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.182 |
+|    spec_syn_time    | 0.328 |
+|       syn_time      | 0.043 |
+|         rps         | 0.193 |
++---------------------+-------+
+
+
+wrong_2_228.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'p': 'birthday', 'result': 'count', 'pd': 'buggy_pd'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_413.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'x': 'birthday', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'dates': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_353.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.065 |
+| ol_refactoring_time | 0.206 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.274 |
+|    spec_syn_time    | 1.149 |
+|       syn_time      | 0.315 |
+|         rps         | 0.685 |
++---------------------+-------+
+
+
+wrong_2_433.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.062 |
+| ol_refactoring_time | 0.046 |
+|       gcr_time      | 0.024 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.243 |
+|    spec_syn_time    | 0.714 |
+|       syn_time      | 0.144 |
+|         rps         | 0.565 |
++---------------------+-------+
+
+
+wrong_2_391.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'item': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'item': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_256.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'unique': 'count', 'i': 'buggy_i', 'days': 'buggy_days', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'unique': 'count', 'i': 'buggy_i', 'months': 'buggy_months', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_109.py
+fail_exception
+
+
+wrong_2_393.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.699 |
+| ol_refactoring_time | 11.283 |
+|       gcr_time      | 0.400  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.338  |
+|    spec_syn_time    | 0.991  |
+|       syn_time      | 0.205  |
+|         rps         | 0.680  |
++---------------------+--------+
+
+
+wrong_2_031.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'tpl': 'buggy_tpl', 'i': 'buggy_i', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'tpl': 'buggy_tpl', 'j': 'buggy_j', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_159.py
+fail_exception
+
+
+wrong_2_081.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 3.092 |
+| ol_refactoring_time | 0.257 |
+|       gcr_time      | 0.022 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.242 |
+|    spec_syn_time    | 1.667 |
+|       syn_time      | 0.229 |
+|         rps         | 0.951 |
++---------------------+-------+
+
+
+wrong_2_044.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_218.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'j': 'buggy_j', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_364.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_147.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 17.387 |
+| ol_refactoring_time | 16.127 |
+|       gcr_time      | 0.040  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.200  |
+|    spec_syn_time    | 0.756  |
+|       syn_time      | 0.128  |
+|         rps         | 0.800  |
++---------------------+--------+
+
+
+wrong_2_126.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_359.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.092 |
+| ol_refactoring_time | 0.121 |
+|       gcr_time      | 0.027 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.211 |
+|    spec_syn_time    | 0.705 |
+|       syn_time      | 0.096 |
+|         rps         | 0.370 |
++---------------------+-------+
+
+
+wrong_2_291.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'the_day': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_361.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.318 |
+| ol_refactoring_time | 0.193 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.215 |
+|    spec_syn_time    | 0.728 |
+|       syn_time      | 0.113 |
+|         rps         | 0.375 |
++---------------------+-------+
+
+
+wrong_2_328.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.353 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.018 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.237 |
+|    spec_syn_time    | 0.920 |
+|       syn_time      | 0.151 |
+|         rps         | 0.762 |
++---------------------+-------+
+
+
+wrong_2_053.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'x': 'buggy_x', 'list': 'buggy_list', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_148.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_371.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.072 |
+| ol_refactoring_time | 8.561  |
+|       gcr_time      | 0.025  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.342  |
+|    spec_syn_time    | 0.924  |
+|       syn_time      | 0.144  |
+|         rps         | 0.868  |
++---------------------+--------+
+
+
+wrong_2_156.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_172.py
+fail_exception
+
+
+wrong_2_265.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.934 |
+| ol_refactoring_time | 0.062 |
+|       gcr_time      | 0.043 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.206 |
+|    spec_syn_time    | 0.421 |
+|       syn_time      | 0.057 |
+|         rps         | 0.394 |
++---------------------+-------+
+
+
+wrong_2_255.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.201 |
+| ol_refactoring_time | 3.150 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.294 |
+|    spec_syn_time    | 0.452 |
+|       syn_time      | 0.067 |
+|         rps         | 0.485 |
++---------------------+-------+
+
+
+wrong_2_252.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.791 |
+| ol_refactoring_time | 0.184 |
+|       gcr_time      | 0.038 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.192 |
+|    spec_syn_time    | 0.916 |
+|       syn_time      | 0.211 |
+|         rps         | 0.560 |
++---------------------+-------+
+
+
+wrong_2_333.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 9.470 |
+| ol_refactoring_time | 8.753 |
+|       gcr_time      | 0.201 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.209 |
+|    spec_syn_time    | 0.086 |
+|       syn_time      | 0.000 |
+|         rps         | 0.362 |
++---------------------+-------+
+
+
+wrong_2_297.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.570 |
+| ol_refactoring_time | 0.004 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.191 |
+|    spec_syn_time    | 0.218 |
+|       syn_time      | 0.031 |
+|         rps         | 0.113 |
++---------------------+-------+
+
+
+wrong_2_032.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'count': 'count', 'tpl': 'buggy_tpl'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'tpl': 'buggy_tpl', 'j': 'buggy_j', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_339.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.356 |
+| ol_refactoring_time | 0.203 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.237 |
+|    spec_syn_time    | 0.881 |
+|       syn_time      | 0.172 |
+|         rps         | 0.733 |
++---------------------+-------+
+
+
+wrong_2_225.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 19.063 |
+| ol_refactoring_time | 16.973 |
+|       gcr_time      | 0.188  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.468  |
+|    spec_syn_time    | 0.730  |
+|       syn_time      | 0.148  |
+|         rps         | 0.765  |
++---------------------+--------+
+
+
+wrong_2_279.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.414 |
+| ol_refactoring_time | 3.221 |
+|       gcr_time      | 0.041 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.293 |
+|    spec_syn_time    | 0.601 |
+|       syn_time      | 0.140 |
+|         rps         | 0.491 |
++---------------------+-------+
+
+
+wrong_2_340.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.805 |
+| ol_refactoring_time | 0.184 |
+|       gcr_time      | 0.013 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.169 |
+|    spec_syn_time    | 0.411 |
+|       syn_time      | 0.056 |
+|         rps         | 0.152 |
++---------------------+-------+
+
+
+wrong_2_112.py
+fail_exception
+
+
+wrong_2_351.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.737 |
+| ol_refactoring_time | 0.126 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.194 |
+|    spec_syn_time    | 0.978 |
+|       syn_time      | 0.245 |
+|         rps         | 0.685 |
++---------------------+-------+
+
+
+wrong_2_272.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.942 |
+| ol_refactoring_time | 0.081 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.227 |
+|    spec_syn_time    | 0.599 |
+|       syn_time      | 0.115 |
+|         rps         | 0.459 |
++---------------------+-------+
+
+
+wrong_2_153.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.290 |
+| ol_refactoring_time | 0.081 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.240 |
+|    spec_syn_time    | 0.689 |
+|       syn_time      | 0.136 |
+|         rps         | 0.550 |
++---------------------+-------+
+
+
+wrong_2_401.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.753 |
+| ol_refactoring_time | 7.334 |
+|       gcr_time      | 0.049 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.364 |
+|    spec_syn_time    | 0.768 |
+|       syn_time      | 0.213 |
+|         rps         | 0.651 |
++---------------------+-------+
+
+
+wrong_2_144.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.812 |
+| ol_refactoring_time | 0.031 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.184 |
+|    spec_syn_time    | 0.319 |
+|       syn_time      | 0.059 |
+|         rps         | 0.429 |
++---------------------+-------+
+
+
+wrong_2_257.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_009.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.565 |
+| ol_refactoring_time | 0.205 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.234 |
+|    spec_syn_time    | 1.086 |
+|       syn_time      | 0.243 |
+|         rps         | 0.589 |
++---------------------+-------+
+
+
+wrong_2_128.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_412.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.227 |
+| ol_refactoring_time | 3.141 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.290 |
+|    spec_syn_time    | 0.752 |
+|       syn_time      | 0.157 |
+|         rps         | 0.626 |
++---------------------+-------+
+
+
+wrong_2_415.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.770 |
+| ol_refactoring_time | 5.485 |
+|       gcr_time      | 0.086 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.322 |
+|    spec_syn_time    | 0.652 |
+|       syn_time      | 0.110 |
+|         rps         | 0.534 |
++---------------------+-------+
+
+
+wrong_2_019.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.868 |
+| ol_refactoring_time | 0.032 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.232 |
+|    spec_syn_time    | 0.573 |
+|       syn_time      | 0.107 |
+|         rps         | 0.612 |
++---------------------+-------+
+
+
+wrong_2_207.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.132 |
+| ol_refactoring_time | 0.145 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.228 |
+|    spec_syn_time    | 0.724 |
+|       syn_time      | 0.141 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_054.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'x': 'buggy_x', 'list': 'buggy_list', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'x': 'buggy_x', 'list': 'buggy_list', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_177.py
+fail_exception
+
+
+wrong_2_278.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.182 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.209 |
+|    spec_syn_time    | 0.585 |
+|       syn_time      | 0.139 |
+|         rps         | 0.364 |
++---------------------+-------+
+
+
+wrong_2_161.py
+fail_exception
+
+
+wrong_2_406.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.490 |
+| ol_refactoring_time | 11.360 |
+|       gcr_time      | 0.144  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.183  |
+|    spec_syn_time    | 0.528  |
+|       syn_time      | 0.097  |
+|         rps         | 0.629  |
++---------------------+--------+
+
+
+wrong_2_015.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.964 |
+| ol_refactoring_time | 0.228 |
+|       gcr_time      | 0.034 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.201 |
+|    spec_syn_time    | 0.988 |
+|       syn_time      | 0.223 |
+|         rps         | 0.546 |
++---------------------+-------+
+
+
+wrong_2_116.py
+fail_exception
+
+
+wrong_2_056.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.050 |
+| ol_refactoring_time | 10.505 |
+|       gcr_time      | 1.241  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.241  |
+|    spec_syn_time    | 1.252  |
+|       syn_time      | 0.447  |
+|         rps         | 0.878  |
++---------------------+--------+
+
+
+wrong_2_202.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.206 |
+| ol_refactoring_time | 0.160 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.230 |
+|    spec_syn_time    | 0.781 |
+|       syn_time      | 0.144 |
+|         rps         | 0.578 |
++---------------------+-------+
+
+
+wrong_2_378.py
+fail_exception
+
+
+wrong_2_062.py
+fail_exception
+
+
+wrong_2_188.py
+fail_exception
+
+
+wrong_2_365.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_435.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.046 |
+| ol_refactoring_time | 0.076 |
+|       gcr_time      | 0.018 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.220 |
+|    spec_syn_time    | 0.408 |
+|       syn_time      | 0.084 |
+|         rps         | 0.611 |
++---------------------+-------+
+
+
+wrong_2_399.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 20.433 |
+| ol_refactoring_time | 17.280 |
+|       gcr_time      | 0.243  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.474  |
+|    spec_syn_time    | 0.785  |
+|       syn_time      | 0.201  |
+|         rps         | 0.771  |
++---------------------+--------+
+
+
+wrong_2_420.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 9.541 |
+| ol_refactoring_time | 8.769 |
+|       gcr_time      | 0.220 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.271 |
+|    spec_syn_time    | 0.084 |
+|       syn_time      | 0.000 |
+|         rps         | 0.351 |
++---------------------+-------+
+
+
+wrong_2_331.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.169 |
+| ol_refactoring_time | 0.059 |
+|       gcr_time      | 0.022 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.208 |
+|    spec_syn_time    | 0.746 |
+|       syn_time      | 0.121 |
+|         rps         | 0.617 |
++---------------------+-------+
+
+
+wrong_2_268.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.198 |
+| ol_refactoring_time | 0.045 |
+|       gcr_time      | 0.054 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.304 |
+|    spec_syn_time    | 0.764 |
+|       syn_time      | 0.167 |
+|         rps         | 0.570 |
++---------------------+-------+
+
+
+wrong_2_326.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_367.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'months': 'birthday', 'i': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_430.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 21.371 |
+| ol_refactoring_time | 18.963 |
+|       gcr_time      | 0.427  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.453  |
+|    spec_syn_time    | 0.824  |
+|       syn_time      | 0.138  |
+|         rps         | 0.827  |
++---------------------+--------+
+
+
+wrong_2_080.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.439 |
+| ol_refactoring_time | 0.284 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.246 |
+|    spec_syn_time    | 1.863 |
+|       syn_time      | 0.237 |
+|         rps         | 0.951 |
++---------------------+-------+
+
+
+wrong_2_114.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.173 |
+| ol_refactoring_time | 3.201 |
+|       gcr_time      | 0.039 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.293 |
+|    spec_syn_time    | 0.409 |
+|       syn_time      | 0.062 |
+|         rps         | 0.330 |
++---------------------+-------+
+
+
+wrong_2_418.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'ref_count': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_208.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.506 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.230 |
+|    spec_syn_time    | 0.735 |
+|       syn_time      | 0.141 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_006.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.156 |
+| ol_refactoring_time | 0.126 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.223 |
+|    spec_syn_time    | 1.291 |
+|       syn_time      | 0.259 |
+|         rps         | 0.638 |
++---------------------+-------+
+
+
+wrong_2_050.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'buggy_i', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_380.py
+fail_exception
+
+
+wrong_2_068.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.273 |
+| ol_refactoring_time | 0.134 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.169 |
+|    spec_syn_time    | 0.731 |
+|       syn_time      | 0.202 |
+|         rps         | 0.333 |
++---------------------+-------+
+
+
+wrong_2_158.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 32.461 |
+| ol_refactoring_time | 30.066 |
+|       gcr_time      | 0.671  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.220  |
+|    spec_syn_time    | 0.877  |
+|       syn_time      | 0.170  |
+|         rps         | 0.845  |
++---------------------+--------+
+
+
+wrong_2_058.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'total_day': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'total_month': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_182.py
+fail_exception
+
+
+wrong_2_097.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_284.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.141 |
+| ol_refactoring_time | 8.890  |
+|       gcr_time      | 0.203  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.248  |
+|    spec_syn_time    | 0.415  |
+|       syn_time      | 0.088  |
+|         rps         | 0.780  |
++---------------------+--------+
+
+
+wrong_2_236.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.699 |
+| ol_refactoring_time | 6.646 |
+|       gcr_time      | 0.317 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.328 |
+|    spec_syn_time    | 0.915 |
+|       syn_time      | 0.168 |
+|         rps         | 1.114 |
++---------------------+-------+
+
+
+wrong_2_160.py
+fail_exception
+
+
+wrong_2_167.py
+fail_exception
+
+
+wrong_2_090.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'dates': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'dates': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_222.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'date': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'mon': 'buggy_mon', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_313.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.047 |
+| ol_refactoring_time | 0.075 |
+|       gcr_time      | 0.019 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.217 |
+|    spec_syn_time    | 0.420 |
+|       syn_time      | 0.084 |
+|         rps         | 0.621 |
++---------------------+-------+
+
+
+wrong_2_162.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 17.061 |
+| ol_refactoring_time | 16.068 |
+|       gcr_time      | 0.029  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.200  |
+|    spec_syn_time    | 0.726  |
+|       syn_time      | 0.126  |
+|         rps         | 0.800  |
++---------------------+--------+
+
+
+wrong_2_200.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 24.907 |
+| ol_refactoring_time | 23.725 |
+|       gcr_time      | 0.030  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.214  |
+|    spec_syn_time    | 0.895  |
+|       syn_time      | 0.153  |
+|         rps         | 1.008  |
++---------------------+--------+
+
+
+wrong_2_422.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.660 |
+| ol_refactoring_time | 5.389 |
+|       gcr_time      | 0.022 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.297 |
+|    spec_syn_time    | 0.680 |
+|       syn_time      | 0.117 |
+|         rps         | 0.492 |
++---------------------+-------+
+
+
+wrong_2_008.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.837 |
+| ol_refactoring_time | 0.285 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.236 |
+|    spec_syn_time    | 1.277 |
+|       syn_time      | 0.250 |
+|         rps         | 0.589 |
++---------------------+-------+
+
+
+wrong_2_289.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 11.133 |
+| ol_refactoring_time | 9.815  |
+|       gcr_time      | 0.287  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.204  |
+|    spec_syn_time    | 0.604  |
+|       syn_time      | 0.067  |
+|         rps         | 0.888  |
++---------------------+--------+
+
+
+wrong_2_275.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.084 |
+| ol_refactoring_time | 0.158 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.227 |
+|    spec_syn_time    | 0.664 |
+|       syn_time      | 0.118 |
+|         rps         | 0.459 |
++---------------------+-------+
+
+
+wrong_2_145.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_030.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'tpl': 'buggy_tpl', 'i': 'buggy_i', 'ref_count': 'count', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_280.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 22.382 |
+| ol_refactoring_time | 20.926 |
+|       gcr_time      | 0.097  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.385  |
+|    spec_syn_time    | 0.920  |
+|       syn_time      | 0.178  |
+|         rps         | 1.189  |
++---------------------+--------+
+
+
+wrong_2_121.py
+fail_exception
+
+
+wrong_2_368.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'count', 'days': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'months': 'birthday', 'i': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_101.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_014.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.879 |
+| ol_refactoring_time | 0.205 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.199 |
+|    spec_syn_time    | 0.968 |
+|       syn_time      | 0.222 |
+|         rps         | 0.554 |
++---------------------+-------+
+
+
+wrong_2_319.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.283 |
+| ol_refactoring_time | 0.045 |
+|       gcr_time      | 0.051 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.226 |
+|    spec_syn_time    | 0.702 |
+|       syn_time      | 0.131 |
+|         rps         | 0.734 |
++---------------------+-------+
+
+
+wrong_2_061.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.997 |
+| ol_refactoring_time | 11.700 |
+|       gcr_time      | 0.250  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.192  |
+|    spec_syn_time    | 0.581  |
+|       syn_time      | 0.055  |
+|         rps         | 0.824  |
++---------------------+--------+
+
+
+wrong_2_017.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.058 |
+| ol_refactoring_time | 0.185 |
+|       gcr_time      | 0.016 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.258 |
+|    spec_syn_time    | 0.571 |
+|       syn_time      | 0.088 |
+|         rps         | 0.316 |
++---------------------+-------+
+
+
+wrong_2_059.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.761 |
+| ol_refactoring_time | 8.387  |
+|       gcr_time      | 0.752  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.183  |
+|    spec_syn_time    | 0.837  |
+|       syn_time      | 0.109  |
+|         rps         | 0.835  |
++---------------------+--------+
+
+
+wrong_2_254.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.341 |
+| ol_refactoring_time | 0.160 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.193 |
+|    spec_syn_time    | 0.649 |
+|       syn_time      | 0.115 |
+|         rps         | 0.468 |
++---------------------+-------+
+
+
+wrong_2_169.py
+fail_exception
+
+
+wrong_2_082.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 2.500 |
+| ol_refactoring_time | 0.199 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.319 |
+|    spec_syn_time    | 1.302 |
+|       syn_time      | 0.119 |
+|         rps         | 0.852 |
++---------------------+-------+
+
+
+wrong_2_266.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.556 |
+| ol_refactoring_time | 7.769 |
+|       gcr_time      | 0.003 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.360 |
+|    spec_syn_time    | 0.385 |
+|       syn_time      | 0.037 |
+|         rps         | 0.407 |
++---------------------+-------+
+
+
+wrong_2_013.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.478 |
+| ol_refactoring_time | 0.249 |
+|       gcr_time      | 0.002 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.200 |
+|    spec_syn_time    | 0.991 |
+|       syn_time      | 0.224 |
+|         rps         | 0.546 |
++---------------------+-------+
+
+
+wrong_2_093.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'result': 'buggy_result', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_035.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.239 |
+| ol_refactoring_time | 0.087 |
+|       gcr_time      | 0.023 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.190 |
+|    spec_syn_time    | 0.911 |
+|       syn_time      | 0.157 |
+|         rps         | 0.510 |
++---------------------+-------+
+
+
+wrong_2_146.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.115 |
+| ol_refactoring_time | 0.046 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.245 |
+|    spec_syn_time    | 0.779 |
+|       syn_time      | 0.147 |
+|         rps         | 0.728 |
++---------------------+-------+
+
+
+wrong_2_421.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 9.510 |
+| ol_refactoring_time | 8.727 |
+|       gcr_time      | 0.208 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.270 |
+|    spec_syn_time    | 0.084 |
+|       syn_time      | 0.000 |
+|         rps         | 0.351 |
++---------------------+-------+
+
+
+wrong_2_086.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.684 |
+| ol_refactoring_time | 0.067 |
+|       gcr_time      | 0.000 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.149 |
+|    spec_syn_time    | 0.397 |
+|       syn_time      | 0.055 |
+|         rps         | 0.545 |
++---------------------+-------+
+
+
+wrong_2_060.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.601 |
+| ol_refactoring_time | 0.060 |
+|       gcr_time      | 0.029 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.316 |
+|    spec_syn_time    | 1.160 |
+|       syn_time      | 0.227 |
+|         rps         | 0.815 |
++---------------------+-------+
+
+
+wrong_2_237.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_389.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'item': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'item': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_315.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'i': 'birthday', 'counter': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'i': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_341.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'birthdays': 'birthday', 'result': 'count'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'ref_count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_414.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.593 |
+| ol_refactoring_time | 4.997 |
+|       gcr_time      | 0.084 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.316 |
+|    spec_syn_time    | 1.154 |
+|       syn_time      | 0.233 |
+|         rps         | 0.799 |
++---------------------+-------+
+
+
+wrong_2_373.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.449 |
+| ol_refactoring_time | 10.626 |
+|       gcr_time      | 0.033  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.304  |
+|    spec_syn_time    | 0.709  |
+|       syn_time      | 0.158  |
+|         rps         | 0.788  |
++---------------------+--------+
+
+
+wrong_2_400.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.755 |
+| ol_refactoring_time | 10.200 |
+|       gcr_time      | 0.048  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.374  |
+|    spec_syn_time    | 1.422  |
+|       syn_time      | 0.292  |
+|         rps         | 0.984  |
++---------------------+--------+
+
+
+wrong_2_157.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 31.742 |
+| ol_refactoring_time | 29.983 |
+|       gcr_time      | 0.616  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.220  |
+|    spec_syn_time    | 0.876  |
+|       syn_time      | 0.171  |
+|         rps         | 0.845  |
++---------------------+--------+
+
+
+wrong_2_334.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 14.342 |
+| ol_refactoring_time | 12.249 |
+|       gcr_time      | 0.487  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.296  |
+|    spec_syn_time    | 0.833  |
+|       syn_time      | 0.201  |
+|         rps         | 0.691  |
++---------------------+--------+
+
+
+wrong_2_092.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.150 |
+| ol_refactoring_time | 0.157 |
+|       gcr_time      | 0.007 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.212 |
+|    spec_syn_time    | 0.510 |
+|       syn_time      | 0.091 |
+|         rps         | 0.301 |
++---------------------+-------+
+
+
+wrong_2_137.py
+fail_exception
+
+
+wrong_2_100.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_301.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.195 |
+| ol_refactoring_time | 3.130 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.287 |
+|    spec_syn_time    | 0.736 |
+|       syn_time      | 0.155 |
+|         rps         | 0.626 |
++---------------------+-------+
+
+
+wrong_2_067.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.203 |
+| ol_refactoring_time | 0.159 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.228 |
+|    spec_syn_time    | 0.783 |
+|       syn_time      | 0.141 |
+|         rps         | 0.586 |
++---------------------+-------+
+
+
+wrong_2_394.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.605 |
+| ol_refactoring_time | 11.256 |
+|       gcr_time      | 0.371  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.312  |
+|    spec_syn_time    | 0.977  |
+|       syn_time      | 0.206  |
+|         rps         | 0.680  |
++---------------------+--------+
+
+
+wrong_2_410.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.204 |
+| ol_refactoring_time | 11.594 |
+|       gcr_time      | 0.098  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.391  |
+|    spec_syn_time    | 0.796  |
+|       syn_time      | 0.203  |
+|         rps         | 0.664  |
++---------------------+--------+
+
+
+wrong_2_239.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.806 |
+| ol_refactoring_time | 0.030 |
+|       gcr_time      | 0.001 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.217 |
+|    spec_syn_time    | 0.527 |
+|       syn_time      | 0.095 |
+|         rps         | 0.526 |
++---------------------+-------+
+
+
+wrong_2_118.py
+fail_exception
+
+
+wrong_2_193.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'unique': 'count', 'i': 'buggy_i', 'days': 'buggy_days', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday', 'count': 'count'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_434.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_129.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.542 |
+| ol_refactoring_time | 5.469 |
+|       gcr_time      | 0.112 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.290 |
+|    spec_syn_time    | 0.633 |
+|       syn_time      | 0.111 |
+|         rps         | 0.512 |
++---------------------+-------+
+
+
+wrong_2_321.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 20.531 |
+| ol_refactoring_time | 18.328 |
+|       gcr_time      | 0.114  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.391  |
+|    spec_syn_time    | 1.074  |
+|       syn_time      | 0.180  |
+|         rps         | 0.774  |
++---------------------+--------+
+
+
+wrong_2_309.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'new': 'buggy_new', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'new': 'buggy_new', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_185.py
+fail_exception
+
+
+wrong_2_283.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.612 |
+| ol_refactoring_time | 0.163 |
+|       gcr_time      | 0.035 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.245 |
+|    spec_syn_time    | 0.794 |
+|       syn_time      | 0.141 |
+|         rps         | 0.562 |
++---------------------+-------+
+
+
+wrong_2_354.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.905 |
+| ol_refactoring_time | 0.081 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.276 |
+|    spec_syn_time    | 1.105 |
+|       syn_time      | 0.311 |
+|         rps         | 0.638 |
++---------------------+-------+
+
+
+wrong_2_384.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'day': 'day', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'item': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'counter': 'count', 'item': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+wrong_2_318.py
+structure mutation
+success_w_mut
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 13.780 |
+| ol_refactoring_time | 12.588 |
+|       gcr_time      | 0.004  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.362  |
+|    spec_syn_time    | 0.780  |
+|       syn_time      | 0.179  |
+|         rps         | 0.678  |
++---------------------+--------+
+
+
+wrong_2_226.py
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.451 |
+| ol_refactoring_time | 0.031 |
+|       gcr_time      | 0.027 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.162 |
+|    spec_syn_time    | 0.087 |
+|       syn_time      | 0.000 |
+|         rps         | 0.012 |
++---------------------+-------+
+
+
+wrong_2_233.py
+structure mutation
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 8.724 |
+| ol_refactoring_time | 6.656 |
+|       gcr_time      | 0.285 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.334 |
+|    spec_syn_time    | 0.966 |
+|       syn_time      | 0.168 |
+|         rps         | 1.081 |
++---------------------+-------+
+
+
+wrong_2_135.py
+fail_exception
+
+
+wrong_2_176.py
+fail_exception
+
+
+wrong_2_184.py
+fail_exception
+
+
+wrong_2_323.py
+structure mutation
+fail_other
+{'001': True, '002': True, '003': True, '004': False, '005': True, '006': False, '007': True, '008': True, '009': True, '010': True, '011': True, '012': True, '013': True, '014': True, '015': True, '016': False, '017': True}
+{'unique_day': {'date': 'day', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'unique_month': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'count': 'count', 'i': 'buggy_i', 'ref_birthday': 'birthday'}, 'contains_unique_day': {'month': 'month', 'possible_birthdays': 'possible_birthdays', 'birthday': 'birthday'}}
+
+
+
+Summary for question_2 (sampling_rate = 0%, exp_idx = 0)
++-----------------+-------+
+|      Metric     | Value |
++-----------------+-------+
+|     rep_rate    | 0.554 |
+| rep_rate_wo_mut | 0.306 |
+|    time_cost    | 5.984 |
+|       rps       | 0.616 |
++-----------------+-------+
+
+fail_list
+wrong_2_343.py
+wrong_2_139.py
+wrong_2_132.py
+wrong_2_308.py
+wrong_2_173.py
+wrong_2_105.py
+wrong_2_260.py
+wrong_2_210.py
+wrong_2_386.py
+wrong_2_198.py
+wrong_2_211.py
+wrong_2_191.py
+wrong_2_262.py
+wrong_2_189.py
+wrong_2_140.py
+wrong_2_119.py
+wrong_2_325.py
+wrong_2_345.py
+wrong_2_016.py
+wrong_2_295.py
+wrong_2_369.py
+wrong_2_307.py
+wrong_2_403.py
+wrong_2_154.py
+wrong_2_292.py
+wrong_2_142.py
+wrong_2_099.py
+wrong_2_183.py
+wrong_2_230.py
+wrong_2_165.py
+wrong_2_382.py
+wrong_2_168.py
+wrong_2_051.py
+wrong_2_363.py
+wrong_2_288.py
+wrong_2_095.py
+wrong_2_304.py
+wrong_2_123.py
+wrong_2_089.py
+wrong_2_344.py
+wrong_2_231.py
+wrong_2_125.py
+wrong_2_149.py
+wrong_2_094.py
+wrong_2_250.py
+wrong_2_263.py
+wrong_2_108.py
+wrong_2_049.py
+wrong_2_417.py
+wrong_2_117.py
+wrong_2_402.py
+wrong_2_141.py
+wrong_2_305.py
+wrong_2_152.py
+wrong_2_428.py
+wrong_2_155.py
+wrong_2_299.py
+wrong_2_091.py
+wrong_2_259.py
+wrong_2_224.py
+wrong_2_346.py
+wrong_2_115.py
+wrong_2_102.py
+wrong_2_175.py
+wrong_2_405.py
+wrong_2_294.py
+wrong_2_227.py
+wrong_2_298.py
+wrong_2_190.py
+wrong_2_303.py
+wrong_2_187.py
+wrong_2_174.py
+wrong_2_107.py
+wrong_2_215.py
+wrong_2_110.py
+wrong_2_133.py
+wrong_2_238.py
+wrong_2_383.py
+wrong_2_258.py
+wrong_2_170.py
+wrong_2_381.py
+wrong_2_113.py
+wrong_2_181.py
+wrong_2_103.py
+wrong_2_311.py
+wrong_2_041.py
+wrong_2_213.py
+wrong_2_312.py
+wrong_2_027.py
+wrong_2_127.py
+wrong_2_111.py
+wrong_2_223.py
+wrong_2_057.py
+wrong_2_171.py
+wrong_2_276.py
+wrong_2_261.py
+wrong_2_096.py
+wrong_2_217.py
+wrong_2_427.py
+wrong_2_180.py
+wrong_2_244.py
+wrong_2_136.py
+wrong_2_277.py
+wrong_2_033.py
+wrong_2_106.py
+wrong_2_379.py
+wrong_2_199.py
+wrong_2_306.py
+wrong_2_419.py
+wrong_2_042.py
+wrong_2_324.py
+wrong_2_216.py
+wrong_2_004.py
+wrong_2_131.py
+wrong_2_134.py
+wrong_2_186.py
+wrong_2_219.py
+wrong_2_374.py
+wrong_2_120.py
+wrong_2_098.py
+wrong_2_220.py
+wrong_2_179.py
+wrong_2_229.py
+wrong_2_164.py
+wrong_2_138.py
+wrong_2_104.py
+wrong_2_166.py
+wrong_2_370.py
+wrong_2_124.py
+wrong_2_296.py
+wrong_2_366.py
+wrong_2_228.py
+wrong_2_413.py
+wrong_2_391.py
+wrong_2_256.py
+wrong_2_109.py
+wrong_2_031.py
+wrong_2_159.py
+wrong_2_044.py
+wrong_2_218.py
+wrong_2_364.py
+wrong_2_126.py
+wrong_2_291.py
+wrong_2_053.py
+wrong_2_148.py
+wrong_2_156.py
+wrong_2_172.py
+wrong_2_032.py
+wrong_2_112.py
+wrong_2_257.py
+wrong_2_128.py
+wrong_2_054.py
+wrong_2_177.py
+wrong_2_161.py
+wrong_2_116.py
+wrong_2_378.py
+wrong_2_062.py
+wrong_2_188.py
+wrong_2_365.py
+wrong_2_326.py
+wrong_2_367.py
+wrong_2_418.py
+wrong_2_050.py
+wrong_2_380.py
+wrong_2_058.py
+wrong_2_182.py
+wrong_2_097.py
+wrong_2_160.py
+wrong_2_167.py
+wrong_2_090.py
+wrong_2_222.py
+wrong_2_145.py
+wrong_2_030.py
+wrong_2_121.py
+wrong_2_368.py
+wrong_2_101.py
+wrong_2_169.py
+wrong_2_093.py
+wrong_2_237.py
+wrong_2_389.py
+wrong_2_315.py
+wrong_2_341.py
+wrong_2_137.py
+wrong_2_100.py
+wrong_2_118.py
+wrong_2_193.py
+wrong_2_434.py
+wrong_2_309.py
+wrong_2_185.py
+wrong_2_384.py
+wrong_2_135.py
+wrong_2_176.py
+wrong_2_184.py
+wrong_2_323.py

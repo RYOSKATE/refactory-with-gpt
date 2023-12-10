@@ -1,0 +1,5159 @@
+Question,Sampling Rate,Experiment ID,File Name,Status,Match (Rfty Code),Match (Ori Code),Buggy Code,Buggy Mutation,Refactored Correct Code,Original Correct File Name,Rule ID,Repair,Stru. Matching Time,Online Refactoring Time,GCR Time,Stru. Mutation Time,Block Mapping Time,Variable Mapping Time,Specification&Synthesis Time,GPT Time,Total Time,#Passed Test Case,#Test Case,RPS
+question_5,0,0,wrong_5_059.py,success_wo_mut,1,1,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    for i in range ( k ) :
+        new_lst . append ( lst . remove ( max ( lst ) ) )
+    return new_lst
+    pass
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    for i in range ( k ) :
+        new_lst . append ( lst . remove ( max ( lst ) ) )
+    return new_lst
+    pass
+
+
+","def top_k ( lst , k ) :
+    ls = [ ]
+    for i in range ( k ) :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return ls
+
+
+",{'top_k': 'reference.py'},{'top_k': ''},"def top_k ( lst , k ) :
+    new_lst = [ ]
+    for i in range ( k ) :
+        new_lst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return new_lst
+    pass
+",N/A,0.001,0.006,0.000,0.000,0.036,0.104,0.000,0.291,5,5,0.308
+question_5,0,0,wrong_5_082.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sotsot = [ ]
+    while lst :
+        while ( len ( sotsot ) <= k ) :
+            sotsot . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        return sotsot
+
+
+","def top_k ( lst , k ) :
+    sotsot = [ ]
+    if True :
+        pass
+        for i in range ( k ) :
+            ls . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        pass
+        if True :
+            sotsot . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        return sotsot
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        for i in range(k):
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        if True:
+            return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.f'}","def top_k ( lst , k ) :
+    sotsot = [ ]
+    while ( ( len ( sotsot ) < k ) and lst ) :
+        sotsot . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sotsot
+
+
+",N/A,4.446,0.533,0.000,0.001,0.031,0.117,0.065,5.274,5,5,0.424
+question_5,0,0,wrong_5_103.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    while ( counter < k ) :
+        maxi = max ( lst )
+        new_lst . append ( maxi )
+        lst . remove ( maxi )
+
+
+","def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    if True :
+        ls = [ ]
+    ls . append ( max ( lst ) )
+    lst . remove ( max ( lst ) )
+    if True :
+        pass
+    ls = [ ]
+    for i in range ( k ) :
+        maxi = max ( lst )
+        new_lst . append ( maxi )
+        lst . remove ( maxi )
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    while ( counter < k ) :
+        maxi = max ( lst )
+        new_lst . append ( maxi )
+        lst . remove ( maxi )
+        counter += 1
+    return new_lst
+
+
+",N/A,4.738,0.008,0.000,0.001,0.116,0.022,0.055,5.003,5,5,0.419
+question_5,0,0,wrong_5_097.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for i in range ( len ( lst ) ) :
+            if ( lst [ i ] > largest ) :
+                largest = lst [ i ]
+        sort . append ( largest )
+        lst . remove ( largest )
+    return sort [ : ( k + 1 ) ]
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for i in range ( len ( lst ) ) :
+            pass
+            if ( lst [ i ] > largest ) :
+                largest = lst [ i ]
+            pass
+        sort . append ( largest )
+        lst . remove ( largest )
+    return sort [ : ( k + 1 ) ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        largest = lst [ 0 ]
+        for i in range ( len ( lst ) ) :
+            if ( lst [ i ] > largest ) :
+                largest = lst [ i ]
+        sort . append ( largest )
+        lst . remove ( largest )
+    return sort
+
+
+",N/A,4.374,0.012,0.000,0.001,0.103,0.286,0.232,5.144,5,5,0.800
+question_5,0,0,wrong_5_036.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return [ ]
+    elif ( k == 0 ) :
+        return lst
+    else :
+        final = [ ]
+        while lst :
+            element = max ( lst )
+            final += [ element ]
+            lst . remove ( element )
+            if ( len ( final ) == k ) :
+                break
+        return final
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return [ ]
+    return lst
+    for i in range ( k ) :
+        final = [ ]
+        if True :
+            element = max ( lst )
+            final += [ element ]
+            lst . remove ( element )
+            if ( len ( final ) == k ) :
+                break
+            pass
+        return final
+    pass
+","
+
+def top_k(lst, k):
+    if False:
+        pass
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            if True:
+                pass
+            lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.f,B1.g'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return [ ]
+    elif ( k == 0 ) :
+        return [ ]
+    else :
+        final = [ ]
+        while ( len ( final ) < k ) :
+            element = max ( lst )
+            final += [ element ]
+            lst . remove ( element )
+        return final
+
+
+",N/A,5.205,0.108,0.000,0.001,0.038,0.285,0.229,6.009,5,5,0.837
+question_5,0,0,wrong_5_048.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while lst :
+        for n in range ( 1 , len ( lst ) ) :
+            biggest = lst [ 0 ]
+            if ( lst [ n ] >= biggest ) :
+                biggest = lst [ n ]
+                lst . remove ( biggest )
+                sorted_lst . append ( biggest )
+    return sorted_lst [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    if True :
+        pass
+        for n in range ( 1 , len ( lst ) ) :
+            biggest = lst [ 0 ]
+            if ( lst [ n ] >= biggest ) :
+                biggest = lst [ n ]
+                lst . remove ( biggest )
+                sorted_lst . append ( biggest )
+            pass
+        pass
+    return sorted_lst [ 0 : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while ( len ( sorted_lst ) < k ) :
+        biggest = lst [ 0 ]
+        for n in lst :
+            if ( n > biggest ) :
+                biggest = n
+        lst . remove ( biggest )
+        sorted_lst . append ( biggest )
+    return sorted_lst
+
+
+",N/A,4.307,0.013,0.000,0.001,0.096,0.230,0.194,4.991,5,5,0.833
+question_5,0,0,wrong_5_015.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        if ( e == pivot ) :
+            plist . append ( e )
+        if ( e > pivot ) :
+            higher . append ( e )
+    sort_list = ( ( lower + plist ) + higher )
+    sort_list = sort_list [ : : ( - 1 ) ]
+    return sort_list [ : k ]
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return lst
+        for e in lst :
+            pass
+            if ( e < pivot ) :
+                lower . append ( e )
+            plist . append ( e )
+        pass
+        if ( e > pivot ) :
+            higher . append ( e )
+        pass
+    sort_list = ( ( lower + plist ) + higher )
+    sort_list = sort_list [ : : ( - 1 ) ]
+    return sort_list [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            if True:
+                pass
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        if True:
+            pass
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h,B1.h'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    ref_ls = [ ]
+    for ref_i in range ( k ) :
+        max_val = max ( lst )
+        ref_ls . append ( max_val )
+        lst . remove ( max_val )
+    return ref_ls
+
+
+",N/A,5.294,0.641,0.000,0.001,0.037,0.330,0.182,6.692,5,5,0.878
+question_5,0,0,wrong_5_019.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    arranged = [ ]
+    while ( k > 0 ) :
+        lst . remove ( max ( lst ) )
+        arranged . append ( max ( lst ) )
+        k -= 1
+    return arranged
+    pass
+
+
+","def top_k ( lst , k ) :
+    arranged = [ ]
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    pass
+    if True :
+        pass
+    pass
+    for i in range ( k ) :
+        lst . remove ( max ( lst ) )
+        arranged . append ( max ( lst ) )
+        k -= 1
+    return arranged
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    arranged = [ ]
+    while ( k > 0 ) :
+        max_val = max ( lst )
+        lst . remove ( max_val )
+        arranged . append ( max_val )
+        k -= 1
+    return arranged
+    pass
+
+
+",N/A,4.729,0.009,0.000,0.001,0.031,1.358,0.059,6.250,5,5,0.588
+question_5,0,0,wrong_5_051.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    a = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for i in lst :
+            if ( i > biggest ) :
+                biggest = i
+                lst . remove ( biggest )
+                a . append ( biggest )
+    return a [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    a = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i > biggest ) :
+                biggest = i
+                lst . remove ( biggest )
+                a . append ( biggest )
+            pass
+        pass
+    return a [ 0 : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    a = [ ]
+    while ( len ( a ) < k ) :
+        biggest = lst [ 0 ]
+        for i in lst :
+            if ( i > biggest ) :
+                biggest = i
+        lst . remove ( biggest )
+        a . append ( biggest )
+    return a
+
+
+",N/A,4.340,0.010,0.000,0.001,0.098,0.203,0.120,4.882,5,5,0.837
+question_5,0,0,wrong_5_039.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    i = 0
+    while ( ( i + 1 ) < len ( lst ) ) :
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        else :
+            i += 1
+    return lst [ : 4 ]
+
+
+","def top_k ( lst , k ) :
+    i = 0
+    for i in range ( k ) :
+        pass
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    i += 1
+    if False :
+        pass
+    return lst [ : 4 ]
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if False:
+            pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,B1.f'}","def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] < lst [ j ] ) :
+                ( lst [ i ] , lst [ j ] ) = ( lst [ j ] , lst [ i ] )
+    return lst [ : k ]
+
+
+",N/A,4.818,0.032,0.000,0.001,0.033,0.281,0.299,5.577,5,5,0.782
+question_5,0,0,wrong_5_056.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    values = [ ]
+    while ( len ( values ) < k ) :
+        for item in lst :
+            greatest = lst [ 0 ]
+            if ( item > greatest ) :
+                greatest = item
+        lst . remove ( greatest )
+        values . append ( greatest )
+    return values
+
+
+","def top_k ( lst , k ) :
+    values = [ ]
+    if True :
+        pass
+        for item in lst :
+            greatest = lst [ 0 ]
+            if ( item > greatest ) :
+                greatest = item
+            pass
+        lst . remove ( greatest )
+        values . append ( greatest )
+    return values
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    values = [ ]
+    while ( len ( values ) < k ) :
+        greatest = lst [ 0 ]
+        for item in lst :
+            if ( item > greatest ) :
+                greatest = item
+        lst . remove ( greatest )
+        values . append ( greatest )
+    return values
+
+
+",N/A,4.236,0.011,0.000,0.001,0.098,0.334,0.112,4.892,5,5,0.841
+question_5,0,0,wrong_5_098.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+    elif ( k == 1 ) :
+        return lst
+    else :
+        a = max ( lst )
+        lst . remove ( a )
+        l . append ( a )
+        return top_k ( lst , ( k - 1 ) )
+    pass
+
+
+","def top_k ( lst , k ) :
+    l = [ ]
+    for i in range ( k ) :
+        pass
+        if ( k > len ( lst ) ) :
+            return False
+            if True :
+                return lst
+            pass
+        a = max ( lst )
+        lst . remove ( a )
+        l . append ( a )
+        return top_k ( lst , ( k - 1 ) )
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if False:
+            if True:
+                pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,B1.f'}","def top_k ( lst , k ) :
+    l = [ ]
+    while ( k > 0 ) :
+        if ( k > len ( lst ) ) :
+            return False
+        else :
+            a = max ( lst )
+            lst . remove ( a )
+            l . append ( a )
+            k -= 1
+    return l
+
+
+",N/A,4.808,2.419,0.000,0.001,0.077,0.252,0.184,7.864,5,5,0.771
+question_5,0,0,wrong_5_068.py,success_wo_mut,1,1,"def top_k ( lst , k ) :
+    new = [ ]
+    for i in range ( ( k - 1 ) ) :
+        new . append ( lst . pop ( max ( lst ) ) )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    for i in range ( ( k - 1 ) ) :
+        new . append ( lst . pop ( max ( lst ) ) )
+    return new
+
+
+","def top_k ( lst , k ) :
+    ls = [ ]
+    for i in range ( k ) :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return ls
+
+
+",{'top_k': 'reference.py'},{'top_k': ''},"def top_k ( lst , k ) :
+    new = [ ]
+    for i in range ( k ) :
+        new . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return new
+",N/A,0.001,0.006,0.000,0.000,0.025,0.099,0.000,0.262,5,5,0.393
+question_5,0,0,wrong_5_088.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def top_k ( lst , k ) :
+    lst = sort_descending ( lst )
+    return lst [ : k ]
+def sort_descending ( lst ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( i , len ( lst ) ) :
+            if ( lst [ j ] > lst [ i ] ) :
+                x = lst [ i ]
+                lst [ i ] = lst [ j ]
+                lst [ j ] = x
+    return lst
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.452,5.170,N/A,N/A,N/A
+question_5,0,0,wrong_5_101.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def top_k ( lst , k ) :
+    sorted_list = sort ( lst )
+    return sorted_list [ : k ]
+def sort ( lst ) :
+    sorted_list = [ ]
+    for _ in range ( len ( lst ) ) :
+        largest = max ( lst )
+        lst . remove ( largest )
+        sorted_list . append ( largest )
+    return sorted_list
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.119,4.898,N/A,N/A,N/A
+question_5,0,0,wrong_5_069.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( lst ) > ( len ( lst ) - k ) ) :
+        new . append ( lst . pop ( max ( lst ) ) )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    ls = [ ]
+    if True :
+        pass
+    ls = [ ]
+    for i in range ( k ) :
+        new . append ( lst . pop ( max ( lst ) ) )
+    return new
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( new ) < k ) :
+        max_val = max ( lst )
+        new . append ( max_val )
+        lst . remove ( max_val )
+    return new
+
+
+",N/A,4.765,0.008,0.000,0.001,0.030,0.144,0.054,5.062,5,5,0.688
+question_5,0,0,wrong_5_022.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    rs = [ ]
+    for qwerty in range ( 0 , k ) :
+        biggest = lst [ 0 ]
+        for k in lst :
+            if ( biggest < k ) :
+                biggest = k
+        rs . append [ biggest ]
+        lst . remove [ biggest ]
+    return r
+
+
+","def top_k ( lst , k ) :
+    rs = [ ]
+    for qwerty in range ( 0 , k ) :
+        biggest = lst [ 0 ]
+    pass
+    if ( biggest < k ) :
+        biggest = k
+        for i in range ( k ) [ : int ( ( len ( range ( k ) ) / 2 ) ) ] :
+            pass
+        rs . append [ biggest ]
+        lst . remove [ biggest ]
+    return r
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.f'}","def top_k ( lst , k ) :
+    rs = [ ]
+    for qwerty in range ( 0 , k ) :
+        biggest = lst [ 0 ]
+        for i in lst :
+            if ( biggest < i ) :
+                biggest = i
+        rs . append ( biggest )
+        lst . remove ( biggest )
+    return rs
+
+
+",N/A,4.602,0.158,0.000,0.001,0.052,0.343,0.115,5.564,5,5,1.267
+question_5,0,0,wrong_5_046.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new_list = [ ]
+    while ( len ( new_list ) < k ) :
+        maximum = max ( lst )
+        new_lst . append ( lst )
+        lst . remove ( maximum )
+    return new_lst
+
+
+","def top_k ( lst , k ) :
+    new_list = [ ]
+    if True :
+        pass
+    ls . append ( max ( lst ) )
+    lst . remove ( max ( lst ) )
+    if True :
+        return ls
+    pass
+    for i in range ( k ) :
+        maximum = max ( lst )
+        new_lst . append ( lst )
+        lst . remove ( maximum )
+    return new_lst
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new_list = [ ]
+    while ( len ( new_list ) < k ) :
+        maximum = max ( lst )
+        new_list . append ( maximum )
+        lst . remove ( maximum )
+    return new_list
+
+
+",N/A,4.603,0.008,0.000,0.001,0.030,1.555,0.047,6.301,5,5,0.656
+question_5,0,0,wrong_5_083.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    result = [ ]
+    for i in range ( len ( lst ) ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        result . append ( largest )
+    return lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    result = [ ]
+    for i in range ( len ( lst ) ) :
+        largest = lst [ 0 ]
+    pass
+    if ( element > largest ) :
+        largest = element
+        for i in range ( k ) [ int ( ( len ( range ( k ) ) / 2 ) ) : ] :
+            pass
+        lst . remove ( largest )
+        result . append ( largest )
+    return lst [ : k ]
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.f'}","def top_k ( lst , k ) :
+    result = [ ]
+    for i in range ( k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        result . append ( largest )
+    return result
+
+
+",N/A,4.623,0.172,0.000,0.001,0.060,0.369,0.114,5.625,5,5,1.298
+question_5,0,0,wrong_5_014.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        if ( e == pivot ) :
+            plist . append ( e )
+        if ( e > pivot ) :
+            higher . append ( e )
+    sort_list = ( ( higher + plist ) + lower )
+    return sort_list [ : k ]
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return lst
+        for e in lst :
+            pass
+            if ( e < pivot ) :
+                pass
+                if ( e == pivot ) :
+                    plist . append ( e )
+                pass
+            higher . append ( e )
+        pass
+    sort_list = ( ( higher + plist ) + lower )
+    return sort_list [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if False:
+                if True:
+                    pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.g,B1.f'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        elif ( e == pivot ) :
+            plist . append ( e )
+        elif ( e > pivot ) :
+            higher . append ( e )
+    sort_list = sorted ( ( ( higher + plist ) + lower ) , reverse = True )
+    return sort_list [ : k ]
+
+
+",N/A,5.361,0.600,0.000,0.001,0.030,0.322,0.396,6.913,5,5,0.838
+question_5,0,0,wrong_5_081.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sotsot = [ ]
+    while lst :
+        while ( len ( sotsot ) <= k ) :
+            sotsot . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        return sotsot
+
+
+","def top_k ( lst , k ) :
+    sotsot = [ ]
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+        for i in range ( k ) :
+            ls . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        pass
+        if True :
+            sotsot . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        return sotsot
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        for i in range(k):
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        if True:
+            return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.f'}","def top_k ( lst , k ) :
+    sotsot = [ ]
+    while ( ( len ( sotsot ) < k ) and lst ) :
+        sotsot . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sotsot
+
+
+",N/A,4.386,0.536,0.000,0.001,0.030,0.136,0.017,5.186,5,5,0.394
+question_5,0,0,wrong_5_040.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    i = 0
+    while ( ( i + 1 ) < len ( lst ) ) :
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        else :
+            i += 1
+    return lst [ : ( k + 1 ) ]
+
+
+","def top_k ( lst , k ) :
+    i = 0
+    for i in range ( k ) :
+        pass
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    i += 1
+    if False :
+        pass
+    return lst [ : ( k + 1 ) ]
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if False:
+            pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,B1.f'}","def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] < lst [ j ] ) :
+                ( lst [ i ] , lst [ j ] ) = ( lst [ j ] , lst [ i ] )
+    return lst [ : k ]
+
+
+",N/A,4.886,0.034,0.000,0.001,0.035,0.255,0.324,5.653,5,5,0.793
+question_5,0,0,wrong_5_087.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    list = [ ]
+    while ( len ( lst ) < k ) :
+        a = max ( lst )
+        lst . remove ( a )
+        new . append ( a )
+    return list
+
+
+","def top_k ( lst , k ) :
+    list = [ ]
+    if True :
+        pass
+    pass
+    if True :
+        ls = [ ]
+    pass
+    for i in range ( k ) :
+        a = max ( lst )
+        lst . remove ( a )
+        new . append ( a )
+    return list
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    list = [ ]
+    while ( len ( list ) < k ) :
+        a = max ( lst )
+        lst . remove ( a )
+        list . append ( a )
+    return list
+
+
+",N/A,4.701,0.008,0.000,0.001,0.043,1.732,0.047,6.589,5,5,0.719
+question_5,0,0,wrong_5_094.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( len ( lst ) - 1 ) ) :
+            if ( lst [ j ] > lst [ ( j + 1 ) ] ) :
+                lst [ j ] = lst [ ( j + 1 ) ]
+                lst [ ( j + 1 ) ] = lst [ j ]
+    lst . reverse ( )
+    return lst [ : k ]
+    pass
+
+
+","def top_k ( lst , k ) :
+    pass
+    for i in range ( len ( lst ) ) :
+        pass
+    pass
+    if ( lst [ j ] > lst [ ( j + 1 ) ] ) :
+        lst [ j ] = lst [ ( j + 1 ) ]
+        lst [ ( j + 1 ) ] = lst [ j ]
+        for i in range ( k ) [ int ( ( len ( range ( k ) ) / 2 ) ) : ] :
+            pass
+        pass
+    lst . reverse ( )
+    return lst [ : k ]
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.f'}","def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( len ( lst ) - 1 ) ) :
+            if ( lst [ j ] < lst [ ( j + 1 ) ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst [ : k ]
+    pass
+
+
+",N/A,4.540,0.220,0.000,0.002,0.039,0.074,0.604,6.038,5,5,1.114
+question_5,0,0,wrong_5_085.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    result = [ ]
+    while ( len ( lst ) > ( len ( lst ) - k ) ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        result . append ( biggest )
+        lst . remove ( biggest )
+    return result
+    pass
+
+
+","def top_k ( lst , k ) :
+    result = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > biggest ) :
+                biggest = element
+            pass
+        result . append ( biggest )
+        lst . remove ( biggest )
+    return result
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    result = [ ]
+    while ( len ( result ) < k ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        result . append ( biggest )
+        lst . remove ( biggest )
+    return result
+
+
+",N/A,4.012,0.012,0.000,0.001,0.101,0.198,0.122,4.555,5,5,0.820
+question_5,0,0,wrong_5_107.py,success_wo_mut,1,1,"def top_k ( lst , k ) :
+    newlst = [ ]
+    for i in range ( ( k + 1 ) ) :
+        newlst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return newlst
+
+
+","def top_k ( lst , k ) :
+    newlst = [ ]
+    for i in range ( ( k + 1 ) ) :
+        newlst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return newlst
+
+
+","def top_k ( lst , k ) :
+    ls = [ ]
+    for i in range ( k ) :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return ls
+
+
+",{'top_k': 'reference.py'},{'top_k': ''},"def top_k ( lst , k ) :
+    newlst = [ ]
+    for i in range ( k ) :
+        newlst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return newlst
+",N/A,0.001,0.006,0.000,0.000,0.042,0.007,0.000,0.181,5,5,0.094
+question_5,0,0,wrong_5_053.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    count = 0
+    op = [ ]
+    big = lst [ 0 ]
+    while ( count < k ) :
+        op += max ( lst )
+        count += 1
+    return op
+
+
+","def top_k ( lst , k ) :
+    count = 0
+    op = [ ]
+    big = lst [ 0 ]
+    if True :
+        return ls
+    ls = [ ]
+    if True :
+        pass
+    return ls
+    for i in range ( k ) :
+        op += max ( lst )
+        count += 1
+    return op
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    count = 0
+    op = [ ]
+    while ( count < k ) :
+        big = max ( lst )
+        op . append ( big )
+        lst . remove ( big )
+        count += 1
+    return op
+
+
+",N/A,4.528,0.008,0.000,0.001,0.033,0.799,0.058,5.486,5,5,0.853
+question_5,0,0,wrong_5_065.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    x = [ ]
+    for i in range ( ( k - 1 ) ) :
+        y = i
+        for j in lst :
+            if ( y < j ) :
+                y = j
+        x += y
+    return x
+    pass
+
+
+","def top_k ( lst , k ) :
+    x = [ ]
+    for i in range ( ( k - 1 ) ) :
+        y = i
+    pass
+    if ( y < j ) :
+        y = j
+        for i in range ( k ) [ : int ( ( len ( range ( k ) ) / 2 ) ) ] :
+            pass
+        x += y
+    return x
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.f'}","def top_k ( lst , k ) :
+    x = [ ]
+    for i in range ( k ) :
+        y = max ( lst )
+        lst . remove ( y )
+        x . append ( y )
+    return x
+    pass
+
+
+",N/A,4.540,0.139,0.000,0.001,0.042,0.255,0.092,5.263,5,5,1.784
+question_5,0,0,wrong_5_044.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    af_sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in a :
+            if ( element > biggest ) :
+                biggest = element
+            lst . remove ( biggest )
+            af_sort . append ( biggest )
+    return af_sort [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    af_sort = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for element in a :
+            pass
+            if ( element > biggest ) :
+                biggest = element
+            lst . remove ( biggest )
+            af_sort . append ( biggest )
+        pass
+    return af_sort [ 0 : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    af_sort = [ ]
+    while ( len ( af_sort ) < k ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        af_sort . append ( biggest )
+    return af_sort
+
+
+",N/A,4.000,0.010,0.000,0.001,0.036,0.209,0.113,4.470,5,5,0.860
+question_5,0,0,wrong_5_091.py,success_w_gpt_only,0,0,"def top_k ( lst , k ) :
+    lst2 = [ ]
+    max = lst [ 0 ]
+    for i in lst :
+        if ( i > max ) :
+            max = i
+        while ( len ( lst2 ) != k ) :
+            lst2 . append ( max )
+    return lst2
+
+
+","def top_k ( lst , k ) :
+    lst2 = [ ]
+    max = lst [ 0 ]
+    for i in lst :
+        pass
+        if ( i > max ) :
+            max = i
+        elif True :
+            lst2 . append ( max )
+        pass
+    return lst2
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            lst.remove(max(lst))
+        elif True:
+            pass
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B2.k'}","def top_k ( lst , k ) :
+    lst2 = [ ]
+    for i in range ( k ) :
+        max_val = lst [ 0 ]
+        for j in lst :
+            if ( j > max_val ) :
+                max_val = j
+        lst2 . append ( max_val )
+        lst . remove ( max_val )
+    return lst2
+
+
+",N/A,4.029,0.069,0.000,0.001,0.111,0.190,0.158,4.568,1,5,N/A
+question_5,0,0,wrong_5_061.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for x in lst :
+            if ( x > lst [ 0 ] ) :
+                biggest = x
+        lst . remove ( biggest )
+        new_lst . append ( biggest )
+    return new_lst [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for x in lst :
+            pass
+            if ( x > lst [ 0 ] ) :
+                biggest = x
+            pass
+        lst . remove ( biggest )
+        new_lst . append ( biggest )
+    return new_lst [ 0 : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    new_lst = [ ]
+    while ( len ( new_lst ) < k ) :
+        biggest = lst [ 0 ]
+        for x in lst :
+            if ( x > biggest ) :
+                biggest = x
+        lst . remove ( biggest )
+        new_lst . append ( biggest )
+    return new_lst
+
+
+",N/A,4.013,0.011,0.000,0.001,0.098,0.220,0.117,4.572,5,5,0.848
+question_5,0,0,wrong_5_034.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    final = [ ]
+    while lst :
+        element = max ( lst )
+        final += [ element ]
+        lst . remove ( element )
+        if ( len ( final ) == k ) :
+            break
+    return final
+
+
+","def top_k ( lst , k ) :
+    final = [ ]
+    for i in range ( k ) :
+        element = max ( lst )
+        final += [ element ]
+        lst . remove ( element )
+        if ( len ( final ) == k ) :
+            ls = [ ]
+            if True :
+                ls = [ ]
+            break
+        pass
+    return final
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            if True:
+                pass
+            lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    final = [ ]
+    for i in range ( k ) :
+        element = max ( lst )
+        final . append ( element )
+        lst . remove ( element )
+    return final
+
+
+",N/A,3.993,0.017,0.000,0.001,0.092,0.365,0.052,4.590,5,5,0.771
+question_5,0,0,wrong_5_038.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    i = 0
+    while ( ( i + 1 ) < len ( lst ) ) :
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        else :
+            i += 1
+    return lst [ : 4 ]
+
+
+","def top_k ( lst , k ) :
+    i = 0
+    for i in range ( k ) :
+        pass
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    i += 1
+    if False :
+        pass
+    return lst [ : 4 ]
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if False:
+            pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,B1.f'}","def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( i + 1 ) , len ( lst ) ) :
+            if ( lst [ i ] < lst [ j ] ) :
+                ( lst [ i ] , lst [ j ] ) = ( lst [ j ] , lst [ i ] )
+    return lst [ : k ]
+
+
+",N/A,4.782,0.021,0.000,0.001,0.034,0.203,0.020,5.073,5,5,0.782
+question_5,0,0,wrong_5_095.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( len ( lst ) - 1 ) ) :
+            if ( lst [ j ] > lst [ ( j + 1 ) ] ) :
+                lst [ j ] = lst [ ( j + 1 ) ]
+                lst [ ( j + 1 ) ] = lst [ j ]
+    lst . reverse ( )
+    return lst [ : k ]
+    pass
+
+
+","def top_k ( lst , k ) :
+    pass
+    for i in range ( len ( lst ) ) :
+        pass
+    pass
+    if ( lst [ j ] > lst [ ( j + 1 ) ] ) :
+        lst [ j ] = lst [ ( j + 1 ) ]
+        lst [ ( j + 1 ) ] = lst [ j ]
+        for i in range ( k ) [ : int ( ( len ( range ( k ) ) / 2 ) ) ] :
+            pass
+        pass
+    lst . reverse ( )
+    return lst [ : k ]
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.f'}","def top_k ( lst , k ) :
+    for i in range ( len ( lst ) ) :
+        for j in range ( ( len ( lst ) - 1 ) ) :
+            if ( lst [ j ] < lst [ ( j + 1 ) ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst [ : k ]
+    pass
+
+
+",N/A,4.426,0.199,0.000,0.002,0.039,0.084,0.010,4.772,5,5,1.114
+question_5,0,0,wrong_5_012.py,success_w_mut,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        if ( x == pivot ) :
+            plist . append ( e )
+        if ( x > pivot ) :
+            higher . append ( e )
+    sort_list = ( ( lower + plist ) + higher )
+    return sort_list [ : k ]
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return lst
+        for e in lst :
+            pass
+            if ( e < pivot ) :
+                pass
+                if ( x == pivot ) :
+                    plist . append ( e )
+                pass
+            higher . append ( e )
+        pass
+    sort_list = ( ( lower + plist ) + higher )
+    return sort_list [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if False:
+                if True:
+                    pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.g,B1.f'}","def top_k ( lst , k ) :
+    pass
+    if True :
+        ref_ls = [ ]
+        for ref_i in range ( k ) :
+            ref_ls . append ( max ( lst ) )
+            if False :
+                pass
+                if ( x == pivot ) :
+                    pass
+                pass
+            lst . remove ( max ( lst ) )
+        return ref_ls
+",N/A,5.198,0.597,0.000,0.001,0.031,0.221,0.000,6.264,5,5,0.838
+question_5,0,0,wrong_5_030.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    ( sort , output ) = ( [ ] , [ ] )
+    while lst :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+        lst . remove ( largest )
+        sort . append ( largest )
+    for j in sort :
+        output . append ( j )
+        if ( len ( output ) == k ) :
+            break
+    return output
+
+
+","def top_k ( lst , k ) :
+    ( sort , output ) = ( [ ] , [ ] )
+    for i in lst :
+        pass
+        if ( i > largest ) :
+            pass
+        lst . remove ( largest )
+        sort . append ( largest )
+    pass
+    for j in sort :
+        output . append ( j )
+        if ( len ( output ) == k ) :
+            break
+        pass
+    return output
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        if True:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+    for i in range(k)[int((len(range(k)) / 2)):]:
+        ls.append(max(lst))
+        if True:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.h,B1.f'}","def top_k ( lst , k ) :
+    ( sort , output ) = ( [ ] , [ ] )
+    while ( len ( sort ) < k ) :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+        lst . remove ( largest )
+        sort . append ( largest )
+    for j in sort :
+        output . append ( j )
+        if ( len ( output ) == k ) :
+            break
+    return output
+
+
+",N/A,9.432,0.052,0.000,0.001,0.042,0.211,0.243,10.366,5,5,1.034
+question_5,0,0,wrong_5_086.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    list = [ ]
+    while ( len ( list ) < k ) :
+        a = max ( lst )
+        lst . remove ( a )
+        new . append ( a )
+    return list
+
+
+","def top_k ( lst , k ) :
+    list = [ ]
+    if True :
+        pass
+    pass
+    if True :
+        pass
+    pass
+    for i in range ( k ) :
+        a = max ( lst )
+        lst . remove ( a )
+        new . append ( a )
+    return list
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    list = [ ]
+    while ( len ( list ) < k ) :
+        a = max ( lst )
+        lst . remove ( a )
+        list . append ( a )
+    return list
+
+
+",N/A,4.645,0.008,0.000,0.001,0.037,1.084,0.047,5.879,5,5,0.719
+question_5,0,0,wrong_5_096.py,success_w_gpt_better,1,0,"def top_k ( lst , k ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            ( lst [ i ] , lst [ ( i + 1 ) ] ) = ( lst [ ( i + 1 ) ] , lst [ i ] )
+    return lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    for i in range ( ( len ( lst ) - 1 ) ) :
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            ( lst [ i ] , lst [ ( i + 1 ) ] ) = ( lst [ ( i + 1 ) ] , lst [ i ] )
+    return lst [ : k ]
+
+
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if True:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},{'top_k': 'B1.f'},"def top_k ( lst , k ) :
+    for i in range ( ( len ( lst ) - 1 ) , 0 , ( - 1 ) ) :
+        for j in range ( i ) :
+            if ( lst [ j ] < lst [ ( j + 1 ) ] ) :
+                ( lst [ j ] , lst [ ( j + 1 ) ] ) = ( lst [ ( j + 1 ) ] , lst [ j ] )
+    return lst [ : k ]
+
+
+",N/A,0.027,0.050,0.000,0.000,0.035,0.219,0.470,0.940,5,5,0.881
+question_5,0,0,wrong_5_029.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sorted_list = [ ]
+    while lst :
+        smallest = lst [ 0 ]
+        for element in lst :
+            if ( element < smallest ) :
+                smallest = element
+            lst . remove ( element )
+            sorted_list . append ( element )
+    return list . reverse ( sorted_list ) [ : ( k - 1 ) ]
+
+
+","def top_k ( lst , k ) :
+    sorted_list = [ ]
+    if True :
+        smallest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element < smallest ) :
+                smallest = element
+            lst . remove ( element )
+            sorted_list . append ( element )
+        pass
+    return list . reverse ( sorted_list ) [ : ( k - 1 ) ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sorted_list = [ ]
+    while ( len ( sorted_list ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sorted_list . append ( largest )
+    return sorted_list
+
+
+",N/A,4.173,0.011,0.000,0.001,0.086,0.220,0.122,4.728,5,5,0.875
+question_5,0,0,wrong_5_090.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        big = max ( lst )
+        sort . append ( big )
+        lst . remove ( big )
+    output = [ n for n in lst if ( lst . index ( n ) < k ) ]
+    return output
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        ls = [ ]
+    pass
+    if True :
+        pass
+    return ls
+    for i in range ( k ) :
+        big = max ( lst )
+        sort . append ( big )
+        lst . remove ( big )
+    output = [ n for n in lst if ( lst . index ( n ) < k ) ]
+    return output
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        big = max ( lst )
+        sort . append ( big )
+        lst . remove ( big )
+    output = sort
+    return output
+
+
+",N/A,4.576,0.010,0.000,0.001,0.036,0.151,0.076,4.949,5,5,0.659
+question_5,0,0,wrong_5_002.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    lst_res = lst
+    sort = [ ]
+    while lst_res :
+        largest = lst_res [ 0 ]
+        for elements in lst_res :
+            if ( element > largest ) :
+                largest = element
+        lst_res . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+
+
+","def top_k ( lst , k ) :
+    lst_res = lst
+    sort = [ ]
+    if True :
+        largest = lst_res [ 0 ]
+        for elements in lst_res :
+            pass
+            if ( element > largest ) :
+                largest = element
+            pass
+        lst_res . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    lst_res = lst
+    sort = [ ]
+    while lst_res :
+        largest = lst_res [ 0 ]
+        for element in lst_res :
+            if ( element > largest ) :
+                largest = element
+        lst_res . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+
+
+",N/A,4.186,0.011,0.000,0.001,0.049,0.196,0.126,4.667,5,5,0.822
+question_5,0,0,wrong_5_070.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( lst ) > ( len ( lst ) - k ) ) :
+        new . append ( lst . remove ( max ( lst ) ) )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    if True :
+        return ls
+    ls = [ ]
+    if True :
+        ls = [ ]
+    ls = [ ]
+    for i in range ( k ) :
+        new . append ( lst . remove ( max ( lst ) ) )
+    return new
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( new ) < k ) :
+        new . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return new
+
+
+",N/A,4.545,0.009,0.000,0.001,0.030,0.090,0.048,4.780,5,5,0.688
+question_5,0,0,wrong_5_032.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for numbers in lst :
+            if ( numbers > largest ) :
+                largest = numbers
+        new_lst . append ( numbers )
+        lst . remove ( numbers )
+    return new_lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for numbers in lst :
+            pass
+            if ( numbers > largest ) :
+                largest = numbers
+            pass
+        new_lst . append ( numbers )
+        lst . remove ( numbers )
+    return new_lst [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    new_lst = [ ]
+    while ( len ( new_lst ) < k ) :
+        largest = lst [ 0 ]
+        for numbers in lst :
+            if ( numbers > largest ) :
+                largest = numbers
+        new_lst . append ( largest )
+        lst . remove ( largest )
+    return new_lst
+
+
+",N/A,4.194,0.010,0.000,0.001,0.100,0.233,0.103,4.739,5,5,0.810
+question_5,0,0,wrong_5_075.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( lst ) >= ( len ( lst ) - k ) ) :
+        top = max ( lst )
+        new . append ( top )
+        lst . remove ( top )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    if True :
+        return ls
+    pass
+    if True :
+        ls = [ ]
+    pass
+    for i in range ( k ) :
+        top = max ( lst )
+        new . append ( top )
+        lst . remove ( top )
+    return new
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( new ) < k ) :
+        top = max ( lst )
+        new . append ( top )
+        lst . remove ( top )
+    return new
+
+
+",N/A,4.516,0.009,0.000,0.001,0.028,0.016,0.055,4.717,5,5,0.405
+question_5,0,0,wrong_5_003.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    tmp = [ ]
+    while ( len ( lst ) > 0 ) :
+        tmp . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return tmp [ : 5 ]
+
+
+","def top_k ( lst , k ) :
+    tmp = [ ]
+    if True :
+        pass
+    pass
+    if True :
+        pass
+    pass
+    for i in range ( k ) :
+        tmp . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return tmp [ : 5 ]
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    tmp = [ ]
+    while ( len ( tmp ) < k ) :
+        tmp . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return tmp
+
+
+",N/A,4.632,0.009,0.000,0.001,0.047,0.081,0.049,4.878,5,5,0.529
+question_5,0,0,wrong_5_045.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    newlst = [ ]
+    while ( len ( newlst ) <= k ) :
+        maximum = lst [ 0 ]
+        for i in lst :
+            if ( i > maximum ) :
+                maximum = i
+        newlst . append ( maximum )
+        lst . remove ( maximum )
+    return newlst
+
+
+","def top_k ( lst , k ) :
+    newlst = [ ]
+    if True :
+        maximum = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i > maximum ) :
+                maximum = i
+            pass
+        newlst . append ( maximum )
+        lst . remove ( maximum )
+    return newlst
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    newlst = [ ]
+    while ( len ( newlst ) < k ) :
+        maximum = lst [ 0 ]
+        for i in lst :
+            if ( i > maximum ) :
+                maximum = i
+        newlst . append ( maximum )
+        lst . remove ( maximum )
+    return newlst
+
+
+",N/A,4.182,0.011,0.000,0.001,0.098,0.212,0.107,4.707,5,5,0.818
+question_5,0,0,wrong_5_007.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    lst1 = [ ]
+    for i in lst :
+        if ( i >= k ) :
+            lst1 . append ( i )
+    sort = [ ]
+    while lst1 :
+        biggest = lst [ 0 ]
+        for element in lst1 :
+            if ( element > biggest ) :
+                biggest = element
+        lst1 . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+","def top_k ( lst , k ) :
+    lst1 = [ ]
+    for i in lst :
+        pass
+        if ( i >= k ) :
+            lst1 . append ( i )
+        pass
+    sort = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for element in lst1 :
+            pass
+            if ( element > biggest ) :
+                biggest = element
+            pass
+        lst1 . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        if True:
+            pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            if True:
+                lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.h,B1.f,B1.f'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,11.673,0.026,0.000,0.001,0.166,0.294,0.164,12.696,5,5,1.200
+question_5,0,0,wrong_5_043.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    a = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+                lst . remove ( largest )
+                a . append ( largest )
+    return a [ : k ]
+
+
+","def top_k ( lst , k ) :
+    a = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i > largest ) :
+                largest = i
+                lst . remove ( largest )
+                a . append ( largest )
+            pass
+        pass
+    return a [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    a = [ ]
+    while ( len ( a ) < k ) :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+        lst . remove ( largest )
+        a . append ( largest )
+    return a
+
+
+",N/A,4.272,0.011,0.000,0.001,0.096,0.141,0.116,4.742,5,5,0.833
+question_5,0,0,wrong_5_073.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        for i in range ( ( - len ( lst ) ) , 0 ) :
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+        continue
+    return results
+
+
+","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    if True :
+        pass
+        for i in range ( ( - len ( lst ) ) , 0 ) :
+            pass
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+            pass
+        continue
+    return results
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        max_val = max ( lst )
+        for i in range ( len ( lst ) ) :
+            if ( lst [ i ] == max_val ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+                break
+        continue
+    return results
+
+
+",N/A,4.114,0.012,0.000,0.001,0.035,0.136,0.239,4.678,5,5,0.745
+question_5,0,0,wrong_5_063.py,success_w_gpt_better,1,0,"def top_k ( lst , k ) :
+    if ( k <= 0 ) :
+        return [ ]
+    else :
+        maxi = max ( lst )
+        length = len ( lst )
+        for i in range ( length ) :
+            if ( lst [ i ] == maxi ) :
+                pos = i
+        new_list = lst . copy ( )
+        new_list . pop ( pos )
+        return ( [ maxi ] + top_k ( new_lst , ( k - 1 ) ) )
+
+
+","def top_k ( lst , k ) :
+    if ( k <= 0 ) :
+        return [ ]
+    else :
+        maxi = max ( lst )
+        length = len ( lst )
+        for i in range ( length ) :
+            if ( lst [ i ] == maxi ) :
+                pos = i
+        new_list = lst . copy ( )
+        new_list . pop ( pos )
+        return ( [ maxi ] + top_k ( new_lst , ( k - 1 ) ) )
+
+
+","
+
+def top_k(lst, k):
+    ls = []
+    if (len(range(k)) == 0):
+        pass
+    else:
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,C1.o'}","def top_k ( lst , k ) :
+    if ( k <= 0 ) :
+        return [ ]
+    else :
+        maxi = max ( lst )
+        length = len ( lst )
+        for i in range ( length ) :
+            if ( lst [ i ] == maxi ) :
+                pos = i
+        new_list = lst . copy ( )
+        new_list . pop ( pos )
+        return ( [ maxi ] + top_k ( new_list , ( k - 1 ) ) )
+
+
+",N/A,0.289,0.017,0.000,0.000,0.074,0.106,0.272,0.911,5,5,0.867
+question_5,0,0,wrong_5_026.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return [ ]
+    sort = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i [ 1 ] > largest [ 1 ] ) :
+                largest = i
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+    pass
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return [ ]
+        if False :
+            pass
+        largest = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i [ 1 ] > largest [ 1 ] ) :
+                largest = i
+            pass
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        if False:
+            pass
+        ls = []
+        for i in range(k):
+            if True:
+                pass
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.g,B1.f'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return [ ]
+    sort = [ ]
+    while ( ( len ( sort ) < k ) and lst ) :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+    pass
+
+
+",N/A,5.216,0.082,0.000,0.001,0.035,0.248,0.198,5.923,5,5,0.839
+question_5,0,0,wrong_5_004.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( ele > biggest ) :
+                biggest = ele
+        lst . remove ( element )
+        sort . append ( element )
+        if ( len ( sort ) == k ) :
+            break
+    return sort
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        biggest = lst [ 0 ]
+    biggest = ele
+    for i in range ( k ) :
+        lst . remove ( element )
+        sort . append ( element )
+        if ( len ( sort ) == k ) :
+            break
+        pass
+    return sort
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( ( len ( sort ) < k ) and lst ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,5.086,0.063,0.000,0.001,0.040,0.293,0.128,5.716,5,5,0.745
+question_5,0,0,wrong_5_027.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sorted_lst = lst
+    while sorted_lst :
+        largest = sorted_lst [ 0 ]
+        for element in sorted_lst :
+            if ( element > largest ) :
+                largest = element
+        sorted_lst . remove ( largest )
+        sorted_lst . append ( largest )
+    return sorted_lst [ : ( k - 1 ) ]
+    pass
+
+
+","def top_k ( lst , k ) :
+    sorted_lst = lst
+    if True :
+        largest = sorted_lst [ 0 ]
+        for element in sorted_lst :
+            pass
+            if ( element > largest ) :
+                largest = element
+            pass
+        sorted_lst . remove ( largest )
+        sorted_lst . append ( largest )
+    return sorted_lst [ : ( k - 1 ) ]
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while ( len ( sorted_lst ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sorted_lst . append ( largest )
+    return sorted_lst
+    pass
+
+
+",N/A,4.266,0.011,0.000,0.001,0.103,0.201,0.123,4.807,5,5,0.870
+question_5,0,0,wrong_5_102.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    while ( counter < k ) :
+        new_lst . append ( lst . remove ( max ( lst ) ) )
+
+
+","def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    if True :
+        pass
+    pass
+    if True :
+        pass
+    pass
+    for i in range ( k ) :
+        new_lst . append ( lst . remove ( max ( lst ) ) )
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    while ( counter < k ) :
+        max_val = max ( lst )
+        new_lst . append ( max_val )
+        lst . remove ( max_val )
+        counter += 1
+    return new_lst
+
+
+",N/A,4.573,0.007,0.000,0.001,0.056,0.089,0.048,4.826,5,5,0.885
+question_5,0,0,wrong_5_028.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+        sort . append ( i )
+    return sort [ : ( k - 1 ) ]
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i > largest ) :
+                largest = i
+            pass
+        sort . append ( i )
+    return sort [ : ( k - 1 ) ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        largest = lst [ 0 ]
+        for i in lst :
+            if ( i > largest ) :
+                largest = i
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+
+
+",N/A,4.184,0.010,0.000,0.001,0.095,0.189,0.100,4.667,5,5,0.875
+question_5,0,0,wrong_5_060.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for x in lst :
+            if ( x < lst [ 0 ] ) :
+                biggest = x
+        lst . remove ( biggest )
+        new_lst . append ( biggest )
+    return new_lst [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for x in lst :
+            pass
+            if ( x < lst [ 0 ] ) :
+                biggest = x
+            pass
+        lst . remove ( biggest )
+        new_lst . append ( biggest )
+    return new_lst [ 0 : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    new_lst = [ ]
+    while ( len ( new_lst ) < k ) :
+        biggest = lst [ 0 ]
+        for x in lst :
+            if ( x > biggest ) :
+                biggest = x
+        lst . remove ( biggest )
+        new_lst . append ( biggest )
+    return new_lst
+
+
+",N/A,4.120,0.011,0.000,0.001,0.109,0.216,0.117,4.679,5,5,0.848
+question_5,0,0,wrong_5_047.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while lst :
+        for n in range ( 1 , len ( lst ) ) :
+            biggest = lst [ 0 ]
+            if ( lst [ n ] > biggest ) :
+                biggest = lst [ n ]
+                lst . remove ( biggest )
+                sorted_lst . append ( biggest )
+    return sorted_lst [ 0 : 3 ]
+
+
+","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    if True :
+        pass
+        for n in range ( 1 , len ( lst ) ) :
+            biggest = lst [ 0 ]
+            if ( lst [ n ] > biggest ) :
+                biggest = lst [ n ]
+                lst . remove ( biggest )
+                sorted_lst . append ( biggest )
+            pass
+        pass
+    return sorted_lst [ 0 : 3 ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while ( len ( sorted_lst ) < k ) :
+        biggest = lst [ 0 ]
+        for n in lst :
+            if ( n > biggest ) :
+                biggest = n
+        lst . remove ( biggest )
+        sorted_lst . append ( biggest )
+    return sorted_lst
+
+
+",N/A,4.105,0.012,0.000,0.001,0.089,0.177,0.193,4.724,5,5,0.833
+question_5,0,0,wrong_5_055.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    values = [ ]
+    greatest = lst [ 0 ]
+    while ( len ( values ) < k ) :
+        for item in lst :
+            if ( item > greatest ) :
+                greatest = item
+        lst . remove ( greatest )
+        values . append ( greatest )
+        greatest = lst [ 0 ]
+    return values
+
+
+","def top_k ( lst , k ) :
+    values = [ ]
+    greatest = lst [ 0 ]
+    if True :
+        pass
+        for item in lst :
+            pass
+            if ( item > greatest ) :
+                greatest = item
+            pass
+        lst . remove ( greatest )
+        values . append ( greatest )
+        greatest = lst [ 0 ]
+    return values
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    values = [ ]
+    while ( len ( values ) < k ) :
+        greatest = max ( lst )
+        lst . remove ( greatest )
+        values . append ( greatest )
+    return values
+
+
+",N/A,4.092,0.012,0.000,0.001,0.103,0.331,0.079,4.729,5,5,0.860
+question_5,0,0,wrong_5_001.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    result = [ ]
+    while ( k >= 0 ) :
+        big = max ( lst )
+        result . append ( big )
+        lst . remove ( big )
+        k -= 1
+    return result
+
+
+","def top_k ( lst , k ) :
+    result = [ ]
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    pass
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    ls = [ ]
+    for i in range ( k ) :
+        big = max ( lst )
+        result . append ( big )
+        lst . remove ( big )
+        k -= 1
+    return result
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    result = [ ]
+    while ( k > 0 ) :
+        big = max ( lst )
+        result . append ( big )
+        lst . remove ( big )
+        k -= 1
+    return result
+
+
+",N/A,4.557,0.009,0.000,0.001,0.031,0.019,0.055,4.772,5,5,0.382
+question_5,0,0,wrong_5_008.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort [ : ( k + 1 ) ]
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > biggest ) :
+                biggest = element
+            pass
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort [ : ( k + 1 ) ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,4.192,0.011,0.000,0.001,0.104,0.208,0.111,4.731,5,5,0.844
+question_5,0,0,wrong_5_105.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort [ 0 : 3 ]
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > largest ) :
+                largest = element
+            pass
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort [ 0 : 3 ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+
+
+",N/A,4.070,0.010,0.000,0.001,0.099,0.241,0.105,4.624,5,5,0.837
+question_5,0,0,wrong_5_104.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    while ( counter < k ) :
+        maxi = max ( lst )
+        new_lst . append ( maxi )
+        lst . remove ( maxi )
+        counter += 1
+
+
+","def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    if True :
+        pass
+    pass
+    if True :
+        pass
+    ls = [ ]
+    for i in range ( k ) :
+        maxi = max ( lst )
+        new_lst . append ( maxi )
+        lst . remove ( maxi )
+        counter += 1
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    counter = 0
+    new_lst = [ ]
+    while ( counter < k ) :
+        maxi = max ( lst )
+        new_lst . append ( maxi )
+        lst . remove ( maxi )
+        counter += 1
+    return new_lst
+
+
+",N/A,4.505,0.008,0.000,0.001,0.129,0.020,0.060,4.823,5,5,0.400
+question_5,0,0,wrong_5_052.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    a = sort_list ( lst )
+    return a [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    a = sort_list ( lst )
+    return a [ 0 : k ]
+    if True :
+        ls = [ ]
+    pass
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    pass
+    for i in range ( k ) :
+        pass
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    a = [ ]
+    for i in range ( k ) :
+        a . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return a
+
+
+",N/A,4.611,0.005,0.000,0.001,0.030,0.126,0.023,4.827,5,5,1.812
+question_5,0,0,wrong_5_037.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        smallest = lst [ 0 ]
+        for i in lst :
+            if ( i < smallest ) :
+                smallest = i
+        lst . remove ( smallest )
+        sort . append ( smallest )
+    counter = k
+    while ( counter != len ( lst ) ) :
+        lst . pop ( )
+        counter += 1
+    return lst
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if ( len ( range ( k ) ) > 0 ) :
+        smallest = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i < smallest ) :
+                smallest = i
+            pass
+        lst . remove ( smallest )
+        sort . append ( smallest )
+    counter = k
+    if True :
+        lst . pop ( )
+        counter += 1
+    return lst
+","
+
+def top_k(lst, k):
+    ls = []
+    if (len(range(k)) > 0):
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.f,C1.n'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( ( len ( sort ) < k ) and lst ) :
+        smallest = lst [ 0 ]
+        for i in lst :
+            if ( i > smallest ) :
+                smallest = i
+        lst . remove ( smallest )
+        sort . append ( smallest )
+    return sort
+
+
+",N/A,4.602,0.079,0.000,0.001,0.103,0.265,0.172,5.375,5,5,0.842
+question_5,0,0,wrong_5_099.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+    elif ( k == 1 ) :
+        return lst
+    else :
+        a = max ( lst )
+        lst . remove ( a )
+        l . append ( a )
+        top_k ( lst , ( k - 1 ) )
+        return l
+    pass
+
+
+","def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+        for i in range ( k ) :
+            return ls
+            if True :
+                return lst
+            pass
+        a = max ( lst )
+        lst . remove ( a )
+        l . append ( a )
+        top_k ( lst , ( k - 1 ) )
+        return l
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if (len(range(k)) > 0):
+        for i in range(k):
+            if True:
+                ls.append(max(lst))
+                lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'C1.n,B1.f'}","def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+    elif ( k == 1 ) :
+        return [ max ( lst ) ]
+    else :
+        for i in range ( k ) :
+            a = max ( lst )
+            lst . remove ( a )
+            l . append ( a )
+        return l
+    pass
+
+
+",N/A,4.703,2.501,0.000,0.001,0.040,0.163,0.210,7.771,5,5,0.780
+question_5,0,0,wrong_5_108.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    counter = 0
+    while ( counter <= k ) :
+        highest = lst [ 0 ]
+        for x in lst :
+            if ( x > highest ) :
+                highest = x
+        new_lst . append ( highest )
+        lst . remove ( highest )
+        counter += 1
+    return new_lst
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    counter = 0
+    if True :
+        highest = lst [ 0 ]
+        for x in lst :
+            pass
+            if ( x > highest ) :
+                highest = x
+            pass
+        new_lst . append ( highest )
+        lst . remove ( highest )
+        counter += 1
+    return new_lst
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    new_lst = [ ]
+    counter = 0
+    while ( counter < k ) :
+        highest = lst [ 0 ]
+        for x in lst :
+            if ( x > highest ) :
+                highest = x
+        new_lst . append ( highest )
+        lst . remove ( highest )
+        counter += 1
+    return new_lst
+
+
+",N/A,4.177,0.011,0.000,0.001,0.135,0.311,0.132,4.876,5,5,0.837
+question_5,0,0,wrong_5_025.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            if ( i > biggest ) :
+                oldest = i
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    n = 1
+    sort_k = [ ]
+    while ( n <= k ) :
+        sort_k . append ( sort . pop ( 0 ) )
+        n += 1
+    return sort_k
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if ( len ( range ( k ) ) > 0 ) :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            pass
+            if ( i > biggest ) :
+                oldest = i
+            pass
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    n = 1
+    sort_k = [ ]
+    if True :
+        sort_k . append ( sort . pop ( 0 ) )
+        n += 1
+    return sort_k
+","
+
+def top_k(lst, k):
+    ls = []
+    if (len(range(k)) > 0):
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.f,C1.n'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( lst and ( len ( sort ) < k ) ) :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            if ( i > biggest ) :
+                biggest = i
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,4.549,0.088,0.000,0.001,0.107,0.288,0.227,5.431,5,5,0.800
+question_5,0,0,wrong_5_020.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    arranged = [ ]
+    while ( k > 0 ) :
+        lst . remove ( max ( lst ) )
+        arranged . append ( max ( lst ) )
+        k = ( k - 1 )
+    return arranged
+    pass
+
+
+","def top_k ( lst , k ) :
+    arranged = [ ]
+    if True :
+        return ls
+    ls . append ( max ( lst ) )
+    lst . remove ( max ( lst ) )
+    if True :
+        ls = [ ]
+    ls = [ ]
+    for i in range ( k ) :
+        lst . remove ( max ( lst ) )
+        arranged . append ( max ( lst ) )
+        k = ( k - 1 )
+    return arranged
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    arranged = [ ]
+    while ( k > 0 ) :
+        max_val = max ( lst )
+        lst . remove ( max_val )
+        arranged . append ( max_val )
+        k = ( k - 1 )
+    return arranged
+    pass
+
+
+",N/A,4.598,0.009,0.000,0.001,0.029,1.101,0.068,5.872,5,5,0.556
+question_5,0,0,wrong_5_050.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    newlist = [ ]
+    while ( len ( newlist ) < k ) :
+        newlist += [ max ( lst ) ]
+        for i in range ( len ( lst ) ) :
+            if ( i == max ( lst ) ) :
+                print ( i )
+                break
+        del lst [ i ]
+    return newlist
+
+
+","def top_k ( lst , k ) :
+    newlist = [ ]
+    if True :
+        newlist += [ max ( lst ) ]
+        for i in range ( len ( lst ) ) :
+            pass
+            if ( i == max ( lst ) ) :
+                print ( i )
+                break
+            pass
+        del lst [ i ]
+    return newlist
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    newlist = [ ]
+    while ( len ( newlist ) < k ) :
+        max_val = max ( lst )
+        newlist . append ( max_val )
+        lst . remove ( max_val )
+    return newlist
+
+
+",N/A,4.177,0.011,0.000,0.001,0.070,0.100,0.084,4.580,5,5,0.714
+question_5,0,0,wrong_5_031.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for numbers in lst :
+            if ( numbers > largest ) :
+                largest = numbers
+        new_lst . append ( lst . pop ( largest ) )
+    return new_lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for numbers in lst :
+            pass
+            if ( numbers > largest ) :
+                largest = numbers
+            pass
+        new_lst . append ( lst . pop ( largest ) )
+    return new_lst [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    new_lst = [ ]
+    while ( len ( new_lst ) < k ) :
+        largest = lst [ 0 ]
+        for numbers in lst :
+            if ( numbers > largest ) :
+                largest = numbers
+        lst . remove ( largest )
+        new_lst . append ( largest )
+    return new_lst
+
+
+",N/A,4.124,0.010,0.000,0.001,0.093,0.183,0.104,4.606,5,5,0.800
+question_5,0,0,wrong_5_072.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        for i in range ( ( - len ( lst ) ) , ( - 1 ) ) :
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+    return results
+
+
+","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    if True :
+        pass
+        for i in range ( ( - len ( lst ) ) , ( - 1 ) ) :
+            pass
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+            pass
+        pass
+    return results
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        max_val = max ( lst )
+        for i in range ( len ( lst ) ) :
+            if ( lst [ i ] == max_val ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+                break
+    return results
+
+
+",N/A,4.084,0.012,0.000,0.001,0.097,0.097,0.235,4.664,5,5,0.750
+question_5,0,0,wrong_5_064.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        for i in range ( ( - len ( lst ) ) , ( - 1 ) ) :
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+    return results
+    pass
+
+
+","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    if True :
+        pass
+        for i in range ( ( - len ( lst ) ) , ( - 1 ) ) :
+            pass
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+            pass
+        pass
+    return results
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        max_val = max ( lst )
+        for i in range ( len ( lst ) ) :
+            if ( lst [ i ] == max_val ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+                break
+    return results
+    pass
+
+
+",N/A,4.082,0.012,0.000,0.001,0.097,0.125,0.246,4.703,5,5,0.755
+question_5,0,0,wrong_5_011.py,success_w_gpt_only,N/A,0,N/A,N/A,N/A,N/A,N/A,"def sort_age ( lst ) :
+    new = [ ]
+    while ( lst != [ ] ) :
+        big = lst [ 0 ]
+        for i in lst :
+            if ( i > big ) :
+                big = i
+        lst . remove ( big )
+        new . append ( big )
+    return new
+def top_k ( lst , k ) :
+    return sort_age ( lst ) [ : k ]
+
+
+",N/A,N/A,N/A,N/A,N/A,N/A,N/A,0.160,0.168,N/A,N/A,N/A
+question_5,0,0,wrong_5_089.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    newlist = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for i in lst :
+            if ( i > biggest ) :
+                biggest = i
+            else :
+                continue
+        lst . remove ( biggest )
+        if ( len ( newlist ) == k ) :
+            break
+        else :
+            newlist . append ( biggest )
+        return newlist
+
+
+","def top_k ( lst , k ) :
+    newlist = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for i in lst :
+            pass
+            if ( i > biggest ) :
+                pass
+            lst . remove ( biggest )
+            if ( len ( newlist ) == k ) :
+                break
+            newlist . append ( biggest )
+        return newlist
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            if False:
+                pass
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.g,B1.f'}","def top_k ( lst , k ) :
+    newlist = [ ]
+    while ( ( len ( newlist ) < k ) and lst ) :
+        biggest = lst [ 0 ]
+        for i in lst :
+            if ( i > biggest ) :
+                biggest = i
+            else :
+                continue
+        lst . remove ( biggest )
+        newlist . append ( biggest )
+    return newlist
+
+
+",N/A,6.197,0.513,0.000,0.001,0.065,0.328,0.166,7.406,5,5,0.833
+question_5,0,0,wrong_5_080.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sotsot = [ ]
+    while ( len ( sotsot ) <= k ) :
+        sotsot . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sotsot
+
+
+","def top_k ( lst , k ) :
+    sotsot = [ ]
+    if True :
+        pass
+    ls . append ( max ( lst ) )
+    lst . remove ( max ( lst ) )
+    if True :
+        return ls
+    pass
+    for i in range ( k ) :
+        sotsot . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sotsot
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    sotsot = [ ]
+    while ( len ( sotsot ) < k ) :
+        sotsot . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sotsot
+
+
+",N/A,4.633,0.008,0.000,0.001,0.030,0.012,0.048,4.788,5,5,0.419
+question_5,0,0,wrong_5_106.py,success_w_gpt_better,1,1,"def top_k ( lst , k ) :
+    new = [ ]
+    lst . sort ( )
+    for i in range ( ( k - 1 ) ) :
+        new . append ( lst [ i ] )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    lst . sort ( )
+    for i in range ( ( k - 1 ) ) :
+        new . append ( lst [ i ] )
+    return new
+
+
+","def top_k ( lst , k ) :
+    ls = [ ]
+    for i in range ( k ) :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return ls
+
+
+",{'top_k': 'reference.py'},{'top_k': ''},"def top_k ( lst , k ) :
+    new = [ ]
+    lst . sort ( reverse = True )
+    for i in range ( k ) :
+        new . append ( lst [ i ] )
+    return new
+
+
+",N/A,0.001,0.006,0.000,0.000,0.034,0.090,0.041,0.220,5,5,0.467
+question_5,0,0,wrong_5_042.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    x = len ( lst )
+    while ( x >= ( x - k ) ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    x = len ( lst )
+    if True :
+        largest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > largest ) :
+                largest = element
+            pass
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    x = len ( lst )
+    while ( k > 0 ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+        k -= 1
+    return sort
+
+
+",N/A,4.188,0.012,0.000,0.001,0.132,0.210,0.143,4.796,5,5,0.840
+question_5,0,0,wrong_5_017.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    result = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for number in lst :
+            if ( number > biggest ) :
+                biggest = number
+        lst . remove ( biggest )
+        result . append ( oldest )
+    return result [ : k ]
+
+
+","def top_k ( lst , k ) :
+    result = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for number in lst :
+            pass
+            if ( number > biggest ) :
+                biggest = number
+            pass
+        lst . remove ( biggest )
+        result . append ( oldest )
+    return result [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    result = [ ]
+    while ( ( len ( result ) < k ) and lst ) :
+        biggest = lst [ 0 ]
+        for number in lst :
+            if ( number > biggest ) :
+                biggest = number
+        lst . remove ( biggest )
+        result . append ( biggest )
+    return result
+
+
+",N/A,4.121,0.010,0.000,0.001,0.098,0.216,0.113,4.658,5,5,0.833
+question_5,0,0,wrong_5_005.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( element )
+        sort . append ( element )
+        if ( len ( sort ) == k ) :
+            break
+    return sort
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        biggest = lst [ 0 ]
+    biggest = element
+    for i in range ( k ) :
+        lst . remove ( element )
+        sort . append ( element )
+        if ( len ( sort ) == k ) :
+            break
+        pass
+    return sort
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,4.959,0.064,0.000,0.001,0.040,0.308,0.118,5.599,5,5,0.745
+question_5,0,0,wrong_5_074.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        for i in range ( ( - len ( lst ) ) , 0 ) :
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+    return results
+
+
+","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    if True :
+        pass
+        for i in range ( ( - len ( lst ) ) , 0 ) :
+            pass
+            if ( lst [ i ] == max ( lst ) ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+            pass
+        pass
+    return results
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    results = [ ]
+    counter = 0
+    while ( counter < k ) :
+        max_val = max ( lst )
+        for i in range ( len ( lst ) ) :
+            if ( lst [ i ] == max_val ) :
+                results . append ( lst . pop ( i ) )
+                counter += 1
+                break
+    return results
+
+
+",N/A,4.300,0.012,0.000,0.001,0.106,0.100,0.235,4.886,5,5,0.740
+question_5,0,0,wrong_5_092.py,success_w_gpt_only,0,0,"def top_k ( lst , k ) :
+    lst2 = [ ]
+    max = lst [ 0 ]
+    for i in lst :
+        if ( i > max ) :
+            max = i
+        lst . pop ( max )
+        while ( len ( lst2 ) != k ) :
+            lst2 . append ( max )
+    return lst2
+
+
+","def top_k ( lst , k ) :
+    lst2 = [ ]
+    max = lst [ 0 ]
+    for i in lst :
+        pass
+        if ( i > max ) :
+            max = i
+        elif True :
+            lst2 . append ( max )
+        pass
+    return lst2
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            lst.remove(max(lst))
+        elif True:
+            pass
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B2.k'}","def top_k ( lst , k ) :
+    lst2 = [ ]
+    for _ in range ( k ) :
+        max = lst [ 0 ]
+        for i in lst :
+            if ( i > max ) :
+                max = i
+        lst . remove ( max )
+        lst2 . append ( max )
+    return lst2
+
+
+",N/A,3.974,0.075,0.000,0.001,0.114,0.185,0.180,4.540,1,5,N/A
+question_5,0,0,wrong_5_067.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new = [ ]
+    while ( i in range ( ( k - 1 ) ) ) :
+        new . append ( lst . pop ( max ( lst ) ) )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    if True :
+        pass
+    return ls
+    if True :
+        return ls
+    pass
+    for i in range ( k ) :
+        new . append ( lst . pop ( max ( lst ) ) )
+    return new
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new = [ ]
+    for i in range ( k ) :
+        new . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return new
+
+
+",N/A,4.580,0.008,0.000,0.001,0.029,0.105,0.046,4.826,5,5,0.700
+question_5,0,0,wrong_5_054.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    count = 0
+    op = [ ]
+    big = lst [ 0 ]
+    while ( count < k ) :
+        op += [ max ( lst ) ]
+        count += 1
+    return op
+
+
+","def top_k ( lst , k ) :
+    count = 0
+    op = [ ]
+    big = lst [ 0 ]
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    pass
+    if True :
+        ls = [ ]
+    return ls
+    for i in range ( k ) :
+        op += [ max ( lst ) ]
+        count += 1
+    return op
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    count = 0
+    op = [ ]
+    while ( count < k ) :
+        big = max ( lst )
+        op . append ( big )
+        lst . remove ( big )
+        count += 1
+    return op
+
+
+",N/A,4.583,0.008,0.000,0.001,0.034,0.798,0.066,5.555,5,5,0.857
+question_5,0,0,wrong_5_013.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        if ( x == pivot ) :
+            plist . append ( e )
+        if ( x > pivot ) :
+            higher . append ( e )
+    sort_list = ( ( higher + plist ) + lower )
+    return sort_list [ : k ]
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return lst
+        for e in lst :
+            pass
+            if ( e < pivot ) :
+                pass
+                if ( x == pivot ) :
+                    plist . append ( e )
+                pass
+            higher . append ( e )
+        pass
+    sort_list = ( ( higher + plist ) + lower )
+    return sort_list [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if False:
+                if True:
+                    pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.g,B1.f'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    top_k_list = [ ]
+    for i in range ( k ) :
+        max_val = max ( lst )
+        top_k_list . append ( max_val )
+        lst . remove ( max_val )
+    return top_k_list
+
+
+",N/A,5.279,0.589,0.000,0.001,0.029,0.247,0.170,6.515,5,5,0.838
+question_5,0,0,wrong_5_009.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    n = ( len ( lst ) - k )
+    counter = 0
+    while ( counter < k ) :
+        lst . remove ( min ( lst ) )
+        counter = ( counter + 1 )
+    sort_list = [ ]
+    while ( lst != [ ] ) :
+        sort_lst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sort_list
+
+
+","def top_k ( lst , k ) :
+    n = ( len ( lst ) - k )
+    counter = 0
+    for i in range ( k ) :
+        lst . remove ( min ( lst ) )
+        counter = ( counter + 1 )
+        if False :
+            sort_list = [ ]
+        return ls
+        if True :
+            pass
+        sort_lst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sort_list
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            pass
+        if False:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.g'}","def top_k ( lst , k ) :
+    n = ( len ( lst ) - k )
+    counter = 0
+    while ( counter < n ) :
+        lst . remove ( min ( lst ) )
+        counter = ( counter + 1 )
+    sort_list = [ ]
+    while ( lst != [ ] ) :
+        sort_list . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sort_list
+
+
+",N/A,4.580,0.102,0.000,0.001,0.048,0.489,0.191,5.521,5,5,0.655
+question_5,0,0,wrong_5_062.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    a = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        a . append ( biggest )
+    return a [ : 3 ]
+
+
+","def top_k ( lst , k ) :
+    a = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > biggest ) :
+                biggest = element
+            pass
+        lst . remove ( biggest )
+        a . append ( biggest )
+    return a [ : 3 ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    a = [ ]
+    while ( len ( a ) < k ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        a . append ( biggest )
+    return a
+
+
+",N/A,4.152,0.011,0.000,0.001,0.098,0.209,0.102,4.666,5,5,0.833
+question_5,0,0,wrong_5_077.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    result = [ ]
+    while lst :
+        minimum = lst [ 0 ]
+        for x in lst :
+            if ( x > minimum ) :
+                minimum = x
+        result . append ( minimum )
+        lst . remove ( minimum )
+    return lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    result = [ ]
+    if True :
+        minimum = lst [ 0 ]
+        for x in lst :
+            pass
+            if ( x > minimum ) :
+                minimum = x
+            pass
+        result . append ( minimum )
+        lst . remove ( minimum )
+    return lst [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    result = [ ]
+    while ( len ( result ) < k ) :
+        maximum = lst [ 0 ]
+        for x in lst :
+            if ( x > maximum ) :
+                maximum = x
+        result . append ( maximum )
+        lst . remove ( maximum )
+    return result
+
+
+",N/A,4.075,0.010,0.000,0.001,0.098,0.210,0.103,4.595,5,5,0.810
+question_5,0,0,wrong_5_076.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( lst ) > ( len ( lst ) - k ) ) :
+        top = max ( lst )
+        new . append ( top )
+        lst . remove ( top )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    if True :
+        pass
+    ls = [ ]
+    if True :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    pass
+    for i in range ( k ) :
+        top = max ( lst )
+        new . append ( top )
+        lst . remove ( top )
+    return new
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( new ) < k ) :
+        top = max ( lst )
+        new . append ( top )
+        lst . remove ( top )
+    return new
+
+
+",N/A,4.541,0.009,0.000,0.001,0.089,0.018,0.058,4.817,5,5,0.405
+question_5,0,0,wrong_5_093.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    result = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for elem in lst :
+            if ( elem > biggest ) :
+                biggest = elem
+        lst . remove ( biggest )
+        result . append ( biggest )
+    return result [ : 3 ]
+    pass
+
+
+","def top_k ( lst , k ) :
+    result = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for elem in lst :
+            pass
+            if ( elem > biggest ) :
+                biggest = elem
+            pass
+        lst . remove ( biggest )
+        result . append ( biggest )
+    return result [ : 3 ]
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    result = [ ]
+    for _ in range ( k ) :
+        biggest = lst [ 0 ]
+        for elem in lst :
+            if ( elem > biggest ) :
+                biggest = elem
+        lst . remove ( biggest )
+        result . append ( biggest )
+    return result
+    pass
+
+
+",N/A,4.190,0.011,0.000,0.001,0.104,0.207,0.105,4.717,5,5,0.837
+question_5,0,0,wrong_5_033.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    final = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+            lst . remove ( largest )
+            final . append ( largest )
+        if ( len ( final ) == k ) :
+            break
+    return final
+
+
+","def top_k ( lst , k ) :
+    final = [ ]
+    if True :
+        largest = lst [ 0 ]
+    largest = element
+    for i in range ( k ) :
+        pass
+        if ( len ( final ) == k ) :
+            break
+        pass
+    return final
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    final = [ ]
+    while ( len ( final ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        final . append ( largest )
+    return final
+
+
+",N/A,4.958,0.063,0.000,0.001,0.039,0.016,0.124,5.342,5,5,0.745
+question_5,0,0,wrong_5_066.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    a = lst
+    sort = [ ]
+    while a :
+        largest = a [ 0 ]
+        for item in a :
+            if ( item [ 1 ] > largest [ 1 ] ) :
+                largest = item
+        a . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+
+
+","def top_k ( lst , k ) :
+    a = lst
+    sort = [ ]
+    if True :
+        largest = a [ 0 ]
+        for item in a :
+            pass
+            if ( item [ 1 ] > largest [ 1 ] ) :
+                largest = item
+            pass
+        a . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    a = lst
+    sort = [ ]
+    while a :
+        largest = a [ 0 ]
+        for item in a :
+            if ( item > largest ) :
+                largest = item
+        a . remove ( largest )
+        sort . append ( largest )
+    return sort [ : k ]
+
+
+",N/A,4.274,0.012,0.000,0.001,0.049,0.213,0.173,4.844,5,5,0.843
+question_5,0,0,wrong_5_079.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort_lst = [ ]
+    while lst :
+        smallest = lst [ 0 ]
+        for element in lst :
+            if ( element < smallest ) :
+                smallest = element
+        lst . remove ( smallest )
+        sort_lst . append ( smallest )
+    return sort_lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    sort_lst = [ ]
+    if True :
+        smallest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element < smallest ) :
+                smallest = element
+            pass
+        lst . remove ( smallest )
+        sort_lst . append ( smallest )
+    return sort_lst [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort_lst = [ ]
+    while ( len ( sort_lst ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort_lst . append ( largest )
+    return sort_lst
+
+
+",N/A,4.102,0.011,0.000,0.001,0.109,0.255,0.103,4.679,5,5,0.833
+question_5,0,0,wrong_5_024.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            if ( i > biggest ) :
+                oldest = i
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    n = 1
+    sort_k = [ ]
+    while ( n <= k ) :
+        sort_k . append ( sort . pop [ 0 ] )
+        n += 1
+    return sort_k
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if ( len ( range ( k ) ) > 0 ) :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            pass
+            if ( i > biggest ) :
+                oldest = i
+            pass
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    n = 1
+    sort_k = [ ]
+    if True :
+        sort_k . append ( sort . pop [ 0 ] )
+        n += 1
+    return sort_k
+","
+
+def top_k(lst, k):
+    ls = []
+    if (len(range(k)) > 0):
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.f,C1.n'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( lst and ( len ( sort ) < k ) ) :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            if ( i > biggest ) :
+                biggest = i
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,4.551,0.089,0.000,0.001,0.102,0.278,0.213,5.420,5,5,0.818
+question_5,0,0,wrong_5_041.py,success_w_mut,0,0,"def top_k ( lst , k ) :
+    i = 0
+    while ( ( i + 1 ) < len ( lst ) ) :
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        else :
+            i += 1
+    return lst [ : k ]
+
+
+","def top_k ( lst , k ) :
+    i = 0
+    for i in range ( k ) :
+        pass
+        if ( lst [ i ] < lst [ ( i + 1 ) ] ) :
+            lst . extend ( [ i ] )
+            lst . pop ( i )
+            i = 0
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    i += 1
+    if False :
+        pass
+    return lst [ : k ]
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if False:
+            pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,B1.f'}","def top_k ( lst , k ) :
+    ref_ls = [ ]
+    for i in range ( k ) :
+        pass
+        if False :
+            pass
+        ref_ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    if True :
+        return ref_ls
+",N/A,4.679,0.032,0.000,0.001,0.033,0.197,0.000,5.639,5,5,0.782
+question_5,0,0,wrong_5_023.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            if ( i > biggest ) :
+                oldest = i
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    n = 1
+    sort_k = [ ]
+    while ( n <= k ) :
+        sort_k . append ( sort . pop [ 0 ] )
+    return sort_k
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if ( len ( range ( k ) ) > 0 ) :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            pass
+            if ( i > biggest ) :
+                oldest = i
+            pass
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    n = 1
+    sort_k = [ ]
+    if True :
+        sort_k . append ( sort . pop [ 0 ] )
+    return sort_k
+","
+
+def top_k(lst, k):
+    ls = []
+    if (len(range(k)) > 0):
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                lst.remove(max(lst))
+    if True:
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.f,C1.n'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( lst and ( len ( sort ) < k ) ) :
+        biggest = lst [ 0 ]
+        for i in lst [ 1 : ] :
+            if ( i > biggest ) :
+                biggest = i
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,4.554,0.085,0.000,0.001,0.098,0.216,0.214,5.332,5,5,0.823
+question_5,0,0,wrong_5_058.py,success_wo_mut,1,1,"def top_k ( lst , k ) :
+    new_lst = [ ]
+    for i in range ( k ) :
+        new_lst . append ( max ( lst ) )
+    return new_lst
+    pass
+
+
+","def top_k ( lst , k ) :
+    new_lst = [ ]
+    for i in range ( k ) :
+        new_lst . append ( max ( lst ) )
+    return new_lst
+    pass
+
+
+","def top_k ( lst , k ) :
+    ls = [ ]
+    for i in range ( k ) :
+        ls . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return ls
+
+
+",{'top_k': 'reference.py'},{'top_k': ''},"def top_k ( lst , k ) :
+    new_lst = [ ]
+    for i in range ( k ) :
+        new_lst . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return new_lst
+    pass
+",N/A,0.001,0.005,0.000,0.000,0.035,0.082,0.000,0.227,5,5,0.304
+question_5,0,0,wrong_5_057.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+        if ( len ( sort ) == k ) :
+            return sort
+        else :
+            continue
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    for element in lst :
+        pass
+        if ( element > biggest ) :
+            biggest = element
+        pass
+    lst . remove ( biggest )
+    sort . append ( biggest )
+    if ( len ( sort ) == k ) :
+        return sort
+    else :
+        pass
+    pass
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if True:
+            pass
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        return ls
+    else:
+        pass
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B2.l,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( ( len ( sort ) < k ) and lst ) :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,4.620,0.023,0.000,0.001,0.038,0.095,0.134,5.020,5,5,0.617
+question_5,0,0,wrong_5_018.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort [ : ( k + 1 ) ]
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > largest ) :
+                largest = element
+            pass
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort [ : ( k + 1 ) ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+
+
+",N/A,4.260,0.011,0.000,0.001,0.101,0.208,0.120,4.801,5,5,0.844
+question_5,0,0,wrong_5_078.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+                lst . remove ( largest )
+                sort . append ( largest )
+    return sort [ : k ]
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        largest = lst [ 0 ]
+        for element in lst :
+            pass
+            if ( element > largest ) :
+                largest = element
+                lst . remove ( largest )
+                sort . append ( largest )
+            pass
+        pass
+    return sort [ : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    while ( len ( sort ) < k ) :
+        largest = lst [ 0 ]
+        for element in lst :
+            if ( element > largest ) :
+                largest = element
+        lst . remove ( largest )
+        sort . append ( largest )
+    return sort
+
+
+",N/A,4.118,0.011,0.000,0.001,0.103,0.147,0.115,4.598,5,5,0.857
+question_5,0,0,wrong_5_100.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+    elif ( k == 1 ) :
+        return lst
+    else :
+        while ( len ( l ) <= k ) :
+            a = max ( lst )
+            lst . remove ( a )
+            l . append ( a )
+        return l
+    pass
+
+
+","def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+    pass
+    if ( len ( range ( k ) ) == 0 ) :
+        return lst
+    else :
+        pass
+        for i in range ( k ) :
+            a = max ( lst )
+            lst . remove ( a )
+            l . append ( a )
+        return l
+    pass
+","
+
+def top_k(lst, k):
+    if False:
+        pass
+    ls = []
+    if (len(range(k)) == 0):
+        pass
+    else:
+        for i in range(k):
+            ls.append(max(lst))
+            lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,C1.o'}","def top_k ( lst , k ) :
+    l = [ ]
+    if ( k > len ( lst ) ) :
+        return False
+    elif ( k == 0 ) :
+        return l
+    else :
+        while ( len ( l ) < k ) :
+            a = max ( lst )
+            lst . remove ( a )
+            l . append ( a )
+        return l
+
+
+",N/A,3.966,0.092,0.000,0.001,0.062,0.021,0.211,4.513,5,5,0.551
+question_5,0,0,wrong_5_084.py,success_w_gpt_better,1,0,"def top_k ( lst , k ) :
+    new_list = [ ]
+    for i in lst :
+        if ( k == 0 ) :
+            break
+        new_list += max ( lst )
+        ( k - 1 )
+    return lst
+    pass
+
+
+","def top_k ( lst , k ) :
+    new_list = [ ]
+    for i in lst :
+        if ( k == 0 ) :
+            break
+        new_list += max ( lst )
+        ( k - 1 )
+    return lst
+    pass
+
+
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        if True:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},{'top_k': 'B1.f'},"def top_k ( lst , k ) :
+    new_list = [ ]
+    for i in range ( k ) :
+        if lst :
+            new_list . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+    return new_list
+
+
+",N/A,0.027,0.033,0.000,0.000,0.030,0.337,0.112,0.594,5,5,0.710
+question_5,0,0,wrong_5_006.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sort = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for element in lst :
+            if ( element > biggest ) :
+                biggest = element
+        lst . remove ( biggest )
+        sort . append ( biggest )
+        if ( len ( sort ) == k ) :
+            break
+    return sort
+
+
+","def top_k ( lst , k ) :
+    sort = [ ]
+    if True :
+        biggest = lst [ 0 ]
+    biggest = element
+    for i in range ( k ) :
+        lst . remove ( biggest )
+        sort . append ( biggest )
+        if ( len ( sort ) == k ) :
+            break
+        pass
+    return sort
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    sort = [ ]
+    for i in range ( k ) :
+        biggest = max ( lst )
+        lst . remove ( biggest )
+        sort . append ( biggest )
+    return sort
+
+
+",N/A,5.044,0.062,0.000,0.001,0.037,0.271,0.076,5.596,5,5,0.745
+question_5,0,0,wrong_5_049.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while lst :
+        biggest = lst [ 0 ]
+        for n in lst :
+            if ( lst [ n ] >= biggest ) :
+                biggest = lst [ n ]
+        lst . remove ( biggest )
+        sorted_lst . append ( biggest )
+    return sorted_lst [ 0 : k ]
+
+
+","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    if True :
+        biggest = lst [ 0 ]
+        for n in lst :
+            pass
+            if ( lst [ n ] >= biggest ) :
+                biggest = lst [ n ]
+            pass
+        lst . remove ( biggest )
+        sorted_lst . append ( biggest )
+    return sorted_lst [ 0 : k ]
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            if True:
+                pass
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.h'}","def top_k ( lst , k ) :
+    sorted_lst = [ ]
+    while ( lst and ( len ( sorted_lst ) < k ) ) :
+        biggest = lst [ 0 ]
+        for n in lst :
+            if ( n >= biggest ) :
+                biggest = n
+        lst . remove ( biggest )
+        sorted_lst . append ( biggest )
+    return sorted_lst
+
+
+",N/A,4.242,0.011,0.000,0.001,0.066,0.253,0.165,4.854,5,5,0.837
+question_5,0,0,wrong_5_010.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    n = ( len ( lst ) - k )
+    counter = 0
+    while ( counter < k ) :
+        lst . remove ( min ( lst ) )
+        counter = ( counter + 1 )
+    sort_list = [ ]
+    while ( lst != [ ] ) :
+        sort_list . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sort_list
+
+
+","def top_k ( lst , k ) :
+    n = ( len ( lst ) - k )
+    counter = 0
+    for i in range ( k ) :
+        lst . remove ( min ( lst ) )
+        counter = ( counter + 1 )
+        if True :
+            sort_list = [ ]
+        pass
+        if False :
+            pass
+        sort_list . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sort_list
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        if True:
+            pass
+        if False:
+            pass
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.g'}","def top_k ( lst , k ) :
+    n = ( len ( lst ) - k )
+    counter = 0
+    while ( counter < n ) :
+        lst . remove ( min ( lst ) )
+        counter += 1
+    sort_list = [ ]
+    while lst :
+        sort_list . append ( max ( lst ) )
+        lst . remove ( max ( lst ) )
+    return sort_list
+
+
+",N/A,4.420,0.102,0.000,0.001,0.121,0.455,0.155,5.363,5,5,0.655
+question_5,0,0,wrong_5_021.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    r = [ ]
+    for qwerty in range ( 0 , k ) :
+        biggest = lst [ 0 ]
+        for k in lst :
+            if ( biggest < k ) :
+                biggest = k
+        r . append [ biggest ]
+        lst . remove [ biggest ]
+    return r
+
+
+","def top_k ( lst , k ) :
+    r = [ ]
+    for qwerty in range ( 0 , k ) :
+        biggest = lst [ 0 ]
+    pass
+    if ( biggest < k ) :
+        biggest = k
+        for i in range ( k ) [ : int ( ( len ( range ( k ) ) / 2 ) ) ] :
+            pass
+        r . append [ biggest ]
+        lst . remove [ biggest ]
+    return r
+","
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k)[:int((len(range(k)) / 2))]:
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'E1.z,B1.f'}","def top_k ( lst , k ) :
+    r = [ ]
+    for qwerty in range ( 0 , k ) :
+        biggest = lst [ 0 ]
+        for i in lst :
+            if ( biggest < i ) :
+                biggest = i
+        r . append ( biggest )
+        lst . remove ( biggest )
+    return r
+
+
+",N/A,4.496,0.161,0.000,0.001,0.050,0.215,0.113,5.301,5,5,1.244
+question_5,0,0,wrong_5_035.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return [ ]
+    else :
+        final = [ ]
+        while lst :
+            element = max ( lst )
+            final += [ element ]
+            lst . remove ( element )
+            if ( len ( final ) == k ) :
+                break
+        return final
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return [ ]
+    final = [ ]
+    if True :
+        element = max ( lst )
+        final += [ element ]
+        lst . remove ( element )
+        for i in range ( k ) :
+            pass
+        return final
+    pass
+","
+
+def top_k(lst, k):
+    if False:
+        pass
+    if True:
+        ls = []
+        for i in range(k):
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.g,B1.f'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return [ ]
+    else :
+        final = [ ]
+        while ( ( len ( final ) < k ) and lst ) :
+            element = max ( lst )
+            final += [ element ]
+            lst . remove ( element )
+        return final
+
+
+",N/A,4.066,0.155,0.000,0.001,0.047,0.256,0.124,4.758,5,5,0.810
+question_5,0,0,wrong_5_071.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( lst ) >= ( len ( lst ) - k ) ) :
+        top = max ( lst )
+        new . append ( lst . remove ( top ) )
+    return new
+
+
+","def top_k ( lst , k ) :
+    new = [ ]
+    if True :
+        pass
+    pass
+    if True :
+        pass
+    pass
+    for i in range ( k ) :
+        top = max ( lst )
+        new . append ( lst . remove ( top ) )
+    return new
+","
+
+def top_k(lst, k):
+    ls = []
+    if True:
+        pass
+    if True:
+        pass
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.h,B1.h'}","def top_k ( lst , k ) :
+    new = [ ]
+    while ( len ( new ) < k ) :
+        top = max ( lst )
+        lst . remove ( top )
+        new . append ( top )
+    return new
+
+
+",N/A,4.595,0.009,0.000,0.001,0.058,0.289,0.053,5.072,5,5,0.657
+question_5,0,0,wrong_5_016.py,success_w_gpt_better,0,0,"def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        if ( e == pivot ) :
+            plist . append ( e )
+        if ( e > pivot ) :
+            higher . append ( e )
+    sort_list = ( ( lower + plist ) + higher )
+    sort_list = sort_list [ : : ( - 1 ) ]
+    if ( k == len ( lst ) ) :
+        return sort_list [ : ( k - 1 ) ]
+    elif ( k > len ( lst ) ) :
+        return sort_list
+    else :
+        return sort_list [ : k ]
+
+
+","def top_k ( lst , k ) :
+    pass
+    if ( lst == [ ] ) :
+        return lst
+        for e in lst :
+            pass
+            if ( e < pivot ) :
+                lower . append ( e )
+            pass
+            if ( e == pivot ) :
+                plist . append ( e )
+            pass
+        higher . append ( e )
+        for i in range ( k ) [ int ( ( len ( range ( k ) ) / 2 ) ) : ] :
+            sort_list = ( ( lower + plist ) + higher )
+            sort_list = sort_list [ : : ( - 1 ) ]
+            if ( k == len ( lst ) ) :
+                return sort_list [ : ( k - 1 ) ]
+            elif ( k > len ( lst ) ) :
+                return sort_list
+            ls . append ( max ( lst ) )
+            lst . remove ( max ( lst ) )
+        return sort_list [ : k ]
+    pass
+","
+
+def top_k(lst, k):
+    if True:
+        ls = []
+        for i in range(k)[:int((len(range(k)) / 2))]:
+            if False:
+                pass
+            if False:
+                pass
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            if False:
+                pass
+            elif False:
+                pass
+            ls.append(max(lst))
+            lst.remove(max(lst))
+        return ls
+",{'top_k': 'reference.py'},"{'top_k': 'B1.f,B1.g,E1.z,B1.g,B2.j'}","def top_k ( lst , k ) :
+    if ( lst == [ ] ) :
+        return lst
+    lower = [ ]
+    higher = [ ]
+    plist = [ ]
+    pivot = lst [ 0 ]
+    for e in lst :
+        if ( e < pivot ) :
+            lower . append ( e )
+        elif ( e == pivot ) :
+            plist . append ( e )
+        elif ( e > pivot ) :
+            higher . append ( e )
+    sort_list = ( ( top_k ( higher , k ) + plist ) + top_k ( lower , k ) )
+    if ( k >= len ( lst ) ) :
+        return sort_list [ : k ]
+    else :
+        return sort_list [ : k ]
+
+
+",N/A,18.582,0.415,0.000,0.003,0.036,0.403,0.703,21.191,5,5,1.028

@@ -1,0 +1,5859 @@
+
+
+Repair submissions in question_5
+
+
+wrong_5_059.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    for i in range(k):
+        new_lst.append(max(lst))
+        lst.remove(max(lst))
+    return new_lst
+    pass
+```
+------------
+min_patch_size (8.0) <= patch_size (8.0)
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    for i in range(k):
+        new_lst.append(lst.remove(max(lst)))
+    return new_lst
+    pass
+```
+------------
+the corrected code is incorrect
+------------
+Apologies for the confusion. Here's the amended code that closely resembles the original code while maintaining the desired functionality:
+
+```python
+def top_k(lst, k):
+    new_lst = []
+    for i in range(k):
+        new_lst.append(max(lst))
+        lst.remove(max(lst))
+    return new_lst
+    pass
+```
+------------
+min_patch_size (8.0) <= patch_size (8.0)
+Error: Failed to fix with GPT
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.221 |
+| ol_refactoring_time | 0.001 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.036 |
+|    spec_syn_time    | 0.080 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.308 |
++---------------------+-------+
+
+
+wrong_5_082.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sotsot
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sotsot = []
+    while lst:
+        while (len(sotsot) < k):
+            sotsot.append(max(lst))
+            lst.remove(max(lst))
+        return sotsot
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.054 |
+| ol_refactoring_time | 4.252 |
+|       gcr_time      | 0.531 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.030 |
+|    spec_syn_time    | 0.089 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.070 |
+|         rps         | 0.424 |
++---------------------+-------+
+
+
+wrong_5_103.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- counter
+- new_lst
+- maxi
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    counter = []
+    while (len(counter) < k):
+        maxi = max(lst)
+        counter.append(maxi)
+        lst.remove(maxi)
+    return counter
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.840 |
+| ol_refactoring_time | 4.600 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.032 |
+|    spec_syn_time    | 1.097 |
+|       syn_time      | 0.055 |
+|       gpt_time      | 0.046 |
+|         rps         | 0.806 |
++---------------------+-------+
+
+
+wrong_5_097.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- sort
+- largest
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for i in range(len(lst)):
+            if (lst[i] > largest):
+                largest = lst[i]
+        sort.append(largest)
+        lst.remove(largest)
+    return sort[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.912 |
+| ol_refactoring_time | 4.181 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.100 |
+|    spec_syn_time    | 0.256 |
+|       syn_time      | 0.021 |
+|       gpt_time      | 0.221 |
+|         rps         | 0.800 |
++---------------------+-------+
+
+
+wrong_5_036.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- final
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return []
+    elif (k == 0):
+        return lst
+    else:
+        final = []
+        while lst:
+            element = max(lst)
+            final += [element]
+            lst.remove(element)
+            if (len(final) == k):
+                break
+        return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    if lst == []:
+        return []
+    elif k == 0:
+        return lst
+    else:
+        final = []
+        while lst:
+            element = max(lst)
+            final.append(element)
+            lst.remove(element)
+            if len(final) == k:
+                break
+        return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for i in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.673 |
+| ol_refactoring_time | 5.061 |
+|       gcr_time      | 0.104 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.037 |
+|    spec_syn_time    | 0.226 |
+|       syn_time      | 0.018 |
+|       gpt_time      | 0.104 |
+|         rps         | 0.837 |
++---------------------+-------+
+
+
+wrong_5_048.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sorted_lst
+- n
+- biggest
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sorted_lst = []
+    while lst:
+        biggest = lst[0]
+        for n in range(1, len(lst)):
+            if lst[n] >= biggest:
+                biggest = lst[n]
+        lst.remove(biggest)
+        sorted_lst.append(biggest)
+    return sorted_lst[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.895 |
+| ol_refactoring_time | 4.205 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.091 |
+|    spec_syn_time    | 0.184 |
+|       syn_time      | 0.023 |
+|       gpt_time      | 0.255 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_015.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lower
+- higher
+- plist
+- pivot
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if (e < pivot):
+            lower.append(e)
+        if (e == pivot):
+            plist.append(e)
+        if (e > pivot):
+            higher.append(e)
+    sort_list = ((lower + plist) + higher)
+    sort_list = sort_list[::-1]
+    return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    if lst == []:
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if e < pivot:
+            lower.append(e)
+        elif e == pivot:
+            plist.append(e)
+        else:
+            higher.append(e)
+    sort_list = lower + plist + higher
+    sort_list = sort_list[::-1]
+    return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for _ in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.549 |
+| ol_refactoring_time | 5.164 |
+|       gcr_time      | 0.655 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.040 |
+|    spec_syn_time    | 0.315 |
+|       syn_time      | 0.040 |
+|       gpt_time      | 0.161 |
+|         rps         | 0.878 |
++---------------------+-------+
+
+
+wrong_5_019.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- arranged
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    arranged = []
+    while (k > 0):
+        arranged.append(max(lst))
+        lst.remove(max(lst))
+        k -= 1
+    return arranged
+    pass
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.057 |
+| ol_refactoring_time | 4.652 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.033 |
+|    spec_syn_time    | 1.244 |
+|       syn_time      | 0.062 |
+|       gpt_time      | 0.056 |
+|         rps         | 0.559 |
++---------------------+-------+
+
+
+wrong_5_051.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- a
+- biggest
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    a = []
+    while lst:
+        biggest = lst[0]
+        for i in lst:
+            if (i > biggest):
+                biggest = i
+        lst.remove(biggest)
+        a.append(biggest)
+    return a[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.689 |
+| ol_refactoring_time | 4.217 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.097 |
+|    spec_syn_time    | 0.137 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.119 |
+|         rps         | 0.837 |
++---------------------+-------+
+
+
+wrong_5_039.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    i = 0
+    while ((i + 1) < len(lst)):
+        if (lst[i] < lst[(i + 1)]):
+            lst.extend([lst[i]])
+            lst.pop(i)
+            i = 0
+        else:
+            i += 1
+    return lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.331 |
+| ol_refactoring_time | 4.703 |
+|       gcr_time      | 0.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.035 |
+|    spec_syn_time    | 0.201 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.241 |
+|         rps         | 0.782 |
++---------------------+-------+
+
+
+wrong_5_056.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- values
+- item
+- greatest
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    values = []
+    while (len(values) < k):
+        for item in lst:
+            greatest = lst[0]
+            if (item > greatest):
+                greatest = item
+        lst.remove(greatest)
+        values.append(greatest)
+    return values
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    values = []
+    while len(values) < k:
+        greatest = lst[0]
+        for item in lst:
+            if item > greatest:
+                greatest = item
+        lst.remove(greatest)
+        values.append(greatest)
+    return values
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.753 |
+| ol_refactoring_time | 4.150 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.097 |
+|    spec_syn_time    | 0.277 |
+|       syn_time      | 0.017 |
+|       gpt_time      | 0.116 |
+|         rps         | 0.841 |
++---------------------+-------+
+
+
+wrong_5_098.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- l
+- a
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    l = []
+    if (k > len(lst)):
+        return False
+    elif (k == 1):
+        return lst
+    else:
+        a = max(lst)
+        lst.remove(a)
+        l.append(a)
+        return top_k(lst, (k - 1))
+    pass
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    l = []
+    if k > len(lst):
+        return False
+    elif k == 1:
+        return lst
+    else:
+        for i in range(k):
+            a = max(lst)
+            lst.remove(a)
+            l.append(a)
+        return l
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 7.688 |
+| ol_refactoring_time | 4.703 |
+|       gcr_time      | 2.431 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.031 |
+|    spec_syn_time    | 0.202 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.190 |
+|         rps         | 0.750 |
++---------------------+-------+
+
+
+wrong_5_068.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    for i in range(k):
+        new.append(max(lst))
+        lst.remove(max(lst))
+    return new
+```
+------------
+min_patch_size (11.0) <= patch_size (11.0)
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = list([])
+    for i in range((k - 1)):
+        new.append(lst.pop(lst.index(max(lst))))
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Apologies for the confusion. Here's the amended code that closely resembles the original code while maintaining the semantics of the model solution:
+
+```python
+def top_k(lst, k):
+    new = []
+    for i in range(k):
+        new.append(lst.pop(lst.index(max(lst))))
+    return new
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.252 |
+| ol_refactoring_time | 0.001 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.025 |
+|    spec_syn_time    | 0.076 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.099 |
+|         rps         | 0.393 |
++---------------------+-------+
+
+
+wrong_5_088.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- sort_descending
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    lst = sort_descending(lst)
+    return lst[:(k - 1)]
+
+def sort_descending(lst):
+    for i in range((len(lst) - 1)):
+        for j in range(i, len(lst)):
+            if (lst[j][1] > lst[i][1]):
+                x = lst[i]
+                lst[i] = lst[j]
+                lst[j] = x
+    return lst
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    lst = sort_descending(lst)
+    return lst[:k]
+
+def sort_descending(lst):
+    for i in range(len(lst) - 1):
+        for j in range(i + 1, len(lst)):
+            if lst[j] > lst[i]:
+                lst[i], lst[j] = lst[j], lst[i]
+    return lst
+```
+------------
+success_w_gpt_only
+print_perf failed! wrong_5_088.py
+'ol_refactoring_time'
+
+
+wrong_5_101.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- sort
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = sort_lst(lst)
+    return sort[:k]
+
+def sort_lst(lst):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for elem in lst:
+            if elem > largest:
+                largest = elem
+        lst.remove(largest)
+        sort.append(largest)
+    return sort
+```
+------------
+min_patch_size (59.0) <= patch_size (75.0)
+------------
+def top_k(lst, k):
+    sort = sort_lst(lst)
+    return sort[:k]
+
+def sort_lst(lst):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for elem in lst:
+            if elem > largest:
+                largest = elem
+        lst.remove(largest)
+        sort.append(largest)
+    return sort
+------------
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- sort
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = sort_lst(lst)
+    return sort[:k]
+
+def sort_lst(lst):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for elem in lst:
+            if elem > largest:
+                largest = elem
+        lst.remove(largest)
+        sort.append(largest)
+    return sort
+```
+------------
+min_patch_size (59.0) <= patch_size (75.0)
+Error: Failed to fix with GPT
+fail_exception
+
+
+wrong_5_069.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    while len(lst) > (len(lst) - k):
+        new.append(max(lst))
+        lst.remove(max(lst))
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    new = []
+    while len(new) < k:
+        max_val = lst[0]
+        max_idx = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_idx = i
+        new.append(max_val)
+        lst.pop(max_idx)
+    return new
+```
+------------
+min_patch_size (23.0) <= patch_size (45.0)
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    new = []
+    while len(new) < k:
+        max_val = lst[0]
+        max_idx = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_idx = i
+        new.append(max_val)
+        lst.pop(max_idx)
+    return new
+```
+------------
+min_patch_size (23.0) <= patch_size (45.0)
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.966 |
+| ol_refactoring_time | 4.642 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.035 |
+|    spec_syn_time    | 0.090 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.719 |
++---------------------+-------+
+
+
+wrong_5_022.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- rs
+- qwerty
+- biggest
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    rs = []
+    for qwerty in range(k)[: int((len(range(k)) / 2))]:
+        biggest = lst[0]
+        for biggest in lst:
+            if (biggest < biggest):
+                biggest = biggest
+        rs.append(biggest)
+        lst.remove(biggest)
+    pass
+    if True:
+        for qwerty in range(k)[int((len(range(k)) / 2)):]:
+            biggest = lst[0]
+            for biggest in lst:
+                if (biggest < biggest):
+                    biggest = biggest
+            rs.append(biggest)
+            lst.remove(biggest)
+        return rs
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    rs = []
+    for qwerty in range(k):
+        biggest = lst[0]
+        for num in lst:
+            if num > biggest:
+                biggest = num
+        rs.append(biggest)
+        lst.remove(biggest)
+    return rs
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.395 |
+| ol_refactoring_time | 4.570 |
+|       gcr_time      | 0.158 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.051 |
+|    spec_syn_time    | 0.219 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.122 |
+|         rps         | 1.267 |
++---------------------+-------+
+
+
+wrong_5_046.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_list
+- maximum
+- new_lst
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_list = []
+    while (len(new_list) < k):
+        maximum = max(lst)
+        new_list.append(maximum)
+        lst.remove(maximum)
+    return new_list
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.887 |
+| ol_refactoring_time | 4.520 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 1.221 |
+|       syn_time      | 0.055 |
+|       gpt_time      | 0.048 |
+|         rps         | 0.656 |
++---------------------+-------+
+
+
+wrong_5_083.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- result
+- i
+- largest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    result = []
+    for i in range(k)[: int((len(range(k)) / 2))]:
+        largest = lst[0]
+        for element in lst:
+            if (element > largest):
+                largest = element
+        lst.remove(largest)
+        result.append(largest)
+    pass
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            largest = lst[0]
+            for element in lst:
+                if (element > largest):
+                    largest = element
+            lst.remove(largest)
+            result.append(largest)
+        return result
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.628 |
+| ol_refactoring_time | 4.533 |
+|       gcr_time      | 0.168 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.059 |
+|    spec_syn_time    | 0.221 |
+|       syn_time      | 0.016 |
+|       gpt_time      | 0.369 |
+|         rps         | 1.298 |
++---------------------+-------+
+
+
+wrong_5_014.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lower
+- higher
+- plist
+- pivot
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if (e < pivot):
+            lower.append(e)
+        if (e == pivot):
+            plist.append(e)
+        if (e > pivot):
+            higher.append(e)
+    sort_list = ((higher + plist) + lower)
+    return sort_list[: k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    if lst == []:
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if e < pivot:
+            lower.append(e)
+        elif e == pivot:
+            plist.append(e)
+        else:
+            higher.append(e)
+    sort_list = (higher + plist + lower)
+    return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for ref_i in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+min_patch_size (62.0) <= patch_size (62.0)
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.456 |
+| ol_refactoring_time | 5.233 |
+|       gcr_time      | 0.597 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.031 |
+|    spec_syn_time    | 0.230 |
+|       syn_time      | 0.025 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.838 |
++---------------------+-------+
+
+
+wrong_5_081.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sotsot
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sotsot = []
+    while lst:
+        while (len(sotsot) < k):
+            sotsot.append(max(lst))
+            lst.remove(max(lst))
+        return sotsot
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.932 |
+| ol_refactoring_time | 4.270 |
+|       gcr_time      | 0.523 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.030 |
+|    spec_syn_time    | 0.090 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.007 |
+|         rps         | 0.424 |
++---------------------+-------+
+
+
+wrong_5_040.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    i = 0
+    while ((i + 1) < len(lst)):
+        if (lst[i] < lst[(i + 1)]):
+            lst.extend([lst[i]])
+            lst.pop(i)
+            i = 0
+        else:
+            i += 1
+    return lst[:(k + 1)]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    i = 0
+    while ((i + 1) < len(lst)):
+        if (lst[i] < lst[(i + 1)]):
+            lst[i], lst[(i + 1)] = lst[(i + 1)], lst[i]
+            i = 0
+        else:
+            i += 1
+    return lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.470 |
+| ol_refactoring_time | 4.788 |
+|       gcr_time      | 0.034 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.035 |
+|    spec_syn_time    | 0.159 |
+|       syn_time      | 0.023 |
+|       gpt_time      | 0.329 |
+|         rps         | 0.793 |
++---------------------+-------+
+
+
+wrong_5_087.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- list
+- k
+- a
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    list = []
+    while (len(lst) > k):
+        a = max(lst)
+        lst.remove(a)
+        list.append(a)
+    return list
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    new = []
+    while len(new) < k:
+        a = max(lst)
+        lst.remove(a)
+        new.append(a)
+    return new
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.848 |
+| ol_refactoring_time | 4.622 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.031 |
+|    spec_syn_time    | 1.076 |
+|       syn_time      | 0.049 |
+|       gpt_time      | 0.055 |
+|         rps         | 0.656 |
++---------------------+-------+
+
+
+wrong_5_094.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+- j
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    for i in range(len(lst)):
+        for j in range((len(lst) - 1)):
+            if (lst[j] > lst[(j + 1)]):
+                lst[j], lst[(j + 1)] = lst[(j + 1)], lst[j]
+    lst.reverse()
+    return lst[: k]
+    pass
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.198 |
+| ol_refactoring_time | 4.557 |
+|       gcr_time      | 0.222 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.041 |
+|    spec_syn_time    | 0.090 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.664 |
+|         rps         | 1.114 |
++---------------------+-------+
+
+
+wrong_5_085.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- result
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    result = []
+    while (len(lst) > (len(lst) - k)):
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        result.append(biggest)
+        lst.remove(biggest)
+    return result
+    pass
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    result = []
+    while len(result) < k:
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        result.append(biggest)
+        lst.remove(biggest)
+    return result
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.675 |
+| ol_refactoring_time | 4.076 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.100 |
+|    spec_syn_time    | 0.245 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.128 |
+|         rps         | 0.820 |
++---------------------+-------+
+
+
+wrong_5_107.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- newlst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    newlst = []
+    for i in range(k):
+        newlst.append(max(lst))
+        lst.remove(max(lst))
+    return newlst
+```
+------------
+min_patch_size (3.0) <= patch_size (3.0)
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- newlst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    newlst = list([])
+    for i in range((k + 1)):
+        newlst.append(max(lst))
+        lst.remove(max(lst))
+    return newlst
+```
+------------
+the corrected code is incorrect
+------------
+Apologies for the confusion. Here's the amended code that closely resembles the original code while maintaining the desired functionality:
+
+```python
+def top_k(lst, k):
+    newlst = []
+    for i in range(k + 1):
+        newlst.append(max(lst))
+        lst.remove(max(lst))
+    return newlst
+```
+------------
+the corrected code is incorrect
+Error: Failed to fix with GPT
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.193 |
+| ol_refactoring_time | 0.001 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.043 |
+|    spec_syn_time    | 0.008 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.094 |
++---------------------+-------+
+
+
+wrong_5_053.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- count
+- op
+- big
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    count = 0
+    op = []
+    big = lst[0]
+    while (count < k):
+        op.append(max(lst))
+        count += 1
+    return op
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    op = []
+    for i in range(k):
+        big = lst[0]
+        for num in lst:
+            if num > big:
+                big = num
+        op.append(big)
+        lst.remove(big)
+    return op
+```
+------------
+min_patch_size (29.0) <= patch_size (29.0)
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    count = 0
+    op = []
+    big = lst[0]
+    while count < k:
+        for num in lst:
+            if num > big:
+                big = num
+        op.append(big)
+        lst.remove(big)
+        count += 1
+    return op
+```
+------------
+the corrected code is incorrect
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.669 |
+| ol_refactoring_time | 4.578 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.045 |
+|    spec_syn_time    | 0.883 |
+|       syn_time      | 0.068 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.853 |
++---------------------+-------+
+
+
+wrong_5_065.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- x
+- i
+- y
+- j
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    x = []
+    for i in range(k - 1):
+        y = i
+        for j in lst:
+            if y < j:
+                y = j
+        x.append(y)
+    return x
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    x = []
+    for i in range(k):
+        y = lst[0]
+        for j in lst:
+            if j > y:
+                y = j
+        x.append(y)
+        lst.remove(y)
+    return x
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.365 |
+| ol_refactoring_time | 4.578 |
+|       gcr_time      | 0.141 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.042 |
+|    spec_syn_time    | 0.277 |
+|       syn_time      | 0.016 |
+|       gpt_time      | 0.130 |
+|         rps         | 1.784 |
++---------------------+-------+
+
+
+wrong_5_044.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- af_sort
+- biggest
+- element
+- k
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    af_sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        lst.remove(biggest)
+        af_sort.append(biggest)
+    return af_sort[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.476 |
+| ol_refactoring_time | 4.016 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.038 |
+|    spec_syn_time    | 0.197 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.111 |
+|         rps         | 0.860 |
++---------------------+-------+
+
+
+wrong_5_091.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lst2
+- max
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    lst2 = []
+    max_val = lst[0]
+    for i in lst:
+        if (i > max_val):
+            max_val = i
+        while (len(lst2) != k):
+            lst2.append(max_val)
+    return lst2
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    lst2 = []
+    for i in lst:
+        if len(lst2) < k:
+            lst2.append(i)
+        else:
+            min_val = min(lst2)
+            if i > min_val:
+                lst2.remove(min_val)
+                lst2.append(i)
+    return sorted(lst2, reverse=True)
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        max_val = lst[0]
+        max_index = 0
+        for j in range(1, len(lst)):
+            if lst[j] > max_val:
+                max_val = lst[j]
+                max_index = j
+        ls.append(max_val)
+        lst.pop(max_index)
+    return ls
+```
+------------
+min_patch_size (28.0) <= patch_size (41.0)
+Error: Failed to fix with GPT
+fail_other
+{'001': False, '002': False, '003': False, '004': False, '005': True}
+{'top_k': {'lst': 'lst', 'k': 'k', 'lst2': 'ls', 'i': 'i', 'max': 'buggy_max'}}
+
+
+wrong_5_061.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- biggest
+- x
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    while lst:
+        biggest = lst[0]
+        for x in lst:
+            if (x > biggest):
+                biggest = x
+        lst.remove(biggest)
+        new_lst.append(biggest)
+    return new_lst[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.515 |
+| ol_refactoring_time | 3.991 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.098 |
+|    spec_syn_time    | 0.195 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.115 |
+|         rps         | 0.848 |
++---------------------+-------+
+
+
+wrong_5_034.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- final
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    final = []
+    while lst:
+        element = max(lst)
+        final += [element]
+        lst.remove(element)
+        if len(final) == k:
+            break
+    return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    final = []
+    for i in range(k):
+        element = max(lst)
+        final.append(element)
+        lst.remove(element)
+    return final
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.448 |
+| ol_refactoring_time | 3.937 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.088 |
+|    spec_syn_time    | 0.276 |
+|       syn_time      | 0.017 |
+|       gpt_time      | 0.058 |
+|         rps         | 0.771 |
++---------------------+-------+
+
+
+wrong_5_038.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    i = 0
+    while ((i + 1) < len(lst)):
+        if (lst[i] < lst[(i + 1)]):
+            lst.extend([lst[i]])
+            lst.pop(i)
+            i = 0
+        else:
+            i += 1
+    return lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.023 |
+| ol_refactoring_time | 4.708 |
+|       gcr_time      | 0.021 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.033 |
+|    spec_syn_time    | 0.238 |
+|       syn_time      | 0.030 |
+|       gpt_time      | 0.009 |
+|         rps         | 0.782 |
++---------------------+-------+
+
+
+wrong_5_095.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+- j
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    for i in range(len(lst)):
+        for j in range(len(lst) - 1):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    lst.reverse()
+    return lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.329 |
+| ol_refactoring_time | 4.408 |
+|       gcr_time      | 0.205 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.038 |
+|    spec_syn_time    | 0.079 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.583 |
+|         rps         | 1.114 |
++---------------------+-------+
+
+
+wrong_5_012.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lower
+- higher
+- plist
+- pivot
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if (e < pivot):
+            lower.append(e)
+        if (e == pivot):
+            plist.append(e)
+        if (e > pivot):
+            higher.append(e)
+    sort_list = ((lower + plist) + higher)
+    return sort_list[: k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    if lst == []:
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if e < pivot:
+            lower.append(e)
+        if e == pivot:
+            plist.append(e)
+        if e > pivot:
+            higher.append(e)
+    sort_list = (lower + plist + higher)
+    return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for ref_i in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+min_patch_size (62.0) <= patch_size (62.0)
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.346 |
+| ol_refactoring_time | 5.170 |
+|       gcr_time      | 0.593 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 0.211 |
+|       syn_time      | 0.020 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.838 |
++---------------------+-------+
+
+
+wrong_5_030.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- output
+- largest
+- i
+- j
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    (sort, output) = ([],[])
+    while lst:
+        largest = lst[0]
+        for i in lst:
+            if (i > largest):
+                largest = i
+        lst.remove(largest)
+        sort.append(largest)
+    for j in sort:
+        output.append(j)
+        if (len(output) == k):
+            break
+    return output
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sort = []
+    output = []
+    while lst:
+        largest = lst[0]
+        for i in lst:
+            if i > largest:
+                largest = i
+        lst.remove(largest)
+        sort.append(largest)
+    for j in sort:
+        output.append(j)
+        if len(output) == k:
+            break
+    return output
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sort = []
+    output = []
+    for i in range(k):
+        sort.append(max(lst))
+        lst.remove(max(lst))
+    return sort
+```
+------------
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 10.192 |
+| ol_refactoring_time | 9.343  |
+|       gcr_time      | 0.051  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.041  |
+|    spec_syn_time    | 0.280  |
+|       syn_time      | 0.020  |
+|       gpt_time      | 0.107  |
+|         rps         | 1.068  |
++---------------------+--------+
+
+
+wrong_5_086.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- list
+- k
+- a
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    list = []
+    while (len(list) < k):
+        a = max(lst)
+        lst.remove(a)
+        list.append(a)
+    return list
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.971 |
+| ol_refactoring_time | 4.695 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 1.136 |
+|       syn_time      | 0.049 |
+|       gpt_time      | 0.046 |
+|         rps         | 0.688 |
++---------------------+-------+
+
+
+wrong_5_096.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    for i in range(len(lst) - 1):
+        if lst[i] < lst[i + 1]:
+            lst[i], lst[i + 1] = lst[i + 1], lst[i]
+    return lst[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    for i in range(len(lst) - 1):
+        for j in range(len(lst) - i - 1):
+            if lst[j] < lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    return lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 1.012 |
+| ol_refactoring_time | 0.027 |
+|       gcr_time      | 0.050 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.035 |
+|    spec_syn_time    | 0.237 |
+|       syn_time      | 0.026 |
+|       gpt_time      | 0.525 |
+|         rps         | 0.881 |
++---------------------+-------+
+
+
+wrong_5_029.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sorted_list
+- smallest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sorted_list = []
+    while lst:
+        smallest = lst[0]
+        for element in lst:
+            if element < smallest:
+                smallest = element
+        lst.remove(smallest)
+        sorted_list.append(smallest)
+    return sorted_list[::-1][:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.812 |
+| ol_refactoring_time | 4.206 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.088 |
+|    spec_syn_time    | 0.263 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.133 |
+|         rps         | 0.875 |
++---------------------+-------+
+
+
+wrong_5_090.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- big
+- output
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        big = max(lst)
+        sort.append(big)
+        lst.remove(big)
+    output = [n for n in sort if (sort.index(n) < k)]
+    return output
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.917 |
+| ol_refactoring_time | 4.551 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.033 |
+|    spec_syn_time    | 0.143 |
+|       syn_time      | 0.025 |
+|       gpt_time      | 0.098 |
+|         rps         | 0.659 |
++---------------------+-------+
+
+
+wrong_5_002.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lst_res
+- sort
+- largest
+- elements
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    lst_res = lst
+    sort = []
+    while lst_res:
+        largest = lst_res[0]
+        for element in lst_res:
+            if (element > largest):
+                largest = element
+        lst_res.remove(largest)
+        sort.append(largest)
+    return sort[: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.618 |
+| ol_refactoring_time | 4.149 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.046 |
+|    spec_syn_time    | 0.201 |
+|       syn_time      | 0.012 |
+|       gpt_time      | 0.111 |
+|         rps         | 0.822 |
++---------------------+-------+
+
+
+wrong_5_070.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    while len(lst) > (len(lst) - k):
+        new.append(max(lst))
+        lst.remove(max(lst))
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    new = []
+    for i in range(k):
+        max_val = lst[0]
+        max_index = 0
+        for j in range(1, len(lst)):
+            if lst[j] > max_val:
+                max_val = lst[j]
+                max_index = j
+        new.append(max_val)
+        lst.pop(max_index)
+    return new
+```
+------------
+min_patch_size (23.0) <= patch_size (44.0)
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    new = []
+    while len(lst) > (len(lst) - k):
+        max_val = lst[0]
+        max_index = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_index = i
+        new.append(max_val)
+        lst.pop(max_index)
+    return new
+```
+------------
+the corrected code is incorrect
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.840 |
+| ol_refactoring_time | 4.508 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.044 |
+|    spec_syn_time    | 0.091 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.719 |
++---------------------+-------+
+
+
+wrong_5_032.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- largest
+- numbers
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    while lst:
+        largest = lst[0]
+        for numbers in lst:
+            if numbers > largest:
+                largest = numbers
+        new_lst.append(largest)
+        lst.remove(largest)
+    return new_lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.673 |
+| ol_refactoring_time | 4.160 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.099 |
+|    spec_syn_time    | 0.211 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.099 |
+|         rps         | 0.810 |
++---------------------+-------+
+
+
+wrong_5_075.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    while (len(lst) >= (len(lst) - k)):
+        top = max(lst)
+        new.append(top)
+        lst.remove(top)
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    new = []
+    for i in range(k):
+        top = max(lst)
+        new.append(top)
+        lst.remove(top)
+    return new
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.745 |
+| ol_refactoring_time | 4.501 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.065 |
+|    spec_syn_time    | 0.016 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.056 |
+|         rps         | 0.405 |
++---------------------+-------+
+
+
+wrong_5_003.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- tmp
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    tmp = []
+    while (len(lst) > 0):
+        tmp.append(max(lst))
+        lst.remove(max(lst))
+    return tmp[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.845 |
+| ol_refactoring_time | 4.574 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.060 |
+|    spec_syn_time    | 0.089 |
+|       syn_time      | 0.005 |
+|       gpt_time      | 0.052 |
+|         rps         | 0.529 |
++---------------------+-------+
+
+
+wrong_5_045.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- newlst
+- maximum
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    newlst = []
+    while len(newlst) <= k:
+        maximum = lst[0]
+        for i in lst:
+            if i > maximum:
+                maximum = i
+        newlst.append(maximum)
+        lst.remove(maximum)
+    return newlst
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    newlst = []
+    while len(newlst) < k:
+        maximum = lst[0]
+        for i in lst:
+            if i > maximum:
+                maximum = i
+        newlst.append(maximum)
+        lst.remove(maximum)
+    return newlst
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.649 |
+| ol_refactoring_time | 4.136 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.101 |
+|    spec_syn_time    | 0.193 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.110 |
+|         rps         | 0.818 |
++---------------------+-------+
+
+
+wrong_5_007.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lst1
+- i
+- sort
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    lst1 = []
+    for i in lst:
+        if (i >= k):
+            lst1.append(i)
+    sort = []
+    while lst1:
+        biggest = lst1[0]
+        for element in lst1:
+            if (element > biggest):
+                biggest = element
+        lst1.remove(biggest)
+        sort.append(biggest)
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    lst1 = []
+    for i in range(k)[: int((len(range(k)) / 2))]:
+        if (i >= k):
+            lst1.append(max(lst))
+            lst.remove(max(lst))
+    if True:
+        for i in range(k)[int((len(range(k)) / 2)):]:
+            lst1.append(max(lst))
+            if True:
+                lst.remove(max(lst))
+            pass
+        return lst1
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    lst1 = []
+    for i in range(k):
+        lst1.append(max(lst))
+        lst.remove(max(lst))
+    return lst1
+```
+------------
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 12.491 |
+| ol_refactoring_time | 11.540 |
+|       gcr_time      | 0.026  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.176  |
+|    spec_syn_time    | 0.282  |
+|       syn_time      | 0.019  |
+|       gpt_time      | 0.098  |
+|         rps         | 1.200  |
++---------------------+--------+
+
+
+wrong_5_043.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- a
+- largest
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    a = []
+    while lst:
+        largest = lst[0]
+        for i in lst:
+            if (i > largest):
+                largest = i
+        lst.remove(largest)
+        a.append(largest)
+    return a[: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.697 |
+| ol_refactoring_time | 4.220 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.102 |
+|    spec_syn_time    | 0.144 |
+|       syn_time      | 0.012 |
+|       gpt_time      | 0.111 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_073.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- results
+- counter
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while (counter < k):
+        for i in range((- len(lst)), 0):
+            if (lst[i] == max(lst)):
+                results.append(lst.pop(i))
+                counter += 1
+        continue
+    return results
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while counter < k:
+        max_val = lst[0]
+        max_idx = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_idx = i
+        results.append(lst.pop(max_idx))
+        counter += 1
+    return results
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.668 |
+| ol_refactoring_time | 4.080 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.034 |
+|    spec_syn_time    | 0.129 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.279 |
+|         rps         | 0.745 |
++---------------------+-------+
+
+
+wrong_5_063.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- maxi
+- length
+- i
+- pos
+- new_list
+- new_lst
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (k <= 0):
+        return []
+    else:
+        maxi = max(lst)
+        length = len(lst)
+        for i in range(length):
+            if (lst[i] == maxi):
+                pos = i
+        new_lst = lst.copy()
+        new_lst.pop(pos)
+        return [maxi] + top_k(new_lst, (k - 1))
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.934 |
+| ol_refactoring_time | 0.311 |
+|       gcr_time      | 0.017 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.074 |
+|    spec_syn_time    | 0.101 |
+|       syn_time      | 0.012 |
+|       gpt_time      | 0.270 |
+|         rps         | 0.867 |
++---------------------+-------+
+
+
+wrong_5_026.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- largest
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return []
+    sort = []
+    while lst:
+        largest = lst[0]
+        for i in lst:
+            if (i > largest):
+                largest = i
+        lst.remove(largest)
+        sort.append(largest)
+    return sort[:k]
+    pass
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.878 |
+| ol_refactoring_time | 5.190 |
+|       gcr_time      | 0.082 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.035 |
+|    spec_syn_time    | 0.244 |
+|       syn_time      | 0.023 |
+|       gpt_time      | 0.178 |
+|         rps         | 0.839 |
++---------------------+-------+
+
+
+wrong_5_004.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- sort
+- k
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(element)
+        sort.append(element)
+        if (len(sort) == k):
+            break
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(element)
+        sort.append(element)
+        if (len(sort) == k):
+            break
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    for i in range(k):
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        sort.append(biggest)
+        lst.remove(biggest)
+    return sort
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.619 |
+| ol_refactoring_time | 5.019 |
+|       gcr_time      | 0.062 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.037 |
+|    spec_syn_time    | 0.267 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.129 |
+|         rps         | 0.745 |
++---------------------+-------+
+
+
+wrong_5_027.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sorted_lst
+- largest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sorted_lst = lst
+    while sorted_lst:
+        largest = sorted_lst[0]
+        for element in sorted_lst:
+            if (element > largest):
+                largest = element
+        sorted_lst.remove(largest)
+        sorted_lst.append(largest)
+    return sorted_lst[:(k - 1)]
+    pass
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sorted_lst = lst.copy()
+    result = []
+    while sorted_lst:
+        largest = sorted_lst[0]
+        for element in sorted_lst:
+            if element > largest:
+                largest = element
+        sorted_lst.remove(largest)
+        result.append(largest)
+    return result[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.796 |
+| ol_refactoring_time | 4.252 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.103 |
+|    spec_syn_time    | 0.199 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.123 |
+|         rps         | 0.870 |
++---------------------+-------+
+
+
+wrong_5_102.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- counter
+- new_lst
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    counter = []
+    while (len(counter) < k):
+        counter.append(max(lst))
+        lst.remove(max(lst))
+    return counter
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.935 |
+| ol_refactoring_time | 4.542 |
+|       gcr_time      | 0.007 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.056 |
+|    spec_syn_time    | 0.240 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.040 |
+|         rps         | 0.962 |
++---------------------+-------+
+
+
+wrong_5_028.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- largest
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for i in lst:
+            if (i > largest):
+                largest = i
+        sort.append(largest)
+        lst.remove(largest)
+    return sort[:(k - 1)]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for i in lst:
+            if (i > largest):
+                largest = i
+        sort.append(largest)
+        lst.remove(largest)
+    return sort[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.613 |
+| ol_refactoring_time | 4.146 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.096 |
+|    spec_syn_time    | 0.169 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.103 |
+|         rps         | 0.875 |
++---------------------+-------+
+
+
+wrong_5_060.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- biggest
+- x
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    while lst:
+        biggest = lst[0]
+        for x in lst:
+            if (x > biggest):
+                biggest = x
+        lst.remove(biggest)
+        new_lst.append(biggest)
+    return new_lst[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.598 |
+| ol_refactoring_time | 4.050 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.106 |
+|    spec_syn_time    | 0.205 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.120 |
+|         rps         | 0.848 |
++---------------------+-------+
+
+
+wrong_5_047.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sorted_lst
+- n
+- biggest
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sorted_lst = []
+    while lst:
+        for n in range(1, len(lst)):
+            biggest = lst[0]
+            if (lst[n] > biggest):
+                biggest = lst[n]
+                lst.remove(biggest)
+                sorted_lst.append(biggest)
+    return sorted_lst[0: 3]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sorted_lst = []
+    while lst:
+        biggest = lst[0]
+        for n in range(1, len(lst)):
+            if lst[n] > biggest:
+                biggest = lst[n]
+        lst.remove(biggest)
+        sorted_lst.append(biggest)
+    return sorted_lst[0:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.795 |
+| ol_refactoring_time | 4.103 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.089 |
+|    spec_syn_time    | 0.194 |
+|       syn_time      | 0.021 |
+|       gpt_time      | 0.251 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_055.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- values
+- greatest
+- item
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    values = []
+    greatest = lst[0]
+    while (len(values) < k):
+        for item in lst:
+            if (item > greatest):
+                greatest = item
+        lst.remove(greatest)
+        values.append(greatest)
+        greatest = lst[0]
+    return values
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    values = []
+    while len(values) < k:
+        greatest = lst[0]
+        for item in lst:
+            if item > greatest:
+                greatest = item
+        lst.remove(greatest)
+        values.append(greatest)
+    return values
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.671 |
+| ol_refactoring_time | 4.050 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.104 |
+|    spec_syn_time    | 0.263 |
+|       syn_time      | 0.018 |
+|       gpt_time      | 0.134 |
+|         rps         | 0.860 |
++---------------------+-------+
+
+
+wrong_5_001.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- result
+- big
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    result = []
+    while (k >= 0):
+        big = max(lst)
+        result.append(big)
+        lst.remove(big)
+        k -= 1
+    return result
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    result = []
+    for i in range(k):
+        big = max(lst)
+        result.append(big)
+        lst.remove(big)
+    return result
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.723 |
+| ol_refactoring_time | 4.544 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.030 |
+|    spec_syn_time    | 0.018 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.053 |
+|         rps         | 0.382 |
++---------------------+-------+
+
+
+wrong_5_008.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+    return sort[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.647 |
+| ol_refactoring_time | 4.134 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.099 |
+|    spec_syn_time    | 0.198 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.106 |
+|         rps         | 0.844 |
++---------------------+-------+
+
+
+wrong_5_105.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- sort
+- largest
+- element
+- k
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for element in lst:
+            if (element > largest):
+                largest = element
+        lst.remove(largest)
+        sort.append(largest)
+    return sort[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.535 |
+| ol_refactoring_time | 4.033 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.098 |
+|    spec_syn_time    | 0.192 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.105 |
+|         rps         | 0.837 |
++---------------------+-------+
+
+
+wrong_5_104.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- counter
+- new_lst
+- maxi
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    counter = 0
+    new_lst = []
+    while (counter < k):
+        maxi = max(lst)
+        new_lst.append(maxi)
+        lst.remove(maxi)
+        counter += 1
+    return new_lst
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.728 |
+| ol_refactoring_time | 4.501 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.033 |
+|    spec_syn_time    | 0.022 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.061 |
+|         rps         | 0.400 |
++---------------------+-------+
+
+
+wrong_5_052.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    a = sort_list(lst)
+    return a[0: k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    a = []
+    for i in range(k):
+        max_val = lst[0]
+        max_index = 0
+        for j in range(1, len(lst)):
+            if lst[j] > max_val:
+                max_val = lst[j]
+                max_index = j
+        a.append(max_val)
+        lst.pop(max_index)
+    return a
+```
+------------
+min_patch_size (29.0) <= patch_size (52.0)
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    a = []
+    if True:
+        pass
+    pass
+    if True:
+        pass
+    pass
+    for i in range(k):
+        max_val = lst[0]
+        max_index = 0
+        for j in range(1, len(lst)):
+            if lst[j] > max_val:
+                max_val = lst[j]
+                max_index = j
+        a.append(max_val)
+        lst.pop(max_index)
+    return a
+```
+------------
+min_patch_size (29.0) <= patch_size (60.0)
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.869 |
+| ol_refactoring_time | 4.583 |
+|       gcr_time      | 0.005 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.028 |
+|    spec_syn_time    | 0.115 |
+|       syn_time      | 0.006 |
+|       gpt_time      | 0.000 |
+|         rps         | 1.812 |
++---------------------+-------+
+
+
+wrong_5_037.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- smallest
+- i
+- counter
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        smallest = lst[0]
+        for i in lst:
+            if (i < smallest):
+                smallest = i
+        lst.remove(smallest)
+        sort.append(smallest)
+    counter = k
+    while (counter != len(sort)):
+        sort.pop()
+        counter += 1
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        smallest = lst[0]
+        for i in lst:
+            if i < smallest:
+                smallest = i
+        lst.remove(smallest)
+        sort.append(smallest)
+    counter = k
+    while counter != len(sort):
+        sort.pop()
+        counter += 1
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    for i in range(k):
+        sort.append(max(lst))
+        lst.remove(max(lst))
+    return sort
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.217 |
+| ol_refactoring_time | 4.540 |
+|       gcr_time      | 0.078 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.098 |
+|    spec_syn_time    | 0.254 |
+|       syn_time      | 0.017 |
+|       gpt_time      | 0.099 |
+|         rps         | 0.842 |
++---------------------+-------+
+
+
+wrong_5_099.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- l
+- a
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    l = []
+    if (len(range(k)) > 0):
+        for i in range(k):
+            if True:
+                l.append(max(lst))
+                lst.remove(max(lst))
+    return l
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 7.722 |
+| ol_refactoring_time | 4.704 |
+|       gcr_time      | 2.505 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.032 |
+|    spec_syn_time    | 0.160 |
+|       syn_time      | 0.012 |
+|       gpt_time      | 0.161 |
+|         rps         | 0.780 |
++---------------------+-------+
+
+
+wrong_5_108.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- counter
+- highest
+- x
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    counter = 0
+    while (counter <= k):
+        highest = lst[0]
+        for x in lst:
+            if (x > highest):
+                highest = x
+        new_lst.append(highest)
+        lst.remove(highest)
+        counter += 1
+    return new_lst
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    new_lst = []
+    counter = 0
+    while counter < k:
+        highest = lst[0]
+        for x in lst:
+            if x > highest:
+                highest = x
+        new_lst.append(highest)
+        lst.remove(highest)
+        counter += 1
+    return new_lst
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.798 |
+| ol_refactoring_time | 4.112 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.135 |
+|    spec_syn_time    | 0.296 |
+|       syn_time      | 0.019 |
+|       gpt_time      | 0.136 |
+|         rps         | 0.837 |
++---------------------+-------+
+
+
+wrong_5_025.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- i
+- oldest
+- n
+- sort_k
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for i in lst[1:]:
+            if (i > biggest):
+                biggest = i
+        lst.remove(biggest)
+        sort.append(biggest)
+    n = 1
+    sort_k = []
+    while (n <= k):
+        sort_k.append(sort.pop(0))
+        n += 1
+    return sort_k
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.397 |
+| ol_refactoring_time | 4.508 |
+|       gcr_time      | 0.090 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.107 |
+|    spec_syn_time    | 0.265 |
+|       syn_time      | 0.019 |
+|       gpt_time      | 0.255 |
+|         rps         | 0.800 |
++---------------------+-------+
+
+
+wrong_5_020.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- arranged
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    arranged = []
+    while (k > 0):
+        arranged.append(max(lst))
+        lst.remove(max(lst))
+        k = (k - 1)
+    return arranged
+    pass
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.799 |
+| ol_refactoring_time | 4.569 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.030 |
+|    spec_syn_time    | 1.057 |
+|       syn_time      | 0.046 |
+|       gpt_time      | 0.066 |
+|         rps         | 0.583 |
++---------------------+-------+
+
+
+wrong_5_050.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- newlist
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    newlist = []
+    while (len(newlist) < k):
+        newlist += [max(lst)]
+        for i in range(len(lst)):
+            if (lst[i] == max(lst)):
+                print(i)
+                break
+        del lst[i]
+    return newlist
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    newlist = []
+    while (len(newlist) < k):
+        max_val = lst[0]
+        max_index = 0
+        for i in range(len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_index = i
+        newlist.append(max_val)
+        del lst[max_index]
+    return newlist
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.727 |
+| ol_refactoring_time | 4.149 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.076 |
+|    spec_syn_time    | 0.104 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.248 |
+|         rps         | 0.714 |
++---------------------+-------+
+
+
+wrong_5_031.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- largest
+- numbers
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    while lst:
+        largest = lst[0]
+        for numbers in lst:
+            if numbers > largest:
+                largest = numbers
+        new_lst.append(largest)
+        lst.remove(largest)
+    return new_lst[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.562 |
+| ol_refactoring_time | 4.037 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.094 |
+|    spec_syn_time    | 0.232 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.097 |
+|         rps         | 0.800 |
++---------------------+-------+
+
+
+wrong_5_072.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- results
+- counter
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while (counter < k):
+        for i in range((- len(lst)),(- 1)):
+            if (lst[i] == max(lst)):
+                results.append(lst.pop(i))
+                counter += 1
+    return results
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while counter < k:
+        max_val = lst[0]
+        max_idx = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_idx = i
+        results.append(lst.pop(max_idx))
+        counter += 1
+    return results
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.690 |
+| ol_refactoring_time | 4.061 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.095 |
+|    spec_syn_time    | 0.097 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.286 |
+|         rps         | 0.750 |
++---------------------+-------+
+
+
+wrong_5_064.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- results
+- counter
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while (counter < k):
+        for i in range((- len(lst)),(- 1)):
+            if (lst[i] == max(lst)):
+                results.append(lst.pop(i))
+                counter += 1
+    return results
+    pass
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while counter < k:
+        max_val = lst[0]
+        max_idx = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_idx = i
+        results.append(lst.pop(max_idx))
+        counter += 1
+    return results
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.702 |
+| ol_refactoring_time | 4.062 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.095 |
+|    spec_syn_time    | 0.101 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.293 |
+|         rps         | 0.755 |
++---------------------+-------+
+
+
+wrong_5_011.py
+------------
+User-defined identifiers from the incorrect code:
+- sort_age
+- lst
+- new
+- big
+- i
+- top_k
+- k
+
+Corrected code employing the listed identifiers:
+```python
+def sort_age(lst):
+    new = []
+    while (lst != []):
+        big = lst[0]
+        for i in lst:
+            if (i[1] > big[1]):
+                big = i
+        lst.remove(big)
+        new.append(big)
+    return new
+
+def top_k(lst, k):
+    ls = []
+    for i in range(k):
+        ls.append(max(lst))
+        lst.remove(max(lst))
+    return ls
+```
+------------
+success_w_gpt_only
+print_perf failed! wrong_5_011.py
+'ol_refactoring_time'
+
+
+wrong_5_089.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- newlist
+- biggest
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    newlist = []
+    while lst:
+        biggest = lst[0]
+        for i in lst:
+            if (i > biggest):
+                biggest = i
+            else:
+                continue
+        lst.remove(biggest)
+        if (len(newlist) == k):
+            break
+        else:
+            newlist.append(biggest)
+    return newlist
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 7.465 |
+| ol_refactoring_time | 6.236 |
+|       gcr_time      | 0.511 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.062 |
+|    spec_syn_time    | 0.352 |
+|       syn_time      | 0.026 |
+|       gpt_time      | 0.172 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_080.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sotsot
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sotsot = []
+    while (len(sotsot) < k):
+        sotsot.append(max(lst))
+        lst.remove(max(lst))
+    return sotsot
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.787 |
+| ol_refactoring_time | 4.634 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 0.014 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.046 |
+|         rps         | 0.387 |
++---------------------+-------+
+
+
+wrong_5_106.py
+[WARN] GPT Request Error. retry=[0/3]Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    lst.sort()
+    for i in range(k):
+        new.append(lst[i])
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    new = []
+    for i in range(k):
+        max_val = lst[0]
+        max_index = 0
+        for j in range(len(lst)):
+            if lst[j] > max_val:
+                max_val = lst[j]
+                max_index = j
+        new.append(max_val)
+        lst.pop(max_index)
+    return new
+```
+------------
+min_patch_size (14.0) <= patch_size (44.0)
+Error: Failed to fix with GPT
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.295 |
+| ol_refactoring_time | 0.001 |
+|       gcr_time      | 0.006 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.032 |
+|    spec_syn_time    | 0.088 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.467 |
++---------------------+-------+
+
+
+wrong_5_042.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- x
+- largest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    x = len(lst)
+    while (x >= (x - k)):
+        largest = lst[0]
+        for element in lst:
+            if (element > largest):
+                largest = element
+        lst.remove(largest)
+        sort.append(largest)
+        x -= 1
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sort = []
+    x = len(lst)
+    while x > (x - k):
+        largest = lst[0]
+        for element in lst:
+            if element > largest:
+                largest = element
+        lst.remove(largest)
+        sort.append(largest)
+        x -= 1
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for ref_i in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.682 |
+| ol_refactoring_time | 4.124 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.132 |
+|    spec_syn_time    | 0.197 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.091 |
+|         rps         | 0.840 |
++---------------------+-------+
+
+
+wrong_5_017.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- result
+- biggest
+- number
+- oldest
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    result = []
+    while lst:
+        biggest = lst[0]
+        for number in lst:
+            if (number > biggest):
+                biggest = number
+        lst.remove(biggest)
+        result.append(biggest)
+    return result[: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.557 |
+| ol_refactoring_time | 4.054 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.097 |
+|    spec_syn_time    | 0.203 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.099 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_005.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+        if (len(sort) == k):
+            break
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+        if len(sort) == k:
+            break
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    for i in range(k):
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+    return sort
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.566 |
+| ol_refactoring_time | 4.923 |
+|       gcr_time      | 0.062 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.038 |
+|    spec_syn_time    | 0.308 |
+|       syn_time      | 0.012 |
+|       gpt_time      | 0.130 |
+|         rps         | 0.745 |
++---------------------+-------+
+
+
+wrong_5_074.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- results
+- counter
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while (counter < k):
+        for i in range((- len(lst)), 0):
+            if (lst[i] == max(lst)):
+                results.append(lst.pop(i))
+                counter += 1
+    return results
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while counter < k:
+        max_val = lst[0]
+        max_idx = 0
+        for i in range(1, len(lst)):
+            if lst[i] > max_val:
+                max_val = lst[i]
+                max_idx = i
+        results.append(lst.pop(max_idx))
+        counter += 1
+    return results
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.885 |
+| ol_refactoring_time | 4.260 |
+|       gcr_time      | 0.012 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.107 |
+|    spec_syn_time    | 0.100 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.272 |
+|         rps         | 0.740 |
++---------------------+-------+
+
+
+wrong_5_092.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lst2
+- max
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    lst2 = []
+    max_val = lst[0]
+    for i in lst:
+        if (i > max_val):
+            max_val = i
+        lst.remove(max_val)
+        while (len(lst2) != k):
+            lst2.append(max_val)
+    return lst2
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    lst2 = []
+    for _ in range(k):
+        max_val = lst[0]
+        for i in lst:
+            if i > max_val:
+                max_val = i
+        lst.remove(max_val)
+        lst2.append(max_val)
+    return lst2
+```
+------------
+success_w_gpt_only
+print_perf failed! wrong_5_092.py
+'rps'
+
+
+wrong_5_067.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    while k > 0:
+        new.append(lst.pop(lst.index(max(lst))))
+        k -= 1
+    return new
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.789 |
+| ol_refactoring_time | 4.541 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 0.098 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.057 |
+|         rps         | 0.667 |
++---------------------+-------+
+
+
+wrong_5_054.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- count
+- op
+- big
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    count = 0
+    op = []
+    big = lst[0]
+    while (count < k):
+        op += [max(lst)]
+        lst.remove(max(lst))
+        count += 1
+    return op
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.632 |
+| ol_refactoring_time | 4.598 |
+|       gcr_time      | 0.008 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.036 |
+|    spec_syn_time    | 0.858 |
+|       syn_time      | 0.067 |
+|       gpt_time      | 0.070 |
+|         rps         | 0.886 |
++---------------------+-------+
+
+
+wrong_5_013.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lower
+- higher
+- plist
+- pivot
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for x in lst:
+        if (x < pivot):
+            lower.append(x)
+        if (x == pivot):
+            plist.append(x)
+        if (x > pivot):
+            higher.append(x)
+    sort_list = ((higher + plist) + lower)
+    return sort_list[: k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    if lst == []:
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if e < pivot:
+            lower.append(e)
+        if e == pivot:
+            plist.append(e)
+        if e > pivot:
+            higher.append(e)
+    sort_list = (higher + plist + lower)
+    return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for ref_i in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+min_patch_size (62.0) <= patch_size (62.0)
+Error: Failed to fix with GPT
+success_w_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 6.412 |
+| ol_refactoring_time | 5.220 |
+|       gcr_time      | 0.597 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.029 |
+|    spec_syn_time    | 0.222 |
+|       syn_time      | 0.020 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.838 |
++---------------------+-------+
+
+
+wrong_5_009.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- n
+- counter
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    n = []
+    counter = 0
+    while counter < k:
+        lst.remove(min(lst))
+        counter = counter + 1
+    sort_list = []
+    while lst != []:
+        sort_list.append(max(lst))
+        lst.remove(max(lst))
+    return sort_list
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort_list = []
+    for i in range(k):
+        sort_list.append(max(lst))
+        lst.remove(max(lst))
+    return sort_list
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.369 |
+| ol_refactoring_time | 4.548 |
+|       gcr_time      | 0.100 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.054 |
+|    spec_syn_time    | 0.463 |
+|       syn_time      | 0.028 |
+|       gpt_time      | 0.092 |
+|         rps         | 0.655 |
++---------------------+-------+
+
+
+wrong_5_062.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- a
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    a = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(biggest)
+        a.append(biggest)
+    return a[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.715 |
+| ol_refactoring_time | 4.141 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.103 |
+|    spec_syn_time    | 0.261 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.099 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_077.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- result
+- minimum
+- x
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    result = []
+    while lst:
+        minimum = lst[0]
+        for x in lst:
+            if (x < minimum):
+                minimum = x
+        result.append(minimum)
+        lst.remove(minimum)
+    return result[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    result = []
+    while lst:
+        maximum = lst[0]
+        for x in lst:
+            if x > maximum:
+                maximum = x
+        result.append(maximum)
+        lst.remove(maximum)
+    return result[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.538 |
+| ol_refactoring_time | 4.033 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.098 |
+|    spec_syn_time    | 0.197 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.107 |
+|         rps         | 0.810 |
++---------------------+-------+
+
+
+wrong_5_076.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    while (len(lst) > (len(lst) - k)):
+        top = max(lst)
+        new.append(top)
+        lst.remove(top)
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    new = []
+    for i in range(k):
+        top = max(lst)
+        new.append(top)
+        lst.remove(top)
+    return new
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.701 |
+| ol_refactoring_time | 4.491 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.031 |
+|    spec_syn_time    | 0.017 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.056 |
+|         rps         | 0.378 |
++---------------------+-------+
+
+
+wrong_5_093.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- result
+- biggest
+- elem
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    result = []
+    while lst:
+        biggest = lst[0]
+        for elem in lst:
+            if (elem > biggest):
+                biggest = elem
+        lst.remove(biggest)
+        result.append(biggest)
+    return result[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.633 |
+| ol_refactoring_time | 4.128 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.100 |
+|    spec_syn_time    | 0.199 |
+|       syn_time      | 0.013 |
+|       gpt_time      | 0.100 |
+|         rps         | 0.837 |
++---------------------+-------+
+
+
+wrong_5_033.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- final
+- largest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    final = []
+    while lst:
+        largest = lst[0]
+        for element in lst:
+            if element > largest:
+                largest = element
+        lst.remove(largest)
+        final.append(largest)
+        if len(final) == k:
+            break
+    return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    final = []
+    while lst:
+        largest = lst[0]
+        for element in lst:
+            if element > largest:
+                largest = element
+        lst.remove(largest)
+        final.append(largest)
+        if len(final) == k:
+            break
+    return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    final = []
+    for i in range(k):
+        largest = lst[0]
+        for element in lst:
+            if element > largest:
+                largest = element
+        lst.remove(largest)
+        final.append(largest)
+    return final
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.279 |
+| ol_refactoring_time | 4.893 |
+|       gcr_time      | 0.061 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.037 |
+|    spec_syn_time    | 0.016 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.135 |
+|         rps         | 0.745 |
++---------------------+-------+
+
+
+wrong_5_066.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- a
+- sort
+- largest
+- item
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    a = lst
+    sort = []
+    while a:
+        largest = a[0]
+        for item in a:
+            if (item > largest):
+                largest = item
+        a.remove(largest)
+        sort.append(largest)
+    return sort[: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.728 |
+| ol_refactoring_time | 4.191 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.047 |
+|    spec_syn_time    | 0.208 |
+|       syn_time      | 0.016 |
+|       gpt_time      | 0.155 |
+|         rps         | 0.843 |
++---------------------+-------+
+
+
+wrong_5_079.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort_lst
+- smallest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort_lst = []
+    while lst:
+        smallest = lst[0]
+        for element in lst:
+            if (element < smallest):
+                smallest = element
+        lst.remove(smallest)
+        sort_lst.append(smallest)
+    return sort_lst[: k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    sort_lst = []
+    while lst:
+        smallest = lst[0]
+        for element in lst:
+            if element < smallest:
+                smallest = element
+        lst.remove(smallest)
+        sort_lst.append(smallest)
+    return sort_lst[-k:][::-1]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for _ in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.508 |
+| ol_refactoring_time | 4.028 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.102 |
+|    spec_syn_time    | 0.200 |
+|       syn_time      | 0.014 |
+|       gpt_time      | 0.076 |
+|         rps         | 0.833 |
++---------------------+-------+
+
+
+wrong_5_024.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- i
+- oldest
+- n
+- sort_k
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for i in lst[1:]:
+            if (i > biggest):
+                biggest = i
+        lst.remove(biggest)
+        sort.append(biggest)
+    n = 1
+    sort_k = []
+    while (n <= k):
+        sort_k.append(sort.pop(0))
+        n += 1
+    return sort_k
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.434 |
+| ol_refactoring_time | 4.502 |
+|       gcr_time      | 0.089 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.099 |
+|    spec_syn_time    | 0.299 |
+|       syn_time      | 0.020 |
+|       gpt_time      | 0.266 |
+|         rps         | 0.818 |
++---------------------+-------+
+
+
+wrong_5_041.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    i = 0
+    while ((i + 1) < len(lst)):
+        if (lst[i] < lst[(i + 1)]):
+            lst.extend([lst[i]])
+            lst.pop(i)
+            i = 0
+        else:
+            i += 1
+    return lst[: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.220 |
+| ol_refactoring_time | 4.643 |
+|       gcr_time      | 0.032 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.033 |
+|    spec_syn_time    | 0.154 |
+|       syn_time      | 0.022 |
+|       gpt_time      | 0.246 |
+|         rps         | 0.782 |
++---------------------+-------+
+
+
+wrong_5_023.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- i
+- oldest
+- n
+- sort_k
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for i in lst[1:]:
+            if (i > biggest):
+                biggest = i
+        lst.remove(biggest)
+        sort.append(biggest)
+    n = 1
+    sort_k = []
+    while (n <= k):
+        sort_k.append(sort.pop(0))
+        n += 1
+    return sort_k
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.324 |
+| ol_refactoring_time | 4.500 |
+|       gcr_time      | 0.084 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.099 |
+|    spec_syn_time    | 0.221 |
+|       syn_time      | 0.016 |
+|       gpt_time      | 0.255 |
+|         rps         | 0.823 |
++---------------------+-------+
+
+
+wrong_5_058.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    for i in range(k):
+        new_lst.append(max(lst))
+        lst.remove(max(lst))
+    return new_lst
+    pass
+```
+------------
+min_patch_size (7.0) <= patch_size (7.0)
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = list([])
+    for i in range(k):
+        new_lst.append(max(lst))
+        lst.remove(max(lst))
+    return new_lst
+    pass
+```
+------------
+min_patch_size (7.0) <= patch_size (9.0)
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_lst
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_lst = []
+    for i in range(k):
+        new_lst.append(max(lst))
+        lst.remove(max(lst))
+    return new_lst
+    pass
+```
+------------
+min_patch_size (7.0) <= patch_size (7.0)
+Error: Failed to fix with GPT
+success_wo_mut
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.224 |
+| ol_refactoring_time | 0.001 |
+|       gcr_time      | 0.005 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.033 |
+|    spec_syn_time    | 0.078 |
+|       syn_time      | 0.003 |
+|       gpt_time      | 0.000 |
+|         rps         | 0.304 |
++---------------------+-------+
+
+
+wrong_5_057.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+        if len(sort) == k:
+            return sort
+        else:
+            continue
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    for ref_i in range(k):
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+    return sort
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.972 |
+| ol_refactoring_time | 4.590 |
+|       gcr_time      | 0.023 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.038 |
+|    spec_syn_time    | 0.091 |
+|       syn_time      | 0.007 |
+|       gpt_time      | 0.120 |
+|         rps         | 0.617 |
++---------------------+-------+
+
+
+wrong_5_018.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- largest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for element in lst:
+            if (element > largest):
+                largest = element
+        lst.remove(largest)
+        sort.append(largest)
+    return sort[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.801 |
+| ol_refactoring_time | 4.236 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.099 |
+|    spec_syn_time    | 0.247 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.107 |
+|         rps         | 0.844 |
++---------------------+-------+
+
+
+wrong_5_078.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- largest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        largest = lst[0]
+        for element in lst:
+            if element > largest:
+                largest = element
+        lst.remove(largest)
+        sort.append(largest)
+    return sort[:k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.519 |
+| ol_refactoring_time | 4.056 |
+|       gcr_time      | 0.010 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.098 |
+|    spec_syn_time    | 0.141 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.110 |
+|         rps         | 0.857 |
++---------------------+-------+
+
+
+wrong_5_100.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- l
+- a
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    l = []
+    if (k > len(lst)):
+        return False
+    elif (k == 1):
+        return lst
+    else:
+        while (len(l) < k):
+            a = max(lst)
+            lst.remove(a)
+            l.append(a)
+        return l
+    pass
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.473 |
+| ol_refactoring_time | 3.930 |
+|       gcr_time      | 0.093 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.063 |
+|    spec_syn_time    | 0.021 |
+|       syn_time      | 0.000 |
+|       gpt_time      | 0.203 |
+|         rps         | 0.551 |
++---------------------+-------+
+
+
+wrong_5_084.py
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new_list
+- i
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new_list = []
+    for i in lst:
+        if (k == 0):
+            break
+        new_list += max(lst)
+        k -= 1
+    return lst
+    pass
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    new_list = []
+    for i in range(k):
+        if k == 0:
+            break
+        new_list.append(max(lst))
+        lst.remove(max(lst))
+        k -= 1
+    return new_list
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 0.500 |
+| ol_refactoring_time | 0.027 |
+|       gcr_time      | 0.034 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.030 |
+|    spec_syn_time    | 0.285 |
+|       syn_time      | 0.019 |
+|       gpt_time      | 0.070 |
+|         rps         | 0.710 |
++---------------------+-------+
+
+
+wrong_5_006.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- sort
+- biggest
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if (element > biggest):
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+        if (len(sort) == k):
+            break
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    while lst:
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+        if len(sort) == k:
+            break
+    return sort
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort = []
+    for i in range(k):
+        biggest = lst[0]
+        for element in lst:
+            if element > biggest:
+                biggest = element
+        lst.remove(biggest)
+        sort.append(biggest)
+    return sort
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.588 |
+| ol_refactoring_time | 4.990 |
+|       gcr_time      | 0.062 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.037 |
+|    spec_syn_time    | 0.274 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.120 |
+|         rps         | 0.745 |
++---------------------+-------+
+
+
+wrong_5_049.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- sorted_lst
+- biggest
+- n
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    sorted_lst = []
+    while lst:
+        biggest = lst[0]
+        for n in lst:
+            if (n >= biggest):
+                biggest = n
+        lst.remove(biggest)
+        sorted_lst.append(biggest)
+    return sorted_lst[0: k]
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.750 |
+| ol_refactoring_time | 4.220 |
+|       gcr_time      | 0.011 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.065 |
+|    spec_syn_time    | 0.202 |
+|       syn_time      | 0.017 |
+|       gpt_time      | 0.134 |
+|         rps         | 0.837 |
++---------------------+-------+
+
+
+wrong_5_010.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- n
+- counter
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    n = []
+    counter = 0
+    while counter < k:
+        lst.remove(min(lst))
+        counter = counter + 1
+    sort_list = []
+    while lst != []:
+        sort_list.append(max(lst))
+        lst.remove(max(lst))
+    return sort_list
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    sort_list = []
+    for i in range(k):
+        sort_list.append(max(lst))
+        lst.remove(max(lst))
+    return sort_list
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.337 |
+| ol_refactoring_time | 4.413 |
+|       gcr_time      | 0.100 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.134 |
+|    spec_syn_time    | 0.492 |
+|       syn_time      | 0.028 |
+|       gpt_time      | 0.091 |
+|         rps         | 0.655 |
++---------------------+-------+
+
+
+wrong_5_021.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- r
+- qwerty
+- biggest
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    r = []
+    for qwerty in range(k)[: int((len(range(k)) / 2))]:
+        biggest = lst[0]
+        for biggest in lst:
+            if (biggest < biggest):
+                biggest = biggest
+        r.append(biggest)
+        lst.remove(biggest)
+    pass
+    if True:
+        for qwerty in range(k)[int((len(range(k)) / 2)):]:
+            biggest = lst[0]
+            for biggest in lst:
+                if (biggest < biggest):
+                    biggest = biggest
+            r.append(biggest)
+            lst.remove(biggest)
+        return r
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    r = []
+    for qwerty in range(k):
+        biggest = lst[0]
+        for num in lst:
+            if num > biggest:
+                biggest = num
+        r.append(biggest)
+        lst.remove(biggest)
+    return r
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 5.267 |
+| ol_refactoring_time | 4.447 |
+|       gcr_time      | 0.158 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.052 |
+|    spec_syn_time    | 0.222 |
+|       syn_time      | 0.015 |
+|       gpt_time      | 0.120 |
+|         rps         | 1.244 |
++---------------------+-------+
+
+
+wrong_5_035.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- final
+- element
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return []
+    else:
+        final = []
+        while lst:
+            element = max(lst)
+            final += [element]
+            lst.remove(element)
+            if (len(final) == k):
+                break
+        return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    if lst == []:
+        return []
+    else:
+        final = []
+        while lst:
+            element = max(lst)
+            final.append(element)
+            lst.remove(element)
+            if len(final) == k:
+                break
+        return final
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    if lst == []:
+        return []
+    else:
+        elements = []
+        for i in range(k):
+            elements.append(max(lst))
+            lst.remove(max(lst))
+        return elements
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.706 |
+| ol_refactoring_time | 4.038 |
+|       gcr_time      | 0.156 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.047 |
+|    spec_syn_time    | 0.243 |
+|       syn_time      | 0.012 |
+|       gpt_time      | 0.111 |
+|         rps         | 0.810 |
++---------------------+-------+
+
+
+wrong_5_071.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- new
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    new = []
+    while (len(lst) >= (len(lst) - k)):
+        top = max(lst)
+        new.append(top)
+        lst.remove(top)
+    return new
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+
+```python
+def top_k(lst, k):
+    new = []
+    while len(new) < k:
+        top = max(lst)
+        new.append(top)
+        lst.remove(top)
+    return new
+```
+------------
+success_w_gpt_better
++---------------------+-------+
+|        Metric       | Value |
++---------------------+-------+
+|         time        | 4.959 |
+| ol_refactoring_time | 4.535 |
+|       gcr_time      | 0.009 |
+|       mut_time      | 0.000 |
+|     vn_map_time     | 0.036 |
+|    spec_syn_time    | 0.257 |
+|       syn_time      | 0.011 |
+|       gpt_time      | 0.060 |
+|         rps         | 0.629 |
++---------------------+-------+
+
+
+wrong_5_016.py
+structure mutation
+------------
+User-defined identifiers from the incorrect code:
+- top_k
+- lst
+- k
+- lower
+- higher
+- plist
+- pivot
+- sort_list
+
+Corrected code employing the listed identifiers:
+```python
+def top_k(lst, k):
+    if (lst == []):
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if (e < pivot):
+            lower.append(e)
+        if (e == pivot):
+            plist.append(e)
+        if (e > pivot):
+            higher.append(e)
+    sort_list = ((lower + plist) + higher)
+    sort_list = sort_list[::-1]
+    if (k == len(lst)):
+        return sort_list[:(k - 1)]
+    elif (k > len(lst)):
+        return sort_list
+    else:
+        return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    if lst == []:
+        return lst
+    lower = []
+    higher = []
+    plist = []
+    pivot = lst[0]
+    for e in lst:
+        if e < pivot:
+            lower.append(e)
+        elif e == pivot:
+            plist.append(e)
+        else:
+            higher.append(e)
+    sort_list = lower + plist + higher
+    sort_list = sort_list[::-1]
+    if k == len(lst):
+        return sort_list[:k-1]
+    elif k > len(lst):
+        return sort_list
+    else:
+        return sort_list[:k]
+```
+------------
+the corrected code is incorrect
+------------
+Amended code:
+```python
+def top_k(lst, k):
+    ref_ls = []
+    for i in range(k):
+        ref_ls.append(max(lst))
+        lst.remove(max(lst))
+    return ref_ls
+```
+------------
+success_w_gpt_better
++---------------------+--------+
+|        Metric       | Value  |
++---------------------+--------+
+|         time        | 20.477 |
+| ol_refactoring_time | 18.479 |
+|       gcr_time      | 0.416  |
+|       mut_time      | 0.000  |
+|     vn_map_time     | 0.036  |
+|    spec_syn_time    | 0.347  |
+|       syn_time      | 0.055  |
+|       gpt_time      | 0.168  |
+|         rps         | 1.028  |
++---------------------+--------+
+
+
+
+Summary for question_5 (sampling_rate = 0%, exp_idx = 0)
++-----------------------+-------+
+|         Metric        | Value |
++-----------------------+-------+
+|        rep_rate       | 0.981 |
+|    rep_rate_wo_mut    | 0.037 |
+| rep_rate_w_gpt_better | 0.852 |
+|  rep_rate_w_gpt_only  | 0.028 |
+|       time_cost       | 5.017 |
+|          rps          | 0.785 |
++-----------------------+-------+
+
+fail_list
+wrong_5_101.py
+wrong_5_091.py
